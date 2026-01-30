@@ -1,0 +1,494 @@
+fileFormatVersion: 2
+guid: a3653b49631063a449c2733b50a0dcd4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4501820730456465280
+    second: realistic-fire-explosion-isolated_23-2151334925_0
+  - first:
+      213: 1080290626240204797
+    second: realistic-fire-explosion-isolated_23-2151334925_1
+  - first:
+      213: -7831460744115665745
+    second: realistic-fire-explosion-isolated_23-2151334925_2
+  - first:
+      213: -8534562598639804286
+    second: realistic-fire-explosion-isolated_23-2151334925_3
+  - first:
+      213: 78350401162535100
+    second: realistic-fire-explosion-isolated_23-2151334925_4
+  - first:
+      213: -3526535099300717730
+    second: realistic-fire-explosion-isolated_23-2151334925_5
+  - first:
+      213: -799816315666363642
+    second: realistic-fire-explosion-isolated_23-2151334925_6
+  - first:
+      213: -2277385140508628439
+    second: realistic-fire-explosion-isolated_23-2151334925_7
+  - first:
+      213: 1267883352113867891
+    second: realistic-fire-explosion-isolated_23-2151334925_8
+  - first:
+      213: -595250951738753467
+    second: realistic-fire-explosion-isolated_23-2151334925_9
+  - first:
+      213: -5670528977553680634
+    second: realistic-fire-explosion-isolated_23-2151334925_10
+  - first:
+      213: -3089990327674930445
+    second: realistic-fire-explosion-isolated_23-2151334925_11
+  - first:
+      213: -2504431477346354638
+    second: realistic-fire-explosion-isolated_23-2151334925_12
+  - first:
+      213: 6640211145643682045
+    second: realistic-fire-explosion-isolated_23-2151334925_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: realistic-fire-explosion-isolated_23-2151334925_0
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 376
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08fd8594a1ea97e30800000000000000
+      internalID: 4501820730456465280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: realistic-fire-explosion-isolated_23-2151334925_1
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 171
+        width: 445
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff4b37d996fdfe00800000000000000
+      internalID: 1080290626240204797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: realistic-fire-explosion-isolated_23-2151334925_2
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 348
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa4c19232ff015390800000000000000
+      internalID: -7831460744115665745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: realistic-fire-explosion-isolated_23-2151334925_3
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 334
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2806dbad8842f8980800000000000000
+      internalID: -8534562598639804286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: realistic-fire-explosion-isolated_23-2151334925_4
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 320
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb06d45564b561100800000000000000
+      internalID: 78350401162535100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: realistic-fire-explosion-isolated_23-2151334925_5
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 312
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5bdb36f20b3f0fc0800000000000000
+      internalID: -3526535099300717730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: realistic-fire-explosion-isolated_23-2151334925_6
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 242
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60b052b6c4b76e4f0800000000000000
+      internalID: -799816315666363642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: realistic-fire-explosion-isolated_23-2151334925_7
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 159
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92aea33e74a1560e0800000000000000
+      internalID: -2277385140508628439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: realistic-fire-explosion-isolated_23-2151334925_8
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 158
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37ce063f03d689110800000000000000
+      internalID: 1267883352113867891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: realistic-fire-explosion-isolated_23-2151334925_9
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 155
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54ef565c96e3db7f0800000000000000
+      internalID: -595250951738753467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: realistic-fire-explosion-isolated_23-2151334925_10
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 165
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6079a5c40fb3e41b0800000000000000
+      internalID: -5670528977553680634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: realistic-fire-explosion-isolated_23-2151334925_11
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 165
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fafa8f1b262e15d0800000000000000
+      internalID: -3089990327674930445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: realistic-fire-explosion-isolated_23-2151334925_12
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 148
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ab67427d87e3dd0800000000000000
+      internalID: -2504431477346354638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: realistic-fire-explosion-isolated_23-2151334925_13
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 157
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df86ea90bd4c62c50800000000000000
+      internalID: 6640211145643682045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      realistic-fire-explosion-isolated_23-2151334925_0: 4501820730456465280
+      realistic-fire-explosion-isolated_23-2151334925_1: 1080290626240204797
+      realistic-fire-explosion-isolated_23-2151334925_10: -5670528977553680634
+      realistic-fire-explosion-isolated_23-2151334925_11: -3089990327674930445
+      realistic-fire-explosion-isolated_23-2151334925_12: -2504431477346354638
+      realistic-fire-explosion-isolated_23-2151334925_13: 6640211145643682045
+      realistic-fire-explosion-isolated_23-2151334925_2: -7831460744115665745
+      realistic-fire-explosion-isolated_23-2151334925_3: -8534562598639804286
+      realistic-fire-explosion-isolated_23-2151334925_4: 78350401162535100
+      realistic-fire-explosion-isolated_23-2151334925_5: -3526535099300717730
+      realistic-fire-explosion-isolated_23-2151334925_6: -799816315666363642
+      realistic-fire-explosion-isolated_23-2151334925_7: -2277385140508628439
+      realistic-fire-explosion-isolated_23-2151334925_8: 1267883352113867891
+      realistic-fire-explosion-isolated_23-2151334925_9: -595250951738753467
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
