@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - EnemySoldier
+  - EnemyMover
   layers:
   - Default
   - TransparentFX

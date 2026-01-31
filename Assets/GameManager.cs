@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 
 public class GameManager : MonoBehaviour 
 {
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private SpriteRenderer middleground;
     [SerializeField] Sprite hungarianMiddleground;
     [SerializeField] Sprite russianMiddleground;
+    [SerializeField] GameObject death;
 
 
     private Vector3 startPos;
@@ -150,5 +152,34 @@ public class GameManager : MonoBehaviour
 
     public bool IsHiding() {
         return isHiding;
+    }
+
+    public void PlayerDeath()
+    {
+        Debug.Log("Player Died!");
+
+        // A death GameObject átlátszóságának folyamatos növelése
+        StartCoroutine(FadeInDeath());
+    }
+
+    IEnumerator FadeInDeath()
+    {
+        SpriteRenderer spriteRenderer = death.GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null)
+        {
+            Debug.LogError("SpriteRenderer not found on death GameObject!");
+            yield break;
+        }
+
+        Color color = spriteRenderer.color;
+        float alpha = color.a;
+
+        while (alpha < 1f)
+        {
+            alpha += Time.deltaTime / 2f; // 2 másodperc alatt növeli az átlátszóságot
+            color.a = Mathf.Clamp01(alpha);
+            spriteRenderer.color = color;
+            yield return null;
+        }
     }
 }
