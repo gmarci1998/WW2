@@ -1,7 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour 
+{
     [SerializeField] private Camera cam;
     [SerializeField] private float parallaxFactorX = 2f;  
     [SerializeField] private float parallaxFactorY = 0.1f; 
