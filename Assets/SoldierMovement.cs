@@ -1,15 +1,13 @@
 using UnityEngine;
-using System.Collections;  // Coroutine-hez
+using System.Collections;
+using System;
+using Random = UnityEngine.Random;  // Coroutine-hez
 
 public class SoldierMovement : MonoBehaviour
 {
-    [SerializeField] private float enemyParallaxX = 4f;  
-    [SerializeField] private float enemyParallaxY = 0.2f;  
-    [SerializeField] private float moveSpeed = 2f;    
-    private float normalizedX;
-    private float normalizedY;
-    private float waitingPeriod;
-    private float startTimer;
+    [SerializeField] private float enemyParallaxX = 4f;
+    [SerializeField] private float enemyParallaxY = 0.2f;
+    [SerializeField] private float moveSpeed = 2f;
     private float targetHeight;
     private bool isMoving = false;
     private float waitForShooting = 4f;
@@ -17,48 +15,63 @@ public class SoldierMovement : MonoBehaviour
     private float firingTimer = 0f;
     private GameObject spark;
 
-
     [SerializeField] private float startingHeight = 0f;
     [SerializeField] private float maximumHeight = 3f;
     private int nextAction;
     private bool actionComplete = false;
 
     [SerializeField] private AudioSource dying;
+    [SerializeField] private float timeBeforeFirstAction = 3f;
 
-    void Start(){
+    public bool IsDead { get; set; } = false;
+
+    public Action OnDeathDelegate { get; set; }
+
+    void Start()
+    {
         startingHeight = transform.position.y;
         maximumHeight = startingHeight + 0.30f;
-        DecideAndAct();
+
+        StartCoroutine(DecideAndActDelayed());
         spark = transform.GetChild(0).gameObject;
     }
 
-    void Update() 
-    {   
-        /*transform.position = new Vector3(
-            normalizedX * enemyParallaxX, // Az X tengelyen történő mozgás
-            transform.position.y, // Az Y tengely fix értéken marad
-            transform.position.z
-        );*/
+    void Update()
+    {
+    }
+
+    IEnumerator DecideAndActDelayed()
+    {
+        yield return new WaitForSeconds(timeBeforeFirstAction);
+
+        DecideAndAct();
     }
 
     void DecideAndAct()
     {
         nextAction = DecideAction();
-        if(nextAction == 0){
+
+        if (nextAction == 0)
+        {
             // Akció 0: Leguggolva marad, majd újra dönt
             StartCoroutine(StayCrouchedAndDecideAgain());
-        }else if(nextAction == 1){
+        }
+        else if (nextAction == 1)
+        {
             // Akció 1: Félig előbújik, majd visszamegy és újra dönt
             targetHeight = startingHeight + (maximumHeight - startingHeight) / 2f; // Pontosítva a targetHeight
-            StartCoroutine(PeekAndReturn());  
-        }else if(nextAction == 2){
+            StartCoroutine(PeekAndReturn());
+        }
+        else if (nextAction == 2)
+        {
             // Akció 2: Teljesen előbújik, majd visszamegy és újra dönt
             targetHeight = maximumHeight; // Pontosítva a targetHeight
             StartCoroutine(FullyEmergeAndReturn());
         }
     }
 
-    int DecideAction(){
+    int DecideAction()
+    {
         return Random.Range(0, 3); // Három akció közül választ
     }
 
@@ -71,14 +84,16 @@ public class SoldierMovement : MonoBehaviour
     IEnumerator PeekAndReturn()
     {
         isMoving = true;
-        while (transform.position.y < targetHeight) {
+        while (transform.position.y < targetHeight)
+        {
             float deltaTime = Mathf.Max(Time.deltaTime, 0.01f); // Minimális deltaTime érték beállítása
             transform.position += Vector3.up * moveSpeed * deltaTime;
             yield return null;
         }
         yield return new WaitForSeconds(2f); // Rövid időt marad félig előbújva
 
-        while (Mathf.Abs(transform.position.y - startingHeight) > 0.01f) { // Tolerancia hozzáadása
+        while (Mathf.Abs(transform.position.y - startingHeight) > 0.01f)
+        { // Tolerancia hozzáadása
             float deltaTime = Mathf.Max(Time.deltaTime, 0.01f); // Minimális deltaTime érték beállítása
             transform.position -= Vector3.up * moveSpeed * deltaTime;
             yield return new WaitForEndOfFrame();
@@ -92,16 +107,18 @@ public class SoldierMovement : MonoBehaviour
     IEnumerator FullyEmergeAndReturn()
     {
         isMoving = true;
-        while (transform.position.y < targetHeight) {
+        while (transform.position.y < targetHeight)
+        {
             float deltaTime = Mathf.Max(Time.deltaTime, 0.01f); // Minimális deltaTime érték beállítása
             transform.position += Vector3.up * moveSpeed * deltaTime;
             yield return null;
         }
 
         float waitingTime = Random.Range(2f, 10f);
-        firingTimer = Random.Range(0.5f, waitingTime);
+        firingTimer = Random.Range(2f, waitingTime);
 
-        if(firingTimer + duckTime > waitingTime){
+        if (firingTimer + duckTime > waitingTime)
+        {
             firingTimer = waitingTime - duckTime - 0.1f; // Biztosítjuk, hogy legyen idő guggolni
         }
 
@@ -109,7 +126,8 @@ public class SoldierMovement : MonoBehaviour
 
         yield return new WaitForSeconds(waitingTime); // Teljesen előbújva marad egy ideig
 
-        while (Mathf.Abs(transform.position.y - startingHeight) > 0.01f) { // Tolerancia hozzáadása
+        while (Mathf.Abs(transform.position.y - startingHeight) > 0.01f)
+        { // Tolerancia hozzáadása
             float deltaTime = Mathf.Max(Time.deltaTime, 0.01f); // Minimális deltaTime érték beállítása
             transform.position -= Vector3.up * moveSpeed * deltaTime;
             yield return null;
@@ -139,16 +157,21 @@ public class SoldierMovement : MonoBehaviour
             yield break; // Ha a játékos bújik, a lövés nem talál
         }
 
+        if (IsDead)
+        {
+            Debug.Log("Died before firing.");
+            yield break;
+        }
+
         GameManager.Instance.PlayerDeath();
+        EnemyManager.Instance.ResetAllEnemies();
     }
 
-    public void SetNormalized(float x, float y){
-        normalizedX = x;
-        normalizedY = y;
-    }
-
-    public void Die(){
+    public void Die()
+    {
         Debug.Log("Enemy Soldier Died");
+        IsDead = true;
+        OnDeathDelegate?.Invoke();
         dying.Play();
         Destroy(gameObject, 0.2f);
     }
