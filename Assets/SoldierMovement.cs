@@ -73,6 +73,11 @@ public class SoldierMovement : MonoBehaviour
 
     int DecideAction()
     {
+        if (GameManager.Instance.IsHiding())
+        {
+            return Random.Range(0, 2); // Ha a játékos bújik, mindig guggolva marad
+        }
+
         return Random.Range(0, 3); // Három akció közül választ
     }
 
