@@ -122,7 +122,6 @@ public class SoldierMovement : MonoBehaviour
 
     IEnumerator FireAtPlayer()
     {
-        Debug.Log("Preparing to Shoot in: " + firingTimer + " seconds");
         yield return new WaitForSeconds(firingTimer);
 
         // Aktiváljuk a spark-ot lövés előtt
@@ -148,7 +147,6 @@ public class SoldierMovement : MonoBehaviour
     }
 
     public void Die(){
-        Debug.Log("Enemy Soldier Died");
         dying.Play();
         Destroy(gameObject, 0.2f);
     }
