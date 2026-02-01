@@ -15,7 +15,7 @@ public class EnemyManager : MonoBehaviour
     void Awake()
     {
         Init();
-        //SpawnEnemies();
+        SpawnEnemies();
     }
 
     private void Init()

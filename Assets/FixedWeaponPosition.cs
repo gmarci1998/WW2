@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class FixedWeaponPosition : MonoBehaviour {
     [SerializeField] private Camera cam;
@@ -24,6 +25,8 @@ public class FixedWeaponPosition : MonoBehaviour {
     private float targetY = -7f;
 
     private float currentT;
+
+    List<Transform> GetEnemies => FindObjectsByType<SoldierMovement>(FindObjectsSortMode.None).Select(s => s.transform).ToList();
 
     void Start() {
         if (cam == null) cam = Camera.main;
@@ -101,13 +104,20 @@ public class FixedWeaponPosition : MonoBehaviour {
         isReloading = true;
     }
 
-    void CheckIfEnemyGotShot(){
-        foreach (Transform enemy in enemySoldiers) {
-            if (enemy == null) continue;  
-            float distance = Vector3.Distance(new Vector3(fireSpark.transform.position.x,fireSpark.transform.position.y,0), new Vector3(enemy.transform.position.x, enemy.transform.position.y,0));
-            if(distance < 0.3){
+    void CheckIfEnemyGotShot()
+    {
+        foreach (Transform enemy in GetEnemies)
+        {
+            if (enemy == null) continue;
+
+            var soldier = enemy.GetComponent<SoldierMovement>();
+            if (soldier.IsDead || !soldier.IsKillable) continue;
+
+            float distance = Vector3.Distance(new Vector3(fireSpark.transform.position.x, fireSpark.transform.position.y, 0f), new Vector3(enemy.transform.position.x, fireSpark.transform.position.y, 0f));
+            if(distance < 0.3)
+            {
                 Debug.Log("BUMMM");
-                enemy.GetComponent<SoldierMovement>().Die();
+                soldier.Die();
             }
         }
     }

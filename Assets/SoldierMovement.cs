@@ -24,6 +24,7 @@ public class SoldierMovement : MonoBehaviour
     [SerializeField] private float timeBeforeFirstAction = 3f;
 
     public bool IsDead { get; set; } = false;
+    public bool IsKillable { get; set; } = false;
 
     public Action OnDeathDelegate { get; set; }
 
@@ -77,6 +78,7 @@ public class SoldierMovement : MonoBehaviour
 
     IEnumerator StayCrouchedAndDecideAgain()
     {
+        IsKillable = false;
         yield return new WaitForSeconds(Random.Range(2f, 5f));
         DecideAndAct();
     }
@@ -84,14 +86,19 @@ public class SoldierMovement : MonoBehaviour
     IEnumerator PeekAndReturn()
     {
         isMoving = true;
+        // Feljön
         while (transform.position.y < targetHeight)
         {
             float deltaTime = Mathf.Max(Time.deltaTime, 0.01f); // Minimális deltaTime érték beállítása
             transform.position += Vector3.up * moveSpeed * deltaTime;
             yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForSeconds(2f); // Rövid időt marad félig előbújva
 
+        IsKillable = true;
+        yield return new WaitForSeconds(2f); // Rövid időt marad félig előbújva
+        IsKillable = false;
+
+        // Lemegy
         while (transform.position.y > startingHeight)
         { // Tolerancia hozzáadása
             float deltaTime = Mathf.Max(Time.deltaTime, 0.01f); // Minimális deltaTime érték beállítása
@@ -108,6 +115,7 @@ public class SoldierMovement : MonoBehaviour
     IEnumerator FullyEmergeAndReturn()
     {
         isMoving = true;
+        // Kijön
         while (transform.position.y < targetHeight)
         {
             float deltaTime = Mathf.Max(Time.deltaTime, 0.01f); // Minimális deltaTime érték beállítása
@@ -115,6 +123,7 @@ public class SoldierMovement : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
+        IsKillable = true;
         float waitingTime = Random.Range(2f, 10f);
         firingTimer = Random.Range(2f, waitingTime);
 
@@ -126,7 +135,9 @@ public class SoldierMovement : MonoBehaviour
         StartCoroutine(FireAtPlayer());
 
         yield return new WaitForSeconds(waitingTime); // Teljesen előbújva marad egy ideig
+        IsKillable = false;
 
+        // Lemegy
         while (transform.position.y > startingHeight)
         { // Tolerancia hozzáadása
             float deltaTime = Mathf.Max(Time.deltaTime, 0.01f); // Minimális deltaTime érték beállítása
