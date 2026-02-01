@@ -2,9 +2,12 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
+using System.IO;
 
 public class GameManager : MonoBehaviour 
 {
+    [SerializeField] private AudioSource ambient;
+    [SerializeField] private AudioSource wind;
     [SerializeField] private Camera cam;
     [SerializeField] private float parallaxFactorX = 2f;  
     [SerializeField] private float parallaxFactorY = 0.1f; 
@@ -23,6 +26,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject flagRus;
     [SerializeField] GameObject license;
 
+    [SerializeField] private CanvasGroup fadeCanvasGroup;
 
     private Vector3 startPos;
     public GameObject backgroundSprite;  
@@ -51,20 +55,29 @@ public class GameManager : MonoBehaviour
     private AudioSource narrationAudio;
     private float narrationPauseTime;
 
+    [System.Serializable]
+    public class SoldierSaveData 
+    {
+        public string Name;
+        public bool isOpened;
+    }
+
+    [System.Serializable]
+    public class SaveWrapper 
+    {
+        public List<SoldierSaveData> Soldiers;
+    }
+    
+
     void Awake() {
         Instance = this;
         DontDestroyOnLoad(gameObject);
-
-        hungarianSide = Random.Range(0,2) == 0;
-
-        ChooseSoldier();
     }
 
     void ChooseSoldier()
     {
         currentSoldier = HungarianSoldiers[1];
-        /*
-        if(HungarianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0 &&
+        /*if(HungarianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0 &&
            RussianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0)
         {
             // Minden katona ki lett választva, visszaállítjuk az állapotukat
@@ -108,12 +121,31 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        Debug.Log("Kiválasztott katona: " + currentSoldier.Name);
-        */
+        Debug.Log("Kiválasztott katona: " + currentSoldier.Name);*/
+        Narration();
     }
 
-    void Start() {
-        if (cam == null) cam = Camera.main;
+    private IEnumerator StartSceneWithFade()
+    {
+        // Ensure the screen starts fully black
+        Color color = spriteRenderer.color;
+        float alpha = color.a;
+
+        // Wait for 5 seconds
+        yield return new WaitForSeconds(5f);
+
+        while (alpha > 0f)
+        {
+            alpha -= Time.deltaTime / 2f; // 2 másodperc alatt csökkenti az átlátszóságot
+            color.a = Mathf.Clamp01(alpha);
+            spriteRenderer.color = color;
+            yield return null;
+        }
+        hungarianSide = Random.Range(0,2) == 0;
+
+        ChooseSoldier();
+        PlayAmbientSound();
+
         startPos = transform.position;
         Cursor.lockState = CursorLockMode.Confined; 
         Cursor.visible = false; 
@@ -131,9 +163,22 @@ public class GameManager : MonoBehaviour
         }
 
         PositionLicense();
+    }
 
+    void Start() {
+        StartCoroutine(StartSceneWithFade());
+
+        if (cam == null) cam = Camera.main;
+
+        LoadSoldiersFromFile();
+        
+    }
+
+    public void Narration()
+    {
         narrationAudio = gameObject.AddComponent<AudioSource>();
         narrationAudio.clip = currentSoldier.Audio;
+        narrationAudio.volume = 1.0f;
         narrationAudio.playOnAwake = false;
 
         StartCoroutine(StartNarrationAfterDelay());
@@ -148,7 +193,7 @@ public class GameManager : MonoBehaviour
     void Update() {
 
         if(Input.GetKeyDown(KeyCode.Escape)){
-            isLock = true;  
+            PlayerDeath();
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && hideActive) {
@@ -226,8 +271,11 @@ public class GameManager : MonoBehaviour
             //middleground.sprite = russianMiddleground;
         }
 
+        if (!narrationAudio.isPlaying && narrationAudio.time >= narrationAudio.clip.length)
+        {
+            currentSoldier.isOpened = true; // Mark the soldier as opened when narration ends
+        }
 
-        Debug.Log(narrationAudio.time);
         if (isHiding && narrationAudio.isPlaying)
         {
             if (narrationPauseTime == 0)
@@ -282,6 +330,8 @@ public class GameManager : MonoBehaviour
     public void PlayerDeath()
     {
         Debug.Log("Player Died!");
+
+        narrationAudio.Stop();
 
         StartCoroutine(FadeInDeath());
     }
@@ -340,61 +390,71 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    [System.Serializable]
-    private class SoldierSaveData
-    {
-        public string Name;
-        public bool isOpened;
-    }
+    public void SaveSoldiersToFile() 
+{
+    List<SoldierSaveData> saveData = new List<SoldierSaveData>();
 
-    public void SaveSoldiersToFile()
-    {
-        List<SoldierSaveData> saveData = new List<SoldierSaveData>();
+    Debug.Log($"Hungarian: {(HungarianSoldiers?.Length ?? 0)} db");
+    Debug.Log($"Russian: {(RussianSoldiers?.Length ?? 0)} db");
 
-        foreach (var soldier in HungarianSoldiers)
-        {
+    if (HungarianSoldiers != null)
+        foreach (var soldier in HungarianSoldiers) 
             saveData.Add(new SoldierSaveData { Name = soldier.Name, isOpened = soldier.isOpened });
-        }
-
-        foreach (var soldier in RussianSoldiers)
-        {
+    
+    if (RussianSoldiers != null)
+        foreach (var soldier in RussianSoldiers) 
             saveData.Add(new SoldierSaveData { Name = soldier.Name, isOpened = soldier.isOpened });
-        }
 
-        string json = JsonUtility.ToJson(new { Soldiers = saveData }, true);
-        System.IO.File.WriteAllText("SoldiersData.json", json);
+    SaveWrapper wrapper = new SaveWrapper { Soldiers = saveData };
+    string json = JsonUtility.ToJson(wrapper, true);
 
-        Debug.Log("Soldiers saved to file.");
-    }
+    string filePath = Path.Combine(Application.persistentDataPath, "SoldiersData.json");
+    File.WriteAllText(filePath, json);
+
+    Debug.Log("✅ SAVED: " + filePath);
+    Debug.Log("JSON: " + json);
+}
+
 
     public void LoadSoldiersFromFile()
     {
-        if (!System.IO.File.Exists("SoldiersData.json"))
+        string filePath = Path.Combine(Application.persistentDataPath, "SoldiersData.json");
+        
+        if (!File.Exists(filePath))
         {
-            Debug.LogWarning("Save file not found.");
+            Debug.LogWarning("❌ Save file not found: " + filePath);
             return;
         }
 
-        string json = System.IO.File.ReadAllText("SoldiersData.json");
-        var saveData = JsonUtility.FromJson<SoldierSaveWrapper>(json);
+        string json = File.ReadAllText(filePath);
+        SaveWrapper saveData = JsonUtility.FromJson<SaveWrapper>(json);
 
         foreach (var soldierData in saveData.Soldiers)
         {
-            var soldier = HungarianSoldiers.FirstOrDefault(s => s.Name == soldierData.Name) ??
-                          RussianSoldiers.FirstOrDefault(s => s.Name == soldierData.Name);
+            SoldierData soldier = System.Array.Find(HungarianSoldiers, s => s.Name == soldierData.Name) ??
+                                System.Array.Find(RussianSoldiers, s => s.Name == soldierData.Name);
 
             if (soldier != null)
             {
                 soldier.isOpened = soldierData.isOpened;
+                Debug.Log($"Loaded: {soldier.Name} = {soldier.isOpened}");
             }
         }
-
-        Debug.Log("Soldiers loaded from file.");
+        Debug.Log("✅ LOAD OK: " + saveData.Soldiers.Count + " soldiers");
     }
 
-    [System.Serializable]
-    private class SoldierSaveWrapper
+    public void PlayAmbientSound()
     {
-        public List<SoldierSaveData> Soldiers;
+        if (ambient != null)
+        {
+            ambient.loop = true;
+            ambient.Play();
+            wind.loop = true;
+            wind.Play();
+        }
+        else
+        {
+            Debug.LogWarning("Ambient AudioSource or AudioClip is not assigned.");
+        }
     }
 }
