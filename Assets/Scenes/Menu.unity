@@ -723,6 +723,142 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122777858}
   m_CullTransparentMesh: 1
+--- !u!1 &143718567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 143718568}
+  - component: {fileID: 143718570}
+  - component: {fileID: 143718569}
+  m_Layer: 5
+  m_Name: Programming
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &143718568
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143718567}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 988232868}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -382.60764, y: 146}
+  m_SizeDelta: {x: 162.578, y: 32.662}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &143718569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143718567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Programming
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: c72fd84918a0e4194a48294f04008932, type: 2}
+  m_sharedMaterial: {fileID: 4684507092206647844, guid: c72fd84918a0e4194a48294f04008932, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 26
+  m_fontSizeBase: 26
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &143718570
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143718567}
+  m_CullTransparentMesh: 1
 --- !u!1 &147734224
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,7 +879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &147734225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,7 +981,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147734224}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 1
@@ -1020,13 +1156,273 @@ MonoBehaviour:
       emotion, he said only this: <i> \u201CNow that\u2019s a patriot right here!\u201D.
       </i> "
   - image: {fileID: -4499955638628263505, guid: 14600db9f8a6ffa4bbdc2e1e85ddec5b, type: 3}
-    description: teszt alekszei
+    description: "Aleksei Morozov / Age: 37 \\n Rank / Position: Junior Sergeant,
+      deputy squad leader \\n Civilian Occupation: Tractor driver \\n Origin: Kursk
+      region, RSFSR (Russian Soviet Federative Socialist Republic) \\n \\n  Aleksei
+      Morozov was kept alive by hatred. \\n Not hatred for the Hungarians across
+      the river, or the occasional German you could spot among them. Those men were
+      just obstacles. Things standing between him and whatever counted as home now.
+      What pumped blood through his veins, day after day, moment after moment, was
+      contempt. Contempt for his uncle. For how he ruined his family. \\n Aleksei\u2019s
+      father was a simple, hard-working man. A man who spent his whole life farming
+      and tending animals. He didn\u2019t understand big politics, and he didn\u2019t
+      want to. He believed that anything he needed, he could produce with his own
+      hands. For a long time, it looked like the world would prove him right. His
+      patience and his discipline built a respectable fortune. Somehow, it even survived
+      the chaos of the civil war years, despite the state taking whatever it could
+      from the countryside. \\n But his father never watched the horizon. He watched
+      only his fields. So the burden of keeping up with the world fell onto Aleksei
+      and his mother, Anna. They were the ones who tried to warn him. They told him
+      collectivization was coming. That it was inevitable. That they should sell
+      what they could while they still could. The equipment. The threshing machine.
+      The livestock. Turn it into money. Then leave\u2014fast. Cross the border.
+      Disappear. \\n Aleksei\u2019s father may have seen the logic in it. But the
+      thought of leaving his country\u2014of the danger, the unknown\u2014terrified
+      him. And that fear is probably why he listened to his younger brother, Pyotr.
+      Pyotr insisted better days would come. There was no need to panic. Don\u2019t
+      sell. Don\u2019t run. Hide what you can. Bury it. Stash it away. When the good
+      times return, you\u2019ll still have something to reach for. Aleksei\u2019s
+      father trusted his brother. Why wouldn\u2019t he? He didn\u2019t even know
+      that Pyotr had already joined the Komsomol. That he was already building himself
+      a future. That he had ambitions that needed a ladder. And nothing built a ladder
+      faster than discovering\u2014and smoking out\u2014a kulak. \\n So Pyotr wrote
+      a speech. \\n And he delivered it at the town\u2019s first quarterly meeting
+      of 1930. Aleksei wasn\u2019t there. But others were. Men who would later become
+      his friends. They told Aleksei what they saw. They repeated the story so many
+      times that Aleksei began to see it, too. He pictured the scene so vividly that
+      he could imagine the smallest twitch in his uncle\u2019s face as he betrayed
+      his own brother. The armed brigade came the next morning. \\n They didn\u2019t
+      leave until they had turned the house inside out. Until they had found everything
+      on the list Pyotr had given them. What made it worse was that Aleksei\u2019s
+      family hadn\u2019t just kept their wealth. They had tried to hide it. So they
+      deported the whole family. Party people moved into their home. Pyotr was appointed
+      brigade leader. And from that day on, a large letter marked Aleksei\u2019s
+      papers. A \u201CK.\u201D It branded him. And it branded his son, born three
+      years later. The stigma followed the boy into school. It sat there in the class
+      register like a stain that wouldn\u2019t wash out. Aleksei\u2019s father couldn\u2019t
+      carry the weight of the betrayal. He hanged himself. His mother didn\u2019t
+      last much longer. Grief and shame finished what the state had started. \\n
+      Aleksei became a tractor driver. Year after year, he planned revenge against
+      his uncle. And year after year, he postponed it\u2014for the sake of his family.
+      For the sake of his son. Until the war arrived. The war, that took so much
+      from him, that consequences stopped mattering. Now, out here on this frozen
+      no-man \u2019s-land, it is the promise of future retribution that moves his
+      limbs. It is faith\u2014cold, clean faith\u2014that a day will come when he
+      can take the rifle he holds right now, press the barrel into his uncle\u2019s
+      mouth, and squeeze the trigger. He imagines it with the calm of a man imagining
+      sunrise. Not because he loves killing. Because he loves the idea of debt being
+      paid."
   - image: {fileID: -4499955638628263505, guid: 14600db9f8a6ffa4bbdc2e1e85ddec5b, type: 3}
-    description: teszt ivan
+    description: "Ivan Petrov / Age: 26 \\n Rank / Position: Red Army soldier (private),
+      rifleman \\n Civilian Occupation: History teacher\\n Origin: Voronezh city
+      / surrounding area, RSFSR (Russian Soviet Federative Socialist Republic) \\n 
+      Ivan Petrov was driven by one thing only: patriotism in its purest form. His
+      heart beat for the nation and the motherland. It was almost religious. And
+      he was certain that this devotion\u2014this worship of home\u2014was what kept
+      him alive. \\n Doctors told his parents early on that he was a sick, fragile
+      boy. Not built for this world. <i> \u201CProtect him from everything,\u201D
+      </i> the doctor said. <i> \u201CEven from the wind. There\u2019s no medicine
+      I can prescribe for what he has.\u201D </i> His parents listened.  They kept
+      him wrapped in comfort. They treated him like porcelain. \\n And Ivan hated
+      it. \\n  He begged for the same rough, ordinary life his siblings got. The
+      same life other boys got. They wouldn\u2019t even let him work summers to earn
+      a little money. They wouldn\u2019t let him play outside in daylight. He was
+      allowed out only at dusk, when the sun couldn\u2019t burn him. He couldn\u2019t
+      even leave the street, so his mother could observe him from the kitchen window.
+      The other children made it even worse. They pushed him out. They didn\u2019t
+      want him on their team. Whether they were playing football or playing war,
+      it was always the same. If Ivan was on your side, you were at a disadvantage.
+      \\n After a while, he stopped asking to go out. \\n He stayed in his room instead.
+      He liked the half-dark that the lowered blinds created. He put on his thick-framed
+      glasses\u2014glasses he would never wear in front of the other boys if he could
+      help it\u2014and squinted his way through book after book from his father\u2019s
+      inexhaustible library. It didn\u2019t take long for him to convince himself
+      that it was better to read about the injustices done to his homeland during
+      the Napoleonic wars than to choke in the dust outside. That Lenin\u2019s immortal
+      ideas could soothe an ordinary Russian youth even when his chest began to sting
+      like an old man\u2019s. \\n In time, Ivan formed a belief as solid as iron.
+      Russia had been robbed of its greatness again and again\u2014or at least, the
+      West had tried to rob it. It didn\u2019t matter though which conquerors came
+      from the west to defile the holy soil. In the end, they always failed. That
+      belief is why he became a history teacher. So he could pass the idea of national
+      greatness into as many unpolished minds as possible. In his modest way, he
+      would help ensure that the motherland remained in good hands in the next generations
+      to come. But daytime speeches in a classroom didn\u2019t fully satisfy his
+      hunger for justice. So in the evenings he went to pubs and caf\xE9s. He never
+      drank a drop of alcohol. And yet he behaved like a drunk. Flushed face. Bright
+      eyes. Climbing onto chairs, onto tables\u2014sometimes straight onto the counter\u2014preaching
+      what should be done to the nations that threatened Mother Russia. \\n So when
+      the motherland needed him most, there was never any question of whether he
+      would go to war. He knew there were cowardly traitors who would gladly hide
+      behind a weak body. Men who would fold their hands in gratitude if poor health
+      excused them from service. Ivan was not one of them. On the contrary. He reached
+      into his pocket and used a significant portion of the money he\u2019d inherited
+      from his parents to grease the right palms. To persuade the decision-making
+      doctors to look away from his irregular heartbeat. To ignore the lungs that
+      worked at seventy percent capacity. \\n And now he leans out of the trench
+      and fires. He keeps firing. And he sings at the top of his lungs\u2014The Sacred
+      War. He\u2019s the most surprised of all that his voice doesn\u2019t crack.
+      That his breathing doesn\u2019t whistle. The sound comes out clean and clear
+      into the frozen air. As if the cold can\u2019t touch him. As if bullets fired
+      by men who fight without conviction can\u2019t touch him either. And if death
+      does catch him here, Ivan isn\u2019t afraid. He only hopes the sun will come
+      out. That the thick crust of ice over the ground will finally soften. So the
+      sweet motherland\u2014his mother earth\u2014can drink, to the last drop, the
+      blood of her fragile child.  "
   - image: {fileID: -4499955638628263505, guid: 14600db9f8a6ffa4bbdc2e1e85ddec5b, type: 3}
-    description: teszt mykola
+    description: "Mykola Shevchenko (Ukrainian) /  Age: 22 /  Rank / Position: Red
+      Army soldier, submachine gunner (PPSh) \\n Civilian Occupation: Shoemaker\u2019s
+      apprentice /  Origin: Around Poltava, Ukrainian SSR \\n    Mykola shouldn\u2019t
+      be here. Not in the karmic, spiritual sense, like \u201Cno child of God deserves
+      to be dragged into a slaughterhouse\u201D. Not even because, as a Ukrainian,
+      he never truly felt part of this conflict with the Third Reich and its allies.
+      No, he shouldn\u2019t be here for a much simpler reason. With a father of his
+      rank, conscription was supposed to be the kind of thing that happened to ordinary
+      people. Not to him. And yet he was here. And the worst part was this: he had
+      volunteered. Mykola had a best friend. Bohdan. Neither of them had siblings,
+      so when they met\u2014four or five years old\u2014they filled that empty space
+      in each other\u2019s lives. They became brothers by choice. Mykola\u2019s parents
+      warned him. Be careful who you attach yourself to. A boy with Bohdan\u2019s
+      background can bring trouble. The source of that suspicion was obvious. Mykola\u2019s
+      father had been transferred from Kyiv as the regional economic officer for
+      the Party committee. The entire weight of strategic production\u2014military
+      equipment\u2014rested on his shoulders. Bohdan\u2019s father, on the other
+      hand, was nothing more than a factory locksmith. \u201CWhat does it say about
+      us,\u201D his mother would ask, \u201Cthat you keep company with some no-name
+      scum?\u201D Mykola didn\u2019t care. He spent every hour he could with Bohdan\u2014often
+      at Bohdan\u2019s home. Their conditions were modest compared to Mykola\u2019s,
+      but the atmosphere was better. Much better. There was singing. Card games that
+      stretched late into the night. Dinners that felt like feasts. And Mykola was
+      always welcome at their table. He would never admit it to his mother, but to
+      Mykola, home-cooked food meant Aunt Daryna\u2019s cooking\u2014not the lukewarm
+      slop that was placed in front of him at home. As the years went on, the bond
+      between the two boys became the subject of endless gossip. Classmates. Even
+      teachers. People talked. Which is why it was almost funny that, in the end,
+      it was a girl who came between them. Oksana. She and her family\u2014mother,
+      father, four younger siblings\u2014had moved into the city from a small farm
+      near Poltava after the state stripped them of almost everything they owned.
+      Their lives crossed because of chess. More precisely, because of the Poltava
+      chess club. Mykola wasn\u2019t much of a player. Bohdan was. Some people called
+      him a once-in-a-generation talent. A boy who was always at least four moves
+      ahead. At least until Oksana walked into the club. After a lazy game against
+      two much younger children, Mykola got bored. He poured himself tea and laced
+      it with vodka. Then he went looking for Bohdan in the Friday-night swirl of
+      the House of Culture. When he found him, Bohdan was wearing an expression Mykola
+      had never seen on his face before\u2014certainly not during chess. Concentration
+      mixed with worry. Across from him sat a strawberry-blonde, freckled girl. And
+      from the number of pieces still standing on the board, it was clear she was
+      giving Bohdan a serious challenge. Mykola sipped his spiked tea and stared
+      at her without shame. Oksana lost, in the end. Bohdan won. But she entered
+      their lives anyway. Irreversibly. And the same was true in the other direction.
+      From the start, Mykola felt like a third wheel whenever the three of them were
+      together. Bohdan and Oksana had more in common than just chess. There was a
+      harmony between them that made even the boys\u2019 legendary friendship feel\u2026
+      smaller. But when Mykola was alone with her\u2014rare moments, usually because
+      Bohdan was stuck working overtime at the factory\u2014Mykola began to believe
+      that Oksana wasn\u2019t indifferent to him. Not to his temper. Not to his loudness.
+      Not to his reckless jokes and his crude humor. Not to the way he filled a room.
+      In the end, it turned out he hadn\u2019t just imagined it. Two weeks after
+      Bohdan asked for Oksana\u2019s hand\u2014and she said yes\u2014she invited
+      Mykola for a walk. At the bank of the Vorskla, Mykola slept with the fianc\xE9e
+      of his childhood best friend. He didn\u2019t fool himself into thinking it
+      meant anything to her beyond one last indulgence. But the way she turned away
+      afterward, as if nothing had happened, still hurt. The next time he heard from
+      her was three months later, when conscription was already sweeping through
+      Poltava. On paper, Mykola had nothing to fear. His father was a respected figure\u2014some
+      people would say a useful idiot\u2014inside the Soviet war machine. All Mykola
+      had to do was avoid attention. Stay away from crowds. Keep off the streets.
+      So when the knock came at the front door one morning, panic filled the house.
+      Then relief. No officers on the threshold. It was Oksana. She sat in the salon
+      and didn\u2019t waste time. In her usual blunt, unsoftened way, she told Mykola
+      she was pregnant. And that the child was almost certainly his, not Bohdan\u2019s.
+      Mykola, stunned, asked what she expected him to do with that information. Oksana
+      answered calmly. \u201CDo what\u2019s right. Go in Bohdan\u2019s place\u201D.
+      Mykola called her insane. He said it was the craziest thing he had ever heard.
+      That\u2019s when she played her ace. Either Mykola takes Bohdan\u2019s place,
+      or Oksana tells him everything. And then Mykola will spend the rest of his
+      life living with what he did. \u201CImagine Bohdan out there,\u201D she said.
+      \u201CBleeding out while laying in the mud, thinking that the best friend he
+      loved like a brother and the woman he adored betrayed him.\u201D So Mykola
+      said yes and took Bohdan\u2019s place. Now, shivering in bone-freezing cold,
+      gripping his weapon until his fingers ache, he understands how stupid it was
+      to agree. But it\u2019s easy to be noble and generous when you\u2019re warm.
+      When your stomach is full. When you aren\u2019t living under the simple fact
+      that any second now someone can put a bullet through you. \u201CBohdan\u2014come
+      here!\u201D one of his comrades calls. Mykola needs a full second to realize
+      the words are meant for him. He turns toward the voice. A cigarette is offered.
+      He takes it with gratitude. Thin blue smoke rises gracefully into the steel-gray
+      sky. "
   - image: {fileID: -4499955638628263505, guid: 14600db9f8a6ffa4bbdc2e1e85ddec5b, type: 3}
-    description: teszt serik
+    description: "Serik Nurgaliyev (Kazakh; \u201CSiberian side\u201D / eastern recruitment)
+      \\n Age: 30 Rank / role: light machine gunner \\n Civilian occupation: Miner
+      / ore extractor (Karaganda-region) \\n Place of origin: Kazakh SSR (Central
+      Asian steppe / East) \\n \\n    As the enemy soldier\u2019s head disappears
+      in a blood-red burst under Serik\u2019s fire, the Kazakh machine-gunner thinks
+      about the dreams he used to have back home. Down in the mines, bending in the
+      dark, he used to daydream about seeing the world one day. This was not what
+      he meant. He hadn\u2019t imagined being dragged, against his will, to a foreign
+      place. A place where life, if possible, was even more miserable than it had
+      been before. But that is exactly what happened. And Serik calms himself with
+      a single thought: even if some miracle sent him back in time, he still wouldn\u2019t
+      be able to change the outcome. He had been helpless from the moment the draft
+      officers appeared at the mine and announced they had three hours to pack. Three
+      hours to put their affairs in order before they left \u201Cto help cleanse
+      Mother Russia of the Western invaders.\u201D Serik didn\u2019t want to look
+      stupid, so he didn\u2019t ask who these Western invaders were. Or why Mother
+      Russia needed cleansing from them. And he decided it was even smarter not to
+      ask what any of it had to do with him\u2014a Kazakh. So he did what everyone
+      in his shift did. He went home. As they walked through the snowy street, Serik
+      saw out of the corner of his eye his neighbor as he broke into a run and headed
+      for the nearby forest. That was not an option for Serik. Deserters would be
+      hunted down. Or, if they weren\u2019t, they would freeze to death out there.
+      Serik had a family. So he chose the path that had the best chance of bending
+      back into itself and leading him home again. He went into the house. He gathered
+      what he thought was essential. Then he held Gaukhart\u2014and their seven-month-old
+      baby, Ainur\u2014as if there might be no tomorrow. Because there very easily
+      might not be for him. With Ainur\u2019s sweet baby scent still in his nose,
+      Serik set out with the men of the village. The draft officers escorted them
+      on both sides. After a short walk\u2014seven kilometers\u2014they reached the
+      district assembly point, where the trains departed. The train ride felt miserable.
+      Serik and hundreds of others were crammed into a single car like sardines.
+      After the first few hours, the stench of urine and shit saturated everything\u2014men
+      giving up on cleanliness because there was no other choice. But the worst was
+      yet to come: days later, the train was forced to stop in the middle of nowhere.
+      The rails ahead had been eaten apart by the cold. What followed was the hardest
+      four and a half weeks of Serik\u2019s life. Which is saying something, considering
+      that since the age of twelve, he had broken stone, lifted impossible weights,
+      and bent over in hellish heat for fourteen-hour shifts. The heat was the first
+      thing he started to miss. Wading through knee-deep snow tested him at first.
+      Then it became worse. Everything on him soaked through. His limbs began to
+      numb, then stiffen. Each step turned into an impossible task. In the first
+      days, he kept himself alive by picking a point in the distance and telling
+      himself: If I reach that, this ends. A week later, he could no longer afford
+      even that. He focused only on his steps. One after another. The smallest unit
+      of value he had left. He told himself that as long as he could keep that rhythm,
+      he would be fine. One of the men from his village\u2014Nur, the baker\u2014had
+      three toes cut off. Two from his right foot, one from his left. The frostbitten
+      little pieces looked like wild berries. The sight made Serik\u2019s stomach
+      lurch, bile rising into his throat. Nur lived for two more days. With toes
+      missing, he staggered. He fell constantly. The officers and the others kept
+      hauling him back up, again and again. Then one night, two men took him under
+      the arms and led him into the darkness beyond the campfire. And they beat him
+      to death. Serik heard the muffled screams. The dull, heavy thuds. The next
+      day, he asked a senior man whether it wouldn\u2019t have been kinder to shoot
+      Nur. The answer was simple: you can\u2019t waste ammunition. After that, Serik
+      stopped asking questions. He didn\u2019t speak again on the road. He was afraid
+      that opening his mouth would waste energy. He did nothing but concentrate on
+      one step following another. By the time they reached the Urals, nearly two-thirds
+      of the column were gone. Serik was almost certain he was the only one from
+      his village who had survived. And now he couldn\u2019t be sure how long his
+      luck would hold. It looked like they were winning against the Hungarians dug
+      in on the far bank. But what happens when those men are ground down? Where
+      would they be sent next? How much farther would he have to march? When would
+      he lose his fingers, too? Or God forbid, his arms or legs? After everything,
+      would the people at home even recognize him if he ever made it back? Gaukhart
+      might. Maybe. He wasn\u2019t even sure of that. But to Ainur, he would be a
+      stranger. A ghost. A pale imprint of whoever he used to be. He is pulled out
+      of his thoughts by another scream\u2014another enemy crying out in pain under
+      Serik\u2019s fire. Serik doesn\u2019t like thinking about how many little girls
+      like Ainur he has already made into orphans."
   - image: {fileID: -4499955638628263505, guid: 14600db9f8a6ffa4bbdc2e1e85ddec5b, type: 3}
     description: "Andr\xE1s Hodanics / Age: 29 \\n Rank / Position: Corporal (junior
       non-commissioned officer), squad leader \\n Civilian Occupation: Mason \\n
@@ -1279,7 +1675,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1334, y: 963}
+  m_AnchoredPosition: {x: 1334, y: 987.18}
   m_SizeDelta: {x: 420, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &264128828
@@ -1509,8 +1905,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.349, y: 84.58383}
-  m_SizeDelta: {x: 1571.6782, y: 871.1064}
+  m_AnchoredPosition: {x: 4.349, y: 96.67407}
+  m_SizeDelta: {x: 1571.6782, y: 895.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &321205393
 GameObject:
@@ -2724,7 +3120,6 @@ MonoBehaviour:
   mainMenu: {fileID: 2075531819}
   charactersMenu: {fileID: 147734229}
   creditsMenu: {fileID: 1297756271}
-  ferencCanvas: {fileID: 0}
   GameScene: GameScene
   fadeTime: 0.4
 --- !u!4 &678694481
@@ -3472,8 +3867,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.7101, y: 35.729473}
-  m_SizeDelta: {x: 1787.8134, y: 1017.1804}
+  m_AnchoredPosition: {x: 6.7101, y: 47.05583}
+  m_SizeDelta: {x: 1787.8134, y: 1039.8333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &939258905
 MonoBehaviour:
@@ -3645,6 +4040,84 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983865690}
+  m_CullTransparentMesh: 1
+--- !u!1 &988232867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 988232868}
+  - component: {fileID: 988232870}
+  - component: {fileID: 988232869}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &988232868
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988232867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1430527955}
+  - {fileID: 143718568}
+  - {fileID: 1229078314}
+  m_Father: {fileID: 1206191425}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &988232869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988232867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &988232870
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988232867}
   m_CullTransparentMesh: 1
 --- !u!1 &1054347865
 GameObject:
@@ -4053,6 +4526,257 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119086607}
+  m_CullTransparentMesh: 1
+--- !u!1 &1206191420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1206191425}
+  - component: {fileID: 1206191424}
+  - component: {fileID: 1206191423}
+  - component: {fileID: 1206191422}
+  - component: {fileID: 1206191421}
+  m_Layer: 5
+  m_Name: Canvas-opening
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!225 &1206191421
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206191420}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!114 &1206191422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206191420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1206191423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206191420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1206191424
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206191420}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1206191425
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206191420}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 988232868}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!1 &1229078313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1229078314}
+  - component: {fileID: 1229078316}
+  - component: {fileID: 1229078315}
+  m_Layer: 5
+  m_Name: Marci Galusz
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1229078314
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229078313}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 988232868}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -244.3598, y: 116.50409}
+  m_SizeDelta: {x: 439.0737, y: 39.6536}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1229078315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229078313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Marci Galusz
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 51fcc563f79b944a7b70bf678803fda0, type: 2}
+  m_sharedMaterial: {fileID: -1371307987657508136, guid: 51fcc563f79b944a7b70bf678803fda0, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -78.02173, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1229078316
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229078313}
   m_CullTransparentMesh: 1
 --- !u!1 &1262601086
 GameObject:
@@ -4641,6 +5365,142 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 1
+--- !u!1 &1430527954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1430527955}
+  - component: {fileID: 1430527957}
+  - component: {fileID: 1430527956}
+  m_Layer: 5
+  m_Name: credits
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1430527955
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430527954}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 988232868}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -398, y: 221}
+  m_SizeDelta: {x: 141.7933, y: 32.6618}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1430527956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430527954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: CREDITS
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 9059c881bfa1940119d4ae5d36aa62bc, type: 2}
+  m_sharedMaterial: {fileID: 2354571462987380143, guid: 9059c881bfa1940119d4ae5d36aa62bc, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1430527957
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430527954}
+  m_CullTransparentMesh: 1
 --- !u!1 &1468293916
 GameObject:
   m_ObjectHideFlags: 0
@@ -7012,6 +7872,7 @@ SceneRoots:
   - {fileID: 1966358704}
   - {fileID: 2075531818}
   - {fileID: 1297756270}
+  - {fileID: 1206191425}
   - {fileID: 678694481}
   - {fileID: 439584778}
   - {fileID: 1542614448}
