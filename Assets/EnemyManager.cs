@@ -14,8 +14,7 @@ public class EnemyManager : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+        Init();
         //SpawnEnemies();
     }
 
@@ -80,7 +79,7 @@ public class EnemyManager : MonoBehaviour
             }
         }
         soldiers.Clear(); // Tisztítsuk meg a listát
-        //SpawnEnemies(); // Újra spawnoljuk az enemy-kat
+        SpawnEnemies(); // Újra spawnoljuk az enemy-kat
     }
 
     void Update()

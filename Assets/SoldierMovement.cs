@@ -88,16 +88,17 @@ public class SoldierMovement : MonoBehaviour
         {
             float deltaTime = Mathf.Max(Time.deltaTime, 0.01f); // Minimális deltaTime érték beállítása
             transform.position += Vector3.up * moveSpeed * deltaTime;
-            yield return null;
+            yield return new WaitForEndOfFrame();
         }
         yield return new WaitForSeconds(2f); // Rövid időt marad félig előbújva
 
-        while (Mathf.Abs(transform.position.y - startingHeight) > 0.01f)
+        while (transform.position.y > startingHeight)
         { // Tolerancia hozzáadása
             float deltaTime = Mathf.Max(Time.deltaTime, 0.01f); // Minimális deltaTime érték beállítása
             transform.position -= Vector3.up * moveSpeed * deltaTime;
             yield return new WaitForEndOfFrame();
         }
+
         transform.position = new Vector3(transform.position.x, startingHeight, transform.position.z); // Biztosítjuk, hogy pontosan az alaphelyzetbe kerüljön
         isMoving = false;
         yield return new WaitForSeconds(1f); // Visszatérés után vár
@@ -111,7 +112,7 @@ public class SoldierMovement : MonoBehaviour
         {
             float deltaTime = Mathf.Max(Time.deltaTime, 0.01f); // Minimális deltaTime érték beállítása
             transform.position += Vector3.up * moveSpeed * deltaTime;
-            yield return null;
+            yield return new WaitForEndOfFrame();
         }
 
         float waitingTime = Random.Range(2f, 10f);
@@ -126,21 +127,40 @@ public class SoldierMovement : MonoBehaviour
 
         yield return new WaitForSeconds(waitingTime); // Teljesen előbújva marad egy ideig
 
-        while (Mathf.Abs(transform.position.y - startingHeight) > 0.01f)
+        while (transform.position.y > startingHeight)
         { // Tolerancia hozzáadása
             float deltaTime = Mathf.Max(Time.deltaTime, 0.01f); // Minimális deltaTime érték beállítása
             transform.position -= Vector3.up * moveSpeed * deltaTime;
-            yield return null;
+            yield return new WaitForEndOfFrame();
         }
+
         transform.position = new Vector3(transform.position.x, startingHeight, transform.position.z); // Biztosítjuk, hogy pontosan az alaphelyzetbe kerüljön
         isMoving = false;
         yield return new WaitForSeconds(2f); // Visszatérés után vár
         DecideAndAct();
     }
 
+    IEnumerator InicateFire(float firingTimer)
+    {
+        // Wait until the firing timer completes, then set the sprite color to red.
+        var image = GetComponent<SpriteRenderer>();
+
+        while (image.color != Color.red)
+        {
+            image.color = Color.Lerp(image.color, Color.red, Time.deltaTime);
+            yield return new WaitForEndOfFrame();
+
+            if(image.color.r >= 0.9f && image.color.b <= .1f && image.color.g <= .1f)
+            {
+                image.color = Color.red;
+            }
+        }
+    }
+
     IEnumerator FireAtPlayer()
     {
         Debug.Log("Preparing to Shoot in: " + firingTimer + " seconds");
+        StartCoroutine(InicateFire(firingTimer));
         yield return new WaitForSeconds(firingTimer);
 
         // Aktiváljuk a spark-ot lövés előtt
