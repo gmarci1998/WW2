@@ -841,8 +841,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d9fa0a8e8c955f44aa4fbbd3a630a67f, type: 3}
-  m_Resource: {fileID: 8300000, guid: d9fa0a8e8c955f44aa4fbbd3a630a67f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bee2d3fbcb8a8c04988d1d20b5c73b7d, type: 3}
+  m_Resource: {fileID: 8300000, guid: bee2d3fbcb8a8c04988d1d20b5c73b7d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.025
   m_Pitch: 1
@@ -1067,7 +1067,7 @@ MonoBehaviour:
     isOpened: 0
   creditsCanvasGroup: {fileID: 0}
   creditsCanvas: {fileID: 0}
-  em: {fileID: 0}
+  em: {fileID: 1456122945}
 --- !u!4 &964686957
 Transform:
   m_ObjectHideFlags: 0

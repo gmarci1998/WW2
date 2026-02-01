@@ -87,7 +87,6 @@ public class GameManager : MonoBehaviour
     void ChooseSoldier()
     {
         SaveSoldiersToFile();
-        PositionLicense();
         if (HungarianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0 &&
            RussianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0)
         {
@@ -248,6 +247,10 @@ public class GameManager : MonoBehaviour
             //middleground.sprite = russianMiddleground;
         }
 
+
+
+        PositionLicense();
+
         if(narrationAudio == null || narrationAudio.clip == null) return;
         if (!narrationAudio.isPlaying && narrationAudio.time >= narrationAudio.clip.length)
         {
@@ -385,6 +388,7 @@ public class GameManager : MonoBehaviour
 
     void PositionLicense()
     {
+        Debug.Log("Positioning license for soldier: " + currentSoldier.Name);
         if (license != null)
         {
             license.transform.position = new Vector3(-7.5f, -4f, license.transform.position.z);
