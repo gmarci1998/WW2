@@ -87,6 +87,7 @@ public class GameManager : MonoBehaviour
     void ChooseSoldier()
     {
         SaveSoldiersToFile();
+        PositionLicense();
         if (HungarianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0 &&
            RussianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0)
         {
@@ -131,7 +132,6 @@ public class GameManager : MonoBehaviour
         if (cam == null) cam = Camera.main;
 
         
-        narrationAudio = gameObject.AddComponent<AudioSource>();
 
         LoadSoldiersFromFile();
         PlayAmbientSound();
@@ -157,6 +157,7 @@ public class GameManager : MonoBehaviour
 
     public void Narration()
     {
+        narrationAudio = gameObject.AddComponent<AudioSource>();
         narrationAudio.clip = currentSoldier.Audio;
         narrationAudio.volume = 1.0f;
         narrationAudio.playOnAwake = false;
