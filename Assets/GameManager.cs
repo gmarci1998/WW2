@@ -86,7 +86,8 @@ public class GameManager : MonoBehaviour
 
     void ChooseSoldier()
     {
-        if(HungarianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0 &&
+        SaveSoldiersToFile();
+        if (HungarianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0 &&
            RussianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0)
         {
             // Minden katona ki lett választva, visszaállítjuk az állapotukat
@@ -98,7 +99,6 @@ public class GameManager : MonoBehaviour
             {
                 soldier.picked = false;
             }
-            SaveSoldiersToFile();
             Credits();
             return;
             
