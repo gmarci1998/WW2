@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject flagRus;
     [SerializeField] GameObject license;
 
-    [SerializeField] private CanvasGroup fadeCanvasGroup;
 
     private Vector3 startPos;
     public GameObject backgroundSprite;  
@@ -72,12 +71,15 @@ public class GameManager : MonoBehaviour
     void Awake() {
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        hungarianSide = Random.Range(0,2) == 0;
+
+        ChooseSoldier();
     }
 
     void ChooseSoldier()
     {
-        currentSoldier = HungarianSoldiers[1];
-        /*if(HungarianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0 &&
+        if(HungarianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0 &&
            RussianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0)
         {
             // Minden katona ki lett választva, visszaállítjuk az állapotukat
@@ -121,29 +123,14 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        Debug.Log("Kiválasztott katona: " + currentSoldier.Name);*/
+        Debug.Log("Kiválasztott katona: " + currentSoldier.Name);
         Narration();
     }
 
-    private IEnumerator StartSceneWithFade()
-    {
-        // Ensure the screen starts fully black
-        Color color = spriteRenderer.color;
-        float alpha = color.a;
+    void Start() {
+        if (cam == null) cam = Camera.main;
 
-        // Wait for 5 seconds
-        yield return new WaitForSeconds(5f);
-
-        while (alpha > 0f)
-        {
-            alpha -= Time.deltaTime / 2f; // 2 másodperc alatt csökkenti az átlátszóságot
-            color.a = Mathf.Clamp01(alpha);
-            spriteRenderer.color = color;
-            yield return null;
-        }
-        hungarianSide = Random.Range(0,2) == 0;
-
-        ChooseSoldier();
+        LoadSoldiersFromFile();
         PlayAmbientSound();
 
         startPos = transform.position;
@@ -163,15 +150,6 @@ public class GameManager : MonoBehaviour
         }
 
         PositionLicense();
-    }
-
-    void Start() {
-        StartCoroutine(StartSceneWithFade());
-
-        if (cam == null) cam = Camera.main;
-
-        LoadSoldiersFromFile();
-        
     }
 
     public void Narration()

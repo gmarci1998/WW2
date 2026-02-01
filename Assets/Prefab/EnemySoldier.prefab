@@ -167,7 +167,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 920290439808299714, guid: 273701e740a8ec64a8f49105996a5a76, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -195,6 +195,7 @@ MonoBehaviour:
   startingHeight: 0
   maximumHeight: 3
   dying: {fileID: 1657631722436741506}
+  timeBeforeFirstAction: 3
 --- !u!82 &1657631722436741506
 AudioSource:
   m_ObjectHideFlags: 0
