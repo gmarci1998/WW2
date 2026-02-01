@@ -228,6 +228,16 @@ public class SoldierMovement : MonoBehaviour
         IsDead = true;
         OnDeathDelegate?.Invoke();
         dying.Play();
-        Destroy(gameObject, 0.2f);
+        gameObject.SetActive(false);
+    }
+
+    public void ResetEnemy()
+    {
+        IsDead = false;
+        IsKillable = false;
+        transform.position = new Vector3(transform.position.x, startingHeight, transform.position.z);
+        gameObject.SetActive(true);
+        StopAllCoroutines();
+        StartCoroutine(DecideAndActDelayed());
     }
 }
