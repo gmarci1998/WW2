@@ -27,7 +27,7 @@ public class SoldierMovement : MonoBehaviour
 
     void Start(){
         startingHeight = transform.position.y;
-        maximumHeight = startingHeight + 3f;
+        maximumHeight = startingHeight + 0.30f;
         DecideAndAct();
         spark = transform.GetChild(0).gameObject;
     }
@@ -107,7 +107,7 @@ public class SoldierMovement : MonoBehaviour
 
         StartCoroutine(FireAtPlayer());
 
-        yield return new WaitForSeconds(4f); // Teljesen előbújva marad egy ideig
+        yield return new WaitForSeconds(waitingTime); // Teljesen előbújva marad egy ideig
 
         while (Mathf.Abs(transform.position.y - startingHeight) > 0.01f) { // Tolerancia hozzáadása
             float deltaTime = Mathf.Max(Time.deltaTime, 0.01f); // Minimális deltaTime érték beállítása
@@ -120,14 +120,25 @@ public class SoldierMovement : MonoBehaviour
         DecideAndAct();
     }
 
-    IEnumerator FireAtPlayer(){
+    IEnumerator FireAtPlayer()
+    {
         Debug.Log("Preparing to Shoot in: " + firingTimer + " seconds");
         yield return new WaitForSeconds(firingTimer);
-        
-        spark.active = true;
-        yield return new WaitForSeconds(0.2f);
-        spark.active = false;
+
+        // Aktiváljuk a spark-ot lövés előtt
+        spark.SetActive(true);
+        yield return new WaitForSeconds(0.2f); // A lövés ideje
+        spark.SetActive(false);
+
+        // Csak ezután kezdődik a guggolás
         yield return new WaitForSeconds(duckTime - 0.2f);
+
+        if (GameManager.Instance.IsHiding())
+        {
+            Debug.Log("Player is hiding, enemy shot missed.");
+            yield break; // Ha a játékos bújik, a lövés nem talál
+        }
+
         GameManager.Instance.PlayerDeath();
     }
 
@@ -139,6 +150,6 @@ public class SoldierMovement : MonoBehaviour
     public void Die(){
         Debug.Log("Enemy Soldier Died");
         dying.Play();
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 0.2f);
     }
 }
