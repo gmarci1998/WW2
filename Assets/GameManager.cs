@@ -170,10 +170,6 @@ public class GameManager : MonoBehaviour
 
     void Update() {
 
-        if(Input.GetKeyDown(KeyCode.Escape)){
-            Credits();
-        }
-
         if (Input.GetKeyDown(KeyCode.Space) && hideActive) {
             if(isHiding){
                 isHiding = false;
