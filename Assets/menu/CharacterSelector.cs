@@ -24,4 +24,9 @@ public class CharacterSelector : MonoBehaviour
         characterDescription.text = characters[index].description;
         characterInfoPanel.SetActive(true);
     }
+
+    public void ClosePanel()
+    {
+        characterInfoPanel.SetActive(false);
+    }
 }

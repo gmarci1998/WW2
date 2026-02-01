@@ -7,7 +7,6 @@ public class MenuManager : MonoBehaviour
     public CanvasGroup mainMenu;
     public CanvasGroup charactersMenu;
     public CanvasGroup creditsMenu;
-    public CanvasGroup ferencCanvas;
     public string GameScene = "GameScene";
 
     public float fadeTime = 0.4f;
@@ -35,10 +34,6 @@ public class MenuManager : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene(GameScene);
-    }
-    public void OpenFerenc()
-    {
-        StartCoroutine(SwitchMenu(mainMenu, ferencCanvas));
     }
 
     public void ExitGame()
