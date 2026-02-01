@@ -103,10 +103,6 @@ public class GameManager : MonoBehaviour
                 currentSoldier = availableHungarianSoldiers[Random.Range(0, availableHungarianSoldiers.Length)];
                 currentSoldier.picked = true; // Jelöld meg, hogy ki lett választva
             }
-            else
-            {
-                Debug.LogWarning("Nincs több elérhető magyar katona!");
-            }
         }
         else
         {
@@ -117,13 +113,8 @@ public class GameManager : MonoBehaviour
                 currentSoldier = availableRussianSoldiers[Random.Range(0, availableRussianSoldiers.Length)];
                 currentSoldier.picked = true; // Jelöld meg, hogy ki lett választva
             }
-            else
-            {
-                Debug.LogWarning("Nincs több elérhető orosz katona!");
-            }
         }
 
-        Debug.Log("Kiválasztott katona: " + currentSoldier.Name);
         Narration();
     }
 
@@ -249,6 +240,7 @@ public class GameManager : MonoBehaviour
             //middleground.sprite = russianMiddleground;
         }
 
+        if(narrationAudio == null) return;
         if (!narrationAudio.isPlaying && narrationAudio.time >= narrationAudio.clip.length)
         {
             currentSoldier.isOpened = true; // Mark the soldier as opened when narration ends
@@ -307,7 +299,6 @@ public class GameManager : MonoBehaviour
 
     public void PlayerDeath()
     {
-        Debug.Log("Player Died!");
 
         narrationAudio.Stop();
 
@@ -320,7 +311,6 @@ public class GameManager : MonoBehaviour
         SpriteRenderer spriteRenderer = death.GetComponent<SpriteRenderer>();
         if (spriteRenderer == null)
         {
-            Debug.LogError("SpriteRenderer not found on death GameObject!");
             yield break;
         }
 
@@ -364,7 +354,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("A license GameObject nincs hozzárendelve!");
         }
     }
 
@@ -372,8 +361,6 @@ public class GameManager : MonoBehaviour
 {
     List<SoldierSaveData> saveData = new List<SoldierSaveData>();
 
-    Debug.Log($"Hungarian: {(HungarianSoldiers?.Length ?? 0)} db");
-    Debug.Log($"Russian: {(RussianSoldiers?.Length ?? 0)} db");
 
     if (HungarianSoldiers != null)
         foreach (var soldier in HungarianSoldiers) 
@@ -389,8 +376,8 @@ public class GameManager : MonoBehaviour
     string filePath = Path.Combine(Application.persistentDataPath, "SoldiersData.json");
     File.WriteAllText(filePath, json);
 
-    Debug.Log("✅ SAVED: " + filePath);
-    Debug.Log("JSON: " + json);
+    //Debug.Log("✅ SAVED: " + filePath);
+    //Debug.Log("JSON: " + json);
 }
 
 
@@ -415,10 +402,8 @@ public class GameManager : MonoBehaviour
             if (soldier != null)
             {
                 soldier.isOpened = soldierData.isOpened;
-                Debug.Log($"Loaded: {soldier.Name} = {soldier.isOpened}");
             }
         }
-        Debug.Log("✅ LOAD OK: " + saveData.Soldiers.Count + " soldiers");
     }
 
     public void PlayAmbientSound()
@@ -432,7 +417,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Ambient AudioSource or AudioClip is not assigned.");
+            //Debug.LogWarning("Ambient AudioSource or AudioClip is not assigned.");
         }
     }
 }

@@ -170,7 +170,12 @@ public class SoldierMovement : MonoBehaviour
 
     IEnumerator FireAtPlayer()
     {
-        Debug.Log("Preparing to Shoot in: " + firingTimer + " seconds");
+        
+        if (GameManager.Instance.IsHiding())
+        {
+            Debug.Log("Player is hiding, enemy will not shoot.");
+            yield break; // Ha a játékos bújik, nem kezdjük el a lövést
+        }
         StartCoroutine(InicateFire(firingTimer));
         yield return new WaitForSeconds(firingTimer);
 
@@ -184,13 +189,11 @@ public class SoldierMovement : MonoBehaviour
 
         if (GameManager.Instance.IsHiding())
         {
-            Debug.Log("Player is hiding, enemy shot missed.");
             yield break; // Ha a játékos bújik, a lövés nem talál
         }
 
         if (IsDead)
         {
-            Debug.Log("Died before firing.");
             yield break;
         }
 
@@ -200,7 +203,6 @@ public class SoldierMovement : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("Enemy Soldier Died");
         IsDead = true;
         OnDeathDelegate?.Invoke();
         dying.Play();
