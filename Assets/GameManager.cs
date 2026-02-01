@@ -237,7 +237,7 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        EnemyManager.Instance.ClearAllEnemies();
+        EnemyManager.Instance.ResetAllEnemies();
 
         hungarianSide = !hungarianSide;
 
