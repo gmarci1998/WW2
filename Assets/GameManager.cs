@@ -240,7 +240,7 @@ public class GameManager : MonoBehaviour
             //middleground.sprite = russianMiddleground;
         }
 
-        if(narrationAudio == null) return;
+        if(narrationAudio == null || narrationAudio.clip == null) return;
         if (!narrationAudio.isPlaying && narrationAudio.time >= narrationAudio.clip.length)
         {
             currentSoldier.isOpened = true; // Mark the soldier as opened when narration ends

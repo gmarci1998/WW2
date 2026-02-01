@@ -73,6 +73,11 @@ public class SoldierMovement : MonoBehaviour
 
     int DecideAction()
     {
+        if (GameManager.Instance.IsHiding())
+        {
+            return Random.Range(0, 2); // Ha a játékos bújik, mindig guggolva marad
+        }
+
         return Random.Range(0, 3); // Három akció közül választ
     }
 
@@ -151,19 +156,35 @@ public class SoldierMovement : MonoBehaviour
         DecideAndAct();
     }
 
-    IEnumerator InicateFire(float firingTimer)
+    IEnumerator IndicateFire(bool isFiring)
     {
         // Wait until the firing timer completes, then set the sprite color to red.
         var image = GetComponent<SpriteRenderer>();
 
-        while (image.color != Color.red)
+        if (isFiring)
         {
-            image.color = Color.Lerp(image.color, Color.red, Time.deltaTime);
-            yield return new WaitForEndOfFrame();
-
-            if(image.color.r >= 0.9f && image.color.b <= .1f && image.color.g <= .1f)
+            while (image.color != Color.red)
             {
-                image.color = Color.red;
+                image.color = Color.Lerp(image.color, Color.red, Time.deltaTime);
+                yield return new WaitForEndOfFrame();
+
+                if (image.color.r >= 0.9f && image.color.b <= .1f && image.color.g <= .1f)
+                {
+                    image.color = Color.red;
+                }
+            }
+        }
+        else
+        {
+            while (image.color != Color.white)
+            {
+                image.color = Color.Lerp(image.color, Color.white, Time.deltaTime);
+                yield return new WaitForEndOfFrame();
+
+                if (image.color.r >= 0.9f && image.color.b >= .9f && image.color.g >= .9f)
+                {
+                    image.color = Color.white;
+                }
             }
         }
     }
@@ -176,7 +197,7 @@ public class SoldierMovement : MonoBehaviour
             Debug.Log("Player is hiding, enemy will not shoot.");
             yield break; // Ha a játékos bújik, nem kezdjük el a lövést
         }
-        StartCoroutine(InicateFire(firingTimer));
+        StartCoroutine(IndicateFire(true));
         yield return new WaitForSeconds(firingTimer);
 
         // Aktiváljuk a spark-ot lövés előtt
@@ -189,6 +210,7 @@ public class SoldierMovement : MonoBehaviour
 
         if (GameManager.Instance.IsHiding())
         {
+            StartCoroutine(IndicateFire(false));
             yield break; // Ha a játékos bújik, a lövés nem talál
         }
 
