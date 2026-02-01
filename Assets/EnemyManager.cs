@@ -59,8 +59,8 @@ public class EnemyManager : MonoBehaviour
 
     IEnumerator RespawnEnemy(Transform parent)
     {
-        yield return new WaitForSeconds(Random.Range(3, 10));
-        GameObject enemy = Instantiate(enemyPrefabs, transform.position, transform.rotation, parent.transform);
+        yield return new WaitForSeconds(Random.Range(3, 8));
+        GameObject enemy = Instantiate(enemyPrefabs, parent.position, parent.rotation,this.parent.transform);
 
         soldiers.Add(enemy.GetComponent<SoldierMovement>());
     }
