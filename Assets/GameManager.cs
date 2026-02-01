@@ -86,6 +86,7 @@ public class GameManager : MonoBehaviour
 
     void ChooseSoldier()
     {
+        SaveSoldiersToFile();
         if(HungarianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0 &&
            RussianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0)
         {
@@ -98,7 +99,6 @@ public class GameManager : MonoBehaviour
             {
                 soldier.picked = false;
             }
-            SaveSoldiersToFile();
             Credits();
             return;
             
@@ -171,6 +171,7 @@ public class GameManager : MonoBehaviour
     void Update() {
 
         if(Input.GetKeyDown(KeyCode.Escape)){
+            SaveSoldiersToFile();
             Credits();
         }
 
