@@ -14,8 +14,9 @@ public class EnemyManager : MonoBehaviour
 
     void Awake()
     {
-        Init();
-        SpawnEnemies();
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+        //SpawnEnemies();
     }
 
     private void Init()
@@ -71,7 +72,6 @@ public class EnemyManager : MonoBehaviour
 
     public void ResetAllEnemies()
     {
-        Debug.Log("Clearing all enemies...");
         foreach (var enemy in soldiers)
         {
             if (enemy != null)
@@ -79,17 +79,8 @@ public class EnemyManager : MonoBehaviour
                 Destroy(enemy.gameObject); // Töröljük az enemy GameObjectet
             }
         }
-        Debug.Log(soldiers.Count + " enemies destroyed.");
         soldiers.Clear(); // Tisztítsuk meg a listát
-
-        StartCoroutine(DelayedSpawn());
-    }
-
-    IEnumerator DelayedSpawn()
-    {
-        yield return new WaitForSeconds(2f);
-
-        SpawnEnemies(); // Újra spawnoljuk az enemy-kat
+        //SpawnEnemies(); // Újra spawnoljuk az enemy-kat
     }
 
     void Update()

@@ -48,6 +48,9 @@ public class GameManager : MonoBehaviour
 
     SoldierData currentSoldier;
 
+    private AudioSource narrationAudio;
+    private float narrationPauseTime;
+
     void Awake() {
         Instance = this;
         DontDestroyOnLoad(gameObject);
@@ -59,6 +62,23 @@ public class GameManager : MonoBehaviour
 
     void ChooseSoldier()
     {
+        currentSoldier = HungarianSoldiers[1];
+        /*
+        if(HungarianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0 &&
+           RussianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0)
+        {
+            // Minden katona ki lett választva, visszaállítjuk az állapotukat
+            foreach (var soldier in HungarianSoldiers)
+            {
+                soldier.picked = false;
+            }
+            foreach (var soldier in RussianSoldiers)
+            {
+                soldier.picked = false;
+            }
+            SaveSoldiersToFile();
+            
+        }
         if (hungarianSide)
         {
             // Csak a nem kiválasztott magyar katonák szűrése
@@ -89,12 +109,14 @@ public class GameManager : MonoBehaviour
         }
 
         Debug.Log("Kiválasztott katona: " + currentSoldier.Name);
+        */
     }
 
     void Start() {
         if (cam == null) cam = Camera.main;
         startPos = transform.position;
-        Cursor.lockState = CursorLockMode.Confined;  
+        Cursor.lockState = CursorLockMode.Confined; 
+        Cursor.visible = false; 
         
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("EnemySoldier");
         foreach (GameObject enemy in enemies)
@@ -109,6 +131,18 @@ public class GameManager : MonoBehaviour
         }
 
         PositionLicense();
+
+        narrationAudio = gameObject.AddComponent<AudioSource>();
+        narrationAudio.clip = currentSoldier.Audio;
+        narrationAudio.playOnAwake = false;
+
+        StartCoroutine(StartNarrationAfterDelay());
+    }
+
+    IEnumerator StartNarrationAfterDelay()
+    {
+        yield return new WaitForSeconds(2f); // Resume from the last paused time
+        narrationAudio.Play();
     }
 
     void Update() {
@@ -123,11 +157,13 @@ public class GameManager : MonoBehaviour
                 hideActive = false;
                 camTargetY = camStartY;  
                 Cursor.lockState = CursorLockMode.Confined;
+                license.transform.position = new Vector3(-7.5f, -4f, license.transform.position.z);
             } else {
                 isHiding = true;
                 hideActive = false;
                 camTargetY = camStartY - 10f; 
                 Cursor.lockState = CursorLockMode.Locked;
+                license.transform.position = new Vector3(-7.5f, -14f, license.transform.position.z);
             }
             camMoving = true;
             camLerpT = 0f;
@@ -167,8 +203,8 @@ public class GameManager : MonoBehaviour
 
         if (middlegroundSprite != null) {
             middlegroundSprite.transform.position = new Vector3(
-                normalizedX / 4f, 
-                -4.2f, 
+                -normalizedX / 32f, 
+                -normalizedY / 32f - 10f, 
                 middlegroundSprite.transform.position.z
             );
         }
@@ -188,6 +224,42 @@ public class GameManager : MonoBehaviour
             flagHun.active = false;
             flagRus.active = true;
             //middleground.sprite = russianMiddleground;
+        }
+
+
+        Debug.Log(narrationAudio.time);
+        if (isHiding && narrationAudio.isPlaying)
+        {
+            if (narrationPauseTime == 0)
+            {
+                narrationPauseTime = narrationAudio.time;
+            }
+
+            StartCoroutine(StopNarrationAfterDelay());
+        }
+        else if (!isHiding && !narrationAudio.isPlaying && narrationPauseTime > 0)
+        {
+            StartCoroutine(ResumeNarrationAfterDelay());
+        }
+    }
+
+    IEnumerator StopNarrationAfterDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        if (isHiding)
+        {
+            narrationAudio.Pause(); // Pause instead of stopping to retain the current playback position
+        }
+    }
+
+    IEnumerator ResumeNarrationAfterDelay()
+    {
+        yield return new WaitForSeconds(2f);
+        if (!isHiding)
+        {
+            //narrationAudio.time = Mathf.Clamp(narrationPauseTime, 0, narrationAudio.clip.length); // Ensure the seek position is valid
+            narrationAudio.UnPause();
+            narrationPauseTime = 0;
         }
     }
 
@@ -258,7 +330,9 @@ public class GameManager : MonoBehaviour
     {
         if (license != null)
         {
-            license.transform.position = new Vector3(-9.5f, -4f, license.transform.position.z);
+            license.transform.position = new Vector3(-7.5f, -4f, license.transform.position.z);
+            license.GetComponent<SpriteRenderer>().sprite = currentSoldier.Image;
+
         }
         else
         {
