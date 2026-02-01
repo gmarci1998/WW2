@@ -34,7 +34,7 @@ public class EnemyManager : MonoBehaviour
         // Minden SpawnPoint-hoz spawnoljunk egy enemyPrefab példányt
         foreach (var spawnPoint in spawnPoints)
         {
-            GameObject enemy = Instantiate(enemyPrefabs, spawnPoint.transform.position, spawnPoint.transform.rotation);
+            GameObject enemy = Instantiate(enemyPrefabs, spawnPoint.transform.position, spawnPoint.transform.rotation, parent.transform);
 
             // Tegyük az enemy-t a Mountains GameObject child-jává
             enemy.transform.SetParent(parent.transform);
@@ -63,8 +63,7 @@ public class EnemyManager : MonoBehaviour
     IEnumerator RespawnEnemy(Transform parent)
     {
         yield return new WaitForSeconds(Random.Range(3, 10));
-        GameObject enemy = Instantiate(enemyPrefabs, transform.position, transform.rotation);
-        enemy.transform.SetParent(parent.transform);
+        GameObject enemy = Instantiate(enemyPrefabs, transform.position, transform.rotation, parent.transform);
 
         soldiers.Add(enemy.GetComponent<SoldierMovement>());
     }
