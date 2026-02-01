@@ -350,7 +350,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &344323036
 Transform:
   m_ObjectHideFlags: 0
@@ -943,7 +943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &910132056
 Transform:
   m_ObjectHideFlags: 0
@@ -988,8 +988,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 010cd0f86e5db0143abe8beaefcea3d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambient: {fileID: 0}
-  wind: {fileID: 0}
+  ambient: {fileID: 852633452}
+  wind: {fileID: 1114724789}
   cam: {fileID: 0}
   parallaxFactorX: 18
   parallaxFactorY: 0.4
@@ -1002,8 +1002,8 @@ MonoBehaviour:
   hungarianMiddleground: {fileID: 0}
   russianMiddleground: {fileID: 0}
   death: {fileID: 1216069438}
-  flagHun: {fileID: 133367738}
-  flagRus: {fileID: 1658093123}
+  flagHun: {fileID: 1658093123}
+  flagRus: {fileID: 133367738}
   license: {fileID: 425022795}
   backgroundSprite: {fileID: 15920}
   middlegroundSprite: {fileID: 1487748516}
@@ -1012,28 +1012,28 @@ MonoBehaviour:
     Image: {fileID: 21300000, guid: bd5ff6cc0b55e2947a11aaa4c5319655, type: 3}
     Age: 22
     Description: Fasz
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 06f6e8cfb33ae184b818f0a92bf39957, type: 3}
     picked: 0
     isOpened: 0
   - Name: "Ferenc Bed\u0151"
     Image: {fileID: 21300000, guid: 52aaeb1a801eb4f4d8d2c3ff71e0bd51, type: 3}
     Age: 22
     Description: 
-    Audio: {fileID: 8300000, guid: 3165ad9a692f3ba408ae334b5228381b, type: 3}
+    Audio: {fileID: 8300000, guid: 16ad02e124fb2e34294adb7bcf313033, type: 3}
     picked: 0
     isOpened: 0
   - Name: Folhoffer Benedek
     Image: {fileID: 21300000, guid: 8c3c323d3741d9244afdcdd1915b791c, type: 3}
     Age: 22
     Description: 
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 555cffd6cbc6e5f48acfff0b68a0bcc8, type: 3}
     picked: 0
     isOpened: 0
   - Name: "Istv\xE1n Maruzs"
     Image: {fileID: 21300000, guid: c5226e19a6f38a1428dace1f0eff1005, type: 3}
     Age: 0
     Description: 
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 50dadd7ea8e52a3438ebc80f2074442e, type: 3}
     picked: 0
     isOpened: 0
   RussianSoldiers:
@@ -1041,30 +1041,33 @@ MonoBehaviour:
     Image: {fileID: 21300000, guid: fcdabd6d9c7a5d641923bc90a7ac13ca, type: 3}
     Age: 17
     Description: Jo
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 44468e74589917f4e94fcd18187c8b88, type: 3}
     picked: 0
     isOpened: 0
   - Name: Ivan Petrov
     Image: {fileID: 21300000, guid: b212de654d852d646a854ecb1ea48233, type: 3}
     Age: 17
     Description: Jo
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: 58069518f45003d459f14a376b4507b5, type: 3}
     picked: 0
     isOpened: 0
   - Name: Mykola Shevchenko
     Image: {fileID: 21300000, guid: 108687ffa86b3204c91c090b989ad30a, type: 3}
     Age: 17
     Description: Jo
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: a063a791164b67e418f9a2c48b7abe1c, type: 3}
     picked: 0
     isOpened: 0
   - Name: Serik Nurgaliyev
     Image: {fileID: 21300000, guid: f8416054167921a4c8272865d9673a66, type: 3}
     Age: 17
     Description: Jo
-    Audio: {fileID: 0}
+    Audio: {fileID: 8300000, guid: ec55de7c793ae9142972faf9511b6013, type: 3}
     picked: 0
     isOpened: 0
+  creditsCanvasGroup: {fileID: 0}
+  creditsCanvas: {fileID: 0}
+  em: {fileID: 0}
 --- !u!4 &964686957
 Transform:
   m_ObjectHideFlags: 0
@@ -1226,7 +1229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1138530244
 Transform:
   m_ObjectHideFlags: 0
@@ -1694,7 +1697,7 @@ Transform:
   m_GameObject: {fileID: 1591572627}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: -0.42, z: 0}
+  m_LocalPosition: {x: -0.04, y: -0.18, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

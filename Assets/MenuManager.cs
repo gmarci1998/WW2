@@ -1,6 +1,9 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -73,5 +76,70 @@ public class MenuManager : MonoBehaviour
         }
 
         cg.alpha = to;
+    }
+
+
+
+    [SerializeField] private SoldierData[] HungarianSoldiers;
+    [SerializeField] private SoldierData[] RussianSoldiers;
+    [SerializeField] private Button button1;
+    [SerializeField] private Button button2;
+    [SerializeField] private Button button3;
+    [SerializeField] private Button button4;
+    [SerializeField] private Button button5;
+    [SerializeField] private Button button6;
+    [SerializeField] private Button button7;
+    [SerializeField] private Button button8;
+
+    [System.Serializable]
+    public class SoldierSaveData 
+    {
+        public string Name;
+        public bool isOpened;
+    }
+
+    [System.Serializable]
+    public class SaveWrapper 
+    {
+        public List<SoldierSaveData> Soldiers;
+    }
+
+    void Start()
+    {
+        LoadSoldiersFromFile();
+    }
+
+    public void LoadSoldiersFromFile()
+    {
+        string filePath = Path.Combine(Application.persistentDataPath, "SoldiersData.json");
+        
+        if (!File.Exists(filePath))
+        {
+            Debug.LogWarning("❌ Save file not found: " + filePath);
+            return;
+        }
+
+        string json = File.ReadAllText(filePath);
+        SaveWrapper saveData = JsonUtility.FromJson<SaveWrapper>(json);
+
+        foreach (var soldierData in saveData.Soldiers)
+        {
+            SoldierData soldier = System.Array.Find(HungarianSoldiers, s => s.Name == soldierData.Name) ??
+                                System.Array.Find(RussianSoldiers, s => s.Name == soldierData.Name);
+
+            if (soldier != null)
+            {
+                soldier.isOpened = soldierData.isOpened;
+            }
+        }
+
+        if (!HungarianSoldiers[0].isOpened) button1.interactable = false;
+        if (!HungarianSoldiers[1].isOpened) button2.interactable = false;
+        if (!HungarianSoldiers[2].isOpened) button3.interactable = false;
+        if (!HungarianSoldiers[3].isOpened) button4.interactable = false;
+        if (!RussianSoldiers[0].isOpened) button5.interactable = false;
+        if (!RussianSoldiers[1].isOpened) button6.interactable = false;
+        if (!RussianSoldiers[2].isOpened) button7.interactable = false;
+        if (!RussianSoldiers[3].isOpened) button8.interactable = false;
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour 
 {
@@ -77,6 +78,12 @@ public class GameManager : MonoBehaviour
         ChooseSoldier();
     }
 
+    [SerializeField] private CanvasGroup creditsCanvasGroup;
+
+    void Credits(){
+            StartCoroutine(FullDeath());
+    }
+
     void ChooseSoldier()
     {
         if(HungarianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0 &&
@@ -92,6 +99,8 @@ public class GameManager : MonoBehaviour
                 soldier.picked = false;
             }
             SaveSoldiersToFile();
+            Credits();
+            return;
             
         }
         if (hungarianSide)
@@ -162,7 +171,7 @@ public class GameManager : MonoBehaviour
     void Update() {
 
         if(Input.GetKeyDown(KeyCode.Escape)){
-            PlayerDeath();
+            Credits();
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && hideActive) {
@@ -240,7 +249,7 @@ public class GameManager : MonoBehaviour
             //middleground.sprite = russianMiddleground;
         }
 
-        if(narrationAudio == null) return;
+        if(narrationAudio == null || narrationAudio.clip == null) return;
         if (!narrationAudio.isPlaying && narrationAudio.time >= narrationAudio.clip.length)
         {
             currentSoldier.isOpened = true; // Mark the soldier as opened when narration ends
@@ -305,6 +314,35 @@ public class GameManager : MonoBehaviour
         StartCoroutine(FadeInDeath());
     }
 
+
+    [SerializeField] private Canvas creditsCanvas;
+
+    [SerializeField] private EnemyManager em;
+    IEnumerator FullDeath()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        SpriteRenderer spriteRenderer = death.GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null)
+        {
+            yield break;
+        }
+
+        Color color = spriteRenderer.color;
+        float alpha = color.a;
+
+        while (alpha < 1f)
+        {
+            alpha += Time.deltaTime / 2f; // 2 másodperc alatt növeli az átlátszóságot
+            color.a = Mathf.Clamp01(alpha);
+            spriteRenderer.color = color;
+            yield return null;
+        }
+
+        SceneManager.LoadScene("Menu");
+        Destroy(em);
+        Destroy(this);
+    }
+
     IEnumerator FadeInDeath()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -344,6 +382,8 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
     }
 
+    
+
     void PositionLicense()
     {
         if (license != null)
@@ -351,9 +391,6 @@ public class GameManager : MonoBehaviour
             license.transform.position = new Vector3(-7.5f, -4f, license.transform.position.z);
             license.GetComponent<SpriteRenderer>().sprite = currentSoldier.Image;
 
-        }
-        else
-        {
         }
     }
 
@@ -420,4 +457,5 @@ public class GameManager : MonoBehaviour
             //Debug.LogWarning("Ambient AudioSource or AudioClip is not assigned.");
         }
     }
+
 }
