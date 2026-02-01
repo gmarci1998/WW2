@@ -37,7 +37,7 @@ public class EnemyManager : MonoBehaviour
             GameObject enemy = Instantiate(enemyPrefabs, spawnPoint.transform.position, spawnPoint.transform.rotation);
 
             // Tegyük az enemy-t a Mountains GameObject child-jává
-            enemy.transform.SetParent(parent.transform);
+            enemy.transform.SetParent(spawnPoint.transform);
 
             // Ellenőrizzük, hogy van-e SoldierMovement komponens, és adjuk hozzá a listához
             SoldierMovement soldierMovement = enemy.GetComponent<SoldierMovement>();
