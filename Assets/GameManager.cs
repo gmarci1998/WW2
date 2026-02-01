@@ -216,17 +216,11 @@ public class GameManager : MonoBehaviour
 
     IEnumerator FadeInDeath()
     {
-        if (death == null)
-        {
-            Debug.LogError("A 'death' GameObject nincs hozzárendelve a GameManagerben!");
-            yield break;
-        }
-
         Cursor.lockState = CursorLockMode.Locked;
         SpriteRenderer spriteRenderer = death.GetComponent<SpriteRenderer>();
         if (spriteRenderer == null)
         {
-            Debug.LogError("SpriteRenderer nem található a 'death' GameObjecten!");
+            Debug.LogError("SpriteRenderer not found on death GameObject!");
             yield break;
         }
 
@@ -243,6 +237,8 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
+        EnemyManager.Instance.ClearAllEnemies();
+
         hungarianSide = !hungarianSide;
 
         while (alpha > 0f)
@@ -254,6 +250,8 @@ public class GameManager : MonoBehaviour
         }
         Cursor.lockState = CursorLockMode.Confined;
         ChooseSoldier();
+        
+        yield return new WaitForSeconds(1f);
     }
 
     void PositionLicense()
@@ -266,5 +264,63 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("A license GameObject nincs hozzárendelve!");
         }
+    }
+
+    [System.Serializable]
+    private class SoldierSaveData
+    {
+        public string Name;
+        public bool isOpened;
+    }
+
+    public void SaveSoldiersToFile()
+    {
+        List<SoldierSaveData> saveData = new List<SoldierSaveData>();
+
+        foreach (var soldier in HungarianSoldiers)
+        {
+            saveData.Add(new SoldierSaveData { Name = soldier.Name, isOpened = soldier.isOpened });
+        }
+
+        foreach (var soldier in RussianSoldiers)
+        {
+            saveData.Add(new SoldierSaveData { Name = soldier.Name, isOpened = soldier.isOpened });
+        }
+
+        string json = JsonUtility.ToJson(new { Soldiers = saveData }, true);
+        System.IO.File.WriteAllText("SoldiersData.json", json);
+
+        Debug.Log("Soldiers saved to file.");
+    }
+
+    public void LoadSoldiersFromFile()
+    {
+        if (!System.IO.File.Exists("SoldiersData.json"))
+        {
+            Debug.LogWarning("Save file not found.");
+            return;
+        }
+
+        string json = System.IO.File.ReadAllText("SoldiersData.json");
+        var saveData = JsonUtility.FromJson<SoldierSaveWrapper>(json);
+
+        foreach (var soldierData in saveData.Soldiers)
+        {
+            var soldier = HungarianSoldiers.FirstOrDefault(s => s.Name == soldierData.Name) ??
+                          RussianSoldiers.FirstOrDefault(s => s.Name == soldierData.Name);
+
+            if (soldier != null)
+            {
+                soldier.isOpened = soldierData.isOpened;
+            }
+        }
+
+        Debug.Log("Soldiers loaded from file.");
+    }
+
+    [System.Serializable]
+    private class SoldierSaveWrapper
+    {
+        public List<SoldierSaveData> Soldiers;
     }
 }

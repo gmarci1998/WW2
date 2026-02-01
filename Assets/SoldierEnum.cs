@@ -12,4 +12,5 @@ public class SoldierData  // ✅ Semmi öröklődés!
     public string Description;
     public AudioClip Audio;
     public bool picked = false;
+    public bool isOpened;
 }
