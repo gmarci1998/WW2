@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
     void ChooseSoldier()
     {
         SaveSoldiersToFile();
-        if(HungarianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0 &&
+        if (HungarianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0 &&
            RussianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0)
         {
             // Minden katona ki lett választva, visszaállítjuk az állapotukat
@@ -130,6 +130,9 @@ public class GameManager : MonoBehaviour
     void Start() {
         if (cam == null) cam = Camera.main;
 
+        
+        narrationAudio = gameObject.AddComponent<AudioSource>();
+
         LoadSoldiersFromFile();
         PlayAmbientSound();
 
@@ -154,7 +157,6 @@ public class GameManager : MonoBehaviour
 
     public void Narration()
     {
-        narrationAudio = gameObject.AddComponent<AudioSource>();
         narrationAudio.clip = currentSoldier.Audio;
         narrationAudio.volume = 1.0f;
         narrationAudio.playOnAwake = false;
@@ -169,11 +171,6 @@ public class GameManager : MonoBehaviour
     }
 
     void Update() {
-
-        if(Input.GetKeyDown(KeyCode.Escape)){
-            SaveSoldiersToFile();
-            Credits();
-        }
 
         if (Input.GetKeyDown(KeyCode.Space) && hideActive) {
             if(isHiding){
