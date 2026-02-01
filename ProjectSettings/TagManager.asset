@@ -6,6 +6,7 @@ TagManager:
   tags:
   - EnemySoldier
   - EnemyMover
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX

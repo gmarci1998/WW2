@@ -216,11 +216,17 @@ public class GameManager : MonoBehaviour
 
     IEnumerator FadeInDeath()
     {
+        if (death == null)
+        {
+            Debug.LogError("A 'death' GameObject nincs hozzárendelve a GameManagerben!");
+            yield break;
+        }
+
         Cursor.lockState = CursorLockMode.Locked;
         SpriteRenderer spriteRenderer = death.GetComponent<SpriteRenderer>();
         if (spriteRenderer == null)
         {
-            Debug.LogError("SpriteRenderer not found on death GameObject!");
+            Debug.LogError("SpriteRenderer nem található a 'death' GameObjecten!");
             yield break;
         }
 
@@ -254,8 +260,7 @@ public class GameManager : MonoBehaviour
     {
         if (license != null)
         {
-            Vector3 bottomLeft = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, Camera.main.nearClipPlane));
-            license.transform.position = new Vector3(bottomLeft.x + 0.5f, bottomLeft.y + 0.5f, license.transform.position.z);
+            license.transform.position = new Vector3(-9.5f, -4f, license.transform.position.z);
         }
         else
         {
