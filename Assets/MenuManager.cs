@@ -10,6 +10,7 @@ public class MenuManager : MonoBehaviour
     public CanvasGroup mainMenu;
     public CanvasGroup charactersMenu;
     public CanvasGroup creditsMenu;
+    public CanvasGroup openingScene;
     public string GameScene = "GameScene";
 
     public float fadeTime = 0.4f;
@@ -36,6 +37,13 @@ public class MenuManager : MonoBehaviour
 
     public void PlayGame()
     {
+        StartCoroutine(PlayGameSequence());
+    }
+
+    IEnumerator PlayGameSequence()
+    {
+        yield return StartCoroutine(SwitchMenu(mainMenu, openingScene));
+        yield return new WaitForSeconds(4f);
         SceneManager.LoadScene(GameScene);
     }
 
