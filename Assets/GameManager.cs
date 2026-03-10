@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private AudioSource ambient;
     [SerializeField] private AudioSource wind;
+    [SerializeField] private AudioSource distance;
     [SerializeField] private Camera cam;
     [SerializeField] private float parallaxFactorX = 2f;  
     [SerializeField] private float parallaxFactorY = 0.1f; 
@@ -454,6 +455,8 @@ public class GameManager : MonoBehaviour
             ambient.Play();
             wind.loop = true;
             wind.Play();
+            distance.loop = true;
+            distance.Play();
         }
         else
         {

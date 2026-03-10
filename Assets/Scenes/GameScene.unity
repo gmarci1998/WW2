@@ -997,7 +997,7 @@ MonoBehaviour:
   hungarianSide: 1
   background: {fileID: 15922}
   hungarianBackground: {fileID: -2670599806629529493, guid: 5f06c19543569c040a2be0735d111c93, type: 3}
-  russianBackground: {fileID: -2078955931572187237, guid: 1f8b5c513be470748b645dae369dcfeb, type: 3}
+  russianBackground: {fileID: -2078955931572187237, guid: cf59a0fe343a6ba4eba3bb09c6d933b2, type: 3}
   middleground: {fileID: 0}
   hungarianMiddleground: {fileID: 0}
   russianMiddleground: {fileID: 0}
@@ -1078,7 +1078,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.5263104, y: -1.4710337, z: -9.9395275}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1114724788}
