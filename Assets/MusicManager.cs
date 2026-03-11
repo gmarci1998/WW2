@@ -32,7 +32,7 @@ public class MusicManager : MonoBehaviour
 
     public void FadeMusic(float targetVolume)
     {
-        StartCoroutine(Fade(targetVolume, 4));
+        StartCoroutine(Fade(targetVolume, 6));
     }
 
     IEnumerator Fade(float targetVolume, float duration)

@@ -117,7 +117,6 @@ public class FixedWeaponPosition : MonoBehaviour
         fireSound.Play();
         sparkAnimator.SetTrigger("Fire");
 
-        // Kickback + kamera rázás egyszerre
         StartCoroutine(WeaponKickback());
         StartCoroutine(ShakeCamera());
 

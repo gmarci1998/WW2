@@ -31,7 +31,8 @@ public class GameManager : MonoBehaviour
 
     private Vector3 startPos;
     public GameObject backgroundSprite;  
-    public GameObject middlegroundSprite;  
+    public GameObject middlegroundSprite;
+    public GameObject canvas_opening;    
     private List<Transform> enemySoldiers = new List<Transform>();
     private List<Transform> enemyMovers = new List<Transform>();
 
@@ -153,6 +154,55 @@ public class GameManager : MonoBehaviour
         }
 
         PositionLicense();
+
+        StartCoroutine(SceneStart()); 
+    }
+
+    IEnumerator SceneStart()
+    {
+        float duration = 2f;
+        float elapsed = 0f;
+
+        float ambientTarget  = ambient  != null ? ambient.volume  : 0f;
+        float windTarget     = wind     != null ? wind.volume     : 0f;
+        float distanceTarget = distance != null ? distance.volume : 0f;
+
+        if (ambient  != null) ambient.volume  = 0f;
+        if (wind     != null) wind.volume     = 0f;
+        if (distance != null) distance.volume = 0f;
+
+        CanvasGroup canvasGroup = canvas_opening != null 
+            ? canvas_opening.GetComponent<CanvasGroup>() 
+            : null;
+
+        if (canvasGroup != null) canvasGroup.alpha = 1f;
+
+        yield return new WaitForSeconds(3f);
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+
+            if (canvasGroup != null)
+                canvasGroup.alpha = 1f - t;
+
+            if (ambient  != null) ambient.volume  = Mathf.Lerp(0f, ambientTarget,  t);
+            if (wind     != null) wind.volume     = Mathf.Lerp(0f, windTarget,     t);
+            if (distance != null) distance.volume = Mathf.Lerp(0f, distanceTarget, t);
+
+            yield return null;
+        }
+
+        if (canvasGroup != null)
+        {
+            canvasGroup.alpha = 0f;
+            canvas_opening.SetActive(false);
+        }
+
+        if (ambient  != null) ambient.volume  = ambientTarget;
+        if (wind     != null) wind.volume     = windTarget;
+        if (distance != null) distance.volume = distanceTarget;
     }
 
     public void Narration()
