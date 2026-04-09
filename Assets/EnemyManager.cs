@@ -4,7 +4,8 @@ using System.Collections;
 
 public class EnemyManager : MonoBehaviour
 {
-    [SerializeField] private GameObject enemyPrefabs;
+    [SerializeField] private GameObject soldierPrefab;
+    [SerializeField] private GameObject sniperPrefab;
     
     public static EnemyManager Instance { get; private set; }
 
@@ -28,18 +29,38 @@ public class EnemyManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
     }
+    GameObject GetRandomEnemyPrefab()
+    {
+        int roll = Random.Range(0, 8);
+
+        if (roll == 0)
+        {
+            return sniperPrefab;
+        }
+
+        return soldierPrefab;
+    }
 
     void SpawnEnemies()
     {
         // Minden SpawnPoint-hoz spawnoljunk egy enemyPrefab példányt
         foreach (var spawnPoint in spawnPoints)
         {
-            GameObject enemy = Instantiate(enemyPrefabs, spawnPoint.transform.position, spawnPoint.transform.rotation, parent.transform);
+            GameObject prefabToSpawn = GetRandomEnemyPrefab();
+            GameObject enemy = Instantiate(prefabToSpawn, spawnPoint.transform.position, spawnPoint.transform.rotation, parent.transform);
 
-            // Ellenőrizzük, hogy van-e SoldierMovement komponens, és adjuk hozzá a listához
             SoldierMovement soldierMovement = enemy.GetComponent<SoldierMovement>();
             if (soldierMovement != null)
             {
+                if (prefabToSpawn == sniperPrefab)
+                {
+                    soldierMovement.SetEnemyType(SoldierMovement.EnemyType.Sniper);
+                }
+                else
+                {
+                    soldierMovement.SetEnemyType(SoldierMovement.EnemyType.Soldier);
+                }
+
                 soldiers.Add(soldierMovement);
                 soldierMovement.OnDeathDelegate += () =>
                 {
@@ -50,19 +71,38 @@ public class EnemyManager : MonoBehaviour
                     }
                 };
             }
-            else
-            {
-                Debug.LogWarning("A létrehozott enemyPrefab nem tartalmaz SoldierMovement komponenst!");
-            }
         }
     }
 
     IEnumerator RespawnEnemy(Transform parent)
     {
-        yield return new WaitForSeconds(Random.Range(3, 8));
-        GameObject enemy = Instantiate(enemyPrefabs, parent.position, parent.rotation,this.parent.transform);
+        yield return new WaitForSeconds(Random.Range(10, 20));
+        GameObject prefabToSpawn = GetRandomEnemyPrefab();
+        GameObject enemy = Instantiate(prefabToSpawn, parent.position, parent.rotation, this.parent.transform);
 
-        soldiers.Add(enemy.GetComponent<SoldierMovement>());
+        SoldierMovement soldierMovement = enemy.GetComponent<SoldierMovement>();
+        if (soldierMovement != null)
+        {
+            if (prefabToSpawn == sniperPrefab)
+            {
+                soldierMovement.SetEnemyType(SoldierMovement.EnemyType.Sniper);
+            }
+            else
+            {
+                soldierMovement.SetEnemyType(SoldierMovement.EnemyType.Soldier);
+            }
+
+            soldiers.Add(soldierMovement);
+
+            soldierMovement.OnDeathDelegate += () =>
+            {
+                if (soldiers.Contains(soldierMovement))
+                {
+                    soldiers.Remove(soldierMovement);
+                    StartCoroutine(RespawnEnemy(parent));
+                }
+            };
+        }
     }
 
     public void ResetAllEnemies()

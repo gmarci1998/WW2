@@ -5,6 +5,7 @@ using System.Linq;
 
 public class FixedWeaponPosition : MonoBehaviour
 {
+    public static FixedWeaponPosition Instance { get; private set; }
     [SerializeField] private Camera cam;
     [SerializeField] private Vector3 viewportOffset = new Vector3(0.5f, 0.2f, 10f);
     [SerializeField] private GameObject fireSpark;
@@ -35,6 +36,10 @@ public class FixedWeaponPosition : MonoBehaviour
 
     List<Transform> GetEnemies => FindObjectsByType<SoldierMovement>(FindObjectsSortMode.None).Select(s => s.transform).ToList();
 
+    void Awake()
+    {
+        Instance = this;
+    }
     void Start()
     {
         if (cam == null) cam = Camera.main;
@@ -150,6 +155,11 @@ public class FixedWeaponPosition : MonoBehaviour
 
         transform.localScale = originalScale;
         isKickbacking = false;
+    }
+
+    public void ShakeCameraByHit()
+    {
+        StartCoroutine(ShakeCamera());
     }
     IEnumerator ShakeCamera()
     {

@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioSource ambient;
     [SerializeField] private AudioSource wind;
     [SerializeField] private AudioSource distance;
+    [SerializeField] private AudioSource standUpAudio;
+    [SerializeField] private AudioSource crouchAudio;
     [SerializeField] private Camera cam;
     [SerializeField] private float parallaxFactorX = 2f;  
     [SerializeField] private float parallaxFactorY = 0.1f; 
@@ -28,6 +30,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject flagRus;
     [SerializeField] GameObject license;
 
+    [SerializeField] private AudioSource playerHitAudio;
+    [SerializeField] private AudioSource playerMissAudio;
+    [SerializeField] private AudioSource playerDeathAudio;
+    [SerializeField] private AudioSource gunshothAudio;
+
 
     private Vector3 startPos;
     public GameObject backgroundSprite;  
@@ -44,6 +51,8 @@ public class GameManager : MonoBehaviour
     private bool camMoving = false;    
     private float camLerpSpeed = 2f;  
     private bool canShoot = true;
+    private bool isPlayerDead = false; 
+    [SerializeField] private int playerLives = 3;
 
     private bool isLock = false;
 
@@ -69,7 +78,47 @@ public class GameManager : MonoBehaviour
     {
         public List<SoldierSaveData> Soldiers;
     }
-    
+
+    public void TakeDamage(int damage)
+    {
+        if (isPlayerDead) return;
+
+        playerLives -= damage;
+        PlayPlayerHitSound();
+        if (FixedWeaponPosition.Instance != null){
+            FixedWeaponPosition.Instance.ShakeCameraByHit();
+        }
+
+        Debug.Log("Player élete: " + playerLives);
+
+        if (playerLives <= 0)
+        {
+            PlayerDeath();
+        }
+    }
+        public void PlayPlayerHitSound()
+    {
+        if (playerHitAudio != null)
+        {
+            playerHitAudio.Play();
+        }
+    }
+
+    public void PlayPlayerMissSound()
+    {
+        if (playerMissAudio != null)
+        {
+            playerMissAudio.Play();
+        }
+    }
+
+    public void PlayGunshotSound()
+    {
+        if (gunshothAudio != null)
+        {
+            gunshothAudio.Play();
+        }
+    }
 
     void Awake() {
         Instance = this;
@@ -227,12 +276,18 @@ public class GameManager : MonoBehaviour
             if(isHiding){
                 isHiding = false;
                 hideActive = false;
+                if (standUpAudio != null){
+                        standUpAudio.Play();
+                    }
                 camTargetY = camStartY;  
                 Cursor.lockState = CursorLockMode.Confined;
                 license.transform.position = new Vector3(-7.5f, -4f, license.transform.position.z);
             } else {
                 isHiding = true;
                 hideActive = false;
+                if (crouchAudio != null){
+                        crouchAudio.Play();
+                }
                 camTargetY = camStartY - 10f; 
                 Cursor.lockState = CursorLockMode.Locked;
                 license.transform.position = new Vector3(-7.5f, -14f, license.transform.position.z);
@@ -361,10 +416,25 @@ public class GameManager : MonoBehaviour
 
     public void PlayerDeath()
     {
+        if (isPlayerDead) return;
+        isPlayerDead = true;
 
-        narrationAudio.Stop();
+        if (narrationAudio != null)
+        {
+            narrationAudio.Stop();
+        }
+
+        if (playerDeathAudio != null)
+        {
+            playerDeathAudio.Play();
+        }
 
         StartCoroutine(FadeInDeath());
+    }
+
+    public int GetPlayerLives()
+    {
+        return playerLives;
     }
 
 
@@ -431,7 +501,9 @@ public class GameManager : MonoBehaviour
         }
         Cursor.lockState = CursorLockMode.Confined;
         ChooseSoldier();
-        
+        isPlayerDead = false;
+        playerLives = 3;
+
         yield return new WaitForSeconds(1f);
     }
 

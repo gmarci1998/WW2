@@ -5,6 +5,11 @@ using Random = UnityEngine.Random;  // Coroutine-hez
 
 public class SoldierMovement : MonoBehaviour
 {
+    public enum EnemyType
+    {
+        Soldier,
+        Sniper
+    }
     [SerializeField] private float enemyParallaxX = 4f;
     [SerializeField] private float enemyParallaxY = 0.2f;
     [SerializeField] private float moveSpeed = 2f;
@@ -22,7 +27,8 @@ public class SoldierMovement : MonoBehaviour
 
     [SerializeField] private AudioSource dying;
     [SerializeField] private float timeBeforeFirstAction = 3f;
-
+    [SerializeField] private EnemyType enemyType = EnemyType.Soldier;
+    [SerializeField, Range(0f, 1f)] private float soldierHitChance = 0.7f;
     public bool IsDead { get; set; } = false;
     public bool IsKillable { get; set; } = false;
 
@@ -202,6 +208,7 @@ public class SoldierMovement : MonoBehaviour
 
         // Aktiváljuk a spark-ot lövés előtt
         spark.SetActive(true);
+        GameManager.Instance.PlayGunshotSound();
         yield return new WaitForSeconds(0.2f); // A lövés ideje
         spark.SetActive(false);
 
@@ -214,15 +221,37 @@ public class SoldierMovement : MonoBehaviour
             yield break; // Ha a játékos bújik, a lövés nem talál
         }
 
-        if (IsDead)
-        {
-            yield break;
-        }
-
-        GameManager.Instance.PlayerDeath();
-        EnemyManager.Instance.ResetAllEnemies();
+    if (IsDead)
+    {
+        yield break;
     }
 
+    if (enemyType == EnemyType.Soldier)
+    {
+        bool hitPlayer = Random.value <= soldierHitChance;
+
+        if (hitPlayer)
+        {
+            GameManager.Instance.TakeDamage(1);
+        }
+        else
+        {
+            GameManager.Instance.PlayPlayerMissSound();
+
+        }
+    }
+    else if (enemyType == EnemyType.Sniper)
+    {
+        GameManager.Instance.TakeDamage(3);
+    }
+
+    EnemyManager.Instance.ResetAllEnemies();
+    }
+
+    public void SetEnemyType(EnemyType newType)
+    {
+        enemyType = newType;
+    }
     public void Die()
     {
         IsDead = true;
