@@ -1,8 +1,8 @@
-using UnityEngine;
-using System.Collections.Generic;
 using System.Collections;
-using System.Linq;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour 
@@ -526,6 +526,7 @@ public class GameManager : MonoBehaviour
         }
 
         StartCoroutine(FadeInDeath());
+        StartCoroutine(ShatterPortrait());
     }
 
     public int GetPlayerLives()
@@ -603,6 +604,26 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
     }
 
+    IEnumerator ShatterPortrait()
+    {
+        var shatter = license.transform.GetChild(0);
+
+        if (shatter == null)
+        {
+            yield break;
+        }
+
+        SpriteRenderer spriteRenderer = shatter.GetComponent<SpriteRenderer>();
+        var color = spriteRenderer.color;
+
+        color.a = 1f;
+        spriteRenderer.color = color;
+
+        yield return new WaitForSeconds(3f);
+
+        color.a = 0f;
+        spriteRenderer.color = color;
+    }
     IEnumerator ChangeSoldier()
     {
         Cursor.lockState = CursorLockMode.Locked;
