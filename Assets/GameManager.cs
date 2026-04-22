@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour 
 {
@@ -566,36 +567,86 @@ public class GameManager : MonoBehaviour
     IEnumerator FadeInDeath()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        SpriteRenderer spriteRenderer = death.GetComponent<SpriteRenderer>();
-        if (spriteRenderer == null)
+
+        // Enable death gameobject
+        // Fade in the death image, 0.5f, death images is the first child of the death gameobject
+        // Slow zoom out, 2s, parallel to the fade in, zooming happens by scaling the image, it should start from x=5, y=5, z=1, and end at x=1, y=1, z=1
+        Transform deathImageTransform = death.transform.GetChild(0);
+        Image deathSprite = deathImageTransform.GetComponent<Image>() ?? death.GetComponent<Image>();
+        death.SetActive(true);
+        Vector3 zoomOutStartScale = new Vector3(5f, 5f, 1f);
+        Vector3 zoomOutEndScale = Vector3.one;
+        float fadeInDuration = 0.5f;
+        float zoomOutDuration = 2f;
+        deathImageTransform.localScale = zoomOutStartScale;
+        if (deathSprite != null)
         {
-            yield break;
+            Color c = deathSprite.color;
+            c.a = 0f;
+            deathSprite.color = c;
         }
-
-        Color color = spriteRenderer.color;
-        float alpha = color.a;
-
-        while (alpha < 1f)
+        float elapsed = 0f;
+        while (elapsed < zoomOutDuration)
         {
-            alpha += Time.deltaTime / 2f; // 2 másodperc alatt növeli az átlátszóságot
-            color.a = Mathf.Clamp01(alpha);
-            spriteRenderer.color = color;
+            elapsed += Time.deltaTime;
+            float zoomT = Mathf.Clamp01(elapsed / zoomOutDuration);
+            deathImageTransform.localScale = Vector3.Lerp(zoomOutStartScale, zoomOutEndScale, zoomT);
+
+            if (deathSprite != null)
+            {
+                float alphaT = Mathf.Clamp01(elapsed / fadeInDuration);
+                Color c = deathSprite.color;
+                c.a = alphaT;
+                deathSprite.color = c;
+            }
+
             yield return null;
         }
-
-        yield return new WaitForSeconds(1f);
+        deathImageTransform.localScale = zoomOutEndScale;
+        if (deathSprite != null)
+        {
+            Color c = deathSprite.color;
+            c.a = 1f;
+            deathSprite.color = c;
+        }
 
         EnemyManager.Instance.ResetAllEnemies();
 
         hungarianSide = !hungarianSide;
 
-        while (alpha > 0f)
+        // Short hold distance
+        // Fast zoom in 0.5s, it should start from x=1, y=1, z=1, and end at  x=5, y=5, z=1
+        // Fade out the death image, parallel to the zoom in
+        // Disable gameobject
+        float holdDuration = 0.5f;
+        yield return new WaitForSeconds(holdDuration);
+        float zoomInDuration = 0.5f;
+        elapsed = 0f;
+        while (elapsed < zoomInDuration)
         {
-            alpha -= Time.deltaTime / 2f; // 2 másodperc alatt csökkenti az átlátszóságot
-            color.a = Mathf.Clamp01(alpha);
-            spriteRenderer.color = color;
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / zoomInDuration);
+
+            deathImageTransform.localScale = Vector3.Lerp(zoomOutEndScale, zoomOutStartScale, t);
+
+            if (deathSprite != null)
+            {
+                Color c = deathSprite.color;
+                c.a = 1f - t;
+                deathSprite.color = c;
+            }
+
             yield return null;
         }
+        deathImageTransform.localScale = zoomOutStartScale;
+        if (deathSprite != null)
+        {
+            Color c = deathSprite.color;
+            c.a = 0f;
+            deathSprite.color = c;
+        }
+        death.SetActive(false);
+
         Cursor.lockState = CursorLockMode.Confined;
         ChooseSoldier();
         isPlayerDead = false;
