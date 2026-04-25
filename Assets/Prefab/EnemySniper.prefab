@@ -166,7 +166,7 @@ SpriteRenderer:
   m_SortingLayerID: -956780627
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 920290439808299714, guid: 273701e740a8ec64a8f49105996a5a76, type: 3}
+  m_Sprite: {fileID: 9156729719186931566, guid: 34cdabe574fd3ea48a52aab2efca8e19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -196,6 +196,8 @@ MonoBehaviour:
   maximumHeight: 3
   dying: {fileID: 1657631722436741506}
   timeBeforeFirstAction: 3
+  enemyType: 0
+  soldierHitChance: 0.7
 --- !u!82 &1657631722436741506
 AudioSource:
   m_ObjectHideFlags: 0
