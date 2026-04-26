@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioSource ambient;
     [SerializeField] private AudioSource wind;
     [SerializeField] private AudioSource distance;
+    [SerializeField] private AudioSource radioNoiseAudio;
+    [SerializeField] private AudioSource narrationPauseWarningAudio;
     [SerializeField] private AudioSource standUpAudio;
     [SerializeField] private AudioSource crouchAudio;
     [SerializeField] private Camera cam;
@@ -77,6 +79,10 @@ public class GameManager : MonoBehaviour
 
     private AudioSource narrationAudio;
     private float narrationPauseTime;
+    private Coroutine stopNarrationCoroutine;
+    private Coroutine resumeNarrationCoroutine;
+    [SerializeField] private float narrationPauseDelay = 3f;
+    [SerializeField] private float narrationPauseWarningLeadTime = 2f;
 
     [System.Serializable]
     public class SoldierSaveData 
@@ -468,11 +474,25 @@ public class GameManager : MonoBehaviour
                 narrationPauseTime = narrationAudio.time;
             }
 
-            StartCoroutine(StopNarrationAfterDelay());
+            if (stopNarrationCoroutine == null)
+            {
+                stopNarrationCoroutine = StartCoroutine(StopNarrationAfterDelay());
+            }
         }
-        else if (!isHiding && !narrationAudio.isPlaying && narrationPauseTime > 0)
+        else if (!isHiding)
         {
-            StartCoroutine(ResumeNarrationAfterDelay());
+            if (stopNarrationCoroutine != null)
+            {
+                StopCoroutine(stopNarrationCoroutine);
+                stopNarrationCoroutine = null;
+            }
+
+            StopNarrationPauseWarningAudio();
+
+            if (!narrationAudio.isPlaying && narrationPauseTime > 0 && resumeNarrationCoroutine == null)
+            {
+                resumeNarrationCoroutine = StartCoroutine(ResumeNarrationAfterDelay());
+            }
         }
 
         
@@ -480,11 +500,31 @@ public class GameManager : MonoBehaviour
 
     IEnumerator StopNarrationAfterDelay()
     {
-        yield return new WaitForSeconds(2f);
+        float warningDelay = Mathf.Max(0f, narrationPauseDelay - narrationPauseWarningLeadTime);
+
+        if (warningDelay > 0f)
+        {
+            yield return new WaitForSeconds(warningDelay);
+        }
+
+        if (isHiding && narrationAudio != null && narrationAudio.isPlaying)
+        {
+            PlayNarrationPauseWarningAudio();
+        }
+
+        float remainingDelay = Mathf.Min(narrationPauseDelay, narrationPauseWarningLeadTime);
+        if (remainingDelay > 0f)
+        {
+            yield return new WaitForSeconds(remainingDelay);
+        }
+
         if (isHiding)
         {
             narrationAudio.Pause(); // Pause instead of stopping to retain the current playback position
+            StopNarrationPauseWarningAudio();
         }
+
+        stopNarrationCoroutine = null;
     }
 
     IEnumerator ResumeNarrationAfterDelay()
@@ -495,6 +535,24 @@ public class GameManager : MonoBehaviour
             //narrationAudio.time = Mathf.Clamp(narrationPauseTime, 0, narrationAudio.clip.length); // Ensure the seek position is valid
             narrationAudio.UnPause();
             narrationPauseTime = 0;
+        }
+
+        resumeNarrationCoroutine = null;
+    }
+
+    void PlayNarrationPauseWarningAudio()
+    {
+        if (narrationPauseWarningAudio != null && !narrationPauseWarningAudio.isPlaying)
+        {
+            narrationPauseWarningAudio.Play();
+        }
+    }
+
+    void StopNarrationPauseWarningAudio()
+    {
+        if (narrationPauseWarningAudio != null && narrationPauseWarningAudio.isPlaying)
+        {
+            narrationPauseWarningAudio.Stop();
         }
     }
 
@@ -523,6 +581,20 @@ public class GameManager : MonoBehaviour
         {
             narrationAudio.Stop();
         }
+
+        if (stopNarrationCoroutine != null)
+        {
+            StopCoroutine(stopNarrationCoroutine);
+            stopNarrationCoroutine = null;
+        }
+
+        if (resumeNarrationCoroutine != null)
+        {
+            StopCoroutine(resumeNarrationCoroutine);
+            resumeNarrationCoroutine = null;
+        }
+
+        StopNarrationPauseWarningAudio();
 
         if (playerDeathAudio != null)
         {
@@ -817,9 +889,11 @@ public class GameManager : MonoBehaviour
             distance.loop = true;
             distance.Play();
         }
-        else
+
+        if (radioNoiseAudio != null)
         {
-            //Debug.LogWarning("Ambient AudioSource or AudioClip is not assigned.");
+            radioNoiseAudio.loop = true;
+            radioNoiseAudio.Play();
         }
     }
 
