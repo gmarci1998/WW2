@@ -121,8 +121,12 @@ public class FixedWeaponPosition : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && !isActive && GameManager.Instance.CanShoot())
         {
-            StartCoroutine(FireEffect());
-            CheckIfEnemyGotShot();
+            Debug.Log("!isActive: " + !isActive + " CanShoot: " + GameManager.Instance.CanShoot() + " CanvasAlpha: " + GameManager.Instance.canvas_opening.GetComponent<CanvasGroup>().alpha);
+            if (!isActive && GameManager.Instance.CanShoot() && GameManager.Instance.canvas_opening.GetComponent<CanvasGroup>().alpha == 0f)
+            {
+                StartCoroutine(FireEffect());
+                CheckIfEnemyGotShot();
+            }
         }
 
         if (cam == null) cam = Camera.main;
@@ -273,6 +277,16 @@ public class FixedWeaponPosition : MonoBehaviour
 
             case ReloadPhase.OriginalUp:
             {
+                // Check if the player is hiding before returning to the original state
+                if (GameManager.Instance != null && GameManager.Instance.IsHiding())
+                {
+                    reloadPhase = ReloadPhase.None;
+                    isReloading = false;
+                    isActive = false;
+                    HideNormalWeaponSprite();
+                    return;
+                }
+
                 ApplyNormalWeaponVisuals();
 
                 if (!weaponRaiseSoundPlayed)

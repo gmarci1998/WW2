@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public enum HungarianSoldier { Soldier1, Soldier2, Soldier3 }
 public enum RussianSoldier { Soldier1, Soldier2, Soldier3 }
@@ -10,7 +11,11 @@ public class SoldierData  // ✅ Semmi öröklődés!
     public Sprite Image;
     public int Age;
     public string Description;
-    public AudioClip Audio;
+    public AudioClip englishAudio;
+    public AudioClip hungarianAudio;
     public bool picked = false;
     public bool isOpened;
+    public SubtitleEntry[] englishEntries; // Átállítva az új SubtitleEntry-re
+    public SubtitleEntry[] hungarianEntries; // Átállítva az új SubtitleEntry-re
+
 }

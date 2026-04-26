@@ -3,7 +3,7 @@ using System.Collections;
 using System;
 using Random = UnityEngine.Random;  // Coroutine-hez
 
-public class SoldierMovement : MonoBehaviour
+public class SoldierSideMovement : MonoBehaviour
 {
     public enum EnemyType
     {
@@ -60,20 +60,20 @@ public class SoldierMovement : MonoBehaviour
 
         if (nextAction == 0)
         {
-            // Akció 0: Leguggolva marad, majd újra dönt
-            StartCoroutine(StayCrouchedAndDecideAgain());
+            // Akció 0: Balra marad, majd újra dönt
+            StartCoroutine(StayLeftAndDecideAgain());
         }
         else if (nextAction == 1)
         {
-            // Akció 1: Félig előbújik, majd visszamegy és újra dönt
-            targetHeight = startingHeight + (maximumHeight - startingHeight) / 2f; // Pontosítva a targetHeight
-            StartCoroutine(PeekAndReturn());
+            // Akció 1: Félig balra mozdul, majd visszamegy és újra dönt
+            targetHeight = transform.position.x - (transform.position.x - startingHeight) / 2f; // Pontosítva a targetHeight
+            StartCoroutine(PeekLeftAndReturn());
         }
         else if (nextAction == 2)
         {
-            // Akció 2: Teljesen előbújik, majd visszamegy és újra dönt
-            targetHeight = maximumHeight; // Pontosítva a targetHeight
-            StartCoroutine(FullyEmergeAndReturn());
+            // Akció 2: Teljesen balra mozdul, majd visszamegy és újra dönt
+            targetHeight = startingHeight - maximumHeight; // Pontosítva a targetHeight
+            StartCoroutine(FullyMoveLeftAndReturn());
         }
     }
 
@@ -87,67 +87,52 @@ public class SoldierMovement : MonoBehaviour
         return Random.Range(0, 3); // Három akció közül választ
     }
 
-    IEnumerator StayCrouchedAndDecideAgain()
+    IEnumerator StayLeftAndDecideAgain()
     {
         IsKillable = false;
         yield return new WaitForSeconds(Random.Range(2f, 5f));
         DecideAndAct();
     }
 
-    IEnumerator PeekAndReturn()
+    IEnumerator PeekLeftAndReturn()
     {
         isMoving = true;
-        // Feljön
-        while (Mathf.Abs(transform.position.y - targetHeight) > 0.01f) // Pontosabb ellenőrzés a célmagasság eléréséhez
+        // Balra mozdul
+        while (transform.position.x > targetHeight)
         {
             float deltaTime = Mathf.Max(Time.deltaTime, 0.01f); // Minimális deltaTime érték beállítása
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, targetHeight, transform.position.z), moveSpeed * deltaTime);
+            transform.position -= Vector3.right * moveSpeed * deltaTime;
             yield return new WaitForEndOfFrame();
         }
-
-        transform.position = new Vector3(transform.position.x, targetHeight, transform.position.z); // Biztosítjuk, hogy pontosan a célmagasságra kerüljön
 
         IsKillable = true;
-        yield return new WaitForSeconds(2f); // Rövid időt marad félig előbújva
+        yield return new WaitForSeconds(2f); // Rövid időt marad félig balra mozdulva
         IsKillable = false;
 
-        // Lemegy
-        /*while (Mathf.Abs(transform.position.y - startingHeight) > 0.01f) // Pontosabb ellenőrzés az alapmagasság eléréséhez
+        // Visszajön
+        while (transform.position.x < startingHeight)
         {
             float deltaTime = Mathf.Max(Time.deltaTime, 0.01f); // Minimális deltaTime érték beállítása
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, startingHeight, transform.position.z), moveSpeed * deltaTime);
-            yield return new WaitForEndOfFrame();
-        }*/
-
-        while (transform.position.y > startingHeight) 
-        {
-            float moveAmount = moveSpeed * Time.deltaTime;
-            float newY = transform.position.y - moveAmount;
-            
-            transform.position = new Vector3(transform.position.x, Mathf.Max(newY, startingHeight), transform.position.z);
-            
-            if (transform.position.y <= startingHeight) break;
+            transform.position += Vector3.right * moveSpeed * deltaTime;
             yield return new WaitForEndOfFrame();
         }
-        
-        transform.position = new Vector3(transform.position.x, startingHeight, transform.position.z); // Biztosítjuk, hogy pontosan az alaphelyzetbe kerüljön
+
+        transform.position = new Vector3(startingHeight, transform.position.y, transform.position.z); // Biztosítjuk, hogy pontosan az alaphelyzetbe kerüljön
         isMoving = false;
         yield return new WaitForSeconds(1f); // Visszatérés után vár
         DecideAndAct();
     }
 
-    IEnumerator FullyEmergeAndReturn()
+    IEnumerator FullyMoveLeftAndReturn()
     {
         isMoving = true;
-        // Kijön
-        while (Mathf.Abs(transform.position.y - targetHeight) > 0.01f) // Pontosabb ellenőrzés a célmagasság eléréséhez
+        // Teljesen balra mozdul
+        while (transform.position.x > targetHeight)
         {
             float deltaTime = Mathf.Max(Time.deltaTime, 0.01f); // Minimális deltaTime érték beállítása
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, targetHeight, transform.position.z), moveSpeed * deltaTime);
+            transform.position -= Vector3.right * moveSpeed * deltaTime;
             yield return new WaitForEndOfFrame();
         }
-
-        transform.position = new Vector3(transform.position.x, targetHeight, transform.position.z); // Biztosítjuk, hogy pontosan a célmagasságra kerüljön
 
         IsKillable = true;
         float waitingTime = Random.Range(2f, 10f);
@@ -155,23 +140,23 @@ public class SoldierMovement : MonoBehaviour
 
         if (firingTimer + duckTime > waitingTime)
         {
-            firingTimer = waitingTime - duckTime - 0.1f; // Biztosítjuk, hogy legyen idő guggolni
+            firingTimer = waitingTime - duckTime - 0.1f; // Biztosítjuk, hogy legyen idő visszajönni
         }
 
         StartCoroutine(FireAtPlayer());
 
-        yield return new WaitForSeconds(waitingTime); // Teljesen előbújva marad egy ideig
+        yield return new WaitForSeconds(waitingTime); // Teljesen balra marad egy ideig
         IsKillable = false;
 
-        // Lemegy
-        while (Mathf.Abs(transform.position.y - startingHeight) > 0.01f) // Pontosabb ellenőrzés az alapmagasság eléréséhez
+        // Visszajön
+        while (transform.position.x < startingHeight)
         {
             float deltaTime = Mathf.Max(Time.deltaTime, 0.01f); // Minimális deltaTime érték beállítása
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, startingHeight, transform.position.z), moveSpeed * deltaTime);
+            transform.position += Vector3.right * moveSpeed * deltaTime;
             yield return new WaitForEndOfFrame();
         }
 
-        transform.position = new Vector3(transform.position.x, startingHeight, transform.position.z); // Biztosítjuk, hogy pontosan az alaphelyzetbe kerüljön
+        transform.position = new Vector3(startingHeight, transform.position.y, transform.position.z); // Biztosítjuk, hogy pontosan az alaphelyzetbe kerüljön
         isMoving = false;
         yield return new WaitForSeconds(2f); // Visszatérés után vár
         DecideAndAct();

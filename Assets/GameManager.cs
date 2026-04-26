@@ -7,6 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour 
 {
+    [Header("Menu Navigation")]
+    public bool showCreditsOnGameEnd = false;
+    
+    [SerializeField] private Subtitles subtitles;
+
     [SerializeField] private AudioSource ambient;
     [SerializeField] private AudioSource wind;
     [SerializeField] private AudioSource distance;
@@ -43,6 +48,11 @@ public class GameManager : MonoBehaviour
     private List<Transform> enemySoldiers = new List<Transform>();
     private List<Transform> enemyMovers = new List<Transform>();
 
+    
+    private Vector3 licenseViewportOffset = new Vector3(0.075f, 0.1f, 8f);
+    private bool licenseInitialized = false;
+    private bool didSurvive = false;
+
     private bool isHiding = false;
     private bool hideActive = true;
     private float camStartY;           
@@ -77,19 +87,21 @@ public class GameManager : MonoBehaviour
     public class SaveWrapper 
     {
         public List<SoldierSaveData> Soldiers;
+        public string NarrationLanguage; // Új mező a narráció nyelvéhez
+        public bool SubtitlesEnabled;   // Új mező a feliratok engedélyezéséhez
     }
 
     public void TakeDamage(int damage)
     {
         if (isPlayerDead) return;
 
-        playerLives -= damage;
+        //playerLives -= damage;// TODO - delete this
         PlayPlayerHitSound();
         if (FixedWeaponPosition.Instance != null){
             FixedWeaponPosition.Instance.ShakeCameraByHit();
         }
 
-        Debug.Log("Player élete: " + playerLives);
+        //Debug.Log("Player élete: " + playerLives);
 
         if (playerLives <= 0)
         {
@@ -132,7 +144,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CanvasGroup creditsCanvasGroup;
 
     void Credits(){
-            StartCoroutine(FullDeath());
+        StartCoroutine(FullDeath());
     }
 
     void ChooseSoldier()
@@ -154,6 +166,17 @@ public class GameManager : MonoBehaviour
             return;
             
         }
+
+        if(hungarianSide){
+            if(HungarianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0){
+                hungarianSide = !hungarianSide;
+            } 
+        } else {
+            if(RussianSoldiers.Where(soldier => !soldier.picked).ToArray().Length == 0){
+                hungarianSide = !hungarianSide;
+            } 
+        }
+
         if (hungarianSide)
         {
             // Csak a nem kiválasztott magyar katonák szűrése
@@ -162,6 +185,16 @@ public class GameManager : MonoBehaviour
             {
                 currentSoldier = availableHungarianSoldiers[Random.Range(0, availableHungarianSoldiers.Length)];
                 currentSoldier.picked = true; // Jelöld meg, hogy ki lett választva
+
+                string language = PlayerPrefs.GetString("NarrationLanguage", "English");
+                if (language == "Hungarian")
+                {
+                    subtitles.SetSubtitles(currentSoldier.hungarianEntries); // Magyar feliratok
+                }
+                else
+                {
+                    subtitles.SetSubtitles(currentSoldier.englishEntries); // Alapértelmezett (angol)
+                }
             }
         }
         else
@@ -172,8 +205,19 @@ public class GameManager : MonoBehaviour
             {
                 currentSoldier = availableRussianSoldiers[Random.Range(0, availableRussianSoldiers.Length)];
                 currentSoldier.picked = true; // Jelöld meg, hogy ki lett választva
+
+                string language = PlayerPrefs.GetString("NarrationLanguage", "English");
+                if (language == "Hungarian")
+                {
+                    subtitles.SetSubtitles(currentSoldier.hungarianEntries); // Magyar feliratok
+                }
+                else
+                {
+                    subtitles.SetSubtitles(currentSoldier.englishEntries); // Alapértelmezett (angol)
+                }
             }
         }
+
 
         Narration();
     }
@@ -205,6 +249,8 @@ public class GameManager : MonoBehaviour
         PositionLicense();
 
         StartCoroutine(SceneStart()); 
+
+        licenseInitialized = true;
     }
 
     IEnumerator SceneStart()
@@ -249,6 +295,8 @@ public class GameManager : MonoBehaviour
             canvas_opening.SetActive(false);
         }
 
+        
+
         if (ambient  != null) ambient.volume  = ambientTarget;
         if (wind     != null) wind.volume     = windTarget;
         if (distance != null) distance.volume = distanceTarget;
@@ -256,8 +304,20 @@ public class GameManager : MonoBehaviour
 
     public void Narration()
     {
+        string language = PlayerPrefs.GetString("NarrationLanguage", "English");
+        AudioClip narrationClip = null;
+
+        if (language == "Hungarian")
+        {
+            narrationClip = currentSoldier.hungarianAudio; // Magyar nyelvű audio
+        }
+        else
+        {
+            narrationClip = currentSoldier.englishAudio; // Alapértelmezett (angol)
+        }
+
         narrationAudio = gameObject.AddComponent<AudioSource>();
-        narrationAudio.clip = currentSoldier.Audio;
+        narrationAudio.clip = narrationClip;
         narrationAudio.volume = 1.0f;
         narrationAudio.playOnAwake = false;
 
@@ -270,7 +330,14 @@ public class GameManager : MonoBehaviour
         narrationAudio.Play();
     }
 
+
     void Update() {
+        Debug.Log("Player élete: " + isPlayerDead);
+        if(isPlayerDead) {
+            license.SetActive(false); 
+        }else{
+            license.SetActive(true); 
+        }
 
         if (Input.GetKeyDown(KeyCode.Space) && hideActive) {
             if(isHiding){
@@ -280,7 +347,7 @@ public class GameManager : MonoBehaviour
                         standUpAudio.Play();
                     }
                 camTargetY = camStartY;  
-                Cursor.lockState = CursorLockMode.Confined;
+                //Cursor.lockState = CursorLockMode.Confined;
                 license.transform.position = new Vector3(-7.5f, -4f, license.transform.position.z);
             } else {
                 isHiding = true;
@@ -289,13 +356,30 @@ public class GameManager : MonoBehaviour
                         crouchAudio.Play();
                 }
                 camTargetY = camStartY - 10f; 
-                Cursor.lockState = CursorLockMode.Locked;
+                //Cursor.lockState = CursorLockMode.Locked;
                 license.transform.position = new Vector3(-7.5f, -14f, license.transform.position.z);
             }
             camMoving = true;
             camLerpT = 0f;
             canShoot = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) && hideActive) {
+            isHiding = !isHiding;  
+            camTargetY = isHiding ? camStartY - 10f : camStartY;
+
+            
+
+            camMoving = true;
+
+            camLerpT = 0f;
+            canShoot = !isHiding;
+        }
+
+        if (license != null && cam != null) {
+            PositionLicense();
+        }
+
 
         if (camMoving) {
             camLerpT += Time.deltaTime * camLerpSpeed;
@@ -361,6 +445,7 @@ public class GameManager : MonoBehaviour
         if (!narrationAudio.isPlaying && narrationAudio.time >= narrationAudio.clip.length)
         {
             currentSoldier.isOpened = true; // Mark the soldier as opened when narration ends
+            StartCoroutine(ChangeSoldier()); // Automatically choose the next soldier after narration ends
         }
 
         if (isHiding && narrationAudio.isPlaying)
@@ -376,6 +461,8 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(ResumeNarrationAfterDelay());
         }
+
+        
     }
 
     IEnumerator StopNarrationAfterDelay()
@@ -461,9 +548,9 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
 
+        showCreditsOnGameEnd = true;
         SceneManager.LoadScene("Menu");
         Destroy(em);
-        Destroy(this);
     }
 
     IEnumerator FadeInDeath()
@@ -507,42 +594,93 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
     }
 
+    IEnumerator ChangeSoldier()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        SpriteRenderer spriteRenderer = death.GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null)
+        {
+            yield break;
+        }
+
+        Color color = spriteRenderer.color;
+        float alpha = color.a;
+
+        while (alpha < 1f)
+        {
+            alpha += Time.deltaTime / 2f; // 2 másodperc alatt növeli az átlátszóságot
+            color.a = Mathf.Clamp01(alpha);
+            spriteRenderer.color = color;
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(1f);
+
+        EnemyManager.Instance.ResetAllEnemies();
+
+        //hungarianSide = !hungarianSide; erre itt nincs szükség, mert a katonák váltogatása után is ugyanazon az oldalon maradunk
+
+        while (alpha > 0f)
+        {
+            alpha -= Time.deltaTime / 2f; // 2 másodperc alatt csökkenti az átlátszóságot
+            color.a = Mathf.Clamp01(alpha);
+            spriteRenderer.color = color;
+            yield return null;
+        }
+        Cursor.lockState = CursorLockMode.Confined;
+        ChooseSoldier();
+        isPlayerDead = false;
+        playerLives = 3;
+
+        yield return new WaitForSeconds(1f);
+    }
+
     
 
     void PositionLicense()
-    {
-        Debug.Log("Positioning license for soldier: " + currentSoldier.Name);
-        if (license != null)
-        {
-            license.transform.position = new Vector3(-7.5f, -4f, license.transform.position.z);
-            license.GetComponent<SpriteRenderer>().sprite = currentSoldier.Image;
-
-        }
-    }
-
-    public void SaveSoldiersToFile() 
 {
-    List<SoldierSaveData> saveData = new List<SoldierSaveData>();
-
-
-    if (HungarianSoldiers != null)
-        foreach (var soldier in HungarianSoldiers) 
-            saveData.Add(new SoldierSaveData { Name = soldier.Name, isOpened = soldier.isOpened });
+    if (license == null || cam == null || !licenseInitialized) return;
     
-    if (RussianSoldiers != null)
-        foreach (var soldier in RussianSoldiers) 
-            saveData.Add(new SoldierSaveData { Name = soldier.Name, isOpened = soldier.isOpened });
-
-    SaveWrapper wrapper = new SaveWrapper { Soldiers = saveData };
-    string json = JsonUtility.ToJson(wrapper, true);
-
-    string filePath = Path.Combine(Application.persistentDataPath, "SoldiersData.json");
-    File.WriteAllText(filePath, json);
-
-    //Debug.Log("✅ SAVED: " + filePath);
-    //Debug.Log("JSON: " + json);
+    Vector3 licenseOffset = licenseViewportOffset;
+    
+    if (isHiding) {
+        licenseOffset.y = 0.1f;  // Hiding: 15% alulról (magasabb)
+    } else {
+        licenseOffset.y = 0.1f;  // Normál: 25% alulról (még magasabb)
+    }
+    
+    Vector3 worldPos = cam.ViewportToWorldPoint(licenseOffset);
+    license.transform.position = worldPos;
+    
+    license.GetComponent<SpriteRenderer>().sprite = currentSoldier?.Image;
+    license.GetComponent<SpriteRenderer>().sortingOrder = 100;
 }
 
+
+
+    public void SaveSoldiersToFile() 
+    {
+        List<SoldierSaveData> saveData = new List<SoldierSaveData>();
+
+        if (HungarianSoldiers != null)
+            foreach (var soldier in HungarianSoldiers) 
+                saveData.Add(new SoldierSaveData { Name = soldier.Name, isOpened = soldier.isOpened });
+        
+        if (RussianSoldiers != null)
+            foreach (var soldier in RussianSoldiers) 
+                saveData.Add(new SoldierSaveData { Name = soldier.Name, isOpened = soldier.isOpened });
+
+        SaveWrapper wrapper = new SaveWrapper 
+        {
+            Soldiers = saveData,
+            NarrationLanguage = PlayerPrefs.GetString("NarrationLanguage", "English"), // Nyelv mentése
+            SubtitlesEnabled = PlayerPrefs.GetInt("SubtitlesEnabled", 1) == 1          // Felirat állapot mentése
+        };
+
+        string json = JsonUtility.ToJson(wrapper, true);
+        string filePath = Path.Combine(Application.persistentDataPath, "SoldiersData.json");
+        File.WriteAllText(filePath, json);
+    }
 
     public void LoadSoldiersFromFile()
     {
@@ -567,6 +705,10 @@ public class GameManager : MonoBehaviour
                 soldier.isOpened = soldierData.isOpened;
             }
         }
+
+        // Betöltjük a nyelvet és a felirat állapotát
+        PlayerPrefs.SetString("NarrationLanguage", saveData.NarrationLanguage);
+        PlayerPrefs.SetInt("SubtitlesEnabled", saveData.SubtitlesEnabled ? 1 : 0);
     }
 
     public void PlayAmbientSound()

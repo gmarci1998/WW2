@@ -1,16 +1,19 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using System.Linq;
 
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField] private GameObject soldierPrefab;
+    [SerializeField] private GameObject soldierPrefab2;
     [SerializeField] private GameObject sniperPrefab;
     
     public static EnemyManager Instance { get; private set; }
 
     List<SoldierMovement> soldiers = new();
     GameObject[] spawnPoints;
+    GameObject[] spawnPointsSide;
     GameObject parent;
 
     void Awake()
@@ -24,6 +27,8 @@ public class EnemyManager : MonoBehaviour
         Instance = this;
 
         spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+        spawnPointsSide = GameObject.FindGameObjectsWithTag("SpawnPointSide");
+        spawnPoints = spawnPoints.Concat(spawnPointsSide).ToArray(); // Combine both spawn point arrays into one using Concat
         // Keressük meg a Mountains GameObjectet
         parent = GameObject.Find("Mountains");
 
@@ -72,6 +77,27 @@ public class EnemyManager : MonoBehaviour
                 };
             }
         }
+
+        
+        /*foreach (var spawnPoint in spawnPointsSide)
+        {
+            GameObject enemy = Instantiate(soldierPrefab2, spawnPoint.transform.position, spawnPoint.transform.rotation, parent.transform);
+
+            SoldierMovement soldierMovement = enemy.GetComponent<SoldierMovement>();
+            if (soldierMovement != null)
+            {
+                soldierMovement.SetEnemyType(SoldierMovement.EnemyType.Soldier);
+                soldiers.Add(soldierMovement);
+                soldierMovement.OnDeathDelegate += () =>
+                {
+                    if (soldiers.Contains(soldierMovement))
+                    {
+                        soldiers.Remove(soldierMovement);
+                        StartCoroutine(RespawnEnemy(spawnPoint.transform));
+                    }
+                };
+            }
+        }*/
     }
 
     IEnumerator RespawnEnemy(Transform parent)

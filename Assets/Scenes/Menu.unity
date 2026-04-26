@@ -3531,16 +3531,72 @@ MonoBehaviour:
   openingScene: {fileID: 1206191421}
   GameScene: GameScene
   fadeTime: 0.4
-  HungarianSoldiers: []
-  RussianSoldiers: []
-  button1: {fileID: 0}
-  button2: {fileID: 0}
-  button3: {fileID: 0}
-  button4: {fileID: 0}
-  button5: {fileID: 0}
-  button6: {fileID: 0}
-  button7: {fileID: 0}
-  button8: {fileID: 0}
+  HungarianSoldiers:
+  - Name: "Andr\xE1s Hodanincs"
+    Image: {fileID: 0}
+    Age: 0
+    Description: 
+    Audio: {fileID: 0}
+    picked: 0
+    isOpened: 0
+  - Name: "Ferenc Bed\u0151"
+    Image: {fileID: 0}
+    Age: 0
+    Description: 
+    Audio: {fileID: 0}
+    picked: 0
+    isOpened: 0
+  - Name: Folhoffer Benedek
+    Image: {fileID: 0}
+    Age: 0
+    Description: 
+    Audio: {fileID: 0}
+    picked: 0
+    isOpened: 0
+  - Name: "Istv\xE1n Maruzs"
+    Image: {fileID: 0}
+    Age: 0
+    Description: 
+    Audio: {fileID: 0}
+    picked: 0
+    isOpened: 0
+  RussianSoldiers:
+  - Name: Aleksei Morozov
+    Image: {fileID: 0}
+    Age: 0
+    Description: 
+    Audio: {fileID: 0}
+    picked: 0
+    isOpened: 0
+  - Name: Ivan Petrov
+    Image: {fileID: 0}
+    Age: 0
+    Description: 
+    Audio: {fileID: 0}
+    picked: 0
+    isOpened: 0
+  - Name: Mykola Shevchenko
+    Image: {fileID: 0}
+    Age: 0
+    Description: 
+    Audio: {fileID: 0}
+    picked: 0
+    isOpened: 0
+  - Name: Serik Nurgaliyev
+    Image: {fileID: 0}
+    Age: 0
+    Description: 
+    Audio: {fileID: 0}
+    picked: 0
+    isOpened: 0
+  button1: {fileID: 66555017}
+  button2: {fileID: 1881194527}
+  button3: {fileID: 235779233}
+  button4: {fileID: 1941519642}
+  button5: {fileID: 1804180428}
+  button6: {fileID: 704460222}
+  button7: {fileID: 1895930140}
+  button8: {fileID: 323879519}
 --- !u!4 &678694481
 Transform:
   m_ObjectHideFlags: 0
@@ -6722,11 +6778,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8631235d00707948b18f7d3475e3421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 1542614447}
+  musicSource: {fileID: 0}
   sfxSource: {fileID: 0}
-  hoverSound: {fileID: 8300000, guid: 24aaafb0e080d3d4696e5673b0e354d2, type: 3}
-  paperSound: {fileID: 8300000, guid: 7bdcb03006860b24ba27cd993d4a2584, type: 3}
-  paperClosedSound: {fileID: 8300000, guid: e750277683b272c49b2192a2f07279fe, type: 3}
+  hoverSound: {fileID: 0}
+  paperSound: {fileID: 0}
+  paperClosedSound: {fileID: 0}
 --- !u!1 &1558418240
 GameObject:
   m_ObjectHideFlags: 0

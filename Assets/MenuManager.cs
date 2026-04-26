@@ -112,9 +112,73 @@ public class MenuManager : MonoBehaviour
         public List<SoldierSaveData> Soldiers;
     }
 
-    void Start()
+    void Awake()
+    {
+        StartCoroutine(CheckCreditsOnAwake());
+    }
+
+    IEnumerator CheckCreditsOnAwake()
+    {
+        yield return null; 
+        
+        if (GameManager.Instance != null && mainMenu != null && creditsMenu != null)
+        {
+            bool shouldShowCredits = GameManager.Instance.showCreditsOnGameEnd;
+            GameManager.Instance.showCreditsOnGameEnd = false;
+            
+            if (shouldShowCredits)
+            {
+                // Főmenü elrejtése
+                mainMenu.alpha = 0f;
+                mainMenu.gameObject.SetActive(false);
+                
+                StartCoroutine(OpenCreditsSafe());
+                yield break;
+            }
+        }
+    }
+
+    IEnumerator OpenCreditsSafe()
+    {
+        yield return new WaitForEndOfFrame(); // Biztos stabilitás
+        
+        // Credits aktiválása
+        creditsMenu.gameObject.SetActive(true);
+        creditsMenu.alpha = 0f;
+        
+        // Gyors fade-in credits-re
+        StartCoroutine(Fade(creditsMenu, 0f, 1f));
+        creditsMenu.interactable = true;
+        creditsMenu.blocksRaycasts = true;
+        
+        // Inicializálás
+        LoadSoldiersFromFile();
+        UnlockCursor();
+    }
+
+    void Start()  
     {
         LoadSoldiersFromFile();
+        UnlockCursor();
+    }
+
+    
+    IEnumerator OpenCreditsImmediate()
+    {
+        yield return null; 
+        if (creditsMenu != null)
+        {
+            creditsMenu.gameObject.SetActive(true);
+            StartCoroutine(SwitchMenu(null, creditsMenu));
+        }
+        LoadSoldiersFromFile();
+        UnlockCursor();
+    }
+
+    public void UnlockCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void LoadSoldiersFromFile()

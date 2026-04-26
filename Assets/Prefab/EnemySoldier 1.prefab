@@ -97,10 +97,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1124048124807032749}
   - component: {fileID: 8693092511967742174}
-  - component: {fileID: 2553884087071905679}
   - component: {fileID: 1657631722436741506}
+  - component: {fileID: -8742167529870920379}
   m_Layer: 0
-  m_Name: EnemySoldier
+  m_Name: EnemySoldier 1
   m_TagString: EnemySoldier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,25 +177,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2553884087071905679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8772047326046934785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ca84ca35d76a144ea7aa21631ca3a64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyParallaxX: 8
-  enemyParallaxY: 0.2
-  moveSpeed: 2
-  startingHeight: 0
-  maximumHeight: 3
-  dying: {fileID: 1657631722436741506}
-  timeBeforeFirstAction: 3
 --- !u!82 &1657631722436741506
 AudioSource:
   m_ObjectHideFlags: 0
@@ -293,3 +274,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-8742167529870920379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8772047326046934785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a74b572041d12264bb6c77f47c242c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyParallaxX: 4
+  enemyParallaxY: 0.2
+  moveSpeed: 2
+  startingHeight: 0
+  maximumHeight: 3
+  dying: {fileID: 0}
+  timeBeforeFirstAction: 3
+  enemyType: 0
+  soldierHitChance: 0.7
