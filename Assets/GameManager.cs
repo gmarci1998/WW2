@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int playerLives = 3;
 
     private bool isLock = false;
+    private int maxPlayerLives = 3;
 
     public static GameManager Instance { get; private set; }
     
@@ -97,7 +98,9 @@ public class GameManager : MonoBehaviour
     {
         if (isPlayerDead) return;
 
-        //playerLives -= damage;// TODO - delete this
+        playerLives -= damage;// TODO - delete this
+
+        SetShatterPortraitAlpha(playerLives);
         PlayPlayerHitSound();
         if (FixedWeaponPosition.Instance != null){
             FixedWeaponPosition.Instance.ShakeCameraByHit();
@@ -356,7 +359,7 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("Player élete: " + isPlayerDead);
         if(isPlayerDead) {
-            license.SetActive(false); 
+            //license.SetActive(false); 
         }else{
             license.SetActive(true); 
         }
@@ -527,7 +530,6 @@ public class GameManager : MonoBehaviour
         }
 
         StartCoroutine(FadeInDeath());
-        StartCoroutine(ShatterPortrait());
     }
 
     public int GetPlayerLives()
@@ -568,6 +570,8 @@ public class GameManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
 
+
+        yield return new WaitForSeconds(0.5f); // Rövid késleltetés a halás animáció előtt
         // Enable death gameobject
         // Fade in the death image, 0.5f, death images is the first child of the death gameobject
         // Slow zoom out, 2s, parallel to the fade in, zooming happens by scaling the image, it should start from x=5, y=5, z=1, and end at x=1, y=1, z=1
@@ -576,8 +580,8 @@ public class GameManager : MonoBehaviour
         death.SetActive(true);
         Vector3 zoomOutStartScale = new Vector3(5f, 5f, 1f);
         Vector3 zoomOutEndScale = Vector3.one;
-        float fadeInDuration = 0.5f;
-        float zoomOutDuration = 2f;
+        float fadeInDuration = 1.5f;
+        float zoomOutDuration = 1.5f;
         deathImageTransform.localScale = zoomOutStartScale;
         if (deathSprite != null)
         {
@@ -650,31 +654,39 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         ChooseSoldier();
         isPlayerDead = false;
-        playerLives = 3;
+        playerLives = maxPlayerLives;
+
+        SetShatterPortraitAlpha(playerLives);
 
         yield return new WaitForSeconds(1f);
     }
 
-    IEnumerator ShatterPortrait()
+    void SetShatterPortraitAlpha(int lives)
     {
         var shatter = license.transform.GetChild(0);
 
         if (shatter == null)
         {
-            yield break;
+            return;
         }
 
         SpriteRenderer spriteRenderer = shatter.GetComponent<SpriteRenderer>();
         var color = spriteRenderer.color;
 
-        color.a = 1f;
-        spriteRenderer.color = color;
-
-        yield return new WaitForSeconds(3f);
-
-        color.a = 0f;
-        spriteRenderer.color = color;
+        if(playerLives == maxPlayerLives)
+        {
+            color.a = 0f;
+            spriteRenderer.color = color;
+            Debug.Log($"Color alpha set to 0 for {currentSoldier.Name} with {playerLives} lives");
+        }
+        else
+        {
+            color.a = 1f / (System.Math.Max(playerLives, 0) + 1f);
+            spriteRenderer.color = color;
+            Debug.Log($"Color alpha set to {color.a} for {currentSoldier.Name} with {playerLives} lives");
+        }
     }
+
     IEnumerator ChangeSoldier()
     {
         Cursor.lockState = CursorLockMode.Locked;
