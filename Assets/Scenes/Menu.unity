@@ -194,6 +194,142 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364151}
   m_CullTransparentMesh: 1
+--- !u!1 &28206654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 28206655}
+  - component: {fileID: 28206657}
+  - component: {fileID: 28206656}
+  m_Layer: 5
+  m_Name: txt-back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &28206655
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28206654}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1529034556}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &28206656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28206654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: <b>English</b> / Hungarian
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 32
+  m_fontSizeBase: 32
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 0
+  m_fontSizeMax: 0
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &28206657
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28206654}
+  m_CullTransparentMesh: 1
 --- !u!1 &49436189
 GameObject:
   m_ObjectHideFlags: 0
@@ -2086,6 +2222,736 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!1 &318125751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 318125758}
+  - component: {fileID: 318125757}
+  - component: {fileID: 318125756}
+  - component: {fileID: 318125755}
+  - component: {fileID: 318125754}
+  - component: {fileID: 318125753}
+  - component: {fileID: 318125752}
+  m_Layer: 5
+  m_Name: Canvas-settings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!82 &318125752
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318125751}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &318125753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318125751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11eb80aea196bbf408863535d6abb0de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterInfoPanel: {fileID: 0}
+  characterImage: {fileID: 0}
+  characterDescription: {fileID: 0}
+  narrationSource: {fileID: 318125752}
+  characters:
+  - image: {fileID: 8830225953951354234, guid: 2a6cd810f5d10ff47b2bdead4a5d6e9b, type: 3}
+    description: "Ferenc Bed\u0151 / Age: 33 \\n Rank/Position: Private (enlisted
+      soldier), infantryman \\n Civilian Occupation: Railway worker (switchman /
+      track switch operator) \\n Origin: Szolnok County \\n \\n Bed\u0151 Ferenc
+      was \u201CFerk\xF3\u201D to everyone back home. \\n \\n He had to be. His father
+      was Bed\u0151 Ferenc, too. And his father before him. You can\u2019t spend
+      your whole life shouting <i> \u201CHey, Feri!\u201D </i> into a room and expect
+      the right man to turn around, so you have to distinguish somehow. \\n \\n That\u2019s
+      how a strange thing happened: Ferk\xF3 grew into a giant. One hundred and four
+      kilos. One ninety-three centimeters. He stood a head and a half above his father\u2014Older
+      Bed\u0151 Ferenc\u2014and his grandfather\u2014Even Older Bed\u0151 Ferenc.
+      And still, as \u201CFerk\xF3\u201D, he was the one who felt like a dumb child.
+      Just because he\u2019d made the mistake of being born twenty-two years after
+      one of them, and thirty-nine years after the other. \\n \\n Now he grips his
+      rifle and fires into a horizon that looks impossible to reach. He thinks he
+      would give almost anything to hear someone call him Ferk\xF3 one more time.
+      But there\u2019s no chance of that here. When they drafted him, he introduced
+      himself as Ferenc. Not Feri. Not Fec\xF3. Not Ferchi. Ferenc. And because he
+      used to be so big, so strong, every man in this trench has called him Ferenc
+      ever since. He\u2019s shrunk since then. Starved down. Folded in on himself.
+      But the name stayed. It clings to him like mud. And every time someone says
+      it, it sounds hollow. Foreign. Like they\u2019re calling to somebody else,
+      and his body just happens to answer. \\n \\n Last night, chewing on tough,
+      salty beef, he felt an urge he couldn\u2019t swallow. To tell someone. To let
+      the nickname exist out loud. There was a man beside him in the trench, maybe
+      five years younger. They shared a torn blanket. If Ferenc remembered correctly,
+      the man\u2014J\xE1nos\u2014was from the same part of Hungary as he was. Somewhere
+      around Szolnok. That was enough to make Ferenc feel a kind of kinship, so he
+      decided J\xE1nos was the right witness for a confession like that, even though
+      he didn\u2019t look like a soldier, not really. Back home, he could\u2019ve
+      been a librarian. A teacher. A watchmaker. A doer of some kind of womanly profession.
+      His fingers were long and spidery, and even after weeks out here, his nails
+      still looked strangely kept. \\n \\n And J\xE1nos didn\u2019t answer. At first,
+      Ferenc got angry. Then the anger curdled. Disgust. Panic. He saw the glassy
+      stare. He lifted the blanket, searching for the wound. A bullet hole. Blood.
+      Anything. There was nothing. J\xE1nos had simply frozen to death. \\n \\n The
+      boots on Ferenc\u2019s feet are J\xE1nos\u2019s boots. Inherited. No. Stolen.
+      Taken to replace Ferenc\u2019s own shredded pair. And now they squeeze his
+      toes painfully. The pain makes it hard to do the only job he has left: to keep
+      firing at the Soviets across the river. So there\u2019s the cold. And the bullets
+      whipping over his head. And now this, too. He almost wishes it would all just
+      end. \\n \\n That wish lasts only until he hears it: the dull thump of a body
+      hitting the ground a few meters away. The sound brutally reminds him that cold,
+      fear, and pain are still better than non-existence. \\n \\n Between two shots,
+      Ferenc repeats something to himself. Over and over. Like a prayer, like a plan.
+      If he ever gets lucky enough to introduce himself to a new person again, he\u2019ll
+      say the following: \u201CBed\u0151 Ferenc. The younger one. But you can just
+      call me Ferk\xF3.\u201D "
+    narrationClip: {fileID: 8300000, guid: 16ad02e124fb2e34294adb7bcf313033, type: 3}
+  - image: {fileID: -7754199205684209494, guid: 80770355e2e487c43a2433218c3f020c, type: 3}
+    description: "Benedek Folhoffer / Age: 24 \\n Rank / Position: Private (enlisted
+      soldier), assistant machine gunner (ammunition bearer) \\n Civilian Occupation:
+      Carpenter\u2019s apprentice \\n Origin: Near Gy\u0151r, Transdanubia \\n \\n 
+      If for nothing else, Folhoffer Benedek was grateful for this: out here, in
+      the middle of this frozen hell, nobody knew he had killed his mother.  \\n
+      \\n He hadn\u2019t meant to, of course. A breech-born infant doesn\u2019t have
+      bloodlust or anything like that. But whatever happened, happened. His mother
+      bled out. And Benedek\u2019s father declared him his sworn enemy about six
+      and a half minutes after he entered the world. \\n \\n Benedek grew up hearing
+      it, over and over. That he was a little murderer. A cursed child. Not everyone
+      said it to hurt him. Some said it as a fact. Some like a joke. His paternal
+      grandfather was even proud. Proud that Benedek had barely drawn his first breath
+      and already \u201Cput a Swab in the ground\u201D. But his father never softened.
+      Not for a second. It was too bitter a pill to swallow that his son had made
+      him a widower. \\n \\n Benedek waited until he was fourteen. Then he left Mez\u0151\xF6rs
+      behind. He took money from weaker kids by force. He bought a train ticket.
+      He didn\u2019t stop until Tata, where he found work as a carpenter\u2019s apprentice.
+      He had as much natural talent for wood as a fattened pig has for self-restraint.
+      But what God had denied him in skill, he made up for with stubbornness. His
+      grandfather used to say it all the time. Not the clever ones get ahead in life
+      but the ones who can sit still and learn. He\u2019d say it under the shade
+      of the cabinet, cherries in their mouths, counting on an abacus while the sun
+      hammered the yard. \\n \\n As it turned out, the old man was right. \\n \\n
+      At first, Master Trok\xE1n Pista only respected Benedek\u2019s effort. The
+      fact that he showed up day after day. That he didn\u2019t quit. Then, slowly,
+      he began to respect the work itself. Once in a while, he\u2019d even say something
+      kind. \u201CYou\u2019re not as hopeless as you look,\u201D he\u2019d tell him,
+      clapping him on the shoulder. And Benedek swelled with pride. \\n \\n Around
+      that time, he decided to take his dead mother\u2019s surname as well. Folhoffer.
+      When he walked out of the registrar\u2019s office with his new name, he did
+      something he had never been able to do before. For the first time in his life,
+      he stopped thinking of himself as a killer. \\n \\n But now\u2026 \\n \\n \u201CNow
+      I\u2019ve finally become what my dear father always said I was,\u201D Benedek
+      mutters as he drops back into the trench for a few seconds to breathe. The
+      endless white is hurting his sight. Stars dance in front of his eyes. Snow-blindness
+      makes him doubt everything. He can\u2019t even be sure he hit anyone across
+      the river. And yet he feels it. He feels that he isn\u2019t just shooting into
+      the world at random. Because lately it has been getting harder to think of
+      himself as a carpenter. Harder to hold onto that word. As if the soul can sense
+      its own slow destruction even when the senses begin to fail. \\n \\n Will he
+      ever be able to create something again, if he makes it home?, he wonders. A
+      table, for example. Or a door. Anything. Can a hand still create, after months
+      of doing nothing but destroy? He doesn\u2019t know the answer. But he knows
+      he wants to get back alive, just to find out. Because it\u2019s better to face
+      horrors in a properly heated workshop than to turn them over in your head while
+      the cold grinds your bones.  "
+    narrationClip: {fileID: 8300000, guid: 555cffd6cbc6e5f48acfff0b68a0bcc8, type: 3}
+  - image: {fileID: -7610096024345054562, guid: 87bc25401fa314c458f93dfc662e7bb3, type: 3}
+    description: "Istv\xE1n Maruzs / Age: 41 \\n Rank / Position: Private (reservist),
+      trench runner / Messenger \\n Civilian Occupation: Farmer \\n Origin: N\xF3gr\xE1d
+      County, Northern Hungary\t\\n\\n  Maruzs Istv\xE1n simply couldn\u2019t understand
+      why everyone else wasn\u2019t enjoying this at least half as much as he was.
+      \\n\\n Sure, the cold was miserable. The food was scarce, and what there was
+      tasted like horse dung. But those were minor inconveniences compared to the
+      fact that he was finally allowed to hold a weapon. A real weapon. One he could
+      actually use. And not just for shooting at targets. \\n\\n But for killing
+      a man. \\n\\n Because Istv\xE1n had fantasized about taking a human life for
+      as long as he could remember. He could never put into words what was so seductive
+      about it. It wasn\u2019t the cruelty of the ritual. He didn\u2019t take pleasure
+      in someone else\u2019s pain. What fascinated him was the idea itself. The switch.
+      That a person who existed could suddenly stop existing\u2014because of him.
+      \\n\\n The biggest obstacle, for years, was the law. He was terrified of it.
+      Not of morality. Of consequences. Of what would happen to him if he did what
+      he wanted to do. So he stayed inert. He dreamed. He imagined. \\n\\n And he
+      did nothing. \\n\\n Sometimes he went hunting with his friend, Endre. But shooting
+      a pheasant or a rabbit did nothing to ease the itch that took up most of his
+      waking life. He liked pig slaughters better. There was something almost human
+      in a pig\u2019s eyes. If nothing else, it gave him a taste of the forbidden
+      fruit. Then, about five years ago, luck smiled at him\u2014briefly. Istv\xE1n
+      lived off farming. They had a few plots of land, part of his wife\u2019s dowry.
+      But his father-in-law could never bring himself to trust him with the work.
+      He couldn\u2019t believe Istv\xE1n was capable of dealing with it alone. So
+      he would come out with him, again and again, to work the soil. And he would
+      wear Istv\xE1n down with his chatter. One of his favorite topics was his broken
+      heart. The tragedy that Istv\xE1n and Marika\u2014Istv\xE1n\u2019s wife\u2014hadn\u2019t
+      given him a strong, beautiful grandchild. Not even a weak, ugly one. Simply
+      none. \\n\\n On that wonderful day, he was complaining about it again. Istv\xE1n
+      was already forming a fake excuse in his mind. He was going to say something
+      and go home. Anything to get away. But he didn\u2019t get the chance. His father-in-law
+      started shaking. His whole body seized. And then he simply toppled into the
+      furrow the plow had cut into the earth. Istv\xE1n ran to him. At first, fear
+      crushed his chest in an iron grip. Then, as he watched the old man convulse
+      in the dirt, foam at the mouth, something else replaced it. Relief. A kind
+      of calm he had wanted his entire life\u2014but had never dared to hope he would
+      actually feel. He positioned the oxen and the plow so they would block the
+      view from the neighboring fields, in case anyone looked over. \\n\\n Then he
+      sat down on the ground. And he watched his father-in-law die. It was a long
+      process. Painful, surely, for the older man. During it, Istv\xE1n even experimented.
+      He wanted to know what would happen if he pinched the man\u2019s nose shut.
+      As it turned out, not much\u2014except that the old man drowned faster in the
+      thick, wet sludge rising in his throat. Only when Istv\xE1n was certain there
+      was no pulse left did he start yelling for help. With all that in mind, it\u2019s
+      no surprise that Istv\xE1n was almost the only man whose face shone on the
+      day of conscription. Luckily, people read his eagerness as patriotism, so they
+      didn\u2019t ask questions. \\n\\n Unluckily, once they reached the Voronezh
+      region, he was assigned as a trench runner. A courier. So he spent his days
+      sprinting from point A to point B with messages, while everyone else got to
+      do the part that mattered. Shooting. Killing. He was already flirting with
+      the idea of disobeying orders when the platoon commander took pity on him.
+      By January fifth\u2014without the German support they\u2019d been promised\u2014the
+      situation against the Soviet superiority had been judged so desperate that
+      every able-bodied man was handed a rifle and pushed to the lip of the trench.
+      \\n\\n When Istv\xE1n received his weapon, he broke into a wide grin. The platoon
+      commander looked at him with fatherly pride. He patted his shoulder. And in
+      a voice thick with emotion, he said only this: <i> \u201CNow that\u2019s a
+      patriot right here!\u201D. </i>"
+    narrationClip: {fileID: 8300000, guid: 50dadd7ea8e52a3438ebc80f2074442e, type: 3}
+  - image: {fileID: 4570106350468467348, guid: 3c678c94c1be9874db7a0d58a33163d9, type: 3}
+    description: "Aleksei Morozov / Age: 37 \\n Rank / Position: Junior Sergeant,
+      deputy squad leader \\n Civilian Occupation: Tractor driver \\n Origin: Kursk
+      region, RSFSR (Russian Soviet Federative Socialist Republic) \\n \\n  Aleksei
+      Morozov was kept alive by hatred. \\n\\n Not hatred for the Hungarians across
+      the river, or the occasional German you could spot among them. Those men were
+      just obstacles. Things standing between him and whatever counted as home now.
+      What pumped blood through his veins, day after day, moment after moment, was
+      contempt. Contempt for his uncle. For how he ruined his family. \\n\\n Aleksei\u2019s
+      father was a simple, hard-working man. A man who spent his whole life farming
+      and tending animals. He didn\u2019t understand big politics, and he didn\u2019t
+      want to. He believed that anything he needed, he could produce with his own
+      hands. For a long time, it looked like the world would prove him right. His
+      patience and his discipline built a respectable fortune. Somehow, it even survived
+      the chaos of the civil war years, despite the state taking whatever it could
+      from the countryside. \\n\\n But his father never watched the horizon. He watched
+      only his fields. So the burden of keeping up with the world fell onto Aleksei
+      and his mother, Anna. They were the ones who tried to warn him. They told him
+      collectivization was coming. That it was inevitable. That they should sell
+      what they could while they still could. The equipment. The threshing machine.
+      The livestock. Turn it into money. Then leave\u2014fast. Cross the border.
+      Disappear. \\n\\n Aleksei\u2019s father may have seen the logic in it. But
+      the thought of leaving his country\u2014of the danger, the unknown\u2014terrified
+      him. And that fear is probably why he listened to his younger brother, Pyotr.
+      Pyotr insisted better days would come. There was no need to panic. Don\u2019t
+      sell. Don\u2019t run. Hide what you can. Bury it. Stash it away. When the good
+      times return, you\u2019ll still have something to reach for. Aleksei\u2019s
+      father trusted his brother. Why wouldn\u2019t he? He didn\u2019t even know
+      that Pyotr had already joined the Komsomol. That he was already building himself
+      a future. That he had ambitions that needed a ladder. And nothing built a ladder
+      faster than discovering\u2014and smoking out\u2014a kulak. \\n\\n So Pyotr
+      wrote a speech. \\n\\n And he delivered it at the town\u2019s first quarterly
+      meeting of 1930. Aleksei wasn\u2019t there. But others were. Men who would
+      later become his friends. They told Aleksei what they saw. They repeated the
+      story so many times that Aleksei began to see it, too. He pictured the scene
+      so vividly that he could imagine the smallest twitch in his uncle\u2019s face
+      as he betrayed his own brother. The armed brigade came the next morning. \\n\\n
+      They didn\u2019t leave until they had turned the house inside out. Until they
+      had found everything on the list Pyotr had given them. What made it worse was
+      that Aleksei\u2019s family hadn\u2019t just kept their wealth. They had tried
+      to hide it. So they deported the whole family. Party people moved into their
+      home. Pyotr was appointed brigade leader. And from that day on, a large letter
+      marked Aleksei\u2019s papers. A \u201CK.\u201D It branded him. And it branded
+      his son, born three years later. The stigma followed the boy into school. It
+      sat there in the class register like a stain that wouldn\u2019t wash out. Aleksei\u2019s
+      father couldn\u2019t carry the weight of the betrayal. He hanged himself. His
+      mother didn\u2019t last much longer. Grief and shame finished what the state
+      had started. \\n\\n Aleksei became a tractor driver. Year after year, he planned
+      revenge against his uncle. And year after year, he postponed it\u2014for the
+      sake of his family. For the sake of his son. Until the war arrived. The war,
+      that took so much from him, that consequences stopped mattering. Now, out here
+      on this frozen no-man \u2019s-land, it is the promise of future retribution
+      that moves his limbs. It is faith\u2014cold, clean faith\u2014that a day will
+      come when he can take the rifle he holds right now, press the barrel into his
+      uncle\u2019s mouth, and squeeze the trigger. He imagines it with the calm of
+      a man imagining sunrise. Not because he loves killing. Because he loves the
+      idea of debt being paid."
+    narrationClip: {fileID: 8300000, guid: 44468e74589917f4e94fcd18187c8b88, type: 3}
+  - image: {fileID: -3432214506606557312, guid: b219ed7586b42db4cac66fca4844c3a2, type: 3}
+    description: "Ivan Petrov / Age: 26 \\n Rank / Position: Red Army soldier (private),
+      rifleman \\n Civilian Occupation: History teacher\\n Origin: Voronezh city
+      / surrounding area, RSFSR (Russian Soviet Federative Socialist Republic) \\n\\n
+      Ivan Petrov was driven by one thing only: patriotism in its purest form. His
+      heart beat for the nation and the motherland. It was almost religious. And
+      he was certain that this devotion\u2014this worship of home\u2014was what kept
+      him alive. \\n\\n Doctors told his parents early on that he was a sick, fragile
+      boy. Not built for this world. <i> \u201CProtect him from everything,\u201D
+      </i> the doctor said. <i> \u201CEven from the wind. There\u2019s no medicine
+      I can prescribe for what he has.\u201D </i> His parents listened.  They kept
+      him wrapped in comfort. They treated him like porcelain. \\n\\n And Ivan hated
+      it. \\n\\n  He begged for the same rough, ordinary life his siblings got. The
+      same life other boys got. They wouldn\u2019t even let him work summers to earn
+      a little money. They wouldn\u2019t let him play outside in daylight. He was
+      allowed out only at dusk, when the sun couldn\u2019t burn him. He couldn\u2019t
+      even leave the street, so his mother could observe him from the kitchen window.
+      The other children made it even worse. They pushed him out. They didn\u2019t
+      want him on their team. Whether they were playing football or playing war,
+      it was always the same. If Ivan was on your side, you were at a disadvantage.
+      \\n\\n After a while, he stopped asking to go out. \\n\\n He stayed in his
+      room instead. He liked the half-dark that the lowered blinds created. He put
+      on his thick-framed glasses\u2014glasses he would never wear in front of the
+      other boys if he could help it\u2014and squinted his way through book after
+      book from his father\u2019s inexhaustible library. It didn\u2019t take long
+      for him to convince himself that it was better to read about the injustices
+      done to his homeland during the Napoleonic wars than to choke in the dust outside.
+      That Lenin\u2019s immortal ideas could soothe an ordinary Russian youth even
+      when his chest began to sting like an old man\u2019s. \\n\\n In time, Ivan
+      formed a belief as solid as iron. Russia had been robbed of its greatness again
+      and again\u2014or at least, the West had tried to rob it. It didn\u2019t matter
+      though which conquerors came from the west to defile the holy soil. In the
+      end, they always failed. That belief is why he became a history teacher. So
+      he could pass the idea of national greatness into as many unpolished minds
+      as possible. In his modest way, he would help ensure that the motherland remained
+      in good hands in the next generations to come. But daytime speeches in a classroom
+      didn\u2019t fully satisfy his hunger for justice. So in the evenings he went
+      to pubs and caf\xE9s. He never drank a drop of alcohol. And yet he behaved
+      like a drunk. Flushed face. Bright eyes. Climbing onto chairs, onto tables\u2014sometimes
+      straight onto the counter\u2014preaching what should be done to the nations
+      that threatened Mother Russia. \\n\\n So when the motherland needed him most,
+      there was never any question of whether he would go to war. He knew there were
+      cowardly traitors who would gladly hide behind a weak body. Men who would fold
+      their hands in gratitude if poor health excused them from service. Ivan was
+      not one of them. On the contrary. He reached into his pocket and used a significant
+      portion of the money he\u2019d inherited from his parents to grease the right
+      palms. To persuade the decision-making doctors to look away from his irregular
+      heartbeat. To ignore the lungs that worked at seventy percent capacity. \\n\\n
+      And now he leans out of the trench and fires. He keeps firing. And he sings
+      at the top of his lungs\u2014The Sacred War. He\u2019s the most surprised of
+      all that his voice doesn\u2019t crack. That his breathing doesn\u2019t whistle.
+      The sound comes out clean and clear into the frozen air. As if the cold can\u2019t
+      touch him. As if bullets fired by men who fight without conviction can\u2019t
+      touch him either. And if death does catch him here, Ivan isn\u2019t afraid.
+      He only hopes the sun will come out. That the thick crust of ice over the ground
+      will finally soften. So the sweet motherland\u2014his mother earth\u2014can
+      drink, to the last drop, the blood of her fragile child.  "
+    narrationClip: {fileID: 8300000, guid: 58069518f45003d459f14a376b4507b5, type: 3}
+  - image: {fileID: 1116025709374489556, guid: 88ce801cd676caa44842508ac0da0c40, type: 3}
+    description: "Mykola Shevchenko (Ukrainian) /  Age:22 \\n Rank/Position: Red
+      Army soldier, submachine gunner(PPSh) \\n Civilian Occupation: Shoemaker\u2019s
+      apprentice /  Origin: Around Poltava, Ukrainian SSR \\n\\n  Mykola shouldn\u2019t
+      be here. Not in the karmic, spiritual sense, like \u201Cno child of God deserves
+      to be dragged into a slaughterhouse\u201D. Not even because, as a Ukrainian,
+      he never truly felt part of this conflict with the Third Reich and its allies.
+      No, he shouldn\u2019t be here for a much simpler reason. With a father of his
+      rank, conscription was supposed to be the kind of thing that happened to ordinary
+      people. Not to him. And yet he was here. \\n\\n And the worst part was this:
+      he had volunteered. Mykola had a best friend. Bohdan. Neither of them had siblings,
+      so when they met\u2014four or five years old\u2014they filled that empty space
+      in each other\u2019s lives. They became brothers by choice. Mykola\u2019s parents
+      warned him. Be careful who you attach yourself to. A boy with Bohdan\u2019s
+      background can bring trouble. The source of that suspicion was obvious. Mykola\u2019s
+      father had been transferred from Kyiv as the regional economic officer for
+      the Party committee. The entire weight of strategic production\u2014military
+      equipment\u2014rested on his shoulders. Bohdan\u2019s father, on the other
+      hand, was nothing more than a factory locksmith. \u201CWhat does it say about
+      us,\u201D his mother would ask, \u201Cthat you keep company with some no-name
+      scum?\u201D Mykola didn\u2019t care. He spent every hour he could with Bohdan\u2014often
+      at Bohdan\u2019s home. Their conditions were modest compared to Mykola\u2019s,
+      but the atmosphere was better. Much better. There was singing. Card games that
+      stretched late into the night. Dinners that felt like feasts. And Mykola was
+      always welcome at their table. He would never admit it to his mother, but to
+      Mykola, home-cooked food meant Aunt Daryna\u2019s cooking\u2014not the lukewarm
+      slop that was placed in front of him at home. As the years went on, the bond
+      between the two boys became the subject of endless gossip. Classmates. Even
+      teachers. People talked. Which is why it was almost funny that, in the end,
+      it was a girl who came between them. \\n\\n Oksana.  She and her family\u2014mother,
+      father, four younger siblings\u2014had moved into the city from a small farm
+      near Poltava after the state stripped them of almost everything they owned.
+      Their lives crossed because of chess. More precisely, because of the Poltava
+      chess club. \\n\\n Mykola wasn\u2019t much of a player. Bohdan was. Some people
+      called him a once-in-a-generation talent. A boy who was always at least four
+      moves ahead. At least until Oksana walked into the club. After a lazy game
+      against two much younger children, Mykola got bored. He poured himself tea
+      and laced it with vodka. Then he went looking for Bohdan in the Friday-night
+      swirl of the House of Culture. When he found him, Bohdan was wearing an expression
+      Mykola had never seen on his face before\u2014certainly not during chess. Concentration
+      mixed with worry. Across from him sat a strawberry-blonde, freckled girl. And
+      from the number of pieces still standing on the board, it was clear she was
+      giving Bohdan a serious challenge. Mykola sipped his spiked tea and stared
+      at her without shame. Oksana lost, in the end. Bohdan won. But she entered
+      their lives anyway. Irreversibly. And the same was true in the other direction.
+      \\n\\n From the start, Mykola felt like a third wheel whenever the three of
+      them were together. Bohdan and Oksana had more in common than just chess. There
+      was a harmony between them that made even the boys\u2019 legendary friendship
+      feel\u2026 smaller. But when Mykola was alone with her\u2014rare moments, usually
+      because Bohdan was stuck working overtime at the factory\u2014Mykola began
+      to believe that Oksana wasn\u2019t indifferent to him. Not to his temper. Not
+      to his loudness. Not to his reckless jokes and his crude humor. Not to the
+      way he filled a room. \\n\\n In the end, it turned out he hadn\u2019t just
+      imagined it. \\n\\n Two weeks after Bohdan asked for Oksana\u2019s hand\u2014and
+      she said yes\u2014she invited Mykola for a walk. At the bank of the Vorskla,
+      Mykola slept with the fianc\xE9e of his childhood best friend. He didn\u2019t
+      fool himself into thinking it meant anything to her beyond one last indulgence.
+      But the way she turned away afterward, as if nothing had happened, still hurt.
+      \\n\\n The next time he heard from her was three months later, when conscription
+      was already sweeping through Poltava. On paper, Mykola had nothing to fear.
+      His father was a respected figure\u2014some people would say a useful idiot\u2014inside
+      the Soviet war machine. All Mykola had to do was avoid attention. Stay away
+      from crowds. Keep off the streets. So when the knock came at the front door
+      one morning, panic filled the house. Then relief. No officers on the threshold.
+      It was Oksana. \\n\\n She sat in the salon and didn\u2019t waste time. In her
+      usual blunt, unsoftened way, she told Mykola she was pregnant. And that the
+      child was almost certainly his, not Bohdan\u2019s. Mykola, stunned, asked what
+      she expected him to do with that information. Oksana answered calmly. \u201CDo
+      what\u2019s right. Go in Bohdan\u2019s place\u201D. Mykola called her insane.
+      He said it was the craziest thing he had ever heard. That\u2019s when she played
+      her ace. Either Mykola takes Bohdan\u2019s place, or Oksana tells him everything.
+      And then Mykola will spend the rest of his life living with what he did. \u201CImagine
+      Bohdan out there,\u201D she said. \u201CBleeding out while laying in the mud,
+      thinking that the best friend he loved like a brother and the woman he adored
+      betrayed him.\u201D \\n\\n So Mykola said yes and took Bohdan\u2019s place.
+      Now, shivering in bone-freezing cold, gripping his weapon until his fingers
+      ache, he understands how stupid it was to agree. But it\u2019s easy to be noble
+      and generous when you\u2019re warm. When your stomach is full. When you aren\u2019t
+      living under the simple fact that any second now someone can put a bullet through
+      you. \u201CBohdan\u2014come here!\u201D one of his comrades calls. Mykola needs
+      a full second to realize the words are meant for him. He turns toward the voice.
+      A cigarette is offered. He takes it with gratitude. Thin blue smoke rises gracefully
+      into the steel-gray sky. "
+    narrationClip: {fileID: 8300000, guid: a063a791164b67e418f9a2c48b7abe1c, type: 3}
+  - image: {fileID: 6467543913970071884, guid: 329a93f3f8c316e4daeee18d27a4caf4, type: 3}
+    description: "Serik Nurgaliyev (Kazakh; \u201CSiberian side\u201D / eastern recruitment)
+      \\n Age: 30 Rank / role: light machine gunner \\n Civilian occupation: Miner
+      / ore extractor (Karaganda-region) \\n Place of origin: Kazakh SSR (Central
+      Asian steppe / East) \\n\\n    As the enemy soldier\u2019s head disappears
+      in a blood-red burst under Serik\u2019s fire, the Kazakh machine-gunner thinks
+      about the dreams he used to have back home. Down in the mines, bending in the
+      dark, he used to daydream about seeing the world one day.\\n\\n This was not
+      what he meant.\\n\\n He hadn\u2019t imagined being dragged, against his will,
+      to a foreign place. A place where life, if possible, was even more miserable
+      than it had been before. But that is exactly what happened. And Serik calms
+      himself with a single thought: even if some miracle sent him back in time,
+      he still wouldn\u2019t be able to change the outcome. He had been helpless
+      from the moment the draft officers appeared at the mine and announced they
+      had three hours to pack. Three hours to put their affairs in order before they
+      left \u201Cto help cleanse Mother Russia of the Western invaders.\u201D Serik
+      didn\u2019t want to look stupid, so he didn\u2019t ask who these Western invaders
+      were. Or why Mother Russia needed cleansing from them. And he decided it was
+      even smarter not to ask what any of it had to do with him\u2014a Kazakh.\\n\\n
+      So he did what everyone in his shift did. He went home. As they walked through
+      the snowy street, Serik saw out of the corner of his eye his neighbor as he
+      broke into a run and headed for the nearby forest. That was not an option for
+      Serik. Deserters would be hunted down. Or, if they weren\u2019t, they would
+      freeze to death out there. Serik had a family. So he chose the path that had
+      the best chance of bending back into itself and leading him home again. He
+      went into the house. He gathered what he thought was essential. Then he held
+      Gaukhart\u2014and their seven-month-old baby, Ainur\u2014as if there might
+      be no tomorrow. Because there very easily might not be for him. With Ainur\u2019s
+      sweet baby scent still in his nose, Serik set out with the men of the village.
+      The draft officers escorted them on both sides. After a short walk\u2014seven
+      kilometers\u2014they reached the district assembly point, where the trains
+      departed. The train ride felt miserable. Serik and hundreds of others were
+      crammed into a single car like sardines. After the first few hours, the stench
+      of urine and shit saturated everything\u2014men giving up on cleanliness because
+      there was no other choice. But the worst was yet to come: days later, the train
+      was forced to stop in the middle of nowhere. The rails ahead had been eaten
+      apart by the cold. What followed was the hardest four and a half weeks of Serik\u2019s
+      life. Which is saying something, considering that since the age of twelve,
+      he had broken stone, lifted impossible weights, and bent over in hellish heat
+      for fourteen-hour shifts.\\n\\n The heat was the first thing he started to
+      miss. Wading through knee-deep snow tested him at first. Then it became worse.
+      Everything on him soaked through. His limbs began to numb, then stiffen. Each
+      step turned into an impossible task. In the first days, he kept himself alive
+      by picking a point in the distance and telling himself: If I reach that, this
+      ends. A week later, he could no longer afford even that. He focused only on
+      his steps. One after another. The smallest unit of value he had left. He told
+      himself that as long as he could keep that rhythm, he would be fine.\\n\\n
+      One of the men from his village\u2014Nur, the baker\u2014had three toes cut
+      off. Two from his right foot, one from his left. The frostbitten little pieces
+      looked like wild berries. The sight made Serik\u2019s stomach lurch, bile rising
+      into his throat. Nur lived for two more days. With toes missing, he staggered.
+      He fell constantly. The officers and the others kept hauling him back up, again
+      and again. Then one night, two men took him under the arms and led him into
+      the darkness beyond the campfire. And they beat him to death. Serik heard the
+      muffled screams. The dull, heavy thuds. The next day, he asked a senior man
+      whether it wouldn\u2019t have been kinder to shoot Nur. The answer was simple:
+      you can\u2019t waste ammunition. After that, Serik stopped asking questions.
+      He didn\u2019t speak again on the road. He was afraid that opening his mouth
+      would waste energy. He did nothing but concentrate on one step following another.
+      By the time they reached the Urals, nearly two-thirds of the column were gone.\\n\\n
+      Serik was almost certain he was the only one from his village who had survived.\\n\\n
+      And now he couldn\u2019t be sure how long his luck would hold. It looked like
+      they were winning against the Hungarians dug in on the far bank. But what happens
+      when those men are ground down? Where would they be sent next? How much farther
+      would he have to march? When would he lose his fingers, too? Or God forbid,
+      his arms or legs? After everything, would the people at home even recognize
+      him if he ever made it back? Gaukhart might. Maybe. He wasn\u2019t even sure
+      of that. But to Ainur, he would be a stranger. A ghost. A pale imprint of whoever
+      he used to be.\\n\\n He is pulled out of his thoughts by another scream\u2014another
+      enemy crying out in pain under Serik\u2019s fire. Serik doesn\u2019t like thinking
+      about how many little girls like Ainur he has already made into orphans. "
+    narrationClip: {fileID: 8300000, guid: ec55de7c793ae9142972faf9511b6013, type: 3}
+  - image: {fileID: -8142763403083625019, guid: daa16bd2a10e36249a13bf32307300cf, type: 3}
+    description: "Andr\xE1s Hodanics / Age: 29 \\n Rank / Position: Corporal (junior
+      non-commissioned officer), squad leader \\n Civilian Occupation: Mason \\n
+      Origin: B\xE1cska / Southern Hungary (Vojvodina) \\n \\n  Hodanics Andr\xE1s
+      would have paid a serious sum\u2014if he\u2019d ever possessed the kind of
+      money that deserves the word \u201Cserious\u201D\u2014for someone to explain
+      to him how the hell he ended up here. \\n\\n He knew every step of the road
+      to the Don, obviously. He could recite it half-asleep. The medical exam in
+      Sombor. The training after that in Baja. The endless train ride to the East.
+      And the final, soul-crushing march into the Big Nowhere that crowned the whole
+      ordeal. \\n\\n So the logistics made sense to him. What didn\u2019t make sense
+      was the \u201Cwhy\u201D. Why he had to stand here and kill men he didn\u2019t
+      even know? Men who had lived half a world away from him. Men who, for all he
+      could tell, were just as clueless about the point of this entire ordeal as
+      he was. He vaguely remembered that some powerful country had attacked another,
+      less powerful country, and that the leaders of other, more powerful countries
+      hadn\u2019t liked it. But how that chain of events led to him putting down
+      his mason\u2019s trowel to pick up a rifle instead\u2026 this remained a mystery
+      to him. \\n\\n Maybe it didn\u2019t even matter. Maybe it was a waste of thought.
+      But he just couldn\u2019t stop. \\n\\n He had been a sensitive boy his whole
+      life. Not the kind who threw around big words, but the kind who couldn\u2019t
+      help wondering what human dignity is measured in. He pretended otherwise, of
+      course. He had to. A mason\u2019s son doesn\u2019t get to be delicate. Not
+      openly. In the pub, he had to throw punches like the rest of them. At the pig
+      slaughter, he had to grip the knife as hard as his uncles and cousins. He learned
+      to look hard, even when he wasn\u2019t. So why now\u2014an enemy of war in
+      principle, a man who hates the very idea of it\u2014why does he clutch the
+      barrel of his rifle the way a drowning man clutches a rope? \\n\\n Because
+      after years of searching, he had finally found someone in front of whom he
+      didn\u2019t have to pretend. Someone who could accept him as he was. And to
+      get back to that person, he first had to trample his own values into the mud.
+      He had to put down at least as many Soviets as the bricks he had once stacked
+      proudly, building a house for the woman he loved. That\u2019s how he met her.
+      She had asked him, together with her husband, to build them a house in the
+      center of his hometown. A long-term contract and good pay, a mason\u2019s dream\u2026
+      but her eyes. Gray, almost transparent. The way she looked him over the first
+      time, like she could see into his soul. At first, he told himself he imagined
+      it. That he was flattering himself. But summer came. He worked outside in the
+      sun until his shirt clung to him. And Elza stepped out from the neighboring
+      house where she lived with her husband\u2019s parents. She brought him cold
+      beer. She took a teasing sip from it herself. And once the beer loosened their
+      tongues, they started to talk. Those conversations began in awkwardness, but
+      before he knew it, he was opening up to her the way he had never opened up
+      before to anyone. Trying to seduce a married woman would have been dangerous.
+      And Andr\xE1s didn\u2019t think he even had the stomach for it. But Elza\u2019s
+      husband had been taken for training a year before Andr\xE1s. And a few months
+      later, a letter arrived. He was dead. He wasn\u2019t coming home. Elza mourned
+      him, yes. But Andr\xE1s couldn\u2019t help noticing how little devotion there
+      was in it. How quickly the grief seemed to turn into something else. He took
+      it as a sign. A sign for their future. Still, out of decency, he meant to wait.
+      Let the dark weeks pass. Let the widowhood be widowhood. Let time do its work.
+      \\n\\n But the world didn\u2019t wait for him. \\n\\n The war didn\u2019t adjust
+      itself to his conscience. Things bigger than him, things that grew over his
+      head, reached down and grabbed him and turned his life upside down. And then,
+      the whim of fate tossed him here, to the end of the earth. \\n\\n Hodanics
+      Andr\xE1s aims. He asks the Almighty for forgiveness. Then he squeezes the
+      trigger. After the shot, he shifts his weight from one foot to the other, afraid
+      that the ring, hidden in his underwear, will slip and fall out. The ring his
+      mother gave him. The ring he carried nearly two thousand kilometers. The ring
+      he meant to use to ask Elza to marry him. He can\u2019t let it hit the ground.
+      Not here. Not on this ice, red with blood. \\n\\n "
+    narrationClip: {fileID: 8300000, guid: 06f6e8cfb33ae184b818f0a92bf39957, type: 3}
+--- !u!225 &318125754
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318125751}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 1
+--- !u!114 &318125755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318125751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &318125756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318125751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &318125757
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318125751}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &318125758
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318125751}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1966570375}
+  - {fileID: 381079891}
+  - {fileID: 1993103577}
+  - {fileID: 1773671917}
+  - {fileID: 1494050766}
+  - {fileID: 1529034556}
+  - {fileID: 1032905194}
+  - {fileID: 1016146408}
+  - {fileID: 920329662}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &321205393
 GameObject:
   m_ObjectHideFlags: 0
@@ -2525,6 +3391,139 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325226189}
   m_CullTransparentMesh: 1
+--- !u!1 &381079890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 381079891}
+  - component: {fileID: 381079894}
+  - component: {fileID: 381079893}
+  - component: {fileID: 381079892}
+  m_Layer: 5
+  m_Name: lbl-settings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &381079891
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381079890}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 601692896}
+  m_Father: {fileID: 318125758}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 960, y: 1004}
+  m_SizeDelta: {x: 420, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &381079892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381079890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 0.8820755, g: 1, b: 0.9393531, a: 0}
+    m_HighlightedColor: {r: 0.21867213, g: 0.3962264, b: 0.28810677, a: 0.50980395}
+    m_PressedColor: {r: 0, g: 0.3018868, b: 0.100628905, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.3
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 5273393732494784626, guid: 2b5705b54015c419abbae4125560b9f7, type: 3}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 381079893}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 678694480}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: BackFromCharacters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &381079893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381079890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 6938792964540697775, guid: 2dfe9a06d7ff84a55859bd272c70f693, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &381079894
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381079890}
+  m_CullTransparentMesh: 1
 --- !u!1 &386113345
 GameObject:
   m_ObjectHideFlags: 0
@@ -2876,6 +3875,144 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &601692895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 601692896}
+  - component: {fileID: 601692898}
+  - component: {fileID: 601692897}
+  m_Layer: 5
+  m_Name: txt-back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &601692896
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601692895}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 381079891}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &601692897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601692895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Settings
+
+'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 32
+  m_fontSizeBase: 32
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 0
+  m_fontSizeMax: 0
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &601692898
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601692895}
+  m_CullTransparentMesh: 1
 --- !u!1 &616613424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2890,7 +4027,7 @@ GameObject:
   - component: {fileID: 616613426}
   - component: {fileID: 616613429}
   m_Layer: 5
-  m_Name: btn-03-credits
+  m_Name: btn-04-credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3331,7 +4468,7 @@ GameObject:
   - component: {fileID: 677957648}
   - component: {fileID: 677957651}
   m_Layer: 5
-  m_Name: btn-04-exit
+  m_Name: btn-05-exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3529,66 +4666,94 @@ MonoBehaviour:
   charactersMenu: {fileID: 147734229}
   creditsMenu: {fileID: 1297756271}
   openingScene: {fileID: 1206191421}
+  settingsScene: {fileID: 318125754}
   GameScene: GameScene
+  language: 
+  subtitlesEnabled: 0
+  menuTitleText: {fileID: 321205395}
   fadeTime: 0.4
   HungarianSoldiers:
   - Name: "Andr\xE1s Hodanincs"
     Image: {fileID: 0}
     Age: 0
     Description: 
-    Audio: {fileID: 0}
+    englishAudio: {fileID: 0}
+    hungarianAudio: {fileID: 0}
     picked: 0
     isOpened: 0
+    englishEntries: []
+    hungarianEntries: []
   - Name: "Ferenc Bed\u0151"
     Image: {fileID: 0}
     Age: 0
     Description: 
-    Audio: {fileID: 0}
+    englishAudio: {fileID: 0}
+    hungarianAudio: {fileID: 0}
     picked: 0
     isOpened: 0
+    englishEntries: []
+    hungarianEntries: []
   - Name: Folhoffer Benedek
     Image: {fileID: 0}
     Age: 0
     Description: 
-    Audio: {fileID: 0}
+    englishAudio: {fileID: 0}
+    hungarianAudio: {fileID: 0}
     picked: 0
     isOpened: 0
+    englishEntries: []
+    hungarianEntries: []
   - Name: "Istv\xE1n Maruzs"
     Image: {fileID: 0}
     Age: 0
     Description: 
-    Audio: {fileID: 0}
+    englishAudio: {fileID: 0}
+    hungarianAudio: {fileID: 0}
     picked: 0
     isOpened: 0
+    englishEntries: []
+    hungarianEntries: []
   RussianSoldiers:
   - Name: Aleksei Morozov
     Image: {fileID: 0}
     Age: 0
     Description: 
-    Audio: {fileID: 0}
+    englishAudio: {fileID: 0}
+    hungarianAudio: {fileID: 0}
     picked: 0
     isOpened: 0
+    englishEntries: []
+    hungarianEntries: []
   - Name: Ivan Petrov
     Image: {fileID: 0}
     Age: 0
     Description: 
-    Audio: {fileID: 0}
+    englishAudio: {fileID: 0}
+    hungarianAudio: {fileID: 0}
     picked: 0
     isOpened: 0
+    englishEntries: []
+    hungarianEntries: []
   - Name: Mykola Shevchenko
     Image: {fileID: 0}
     Age: 0
     Description: 
-    Audio: {fileID: 0}
+    englishAudio: {fileID: 0}
+    hungarianAudio: {fileID: 0}
     picked: 0
     isOpened: 0
+    englishEntries: []
+    hungarianEntries: []
   - Name: Serik Nurgaliyev
     Image: {fileID: 0}
     Age: 0
     Description: 
-    Audio: {fileID: 0}
+    englishAudio: {fileID: 0}
+    hungarianAudio: {fileID: 0}
     picked: 0
     isOpened: 0
+    englishEntries: []
+    hungarianEntries: []
   button1: {fileID: 66555017}
   button2: {fileID: 1881194527}
   button3: {fileID: 235779233}
@@ -4169,6 +5334,278 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 724678203}
   m_CullTransparentMesh: 1
+--- !u!1 &736130372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 736130373}
+  - component: {fileID: 736130375}
+  - component: {fileID: 736130374}
+  m_Layer: 5
+  m_Name: txt-back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &736130373
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736130372}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1773671917}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &736130374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736130372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: <b>English</b> / Hungarian
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 32
+  m_fontSizeBase: 32
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 0
+  m_fontSizeMax: 0
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &736130375
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736130372}
+  m_CullTransparentMesh: 1
+--- !u!1 &748475809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 748475810}
+  - component: {fileID: 748475812}
+  - component: {fileID: 748475811}
+  m_Layer: 5
+  m_Name: txt-back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &748475810
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748475809}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1494050766}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &748475811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748475809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: <b>On</b> / Off
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 32
+  m_fontSizeBase: 32
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 0
+  m_fontSizeMax: 0
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &748475812
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748475809}
+  m_CullTransparentMesh: 1
 --- !u!1 &766697293
 GameObject:
   m_ObjectHideFlags: 0
@@ -4695,6 +6132,139 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874084344}
   m_CullTransparentMesh: 1
+--- !u!1 &920329661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 920329662}
+  - component: {fileID: 920329665}
+  - component: {fileID: 920329664}
+  - component: {fileID: 920329663}
+  m_Layer: 5
+  m_Name: lbl-subtitles language
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &920329662
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920329661}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1500960782}
+  m_Father: {fileID: 318125758}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 400, y: 583}
+  m_SizeDelta: {x: 420, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &920329663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920329661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 0.8820755, g: 1, b: 0.9393531, a: 0}
+    m_HighlightedColor: {r: 0.21867213, g: 0.3962264, b: 0.28810677, a: 0.50980395}
+    m_PressedColor: {r: 0, g: 0.3018868, b: 0.100628905, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.3
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 5273393732494784626, guid: 2b5705b54015c419abbae4125560b9f7, type: 3}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 920329664}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 678694480}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: BackFromCharacters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &920329664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920329661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 6938792964540697775, guid: 2dfe9a06d7ff84a55859bd272c70f693, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &920329665
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920329661}
+  m_CullTransparentMesh: 1
 --- !u!1 &939258903
 GameObject:
   m_ObjectHideFlags: 0
@@ -5072,6 +6642,272 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 988232867}
+  m_CullTransparentMesh: 1
+--- !u!1 &1016146407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1016146408}
+  - component: {fileID: 1016146411}
+  - component: {fileID: 1016146410}
+  - component: {fileID: 1016146409}
+  m_Layer: 5
+  m_Name: lbl-subtitles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1016146408
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016146407}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1777264572}
+  m_Father: {fileID: 318125758}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 400, y: 686}
+  m_SizeDelta: {x: 420, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1016146409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016146407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 0.8820755, g: 1, b: 0.9393531, a: 0}
+    m_HighlightedColor: {r: 0.21867213, g: 0.3962264, b: 0.28810677, a: 0.50980395}
+    m_PressedColor: {r: 0, g: 0.3018868, b: 0.100628905, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.3
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 5273393732494784626, guid: 2b5705b54015c419abbae4125560b9f7, type: 3}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 1016146410}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 678694480}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: BackFromCharacters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1016146410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016146407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 6938792964540697775, guid: 2dfe9a06d7ff84a55859bd272c70f693, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1016146411
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016146407}
+  m_CullTransparentMesh: 1
+--- !u!1 &1032905193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1032905194}
+  - component: {fileID: 1032905197}
+  - component: {fileID: 1032905196}
+  - component: {fileID: 1032905195}
+  m_Layer: 5
+  m_Name: lbl-language
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1032905194
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032905193}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1397237961}
+  m_Father: {fileID: 318125758}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 393, y: 807}
+  m_SizeDelta: {x: 420, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1032905195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032905193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 0.8820755, g: 1, b: 0.9393531, a: 0}
+    m_HighlightedColor: {r: 0.21867213, g: 0.3962264, b: 0.28810677, a: 0.50980395}
+    m_PressedColor: {r: 0, g: 0.3018868, b: 0.100628905, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.3
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 5273393732494784626, guid: 2b5705b54015c419abbae4125560b9f7, type: 3}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 0
+  m_TargetGraphic: {fileID: 1032905196}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 678694480}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: BackFromCharacters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1032905196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032905193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 6938792964540697775, guid: 2dfe9a06d7ff84a55859bd272c70f693, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1032905197
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032905193}
   m_CullTransparentMesh: 1
 --- !u!1 &1054347865
 GameObject:
@@ -5758,6 +7594,142 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1259068488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1259068489}
+  - component: {fileID: 1259068491}
+  - component: {fileID: 1259068490}
+  m_Layer: 5
+  m_Name: txt-settings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1259068489
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259068488}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1553912434}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1259068490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259068488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Settings
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 32
+  m_fontSizeBase: 32
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 0
+  m_fontSizeMax: 0
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1259068491
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259068488}
+  m_CullTransparentMesh: 1
 --- !u!1 &1262601086
 GameObject:
   m_ObjectHideFlags: 0
@@ -6333,6 +8305,142 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1392564812}
   m_CullTransparentMesh: 1
+--- !u!1 &1397237960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1397237961}
+  - component: {fileID: 1397237963}
+  - component: {fileID: 1397237962}
+  m_Layer: 5
+  m_Name: txt-back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1397237961
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397237960}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1032905194}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1397237962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397237960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Language
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 32
+  m_fontSizeBase: 32
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 0
+  m_fontSizeMax: 0
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1397237963
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397237960}
+  m_CullTransparentMesh: 1
 --- !u!1 &1406501795
 GameObject:
   m_ObjectHideFlags: 0
@@ -6364,6 +8472,7 @@ RectTransform:
   m_Children:
   - {fileID: 983865691}
   - {fileID: 853921907}
+  - {fileID: 1553912434}
   - {fileID: 616613425}
   - {fileID: 677957647}
   m_Father: {fileID: 2075531818}
@@ -6561,6 +8670,275 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1486993957}
   m_CullTransparentMesh: 1
+--- !u!1 &1494050765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1494050766}
+  - component: {fileID: 1494050769}
+  - component: {fileID: 1494050768}
+  - component: {fileID: 1494050767}
+  m_Layer: 5
+  m_Name: btn-subtitles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1494050766
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494050765}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 748475810}
+  m_Father: {fileID: 318125758}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1120, y: 682}
+  m_SizeDelta: {x: 420, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1494050767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494050765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 0.8820755, g: 1, b: 0.9393531, a: 0}
+    m_HighlightedColor: {r: 0.21867213, g: 0.3962264, b: 0.28810677, a: 0.50980395}
+    m_PressedColor: {r: 0, g: 0.3018868, b: 0.100628905, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.3
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 5273393732494784626, guid: 2b5705b54015c419abbae4125560b9f7, type: 3}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1494050768}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 678694480}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: BackFromCharacters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1494050768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494050765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 6938792964540697775, guid: 2dfe9a06d7ff84a55859bd272c70f693, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1494050769
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494050765}
+  m_CullTransparentMesh: 1
+--- !u!1 &1500960781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1500960782}
+  - component: {fileID: 1500960784}
+  - component: {fileID: 1500960783}
+  m_Layer: 5
+  m_Name: txt-back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1500960782
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500960781}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 920329662}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1500960783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500960781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Subtitles language
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 32
+  m_fontSizeBase: 32
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 0
+  m_fontSizeMax: 0
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1500960784
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500960781}
+  m_CullTransparentMesh: 1
 --- !u!1 &1517430836
 GameObject:
   m_ObjectHideFlags: 0
@@ -6635,6 +9013,275 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1517430836}
+  m_CullTransparentMesh: 1
+--- !u!1 &1524097664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1524097665}
+  - component: {fileID: 1524097667}
+  - component: {fileID: 1524097666}
+  m_Layer: 5
+  m_Name: txt-back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1524097665
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524097664}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1993103577}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1524097666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524097664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Back
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 32
+  m_fontSizeBase: 32
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 0
+  m_fontSizeMax: 0
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1524097667
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524097664}
+  m_CullTransparentMesh: 1
+--- !u!1 &1529034555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1529034556}
+  - component: {fileID: 1529034559}
+  - component: {fileID: 1529034558}
+  - component: {fileID: 1529034557}
+  m_Layer: 5
+  m_Name: btn-subtitles language
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1529034556
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529034555}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 28206655}
+  m_Father: {fileID: 318125758}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1120, y: 568}
+  m_SizeDelta: {x: 420, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1529034557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529034555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 0.8820755, g: 1, b: 0.9393531, a: 0}
+    m_HighlightedColor: {r: 0.21867213, g: 0.3962264, b: 0.28810677, a: 0.50980395}
+    m_PressedColor: {r: 0, g: 0.3018868, b: 0.100628905, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.3
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 5273393732494784626, guid: 2b5705b54015c419abbae4125560b9f7, type: 3}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1529034558}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 678694480}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: BackFromCharacters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1529034558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529034555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 6938792964540697775, guid: 2dfe9a06d7ff84a55859bd272c70f693, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1529034559
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1529034555}
   m_CullTransparentMesh: 1
 --- !u!1 &1542614446
 GameObject:
@@ -6783,6 +9430,185 @@ MonoBehaviour:
   hoverSound: {fileID: 0}
   paperSound: {fileID: 0}
   paperClosedSound: {fileID: 0}
+--- !u!1 &1553912433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1553912434}
+  - component: {fileID: 1553912438}
+  - component: {fileID: 1553912437}
+  - component: {fileID: 1553912436}
+  - component: {fileID: 1553912435}
+  m_Layer: 5
+  m_Name: btn-03-settings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1553912434
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553912433}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1259068489}
+  m_Father: {fileID: 1406501796}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1553912435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553912433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1542614449}
+          m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
+          m_MethodName: OnPointerEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1542614449}
+          m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
+          m_MethodName: OnPointerExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1553912436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553912433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 0.8820755, g: 1, b: 0.9393531, a: 0}
+    m_HighlightedColor: {r: 0.21867213, g: 0.3962264, b: 0.28810677, a: 0.50980395}
+    m_PressedColor: {r: 0, g: 0.3018868, b: 0.100628905, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.3
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: -1584907159259951675, guid: edad972d702f94839a7710e6adcd1859, type: 3}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1553912437}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 678694480}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: OpenSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1553912437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553912433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 6938792964540697775, guid: 2dfe9a06d7ff84a55859bd272c70f693, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1553912438
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553912433}
+  m_CullTransparentMesh: 1
 --- !u!1 &1558418240
 GameObject:
   m_ObjectHideFlags: 0
@@ -7709,6 +10535,275 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765216996}
+  m_CullTransparentMesh: 1
+--- !u!1 &1773671916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1773671917}
+  - component: {fileID: 1773671920}
+  - component: {fileID: 1773671919}
+  - component: {fileID: 1773671918}
+  m_Layer: 5
+  m_Name: btn-language
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1773671917
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773671916}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 736130373}
+  m_Father: {fileID: 318125758}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1116, y: 799}
+  m_SizeDelta: {x: 420, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1773671918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773671916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 0.8820755, g: 1, b: 0.9393531, a: 0}
+    m_HighlightedColor: {r: 0.21867213, g: 0.3962264, b: 0.28810677, a: 0.50980395}
+    m_PressedColor: {r: 0, g: 0.3018868, b: 0.100628905, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.3
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 5273393732494784626, guid: 2b5705b54015c419abbae4125560b9f7, type: 3}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1773671919}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 678694480}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: BackFromCharacters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1773671919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773671916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 6938792964540697775, guid: 2dfe9a06d7ff84a55859bd272c70f693, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1773671920
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773671916}
+  m_CullTransparentMesh: 1
+--- !u!1 &1777264571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1777264572}
+  - component: {fileID: 1777264574}
+  - component: {fileID: 1777264573}
+  m_Layer: 5
+  m_Name: txt-back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1777264572
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777264571}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1016146408}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1777264573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777264571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Subtitles
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 32
+  m_fontSizeBase: 32
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 0
+  m_fontSizeMax: 0
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1777264574
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777264571}
   m_CullTransparentMesh: 1
 --- !u!1 &1798396953
 GameObject:
@@ -8950,6 +12045,214 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &1966570374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1966570375}
+  - component: {fileID: 1966570377}
+  - component: {fileID: 1966570376}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1966570375
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966570374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 318125758}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1966570376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966570374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8018868, g: 0.7652474, b: 0.6997597, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 3844314895499371176, guid: 311c24022ab78ec4fb50f0ab4bf0ba90, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1966570377
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966570374}
+  m_CullTransparentMesh: 1
+--- !u!1 &1993103576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1993103577}
+  - component: {fileID: 1993103580}
+  - component: {fileID: 1993103579}
+  - component: {fileID: 1993103578}
+  m_Layer: 5
+  m_Name: btn-01-back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1993103577
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993103576}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1524097665}
+  m_Father: {fileID: 318125758}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1649, y: 105}
+  m_SizeDelta: {x: 420, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1993103578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993103576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 2
+  m_Colors:
+    m_NormalColor: {r: 0.8820755, g: 1, b: 0.9393531, a: 0}
+    m_HighlightedColor: {r: 0.21867213, g: 0.3962264, b: 0.28810677, a: 0.50980395}
+    m_PressedColor: {r: 0, g: 0.3018868, b: 0.100628905, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.3
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 5273393732494784626, guid: 2b5705b54015c419abbae4125560b9f7, type: 3}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1993103579}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 678694480}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: BackFromSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1993103579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993103576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 6938792964540697775, guid: 2dfe9a06d7ff84a55859bd272c70f693, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1993103580
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993103576}
+  m_CullTransparentMesh: 1
 --- !u!1 &2013819047
 GameObject:
   m_ObjectHideFlags: 0
@@ -9213,6 +12516,7 @@ SceneRoots:
   - {fileID: 1297756270}
   - {fileID: 1206191425}
   - {fileID: 147734228}
+  - {fileID: 318125758}
   - {fileID: 678694481}
   - {fileID: 439584778}
   - {fileID: 1542614448}

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
 using UnityEngine.UI;
+using TMPro;
 
 public class MenuManager : MonoBehaviour
 {
@@ -11,13 +12,23 @@ public class MenuManager : MonoBehaviour
     public CanvasGroup charactersMenu;
     public CanvasGroup creditsMenu;
     public CanvasGroup openingScene;
+    public CanvasGroup settingsScene;
     public string GameScene = "GameScene";
+    public string language;
+    public bool subtitlesEnabled;
+
+    [SerializeField] private TextMeshProUGUI menuTitleText;
 
     public float fadeTime = 0.4f;
 
     public void OpenCharacters()
     {
         StartCoroutine(SwitchMenu(mainMenu, charactersMenu));
+    }
+
+    public void OpenSettings()
+    {
+        StartCoroutine(SwitchMenu(mainMenu, settingsScene));
     }
 
     public void OpenCredits()
@@ -28,6 +39,11 @@ public class MenuManager : MonoBehaviour
     public void BackFromCharacters()
     {
         StartCoroutine(SwitchMenu(charactersMenu, mainMenu));
+    }
+
+    public void BackFromSettings()
+    {
+        StartCoroutine(SwitchMenu(settingsScene, mainMenu));
     }
 
     public void BackFromCredits()
@@ -110,6 +126,9 @@ public class MenuManager : MonoBehaviour
     public class SaveWrapper 
     {
         public List<SoldierSaveData> Soldiers;
+        public string NarrationLanguage;
+        public bool SubtitlesEnabled;
+        public string SubtitlesLanguage;
     }
 
     void Awake()
@@ -172,7 +191,26 @@ public class MenuManager : MonoBehaviour
             StartCoroutine(SwitchMenu(null, creditsMenu));
         }
         LoadSoldiersFromFile();
+
         UnlockCursor();
+    }
+
+    public void ChangeLanguage()
+    {
+        menuTitleText.text = language == "English" ? "Play game" : "Játék indítása";
+    }
+
+    public void SetLanguage()
+    {
+        if (language == "English")
+        {
+            language = "Hungarian";
+        }
+        else
+        {
+            PlayerPrefs.SetString("NarrationLanguage", "Hungarian");
+            PlayerPrefs.SetString("SubtitlesLanguage", "Hungarian");
+        }
     }
 
     public void UnlockCursor()
@@ -204,6 +242,11 @@ public class MenuManager : MonoBehaviour
                 soldier.isOpened = soldierData.isOpened;
             }
         }
+
+        // Betöltjük a nyelvet és a felirat állapotát
+        PlayerPrefs.SetString("NarrationLanguage", saveData.NarrationLanguage);
+        PlayerPrefs.SetInt("SubtitlesEnabled", saveData.SubtitlesEnabled ? 1 : 0);
+        PlayerPrefs.SetString("SubtitlesLanguage", saveData.SubtitlesLanguage);
 
         if (!HungarianSoldiers[0].isOpened) button1.interactable = false;
         if (!HungarianSoldiers[1].isOpened) button2.interactable = false;

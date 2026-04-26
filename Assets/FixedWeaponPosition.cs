@@ -38,8 +38,11 @@ public class FixedWeaponPosition : MonoBehaviour
     private enum NormalHideTransition { None, Lowering, Raising }
     private enum RestWeaponState { Hidden, Waiting, Entering, Idle, Exiting }
 
+    [SerializeField]
     private ReloadPhase reloadPhase = ReloadPhase.None;
-    private NormalHideTransition normalHideTransition = NormalHideTransition.None;
+    [SerializeField]
+    private NormalHideTransition normalHideTransition = NormalHideTransition.Lowering;
+    [SerializeField]
     private RestWeaponState restWeaponState = RestWeaponState.Hidden;
 
     private float phaseTimer = 0f;
@@ -98,26 +101,45 @@ public class FixedWeaponPosition : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        //TODO: maybe only if starting in hiding state?
+
     }
 
     void Start()
+{
+    if (cam == null) cam = Camera.main;
+    enemySoldiers = GameManager.Instance.GetEnemies();
+    spriteRenderer = GetComponent<SpriteRenderer>();
+    originalScale = transform.localScale;
+    initialWeaponPosition = transform.position;
+    initialCameraY = cam != null ? cam.transform.position.y : 0f;
+    startY = initialWeaponPosition.y;
+    RefreshReloadPositions();
+    EnsureRestSpriteRenderer();
+    SetRestSpriteVisible(false);
+    
+    BeginRestEnter();
+
+    // Módosítás: a kezdeti állapot pontos beállítása
+    wasHiding = GameManager.Instance != null && GameManager.Instance.IsHiding();
+    
+    if (wasHiding)
     {
-        if (cam == null) cam = Camera.main;
-        enemySoldiers = GameManager.Instance.GetEnemies();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        originalScale = transform.localScale;
-        initialWeaponPosition = transform.position;
-        initialCameraY = cam != null ? cam.transform.position.y : 0f;
-        startY = initialWeaponPosition.y;
-        RefreshReloadPositions();
-        EnsureRestSpriteRenderer();
-        SetRestSpriteVisible(false);
-        wasHiding = GameManager.Instance != null && GameManager.Instance.IsHiding();
+        // Ha bújik, azonnal a rejtett pozícióba tesszük (kikerüljük az animációt induláskor)
+        SetNormalWeaponHiddenPose(GetCameraYOffset());
+        HideNormalWeaponSprite();
+        currentHideProgress = 1f; // A progress 1, tehát rejtve vagyunk
     }
+    else
+    {
+        currentHideProgress = 0f; // Látható
+    }
+}
 
     void Update()
     {
         bool isCurrentlyHiding = GameManager.Instance != null && GameManager.Instance.IsHiding();
+        Debug.Log("IsHiding: " + isCurrentlyHiding );
 
         if (Input.GetMouseButtonDown(0) && !isActive && GameManager.Instance.CanShoot())
         {
@@ -283,7 +305,12 @@ public class FixedWeaponPosition : MonoBehaviour
                     reloadPhase = ReloadPhase.None;
                     isReloading = false;
                     isActive = false;
+                    
+                    // Kényszerítsük a rejtett pozíciót, hogy ne legyen "ugrás"
+                    currentHideProgress = 1f; 
+                    SetNormalWeaponHiddenPose(weaponYOffset);
                     HideNormalWeaponSprite();
+                    BeginRestWait();
                     return;
                 }
 

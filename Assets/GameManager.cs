@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     private bool licenseInitialized = false;
     private bool didSurvive = false;
 
-    private bool isHiding = false;
+    private bool isHiding = true;
     private bool hideActive = true;
     private float camStartY;           
     private float camTargetY;          
@@ -89,6 +89,7 @@ public class GameManager : MonoBehaviour
         public List<SoldierSaveData> Soldiers;
         public string NarrationLanguage; // Új mező a narráció nyelvéhez
         public bool SubtitlesEnabled;   // Új mező a feliratok engedélyezéséhez
+        public string SubtitlesLanguage; // Új mező a feliratok nyelvéhez
     }
 
     public void TakeDamage(int damage)
@@ -225,7 +226,22 @@ public class GameManager : MonoBehaviour
     void Start() {
         if (cam == null) cam = Camera.main;
 
+        //TODO: maybe only if starting in hiding state?
+
         
+        isHiding = true;
+        hideActive = false;
+        if (crouchAudio != null){
+                crouchAudio.Play();
+        }
+        camTargetY = camStartY - 10f; 
+        //Cursor.lockState = CursorLockMode.Locked;
+        license.transform.position = new Vector3(-7.5f, -14f, license.transform.position.z);
+        camMoving = true;
+        camLerpT = 0f;
+        canShoot = false;
+
+        ///////////
 
         LoadSoldiersFromFile();
         PlayAmbientSound();
@@ -332,6 +348,11 @@ public class GameManager : MonoBehaviour
 
 
     void Update() {
+
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            PlayerDeath();
+        }
+
         Debug.Log("Player élete: " + isPlayerDead);
         if(isPlayerDead) {
             license.SetActive(false); 
@@ -362,18 +383,6 @@ public class GameManager : MonoBehaviour
             camMoving = true;
             camLerpT = 0f;
             canShoot = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && hideActive) {
-            isHiding = !isHiding;  
-            camTargetY = isHiding ? camStartY - 10f : camStartY;
-
-            
-
-            camMoving = true;
-
-            camLerpT = 0f;
-            canShoot = !isHiding;
         }
 
         if (license != null && cam != null) {
@@ -674,7 +683,8 @@ public class GameManager : MonoBehaviour
         {
             Soldiers = saveData,
             NarrationLanguage = PlayerPrefs.GetString("NarrationLanguage", "English"), // Nyelv mentése
-            SubtitlesEnabled = PlayerPrefs.GetInt("SubtitlesEnabled", 1) == 1          // Felirat állapot mentése
+            SubtitlesEnabled = PlayerPrefs.GetInt("SubtitlesEnabled", 1) == 1,          // Felirat állapot mentése
+            SubtitlesLanguage = PlayerPrefs.GetString("SubtitlesLanguage", "English")            // Felirat nyelv mentése
         };
 
         string json = JsonUtility.ToJson(wrapper, true);
@@ -709,6 +719,7 @@ public class GameManager : MonoBehaviour
         // Betöltjük a nyelvet és a felirat állapotát
         PlayerPrefs.SetString("NarrationLanguage", saveData.NarrationLanguage);
         PlayerPrefs.SetInt("SubtitlesEnabled", saveData.SubtitlesEnabled ? 1 : 0);
+        PlayerPrefs.SetString("SubtitlesLanguage", saveData.SubtitlesLanguage);
     }
 
     public void PlayAmbientSound()
