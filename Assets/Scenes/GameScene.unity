@@ -2889,7 +2889,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!225 &1475261089
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3713,6 +3713,9 @@ MonoBehaviour:
   restSwaySpeed: 0.2
   restSpriteScaleMultiplier: 2.3
   restSpritePivotOffsetTweak: {x: 0, y: 0, z: 0}
+  reloadPhase: 0
+  normalHideTransition: 1
+  restWeaponState: 0
   cam: {fileID: 519420031}
   viewportOffset: {x: 0.525, y: 0.2, z: 10}
   fireSpark: {fileID: 1729306534}

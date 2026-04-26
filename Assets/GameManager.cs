@@ -353,6 +353,8 @@ public class GameManager : MonoBehaviour
 
     void Update() {
 
+        Debug.Log("Player élete: " + playerLives);
+
         if(Input.GetKeyDown(KeyCode.Escape)){
             PlayerDeath();
         }

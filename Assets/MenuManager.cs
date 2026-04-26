@@ -16,8 +16,46 @@ public class MenuManager : MonoBehaviour
     public string GameScene = "GameScene";
     public string language;
     public bool subtitlesEnabled;
+    public string subtitlesLanguage;
 
-    [SerializeField] private TextMeshProUGUI menuTitleText;
+    [Header("Main Menu UI")]
+    [SerializeField] private TextMeshProUGUI DONTitleText;
+    [SerializeField] private TextMeshProUGUI playButtonText;
+    [SerializeField] private TextMeshProUGUI charactersButtonText;
+    [SerializeField] private TextMeshProUGUI settingsButtonText;
+    [SerializeField] private TextMeshProUGUI creditsButtonText;
+    [SerializeField] private TextMeshProUGUI exitButtonText;
+
+
+    [Header("Characters Menu UI")]
+    [SerializeField] private TextMeshProUGUI closeButtonText;
+    [SerializeField] private TextMeshProUGUI narrationButtonText;
+    [SerializeField] private TextMeshProUGUI backButtonText;
+
+    [Header("Credits Menu UI")]
+    [SerializeField] private TextMeshProUGUI creditsTitleText;
+    [SerializeField] private TextMeshProUGUI programmingTitleText;
+    [SerializeField] private TextMeshProUGUI artLabelText;
+    [SerializeField] private TextMeshProUGUI portraitsLabelText;
+    [SerializeField] private TextMeshProUGUI uiDesignLabelText;
+    [SerializeField] private TextMeshProUGUI writingLabelText;
+    [SerializeField] private TextMeshProUGUI audioLabelText;
+    [SerializeField] private TextMeshProUGUI charactersExitButtonText;
+
+
+    [Header("Settings Menu UI")]
+    [SerializeField] private TextMeshProUGUI settingsTitleText;
+    [SerializeField] private TextMeshProUGUI languageLabelText;
+    [SerializeField] private TextMeshProUGUI languageButtonText;
+    [SerializeField] private TextMeshProUGUI subtitlesLabelText;
+    [SerializeField] private TextMeshProUGUI subtitlesButtonText;
+    [SerializeField] private TextMeshProUGUI subtitlesLanguageLabelText;
+    [SerializeField] private TextMeshProUGUI subtitlesLanguageButtonText;
+    [SerializeField] private TextMeshProUGUI settingsBackButtonText;
+
+    [SerializeField] private Button subtitlesLanguageLabel;
+    [SerializeField] private Button subtitlesLanguageButton;
+
 
     public float fadeTime = 0.4f;
 
@@ -178,7 +216,10 @@ public class MenuManager : MonoBehaviour
     void Start()  
     {
         LoadSoldiersFromFile();
+        Debug.Log(language);
+        ChangeLanguage();
         UnlockCursor();
+        HideSubtitleLanguageOption();
     }
 
     
@@ -190,33 +231,135 @@ public class MenuManager : MonoBehaviour
             creditsMenu.gameObject.SetActive(true);
             StartCoroutine(SwitchMenu(null, creditsMenu));
         }
-        LoadSoldiersFromFile();
+        //LoadSoldiersFromFile();
 
         UnlockCursor();
     }
 
+    /*
+[SerializeField] private TextMeshProUGUI settingsTitleText;
+    [SerializeField] private TextMeshProUGUI languageLabelText;
+    [SerializeField] private TextMeshProUGUI languageButtonText;
+    [SerializeField] private TextMeshProUGUI subtitlesLabelText;
+    [SerializeField] private TextMeshProUGUI subtitlesButtonText;
+    [SerializeField] private TextMeshProUGUI subtitlesLanguageLabelText;
+    [SerializeField] private TextMeshProUGUI subtitlesLanguageButtonText;
+    [SerializeField] private TextMeshProUGUI settingsBackButtonText;
+    */
+
     public void ChangeLanguage()
     {
-        menuTitleText.text = language == "English" ? "Play game" : "Játék indítása";
+        settingsTitleText.text = language == "English" ? "Settings" : "Beállítások";
+        languageLabelText.text = language == "English" ? "Language" : "Nyelv";
+        languageButtonText.text = language == "English" ? "   <b>English</b> / Hungarian" : "Angol / <b>Magyar</b>";
+        subtitlesLabelText.text = language == "English" ? "Subtitles" : "Feliratok";
+        if (subtitlesEnabled)
+        {
+                subtitlesButtonText.text = language == "English" ? "<b>ON</b> / OFF" : "<b>BE</b> / KI";
+            }
+            else
+            {
+                subtitlesButtonText.text = language == "English" ? "ON / <b>OFF</b>" : "BE / <b>KI</b>";
+        }
+        subtitlesLanguageLabelText.text = language == "English" ? "Subtitles Language" : "Felirat nyelve";
+        if (subtitlesLanguage == "English")
+        {
+                subtitlesLanguageButtonText.text = language == "English" ? "    <b>English</b> / Hungarian" : "<b>Angol</b> / Magyar";
+            }
+            else
+            {
+                subtitlesLanguageButtonText.text = language == "English" ? "   English / <b>Hungarian</b>" : "Angol / <b>Magyar</b>";
+        }
+        settingsBackButtonText.text = language == "English" ? "Back" : "Vissza";
     }
 
     public void SetLanguage()
     {
+
         if (language == "English")
         {
             language = "Hungarian";
         }
         else
         {
-            PlayerPrefs.SetString("NarrationLanguage", "Hungarian");
-            PlayerPrefs.SetString("SubtitlesLanguage", "Hungarian");
+            language = "English";
         }
+        PlayerPrefs.SetString("NarrationLanguage", language);
+        PlayerPrefs.Save();
+        ChangeLanguage();
+        SaveSoldiersToFile();
+    }
+
+    public void ToggleSubtitles()
+    {
+        subtitlesEnabled = !subtitlesEnabled;
+        PlayerPrefs.SetInt("SubtitlesEnabled", subtitlesEnabled ? 1 : 0);
+        PlayerPrefs.Save();
+        ChangeLanguage();
+        HideSubtitleLanguageOption();
+        SaveSoldiersToFile();
+    }
+
+    public void HideSubtitleLanguageOption()
+    {
+        if(subtitlesEnabled)
+        {
+            subtitlesLanguageLabel.gameObject.SetActive(true);
+            subtitlesLanguageButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            subtitlesLanguageLabel.gameObject.SetActive(false);
+            subtitlesLanguageButton.gameObject.SetActive(false);
+        }
+    }
+
+    public void ToggleSubtitlesLanguage()
+    {
+        if (subtitlesLanguage == "English")
+        {
+            subtitlesLanguage = "Hungarian";
+        }
+        else
+        {
+            subtitlesLanguage = "English";
+        }
+        PlayerPrefs.SetString("SubtitlesLanguage", subtitlesLanguage);
+        PlayerPrefs.Save();
+        ChangeLanguage();
+        SaveSoldiersToFile();
     }
 
     public void UnlockCursor()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+    }
+
+    public void SaveSoldiersToFile() 
+    {
+        List<SoldierSaveData> saveData = new List<SoldierSaveData>();
+
+        if (HungarianSoldiers != null)
+            foreach (var soldier in HungarianSoldiers) 
+                saveData.Add(new SoldierSaveData { Name = soldier.Name, isOpened = soldier.isOpened });
+        
+        if (RussianSoldiers != null)
+            foreach (var soldier in RussianSoldiers) 
+                saveData.Add(new SoldierSaveData { Name = soldier.Name, isOpened = soldier.isOpened });
+
+        SaveWrapper wrapper = new SaveWrapper 
+        {
+            Soldiers = saveData,
+            NarrationLanguage = language, // Nyelv mentése
+            SubtitlesEnabled = subtitlesEnabled,          // Felirat állapot mentése
+            SubtitlesLanguage = subtitlesLanguage            // Felirat nyelv mentése
+        };
+        Debug.Log("✅ Save file created with Narration Language: " + wrapper.NarrationLanguage + ", Subtitles Enabled: " + wrapper.SubtitlesEnabled + ", Subtitles Language: " + wrapper.SubtitlesLanguage);
+
+        string json = JsonUtility.ToJson(wrapper, true);
+        string filePath = Path.Combine(Application.persistentDataPath, "SoldiersData.json");
+        File.WriteAllText(filePath, json);
     }
 
     public void LoadSoldiersFromFile()
@@ -232,6 +375,8 @@ public class MenuManager : MonoBehaviour
         string json = File.ReadAllText(filePath);
         SaveWrapper saveData = JsonUtility.FromJson<SaveWrapper>(json);
 
+        Debug.Log("✅ Save file loaded successfully: " + saveData.NarrationLanguage + ", Subtitles Enabled: " + saveData.SubtitlesEnabled + ", Subtitles Language: " + saveData.SubtitlesLanguage);
+
         foreach (var soldierData in saveData.Soldiers)
         {
             SoldierData soldier = System.Array.Find(HungarianSoldiers, s => s.Name == soldierData.Name) ??
@@ -244,9 +389,9 @@ public class MenuManager : MonoBehaviour
         }
 
         // Betöltjük a nyelvet és a felirat állapotát
-        PlayerPrefs.SetString("NarrationLanguage", saveData.NarrationLanguage);
-        PlayerPrefs.SetInt("SubtitlesEnabled", saveData.SubtitlesEnabled ? 1 : 0);
-        PlayerPrefs.SetString("SubtitlesLanguage", saveData.SubtitlesLanguage);
+        language = PlayerPrefs.GetString("NarrationLanguage");
+        subtitlesEnabled = PlayerPrefs.GetInt("SubtitlesEnabled", saveData.SubtitlesEnabled ? 1 : 0) == 1;
+        subtitlesLanguage = PlayerPrefs.GetString("SubtitlesLanguage", saveData.SubtitlesLanguage);
 
         if (!HungarianSoldiers[0].isOpened) button1.interactable = false;
         if (!HungarianSoldiers[1].isOpened) button2.interactable = false;

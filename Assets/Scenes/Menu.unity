@@ -251,7 +251,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <b>English</b> / Hungarian
+  m_text: '   <b>English</b> / Hungarian'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
   m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
@@ -4670,7 +4670,34 @@ MonoBehaviour:
   GameScene: GameScene
   language: 
   subtitlesEnabled: 0
-  menuTitleText: {fileID: 321205395}
+  subtitlesLanguage: 
+  DONTitleText: {fileID: 0}
+  playButtonText: {fileID: 0}
+  charactersButtonText: {fileID: 0}
+  settingsButtonText: {fileID: 0}
+  creditsButtonText: {fileID: 0}
+  exitButtonText: {fileID: 0}
+  closeButtonText: {fileID: 0}
+  narrationButtonText: {fileID: 0}
+  backButtonText: {fileID: 0}
+  creditsTitleText: {fileID: 0}
+  programmingTitleText: {fileID: 0}
+  artLabelText: {fileID: 0}
+  portraitsLabelText: {fileID: 0}
+  uiDesignLabelText: {fileID: 0}
+  writingLabelText: {fileID: 0}
+  audioLabelText: {fileID: 0}
+  charactersExitButtonText: {fileID: 0}
+  settingsTitleText: {fileID: 601692897}
+  languageLabelText: {fileID: 1397237962}
+  languageButtonText: {fileID: 736130374}
+  subtitlesLabelText: {fileID: 1777264573}
+  subtitlesButtonText: {fileID: 748475811}
+  subtitlesLanguageLabelText: {fileID: 1500960783}
+  subtitlesLanguageButtonText: {fileID: 28206656}
+  settingsBackButtonText: {fileID: 1524097666}
+  subtitlesLanguageLabel: {fileID: 920329663}
+  subtitlesLanguageButton: {fileID: 1529034557}
   fadeTime: 0.4
   HungarianSoldiers:
   - Name: "Andr\xE1s Hodanincs"
@@ -4680,7 +4707,7 @@ MonoBehaviour:
     englishAudio: {fileID: 0}
     hungarianAudio: {fileID: 0}
     picked: 0
-    isOpened: 0
+    isOpened: 1
     englishEntries: []
     hungarianEntries: []
   - Name: "Ferenc Bed\u0151"
@@ -5391,7 +5418,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <b>English</b> / Hungarian
+  m_text: '    <b>English</b> / Hungarian'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
   m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
@@ -6168,7 +6195,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 400, y: 583}
+  m_AnchoredPosition: {x: 400, y: 600}
   m_SizeDelta: {x: 420, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &920329663
@@ -6679,7 +6706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 400, y: 686}
+  m_AnchoredPosition: {x: 400, y: 700}
   m_SizeDelta: {x: 420, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1016146409
@@ -6812,7 +6839,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 393, y: 807}
+  m_AnchoredPosition: {x: 400, y: 800}
   m_SizeDelta: {x: 420, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1032905195
@@ -8396,7 +8423,7 @@ MonoBehaviour:
   m_fontSizeMin: 0
   m_fontSizeMax: 0
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -8706,7 +8733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1120, y: 682}
+  m_AnchoredPosition: {x: 900, y: 700}
   m_SizeDelta: {x: 420, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1494050767
@@ -8755,7 +8782,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 678694480}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: BackFromCharacters
+        m_MethodName: ToggleSubtitles
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8894,7 +8921,7 @@ MonoBehaviour:
   m_fontSizeMin: 0
   m_fontSizeMax: 0
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -9186,7 +9213,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1120, y: 568}
+  m_AnchoredPosition: {x: 900, y: 600}
   m_SizeDelta: {x: 420, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1529034557
@@ -9235,7 +9262,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 678694480}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: BackFromCharacters
+        m_MethodName: ToggleSubtitlesLanguage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10572,7 +10599,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1116, y: 799}
+  m_AnchoredPosition: {x: 900, y: 800}
   m_SizeDelta: {x: 420, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1773671918
@@ -10621,7 +10648,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 678694480}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: BackFromCharacters
+        m_MethodName: SetLanguage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10760,7 +10787,7 @@ MonoBehaviour:
   m_fontSizeMin: 0
   m_fontSizeMax: 0
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
