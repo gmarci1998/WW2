@@ -18,6 +18,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioSource distance;
     [SerializeField] private AudioSource radioNoiseAudio;
     [SerializeField] private AudioSource narrationPauseWarningAudio;
+    [SerializeField] private float radioNoiseNormalVolume = 0.080f;
+    [SerializeField] private float radioNoiseHidingVolume = 0.350f;
+    [SerializeField] private float radioNoiseFadeInDuration = 5f;
+    [SerializeField] private float radioNoiseFadeOutDuration = 2f;
     [SerializeField] private AudioSource standUpAudio;
     [SerializeField] private AudioSource crouchAudio;
     [SerializeField] private Camera cam;
@@ -79,10 +83,12 @@ public class GameManager : MonoBehaviour
 
     private AudioSource narrationAudio;
     private float narrationPauseTime;
+    private Coroutine startNarrationCoroutine;
     private Coroutine stopNarrationCoroutine;
     private Coroutine resumeNarrationCoroutine;
-    [SerializeField] private float narrationPauseDelay = 3f;
-    [SerializeField] private float narrationPauseWarningLeadTime = 2f;
+    [SerializeField] private float narrationPauseDelay = 8f;
+    private bool previousIsHiding;
+    private float radioNoiseTargetVolume;
 
     [System.Serializable]
     public class SoldierSaveData 
@@ -259,6 +265,7 @@ public class GameManager : MonoBehaviour
         startPos = transform.position;
         Cursor.lockState = CursorLockMode.Confined; 
         Cursor.visible = false; 
+        previousIsHiding = isHiding;
         
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("EnemySoldier");
         foreach (GameObject enemy in enemies)
@@ -347,13 +354,30 @@ public class GameManager : MonoBehaviour
         narrationAudio.volume = 1.0f;
         narrationAudio.playOnAwake = false;
 
-        StartCoroutine(StartNarrationAfterDelay());
+        if (startNarrationCoroutine != null)
+        {
+            StopCoroutine(startNarrationCoroutine);
+        }
+
+        startNarrationCoroutine = StartCoroutine(StartNarrationAfterDelay());
     }
 
     IEnumerator StartNarrationAfterDelay()
     {
-        yield return new WaitForSeconds(2f); // Resume from the last paused time
-        narrationAudio.Play();
+        float standingTime = 0f;
+
+        while (standingTime < 2f)
+        {
+            standingTime = isHiding ? 0f : standingTime + Time.deltaTime;
+            yield return null;
+        }
+
+        if (!isHiding && narrationAudio != null)
+        {
+            narrationAudio.Play();
+        }
+
+        startNarrationCoroutine = null;
     }
 
 
@@ -385,6 +409,7 @@ public class GameManager : MonoBehaviour
             } else {
                 isHiding = true;
                 hideActive = false;
+                PlayNarrationPauseWarningAudio();
                 if (crouchAudio != null){
                         crouchAudio.Play();
                 }
@@ -396,6 +421,8 @@ public class GameManager : MonoBehaviour
             camLerpT = 0f;
             canShoot = false;
         }
+
+        UpdateRadioNoiseVolume();
 
         if (license != null && cam != null) {
             PositionLicense();
@@ -462,18 +489,29 @@ public class GameManager : MonoBehaviour
 
         PositionLicense();
 
-        if(narrationAudio == null || narrationAudio.clip == null) return;
+        if(narrationAudio == null || narrationAudio.clip == null)
+        {
+            return;
+        }
         if (!narrationAudio.isPlaying && narrationAudio.time >= narrationAudio.clip.length)
         {
             currentSoldier.isOpened = true; // Mark the soldier as opened when narration ends
             StartCoroutine(ChangeSoldier()); // Automatically choose the next soldier after narration ends
         }
 
+        bool hidingJustActivated = isHiding && !previousIsHiding;
+        previousIsHiding = isHiding;
+
         if (isHiding && narrationAudio.isPlaying)
         {
             if (narrationPauseTime == 0)
             {
                 narrationPauseTime = narrationAudio.time;
+            }
+
+            if (hidingJustActivated)
+            {
+                PlayNarrationPauseWarningAudio();
             }
 
             if (stopNarrationCoroutine == null)
@@ -496,34 +534,18 @@ public class GameManager : MonoBehaviour
                 resumeNarrationCoroutine = StartCoroutine(ResumeNarrationAfterDelay());
             }
         }
-
-        
     }
 
     IEnumerator StopNarrationAfterDelay()
     {
-        float warningDelay = Mathf.Max(0f, narrationPauseDelay - narrationPauseWarningLeadTime);
-
-        if (warningDelay > 0f)
+        if (narrationPauseDelay > 0f)
         {
-            yield return new WaitForSeconds(warningDelay);
-        }
-
-        if (isHiding && narrationAudio != null && narrationAudio.isPlaying)
-        {
-            PlayNarrationPauseWarningAudio();
-        }
-
-        float remainingDelay = Mathf.Min(narrationPauseDelay, narrationPauseWarningLeadTime);
-        if (remainingDelay > 0f)
-        {
-            yield return new WaitForSeconds(remainingDelay);
+            yield return new WaitForSeconds(narrationPauseDelay);
         }
 
         if (isHiding)
         {
             narrationAudio.Pause(); // Pause instead of stopping to retain the current playback position
-            StopNarrationPauseWarningAudio();
         }
 
         stopNarrationCoroutine = null;
@@ -542,9 +564,39 @@ public class GameManager : MonoBehaviour
         resumeNarrationCoroutine = null;
     }
 
+    void UpdateRadioNoiseVolume()
+    {
+        if (radioNoiseAudio == null)
+        {
+            return;
+        }
+
+        radioNoiseTargetVolume = isHiding ? radioNoiseHidingVolume : radioNoiseNormalVolume;
+        float fadeDuration = isHiding ? radioNoiseFadeInDuration : radioNoiseFadeOutDuration;
+
+        if (fadeDuration <= 0f)
+        {
+            radioNoiseAudio.volume = radioNoiseTargetVolume;
+            return;
+        }
+
+        float volumeStep = Mathf.Abs(radioNoiseHidingVolume - radioNoiseNormalVolume) * (Time.deltaTime / fadeDuration);
+        radioNoiseAudio.volume = Mathf.MoveTowards(radioNoiseAudio.volume, radioNoiseTargetVolume, volumeStep);
+    }
+
     void PlayNarrationPauseWarningAudio()
     {
-        if (narrationPauseWarningAudio != null && !narrationPauseWarningAudio.isPlaying)
+        if (narrationPauseWarningAudio == null)
+        {
+            return;
+        }
+
+        if (narrationPauseWarningAudio.clip == null)
+        {
+            return;
+        }
+
+        if (!narrationPauseWarningAudio.isPlaying)
         {
             narrationPauseWarningAudio.Play();
         }
@@ -582,6 +634,12 @@ public class GameManager : MonoBehaviour
         if (narrationAudio != null)
         {
             narrationAudio.Stop();
+        }
+
+        if (startNarrationCoroutine != null)
+        {
+            StopCoroutine(startNarrationCoroutine);
+            startNarrationCoroutine = null;
         }
 
         if (stopNarrationCoroutine != null)
@@ -895,6 +953,7 @@ public class GameManager : MonoBehaviour
         if (radioNoiseAudio != null)
         {
             radioNoiseAudio.loop = true;
+            radioNoiseAudio.volume = radioNoiseNormalVolume;
             radioNoiseAudio.Play();
         }
     }

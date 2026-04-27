@@ -11,13 +11,25 @@ public class MusicManager : MonoBehaviour
 
     private bool canPlayHover = true;
 
-    void Start()
+    void Awake()
     {
+        if (musicSource == null)
+        {
+            musicSource = GetComponent<AudioSource>();
+        }
+
+        if (musicSource != null)
+        {
+            musicSource.spatialBlend = 0f;
+        }
+
         if (sfxSource == null)
         {
             sfxSource = gameObject.AddComponent<AudioSource>();
-            sfxSource.playOnAwake = false;
         }
+
+        sfxSource.playOnAwake = false;
+        sfxSource.spatialBlend = 0f;
     }
 
     public void FadeOutMusic()
@@ -37,6 +49,11 @@ public class MusicManager : MonoBehaviour
 
     IEnumerator Fade(float targetVolume, float duration)
     {
+        if (musicSource == null)
+        {
+            yield break;
+        }
+
         float startVolume = musicSource.volume;
         float elapsed = 0f;
 
@@ -52,6 +69,11 @@ public class MusicManager : MonoBehaviour
 
     IEnumerator FadeOut()
     {
+        if (musicSource == null)
+        {
+            yield break;
+        }
+
         float startVolume = musicSource.volume;
         float targetVolume = 0.025f;
         float duration = 2f;
@@ -69,6 +91,11 @@ public class MusicManager : MonoBehaviour
 
     IEnumerator FadeIn()
     {
+        if (musicSource == null)
+        {
+            yield break;
+        }
+
         float startVolume = musicSource.volume;
         float targetVolume = 1f;
         float duration = 2f;
@@ -86,7 +113,7 @@ public class MusicManager : MonoBehaviour
 
     public void OnPointerEnter()
     {
-        if (canPlayHover)
+        if (canPlayHover && sfxSource != null && hoverSound != null)
         {
             sfxSource.PlayOneShot(hoverSound);
             canPlayHover = false;
@@ -100,14 +127,14 @@ public class MusicManager : MonoBehaviour
 
     public void PlayPaperSound()
     {
-        if (true)
+        if (sfxSource != null && paperSound != null)
         {
             sfxSource.PlayOneShot(paperSound);
         }
     }
     public void PlayPaperClosedSound()
     {
-        if (true)
+        if (sfxSource != null && paperClosedSound != null)
         {
             sfxSource.PlayOneShot(paperClosedSound);
         }

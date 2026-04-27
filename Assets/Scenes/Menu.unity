@@ -9452,11 +9452,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8631235d00707948b18f7d3475e3421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 0}
+  musicSource: {fileID: 1542614447}
   sfxSource: {fileID: 0}
-  hoverSound: {fileID: 0}
-  paperSound: {fileID: 0}
-  paperClosedSound: {fileID: 0}
+  hoverSound: {fileID: 8300000, guid: 24aaafb0e080d3d4696e5673b0e354d2, type: 3}
+  paperSound: {fileID: 8300000, guid: e750277683b272c49b2192a2f07279fe, type: 3}
+  paperClosedSound: {fileID: 8300000, guid: 7bdcb03006860b24ba27cd993d4a2584, type: 3}
 --- !u!1 &1553912433
 GameObject:
   m_ObjectHideFlags: 0

@@ -369,6 +369,9 @@ public class MenuManager : MonoBehaviour
         if (!File.Exists(filePath))
         {
             Debug.LogWarning("❌ Save file not found: " + filePath);
+            language = PlayerPrefs.GetString("NarrationLanguage", "English");
+            subtitlesEnabled = PlayerPrefs.GetInt("SubtitlesEnabled", 1) == 1;
+            subtitlesLanguage = PlayerPrefs.GetString("SubtitlesLanguage", "English");
             return;
         }
 
@@ -389,9 +392,18 @@ public class MenuManager : MonoBehaviour
         }
 
         // Betöltjük a nyelvet és a felirat állapotát
-        language = PlayerPrefs.GetString("NarrationLanguage");
+        language = PlayerPrefs.GetString("NarrationLanguage", saveData.NarrationLanguage);
+        if (string.IsNullOrEmpty(language))
+        {
+            language = "English";
+        }
+
         subtitlesEnabled = PlayerPrefs.GetInt("SubtitlesEnabled", saveData.SubtitlesEnabled ? 1 : 0) == 1;
         subtitlesLanguage = PlayerPrefs.GetString("SubtitlesLanguage", saveData.SubtitlesLanguage);
+        if (string.IsNullOrEmpty(subtitlesLanguage))
+        {
+            subtitlesLanguage = "English";
+        }
 
         if (!HungarianSoldiers[0].isOpened) button1.interactable = false;
         if (!HungarianSoldiers[1].isOpened) button2.interactable = false;
