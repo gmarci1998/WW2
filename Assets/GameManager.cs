@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour 
 {
@@ -42,6 +43,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject flagRus;
     [SerializeField] GameObject license;
 
+    [Header("Exit Confirmation UI")]
+    public GameObject exitConfirmationPanel;
+    public Button exitConfirmButton;
+    public Button exitCancelButton;
+    public TextMeshProUGUI exitConfirmationTitleText;
+    public TextMeshProUGUI exitConfirmationMessageText;
+    public string exitConfirmationTitle = "Kilépés";
+    public string exitConfirmationMessage = "Kilépsz a főmenübe?";
+
     [SerializeField] private AudioSource playerHitAudio;
     [SerializeField] private AudioSource playerMissAudio;
     [SerializeField] private AudioSource playerDeathAudio;
@@ -70,6 +80,8 @@ public class GameManager : MonoBehaviour
     private bool canShoot = true;
     private bool isPlayerDead = false; 
     [SerializeField] private int playerLives = 3;
+
+    private bool exitConfirmationVisible = false;
 
     private bool isLock = false;
     private int maxPlayerLives = 3;
@@ -156,6 +168,38 @@ public class GameManager : MonoBehaviour
         hungarianSide = Random.Range(0,2) == 0;
 
         ChooseSoldier();
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "GameScene")
+        {
+            InitializeExitConfirmationUI();
+        }
+        else
+        {
+            ClearExitConfirmationReferences();
+        }
+    }
+
+    private void ClearExitConfirmationReferences()
+    {
+        exitConfirmationPanel = null;
+        exitConfirmButton = null;
+        exitCancelButton = null;
+        exitConfirmationTitleText = null;
+        exitConfirmationMessageText = null;
+        exitConfirmationVisible = false;
     }
 
     [SerializeField] private CanvasGroup creditsCanvasGroup;
@@ -283,6 +327,7 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(SceneStart()); 
 
+        InitializeExitConfirmationUI();
         licenseInitialized = true;
     }
 
@@ -383,10 +428,23 @@ public class GameManager : MonoBehaviour
 
     void Update() {
 
+        if (SceneManager.GetActiveScene().name != "GameScene")
+        {
+            return;
+        }
+
         Debug.Log("Player élete: " + playerLives);
 
-        if(Input.GetKeyDown(KeyCode.Escape)){
-            PlayerDeath();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (exitConfirmationVisible)
+            {
+                HideExitConfirmation();
+            }
+            else
+            {
+                ShowExitConfirmation();
+            }
         }
 
         Debug.Log("Player élete: " + isPlayerDead);
@@ -396,30 +454,9 @@ public class GameManager : MonoBehaviour
             license.SetActive(true); 
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && hideActive) {
-            if(isHiding){
-                isHiding = false;
-                hideActive = false;
-                if (standUpAudio != null){
-                        standUpAudio.Play();
-                    }
-                camTargetY = camStartY;  
-                //Cursor.lockState = CursorLockMode.Confined;
-                license.transform.position = new Vector3(-7.5f, -4f, license.transform.position.z);
-            } else {
-                isHiding = true;
-                hideActive = false;
-                PlayNarrationPauseWarningAudio();
-                if (crouchAudio != null){
-                        crouchAudio.Play();
-                }
-                camTargetY = camStartY - 10f; 
-                //Cursor.lockState = CursorLockMode.Locked;
-                license.transform.position = new Vector3(-7.5f, -14f, license.transform.position.z);
-            }
-            camMoving = true;
-            camLerpT = 0f;
-            canShoot = false;
+        // A guggolás / felállás logikája külön metódusba lett áthelyezve, ezért itt csak a hívás marad.
+        if (Input.GetKeyDown(KeyCode.Space) && hideActive && !exitConfirmationVisible) {
+            ToggleHideState();
         }
 
         UpdateRadioNoiseVolume();
@@ -533,6 +570,179 @@ public class GameManager : MonoBehaviour
             {
                 resumeNarrationCoroutine = StartCoroutine(ResumeNarrationAfterDelay());
             }
+        }
+    }
+
+    private void ShowExitConfirmation()
+    {
+        if (!isHiding && hideActive)
+        {
+            ToggleHideState();
+        }
+
+        exitConfirmationVisible = true;
+        if (exitConfirmationPanel != null)
+        {
+            exitConfirmationPanel.SetActive(true);
+        }
+    }
+
+    private void HideExitConfirmation()
+    {
+        exitConfirmationVisible = false;
+        if (exitConfirmationPanel != null)
+        {
+            exitConfirmationPanel.SetActive(false);
+        }
+    }
+
+    private void ToggleHideState()
+    {
+        if (!hideActive)
+        {
+            return;
+        }
+
+        if (isHiding)
+        {
+            isHiding = false;
+            hideActive = false;
+            if (standUpAudio != null)
+            {
+                standUpAudio.Play();
+            }
+            camTargetY = camStartY;
+            license.transform.position = new Vector3(-7.5f, -4f, license.transform.position.z);
+        }
+        else
+        {
+            isHiding = true;
+            hideActive = false;
+            PlayNarrationPauseWarningAudio();
+            if (crouchAudio != null)
+            {
+                crouchAudio.Play();
+            }
+            camTargetY = camStartY - 10f;
+            license.transform.position = new Vector3(-7.5f, -14f, license.transform.position.z);
+        }
+
+        camMoving = true;
+        camLerpT = 0f;
+        canShoot = false;
+    }
+
+    private void ConfirmExitToMainMenu()
+    {
+        exitConfirmationVisible = false;
+        StopAllSceneAudio();
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("Menu");
+    }
+
+    private void InitializeExitConfirmationUI()
+    {
+        if (exitConfirmationPanel == null)
+        {
+            exitConfirmationPanel = FindSceneGameObject("ExitConfirmationPanel");
+        }
+
+        if (exitConfirmButton == null)
+        {
+            exitConfirmButton = FindSceneGameObject("ExitYesButton")?.GetComponent<Button>();
+        }
+
+        if (exitCancelButton == null)
+        {
+            exitCancelButton = FindSceneGameObject("ExitNoButton")?.GetComponent<Button>();
+        }
+
+        if (exitConfirmationTitleText == null)
+        {
+            exitConfirmationTitleText = FindSceneGameObject("ExitConfirmationTitle")?.GetComponent<TextMeshProUGUI>();
+        }
+
+        if (exitConfirmationMessageText == null)
+        {
+            exitConfirmationMessageText = FindSceneGameObject("ExitConfirmationMessage")?.GetComponent<TextMeshProUGUI>();
+        }
+
+        if (exitConfirmationPanel != null)
+        {
+            exitConfirmationPanel.SetActive(false);
+        }
+
+        if (exitConfirmButton != null)
+        {
+            exitConfirmButton.onClick.RemoveAllListeners();
+            exitConfirmButton.onClick.AddListener(ConfirmExitToMainMenu);
+        }
+
+        if (exitCancelButton != null)
+        {
+            exitCancelButton.onClick.RemoveAllListeners();
+            exitCancelButton.onClick.AddListener(HideExitConfirmation);
+        }
+
+        UpdateExitConfirmationText();
+    }
+
+    private void UpdateExitConfirmationText()
+    {
+        if (exitConfirmationTitleText != null)
+        {
+            exitConfirmationTitleText.text = exitConfirmationTitle;
+        }
+
+        if (exitConfirmationMessageText != null)
+        {
+            exitConfirmationMessageText.text = exitConfirmationMessage;
+        }
+    }
+
+    private GameObject FindSceneGameObject(string name)
+    {
+        foreach (var root in SceneManager.GetActiveScene().GetRootGameObjects())
+        {
+            var found = FindChildRecursive(root.transform, name);
+            if (found != null)
+            {
+                return found.gameObject;
+            }
+        }
+
+        return null;
+    }
+
+    private Transform FindChildRecursive(Transform parent, string name)
+    {
+        if (parent.name == name)
+        {
+            return parent;
+        }
+
+        foreach (Transform child in parent)
+        {
+            var result = FindChildRecursive(child, name);
+            if (result != null)
+            {
+                return result;
+            }
+        }
+
+        return null;
+    }
+
+    private void StopAllSceneAudio()
+    {
+        foreach (var source in FindObjectsOfType<AudioSource>())
+        {
+            source.Stop();
+        }
+
+        if (narrationAudio != null)
+        {
+            narrationAudio.Stop();
         }
     }
 
