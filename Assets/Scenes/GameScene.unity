@@ -609,8 +609,8 @@ MonoBehaviour:
     Shoot
     with the LEFT MOUSE BUTTON.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9059c881bfa1940119d4ae5d36aa62bc, type: 2}
-  m_sharedMaterial: {fileID: 2354571462987380143, guid: 9059c881bfa1940119d4ae5d36aa62bc, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 80d679ee9997f024ba4ece8f570f66f0, type: 2}
+  m_sharedMaterial: {fileID: 7409515842414935642, guid: 80d679ee9997f024ba4ece8f570f66f0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -704,7 +704,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2354571462987380143, guid: 9059c881bfa1940119d4ae5d36aa62bc, type: 2}
+  - {fileID: 7409515842414935642, guid: 80d679ee9997f024ba4ece8f570f66f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1585,8 +1585,8 @@ MonoBehaviour:
   m_text: "1943, 11th of January\r\nDon River Line, Voronezh Region, USSR\r\n\u221235
     \xB0C\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c72fd84918a0e4194a48294f04008932, type: 2}
-  m_sharedMaterial: {fileID: 4684507092206647844, guid: c72fd84918a0e4194a48294f04008932, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4069,8 +4069,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Kil\xE9psz a f\u0151men\xFCbe?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c72fd84918a0e4194a48294f04008932, type: 2}
-  m_sharedMaterial: {fileID: 4684507092206647844, guid: c72fd84918a0e4194a48294f04008932, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4326,8 +4326,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Igen
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c72fd84918a0e4194a48294f04008932, type: 2}
-  m_sharedMaterial: {fileID: 4684507092206647844, guid: c72fd84918a0e4194a48294f04008932, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4583,8 +4583,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Nem
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c72fd84918a0e4194a48294f04008932, type: 2}
-  m_sharedMaterial: {fileID: 4684507092206647844, guid: c72fd84918a0e4194a48294f04008932, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

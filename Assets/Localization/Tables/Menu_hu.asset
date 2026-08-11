@@ -1,0 +1,174 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Menu_hu
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: hu
+  m_SharedData: {fileID: 11400000, guid: ec99a26b672463a409845fcc24991cc1, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1856872448
+    m_Localized: "J\xE1t\xE9k ind\xEDt\xE1sa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1944952832
+    m_Localized: Karakterek
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1953341440
+    m_Localized: "Be\xE1ll\xEDt\xE1sok"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1953341441
+    m_Localized: "St\xE1blista"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535744
+    m_Localized: "Kil\xE9p\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535745
+    m_Localized: "Bez\xE1r\xE1s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535746
+    m_Localized: "Narr\xE1ci\xF3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535747
+    m_Localized: Vissza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535748
+    m_Localized: "ST\xC1BLISTA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535749
+    m_Localized: "Programoz\xE1s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535750
+    m_Localized: "M\u0171v\xE9szet \xE9s vizu\xE1lis elemek"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535751
+    m_Localized: "Portr\xE9k \xE9s programoz\xE1s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535752
+    m_Localized: "Fel\xFClet diz\xE1jn"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535753
+    m_Localized: "\xCDr\xE1s \xE9s narr\xE1ci\xF3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535754
+    m_Localized: "Hangm\xE9rn\xF6ki munka"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535755
+    m_Localized: Vissza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535756
+    m_Localized: "Be\xE1ll\xEDt\xE1sok"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535757
+    m_Localized: Nyelv
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535758
+    m_Localized: Angol / <b>Magyar</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535759
+    m_Localized: Feliratok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535760
+    m_Localized: <b>BE</b> / KI
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535761
+    m_Localized: BE / <b>KI</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535762
+    m_Localized: Felirat nyelve
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535763
+    m_Localized: <b>Angol</b> / Magyar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535764
+    m_Localized: Angol / <b>Magyar</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535765
+    m_Localized: Vissza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535766
+    m_Localized: "Kil\xE9psz a f\u0151men\xFCbe?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535767
+    m_Localized: Igen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535768
+    m_Localized: Nem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535769
+    m_Localized: "1943. janu\xE1r 11.\nDon-kanyar, Vorony\xE9zsi ter\xFClet, Szovjetuni\xF3\n\u221235
+      \xB0C"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248548359512064
+    m_Localized: Bajnok David
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248548409843712
+    m_Localized: Galusz Marci
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248548409843713
+    m_Localized: Barta David
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248548409843714
+    m_Localized: "Nagy Bor\xFAs Levente"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248548409843715
+    m_Localized: Benda Daniel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248548409843716
+    m_Localized: Boros Aron
+    m_Metadata:
+      m_Items: []
+  - m_Id: 253860416167936
+    m_Localized: "\u201CIn the bleak mid-winter\nFrosty wind made moan\nEarth stood
+      hard as iron\nWater like a stone;\nSnow had fallen, snow on snow,\nSnow on
+      snow,\nIn the bleak mid-winter\nLong ago.\u201D - Christina Rossetti"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

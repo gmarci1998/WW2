@@ -26,6 +26,9 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI creditsButtonText;
     [SerializeField] private TextMeshProUGUI exitButtonText;
 
+    [Header("Opening Sequence UI")]
+    [SerializeField] private TextMeshProUGUI openingQuoteText;
+
 
     [Header("Characters Menu UI")]
     [SerializeField] private TextMeshProUGUI closeButtonText;
@@ -41,6 +44,12 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI writingLabelText;
     [SerializeField] private TextMeshProUGUI audioLabelText;
     [SerializeField] private TextMeshProUGUI charactersExitButtonText;
+    [SerializeField] private TextMeshProUGUI creditsNameBajnokText;
+    [SerializeField] private TextMeshProUGUI creditsNameGaluszText;
+    [SerializeField] private TextMeshProUGUI creditsNameBartaText;
+    [SerializeField] private TextMeshProUGUI creditsNameNagyBorusText;
+    [SerializeField] private TextMeshProUGUI creditsNameBendaText;
+    [SerializeField] private TextMeshProUGUI creditsNameBorosText;
 
 
     [Header("Settings Menu UI")]
@@ -153,6 +162,11 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private Button button7;
     [SerializeField] private Button button8;
 
+    [Header("Characters Menu Locked Visual")]
+    [SerializeField] private float lockedButtonAlpha = 0.25f;
+    [SerializeField] private Color buttonShadowColor = new Color(0f, 0f, 0f, 0.6f);
+    [SerializeField] private Vector2 buttonShadowDistance = new Vector2(5f, -5f);
+
     [System.Serializable]
     public class SoldierSaveData 
     {
@@ -216,6 +230,9 @@ public class MenuManager : MonoBehaviour
     void Start()  
     {
         LoadSoldiersFromFile();
+        LocalizationManager.Initialize();
+        LocalizationManager.SetLanguage(language);
+        language = LocalizationManager.CurrentLanguage;
         Debug.Log(language);
         ChangeLanguage();
         UnlockCursor();
@@ -249,33 +266,62 @@ public class MenuManager : MonoBehaviour
 
     public void ChangeLanguage()
     {
-        settingsTitleText.text = language == "English" ? "Settings" : "Beállítások";
-        languageLabelText.text = language == "English" ? "Language" : "Nyelv";
-        languageButtonText.text = language == "English" ? "   <b>English</b> / Hungarian" : "Angol / <b>Magyar</b>";
-        subtitlesLabelText.text = language == "English" ? "Subtitles" : "Feliratok";
+        if (playButtonText != null) playButtonText.text = LocalizationManager.GetText("MainMenu.PlayButton", playButtonText.text);
+        if (charactersButtonText != null) charactersButtonText.text = LocalizationManager.GetText("MainMenu.CharactersButton", charactersButtonText.text);
+        if (settingsButtonText != null) settingsButtonText.text = LocalizationManager.GetText("MainMenu.SettingsButton", settingsButtonText.text);
+        if (creditsButtonText != null) creditsButtonText.text = LocalizationManager.GetText("MainMenu.CreditsButton", creditsButtonText.text);
+        if (exitButtonText != null) exitButtonText.text = LocalizationManager.GetText("MainMenu.ExitButton", exitButtonText.text);
+        if (openingQuoteText != null) openingQuoteText.text = LocalizationManager.GetText("MainMenu.OpeningQuote", openingQuoteText.text);
+
+        if (closeButtonText != null) closeButtonText.text = LocalizationManager.GetText("Characters.CloseButton", closeButtonText.text);
+        if (narrationButtonText != null) narrationButtonText.text = LocalizationManager.GetText("Characters.NarrationButton", narrationButtonText.text);
+        if (backButtonText != null) backButtonText.text = LocalizationManager.GetText("Characters.BackButton", backButtonText.text);
+
+        if (creditsTitleText != null) creditsTitleText.text = LocalizationManager.GetText("Credits.Title", creditsTitleText.text);
+        if (programmingTitleText != null) programmingTitleText.text = LocalizationManager.GetText("Credits.ProgrammingTitle", programmingTitleText.text);
+        if (artLabelText != null) artLabelText.text = LocalizationManager.GetText("Credits.ArtLabel", artLabelText.text);
+        if (portraitsLabelText != null) portraitsLabelText.text = LocalizationManager.GetText("Credits.PortraitsLabel", portraitsLabelText.text);
+        if (uiDesignLabelText != null) uiDesignLabelText.text = LocalizationManager.GetText("Credits.UIDesignLabel", uiDesignLabelText.text);
+        if (writingLabelText != null) writingLabelText.text = LocalizationManager.GetText("Credits.WritingLabel", writingLabelText.text);
+        if (audioLabelText != null) audioLabelText.text = LocalizationManager.GetText("Credits.AudioLabel", audioLabelText.text);
+        if (charactersExitButtonText != null) charactersExitButtonText.text = LocalizationManager.GetText("Credits.BackButton", charactersExitButtonText.text);
+        if (creditsNameBajnokText != null) creditsNameBajnokText.text = LocalizationManager.GetText("Credits.Name.Bajnok", creditsNameBajnokText.text);
+        if (creditsNameGaluszText != null) creditsNameGaluszText.text = LocalizationManager.GetText("Credits.Name.Galusz", creditsNameGaluszText.text);
+        if (creditsNameBartaText != null) creditsNameBartaText.text = LocalizationManager.GetText("Credits.Name.Barta", creditsNameBartaText.text);
+        if (creditsNameNagyBorusText != null) creditsNameNagyBorusText.text = LocalizationManager.GetText("Credits.Name.NagyBorus", creditsNameNagyBorusText.text);
+        if (creditsNameBendaText != null) creditsNameBendaText.text = LocalizationManager.GetText("Credits.Name.Benda", creditsNameBendaText.text);
+        if (creditsNameBorosText != null) creditsNameBorosText.text = LocalizationManager.GetText("Credits.Name.Boros", creditsNameBorosText.text);
+
+        settingsTitleText.text = LocalizationManager.GetText("Settings.Title", settingsTitleText.text);
+        languageLabelText.text = LocalizationManager.GetText("Settings.LanguageLabel", languageLabelText.text);
+        languageButtonText.text = LocalizationManager.GetText("Settings.LanguageButton.EnglishHungarian", languageButtonText.text);
+        subtitlesLabelText.text = LocalizationManager.GetText("Settings.SubtitlesLabel", subtitlesLabelText.text);
+
         if (subtitlesEnabled)
         {
-                subtitlesButtonText.text = language == "English" ? "<b>ON</b> / OFF" : "<b>BE</b> / KI";
-            }
-            else
-            {
-                subtitlesButtonText.text = language == "English" ? "ON / <b>OFF</b>" : "BE / <b>KI</b>";
+            subtitlesButtonText.text = LocalizationManager.GetText("Settings.SubtitlesOn", subtitlesButtonText.text);
         }
-        subtitlesLanguageLabelText.text = language == "English" ? "Subtitles Language" : "Felirat nyelve";
+        else
+        {
+            subtitlesButtonText.text = LocalizationManager.GetText("Settings.SubtitlesOff", subtitlesButtonText.text);
+        }
+
+        subtitlesLanguageLabelText.text = LocalizationManager.GetText("Settings.SubtitlesLanguageLabel", subtitlesLanguageLabelText.text);
+
         if (subtitlesLanguage == "English")
         {
-                subtitlesLanguageButtonText.text = language == "English" ? "    <b>English</b> / Hungarian" : "<b>Angol</b> / Magyar";
-            }
-            else
-            {
-                subtitlesLanguageButtonText.text = language == "English" ? "   English / <b>Hungarian</b>" : "Angol / <b>Magyar</b>";
+            subtitlesLanguageButtonText.text = LocalizationManager.GetText("Settings.SubtitlesLanguageButton.EnglishHungarian", subtitlesLanguageButtonText.text);
         }
-        settingsBackButtonText.text = language == "English" ? "Back" : "Vissza";
+        else
+        {
+            subtitlesLanguageButtonText.text = LocalizationManager.GetText("Settings.SubtitlesLanguageButton.HungarianEnglish", subtitlesLanguageButtonText.text);
+        }
+
+        settingsBackButtonText.text = LocalizationManager.GetText("Settings.BackButton", settingsBackButtonText.text);
     }
 
     public void SetLanguage()
     {
-
         if (language == "English")
         {
             language = "Hungarian";
@@ -284,8 +330,9 @@ public class MenuManager : MonoBehaviour
         {
             language = "English";
         }
-        PlayerPrefs.SetString("NarrationLanguage", language);
-        PlayerPrefs.Save();
+
+        LocalizationManager.SetLanguage(language);
+        language = LocalizationManager.CurrentLanguage;
         ChangeLanguage();
         SaveSoldiersToFile();
     }
@@ -369,7 +416,7 @@ public class MenuManager : MonoBehaviour
         if (!File.Exists(filePath))
         {
             Debug.LogWarning("❌ Save file not found: " + filePath);
-            language = PlayerPrefs.GetString("NarrationLanguage", "English");
+            language = PlayerPrefs.GetString(LocalizationManager.MenuLanguagePrefKey, "English");
             subtitlesEnabled = PlayerPrefs.GetInt("SubtitlesEnabled", 1) == 1;
             subtitlesLanguage = PlayerPrefs.GetString("SubtitlesLanguage", "English");
             return;
@@ -392,7 +439,7 @@ public class MenuManager : MonoBehaviour
         }
 
         // Betöltjük a nyelvet és a felirat állapotát
-        language = PlayerPrefs.GetString("NarrationLanguage", saveData.NarrationLanguage);
+        language = PlayerPrefs.GetString(LocalizationManager.MenuLanguagePrefKey, saveData.NarrationLanguage);
         if (string.IsNullOrEmpty(language))
         {
             language = "English";
@@ -405,13 +452,54 @@ public class MenuManager : MonoBehaviour
             subtitlesLanguage = "English";
         }
 
-        if (!HungarianSoldiers[0].isOpened) button1.interactable = false;
-        if (!HungarianSoldiers[1].isOpened) button2.interactable = false;
-        if (!HungarianSoldiers[2].isOpened) button3.interactable = false;
-        if (!HungarianSoldiers[3].isOpened) button4.interactable = false;
-        if (!RussianSoldiers[0].isOpened) button5.interactable = false;
-        if (!RussianSoldiers[1].isOpened) button6.interactable = false;
-        if (!RussianSoldiers[2].isOpened) button7.interactable = false;
-        if (!RussianSoldiers[3].isOpened) button8.interactable = false;
+        UpdateCharacterButtonsVisuals();
+    }
+
+    private void UpdateCharacterButtonsVisuals()
+    {
+        ApplyCharacterButtonVisual(button1, HungarianSoldiers[0].isOpened);
+        ApplyCharacterButtonVisual(button2, HungarianSoldiers[1].isOpened);
+        ApplyCharacterButtonVisual(button3, HungarianSoldiers[2].isOpened);
+        ApplyCharacterButtonVisual(button4, HungarianSoldiers[3].isOpened);
+        ApplyCharacterButtonVisual(button5, RussianSoldiers[0].isOpened);
+        ApplyCharacterButtonVisual(button6, RussianSoldiers[1].isOpened);
+        ApplyCharacterButtonVisual(button7, RussianSoldiers[2].isOpened);
+        ApplyCharacterButtonVisual(button8, RussianSoldiers[3].isOpened);
+    }
+
+    private void ApplyCharacterButtonVisual(Button button, bool isOpened)
+    {
+        if (button == null) return;
+
+        button.interactable = isOpened;
+
+        ColorBlock colors = button.colors;
+        colors.normalColor = Color.white;
+        Color disabledColor = colors.disabledColor;
+        disabledColor.a = lockedButtonAlpha;
+        colors.disabledColor = disabledColor;
+        button.colors = colors;
+
+        // Button.colors only takes effect with the "Color Tint" transition; most of our
+        // buttons use Sprite Swap/Animation, so the graphic's alpha is set directly too.
+        if (button.targetGraphic != null)
+        {
+            Color graphicColor = button.targetGraphic.color;
+            graphicColor.a = isOpened ? 1f : lockedButtonAlpha;
+            button.targetGraphic.color = graphicColor;
+        }
+
+        Shadow shadow = button.GetComponent<Shadow>();
+        if (isOpened)
+        {
+            shadow ??= button.gameObject.AddComponent<Shadow>();
+            shadow.effectColor = buttonShadowColor;
+            shadow.effectDistance = buttonShadowDistance;
+            shadow.enabled = true;
+        }
+        else if (shadow is not null)
+        {
+            shadow.enabled = false;
+        }
     }
 }

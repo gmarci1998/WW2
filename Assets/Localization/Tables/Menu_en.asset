@@ -1,0 +1,174 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Menu_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: ec99a26b672463a409845fcc24991cc1, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1856872448
+    m_Localized: Play game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1944952832
+    m_Localized: Characters
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1953341440
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1953341441
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535744
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535745
+    m_Localized: Close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535746
+    m_Localized: Narration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535747
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535748
+    m_Localized: CREDITS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535749
+    m_Localized: Programming
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535750
+    m_Localized: Art & Visual Assets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535751
+    m_Localized: Portraits & Programming
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535752
+    m_Localized: UI Design
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535753
+    m_Localized: Writing & Narration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535754
+    m_Localized: Audio Engineering
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535755
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535756
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535757
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535758
+    m_Localized: '   <b>English</b> / Hungarian'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535759
+    m_Localized: Subtitles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535760
+    m_Localized: <b>ON</b> / OFF
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535761
+    m_Localized: ON / <b>OFF</b>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535762
+    m_Localized: Subtitles Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535763
+    m_Localized: '    <b>English</b> / Hungarian'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535764
+    m_Localized: '   English / <b>Hungarian</b>'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535765
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535766
+    m_Localized: Leave to the main menu?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535767
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535768
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535769
+    m_Localized: "1943, 11th of January\nDon River Line, Voronezh Region, USSR\n\u221235
+      \xB0C"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248548359512064
+    m_Localized: David Bajnok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248548409843712
+    m_Localized: Marci Galusz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248548409843713
+    m_Localized: David Barta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248548409843714
+    m_Localized: "Levente Nagy Bor\xFAs"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248548409843715
+    m_Localized: Daniel Benda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248548409843716
+    m_Localized: Aron Boros
+    m_Metadata:
+      m_Items: []
+  - m_Id: 253860416167936
+    m_Localized: "\u201CIn the bleak mid-winter\nFrosty wind made moan\nEarth stood
+      hard as iron\nWater like a stone;\nSnow had fallen, snow on snow,\nSnow on
+      snow,\nIn the bleak mid-winter\nLong ago.\u201D - Christina Rossetti"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,176 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Menu Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Menu
+  m_TableCollectionNameGuidString: ec99a26b672463a409845fcc24991cc1
+  m_Entries:
+  - m_Id: 1856872448
+    m_Key: MainMenu.PlayButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1944952832
+    m_Key: MainMenu.CharactersButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1953341440
+    m_Key: MainMenu.SettingsButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1953341441
+    m_Key: MainMenu.CreditsButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535744
+    m_Key: MainMenu.ExitButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535745
+    m_Key: Characters.CloseButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535746
+    m_Key: Characters.NarrationButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535747
+    m_Key: Characters.BackButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535748
+    m_Key: Credits.Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535749
+    m_Key: Credits.ProgrammingTitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535750
+    m_Key: Credits.ArtLabel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535751
+    m_Key: Credits.PortraitsLabel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535752
+    m_Key: Credits.UIDesignLabel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535753
+    m_Key: Credits.WritingLabel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535754
+    m_Key: Credits.AudioLabel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535755
+    m_Key: Credits.BackButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535756
+    m_Key: Settings.Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535757
+    m_Key: Settings.LanguageLabel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535758
+    m_Key: Settings.LanguageButton.EnglishHungarian
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535759
+    m_Key: Settings.SubtitlesLabel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535760
+    m_Key: Settings.SubtitlesOn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535761
+    m_Key: Settings.SubtitlesOff
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535762
+    m_Key: Settings.SubtitlesLanguageLabel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535763
+    m_Key: Settings.SubtitlesLanguageButton.EnglishHungarian
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535764
+    m_Key: Settings.SubtitlesLanguageButton.HungarianEnglish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535765
+    m_Key: Settings.BackButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535766
+    m_Key: GameScene.ExitConfirmation.Message
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535767
+    m_Key: GameScene.ExitConfirmation.YesButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535768
+    m_Key: GameScene.ExitConfirmation.NoButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1957535769
+    m_Key: GameScene.Opening.Caption
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248548359512064
+    m_Key: Credits.Name.Bajnok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248548409843712
+    m_Key: Credits.Name.Galusz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248548409843713
+    m_Key: Credits.Name.Barta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248548409843714
+    m_Key: Credits.Name.NagyBorus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248548409843715
+    m_Key: Credits.Name.Benda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248548409843716
+    m_Key: Credits.Name.Boros
+    m_Metadata:
+      m_Items: []
+  - m_Id: 253860416167936
+    m_Key: MainMenu.OpeningQuote
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3014625833684566016
+  references:
+    version: 2
+    RefIds:
+    - rid: 3014625833684566016
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1786393695182

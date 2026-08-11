@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class ControlsHint : MonoBehaviour
 {
-    private const string LanguagePrefsKey = "NarrationLanguage";
-
     public enum Language
     {
         English,
@@ -76,8 +74,7 @@ public class ControlsHint : MonoBehaviour
 
     string GetSavedLanguage()
     {
-        string savedLanguage = PlayerPrefs.GetString(LanguagePrefsKey, fallbackLanguage.ToString());
-        return NormalizeLanguage(savedLanguage);
+        return NormalizeLanguage(LocalizationManager.CurrentLanguage);
     }
 
     string NormalizeLanguage(string selectedLanguage)

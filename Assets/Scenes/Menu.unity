@@ -253,8 +253,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '   <b>English</b> / Hungarian'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
-  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -389,8 +389,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: David Bajnok
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 51fcc563f79b944a7b70bf678803fda0, type: 2}
-  m_sharedMaterial: {fileID: -1371307987657508136, guid: 51fcc563f79b944a7b70bf678803fda0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -769,8 +769,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -353.7399, y: 34}
-  m_SizeDelta: {x: 220.3135, y: 32.6618}
+  m_AnchoredPosition: {x: -306.4392, y: 34}
+  m_SizeDelta: {x: 314.915, y: 32.662}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &122777860
 MonoBehaviour:
@@ -794,8 +794,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Art & Visual Assets
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c72fd84918a0e4194a48294f04008932, type: 2}
-  m_sharedMaterial: {fileID: 4684507092206647844, guid: c72fd84918a0e4194a48294f04008932, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -932,8 +932,8 @@ MonoBehaviour:
     hard as iron\r\nWater like a stone;\r\nSnow had fallen, snow on snow,\r\nSnow
     on snow,\r\nIn the bleak mid-winter\r\nLong ago.\u201D - Christina Rossetti"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c72fd84918a0e4194a48294f04008932, type: 2}
-  m_sharedMaterial: {fileID: 4684507092206647844, guid: c72fd84918a0e4194a48294f04008932, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1154,7 +1154,7 @@ MonoBehaviour:
   narrationSource: {fileID: 147734231}
   characters:
   - image: {fileID: 8830225953951354234, guid: 2a6cd810f5d10ff47b2bdead4a5d6e9b, type: 3}
-    description: "Ferenc Bed\u0151 / Age: 33 \\n Rank/Position: Private (enlisted
+    englishDescription: "Ferenc Bed\u0151 / Age: 33 \\n Rank/Position: Private (enlisted
       soldier), infantryman \\n Civilian Occupation: Railway worker (switchman /
       track switch operator) \\n Origin: Szolnok County \\n \\n Bed\u0151 Ferenc
       was \u201CFerk\xF3\u201D to everyone back home. \\n \\n He had to be. His father
@@ -1201,81 +1201,204 @@ MonoBehaviour:
       If he ever gets lucky enough to introduce himself to a new person again, he\u2019ll
       say the following: \u201CBed\u0151 Ferenc. The younger one. But you can just
       call me Ferk\xF3.\u201D "
-    narrationClip: {fileID: 8300000, guid: 16ad02e124fb2e34294adb7bcf313033, type: 3}
+    hungarianDescription: "Bed\u0151 Ferenc / Kor: 33 \\n Rang/beoszt\xE1s: honv\xE9d
+      (k\xF6zkatona), l\xF6v\xE9sz \\n Civil foglalkoz\xE1s: vasutas (v\xE1lt\xF3kezel\u0151)
+      \\n Sz\xE1rmaz\xE1s: Szolnok v\xE1rmegye, Alf\xF6ld \\n \\n Bed\u0151 Ferencet
+      mindenki Ferk\xF3nak h\xEDvta, mivel az apja \xE9s annak az apja is a Bed\u0151
+      Ferenc n\xE9vre hallgatott. Valahogy teh\xE1t meg kellett \u0151ket k\xFCl\xF6nb\xF6ztetni
+      egym\xE1st\xF3l, mert az az\xE9rt m\xE9gsem lehetett, hogy mindegyik\xFCket
+      \xFAgy sz\xF3l\xEDts\xE1k meg a csal\xE1dtagok, hogy <i> \u201CH\xE9, Feri!\u201D
+      </i> . \xCDgy alakult ki az a szokatlan helyezet, hogy \u0151, Ferk\xF3 a maga
+      104 kilogramj\xE1val \xE9s 193 centij\xE9vel apja, id\u0151sebb Bed\u0151 Ferenc
+      \xE9s nagyapja, m\xE9g id\u0151sebb Bed\u0151 Ferenc f\xF6l\xE9 tornyosult
+      m\xE1sf\xE9l fejjel \xE9s m\xE9gis neki kellett \xFAgy \xE9reznie mag\xE1t,
+      mint egy taknyos h\xFClyegyereknek, csak az\xE9rt, mert elk\xF6vette azt a
+      hib\xE1t, hogy huszonkett\u0151, illetve harminckilenc \xE9vvel a m\xE1sik
+      kett\u0151 ut\xE1n sz\xFCletett. \\n \\n Ferenc most a fegyvert szorongatva
+      \xE9s az el\xE9rhetetlennek tetsz\u0151 horizont fel\xE9 puffogtatva arra gondol,
+      hogy nagyon sok mindent megadna az\xE9rt, ha m\xE9g egyszer valaki az \xE9letben
+      Ferk\xF3nak sz\xF3l\xEDtan\xE1. Erre viszont nem sok es\xE9ly k\xEDn\xE1lkozik,
+      mert annak idej\xE9n a soroz\xE1skor mindenkinek Ferenck\xE9nt mutatkozott
+      be, nem Ferik\xE9nt, nem Fec\xF3k\xE9nt \xE9s v\xE9gk\xE9pp nem Fercsik\xE9nt,
+      ergo tiszteletet parancsol\xF3 m\xE9retei ok\xE1n minden egyes bajt\xE1rsa
+      k\xF6vetkezetesen Ferencnek sz\xF3l\xEDtja mind a mai napig. Az\xF3ta, teh\xE1t
+      a besoroz\xE1s \xF3ta persze iszonyatosan lefogyott, \xF6sszement, de a Ferenc
+      n\xE9v rajta maradt, \xE9s minden egyes alkalommal idegen\xFCl, \xFCresen cseng,
+      amikor valaki kimondja. Olyan \xE9rz\xE9s ker\xEDti ilyenkor hatalm\xE1ba,
+      mintha nem neki c\xEDmezn\xE9k a szavakat, amiket nyilv\xE1nval\xF3an neki
+      sz\xF3lnak am\xFAgy. \\n \\n El\u0151z\u0151 este a r\xE1gos, s\xF3zott marhah\xFAst
+      r\xE1gcs\xE1lva ellen\xE1llhatatlan k\xE9ztet\xE9st \xE9rzett, hogy megossza
+      valakivel, hogy sz\xE1m\xE1ra am\xFAgy nem idegen a Ferk\xF3 becen\xE9v sem.
+      A l\xF6v\xE9sz\xE1rok m\xE9ly\xE9n mellette \xFCld\xF6g\xE9l\u0151, r\xE1n\xE9z\xE9sre
+      n\xE1la vagy \xF6t \xE9vvel fiatalabb f\xE9rfi, akivel a megt\xE9p\xE1zott
+      l\xF3pokr\xF3con osztozott, t\xF6k\xE9letes c\xE9lpontnak t\u0171nt arra, hogy
+      f\xFCltan\xFAja legyen egy ehhez hasonl\xF3 kinyilatkoztat\xE1snak. Ha Feri
+      eml\xE9kezete nem csalt, a f\xE9rfi - akit egy\xE9bir\xE1nt J\xE1nosnak h\xEDvtak
+      - ugyan\xFAgy az Alf\xF6ld \xE9szaki cs\xFCcsk\xE9r\u0151l, Szolnok k\xF6rny\xE9k\xE9r\u0151l
+      sz\xE1rmazott, \xEDgy h\xE1t egyfajta k\xF6z\xF6ss\xE9get \xE9rzett vele. Annak
+      ellen\xE9re tette ezt, hogy J\xE1nos k\xF6nyvt\xE1ros, tan\xE1r esetleg \xF3r\xE1s
+      vagy valami ehhez hasonl\xF3, nem kifejezetten f\xE9rfias foglalkoz\xE1s v\xE9gz\u0151je
+      lehetett odahaza. Hossz\xFA, p\xF3kszer\u0171 ujjai \xE9s az elm\xFAlt hetek
+      megpr\xF3b\xE1ltat\xE1sai dac\xE1ra \xE1poltnak t\u0171n\u0151 k\xF6rmei legal\xE1bbis
+      err\u0151l \xE1rulkodtak. Ferenc teh\xE1t megoszotta vele a titk\xE1t, de amikor
+      elhangzott, aminek el kellett hangoznia, nem j\xF6tt semmif\xE9le v\xE1lasz
+      J\xE1nost\xF3l, amit\u0151l Ferenc el\u0151sz\xF6r megd\xFCh\xF6d\xF6tt, de
+      haragj\xE1t hamar viszolyg\xE1ssal vegyes r\xE9m\xFClet v\xE1ltotta fel, ahogy
+      \xE9szrevette, hogy amannak meg\xFCvegesedett a tekintete. Felemelte a takar\xF3t,
+      hogy megn\xE9zze, milyen seb okozhatta f\xF6ldije veszt\xE9t, de nem tal\xE1lt
+      semmit. J\xE1nos egyszer\u0171en hal\xE1lra fagyott. \\n \\n A J\xE1nost\xF3l
+      meg\xF6r\xF6k\xF6lt vagyis ink\xE1bb helyesebb, ha azt mondjuk, hogy elorzott
+      csizma, amit saj\xE1t szakadt l\xE1bbelije helyettes\xEDt\xE9s\xE9\xFCl szolg\xE1l,
+      most veszett\xFCl szor\xEDtja Ferenc l\xE1b\xE1t, amit\u0151l nehez\xE9re esik
+      egyetlen feladat\xE1ra, azaz a Don t\xFAloldal\xE1n megh\xFAz\xF3d\xF3 szovjetek
+      irt\xE1s\xE1ra koncentr\xE1lnia. A hideg \xE9s a feje f\xF6l\xF6tt els\xFCv\xEDt\u0151
+      goly\xF3k mellett teh\xE1t jelen van egy \xFAjabb k\xEDn, aminek hat\xE1s\xE1ra
+      majdhogynem azt k\xEDv\xE1nja, b\xE1rcsak v\xE9ge lenne ennek az eg\xE9sznek.
+      Ez persze csak addig tart, m\xEDg egy f\xF6ldre hanyatl\xF3 test puffan\xE1st
+      nem hallja n\xE9h\xE1ny m\xE9terrel odd\xE9bbr\xF3l, ami tudatos\xEDtja benne,
+      hogy a hideg, a f\xE9lelem \xE9s f\xE1jdalom m\xE9g mindig jobb alternat\xEDv\xE1k
+      a biztos nem-l\xE9tn\xE9l. \\n \\n Ferenc k\xE9t l\xF6v\xE9s k\xF6z\xF6tt azt
+      mondogatja mag\xE1nak, hogy ha valaha is lesz olyan szerencs\xE9s, hogy bemutatkozzon
+      egy \xFAj embernek, akkor garant\xE1ltan azt fogja neki mondani, hogy \u201CIfjabb
+      Bed\u0151 Ferenc, de te h\xEDvj\xE1l csak nyugodtan  Ferk\xF3nak\u201D. "
+    englishNarrationClip: {fileID: 8300000, guid: 16ad02e124fb2e34294adb7bcf313033, type: 3}
+    hungarianNarrationClip: {fileID: 0}
   - image: {fileID: -7754199205684209494, guid: 80770355e2e487c43a2433218c3f020c, type: 3}
-    description: "Benedek Folhoffer / Age: 24 \\n Rank / Position: Private (enlisted
-      soldier), assistant machine gunner (ammunition bearer) \\n Civilian Occupation:
-      Carpenter\u2019s apprentice \\n Origin: Near Gy\u0151r, Transdanubia \\n \\n 
-      If for nothing else, Folhoffer Benedek was grateful for this: out here, in
-      the middle of this frozen hell, nobody knew he had killed his mother.  \\n
-      \\n He hadn\u2019t meant to, of course. A breech-born infant doesn\u2019t have
-      bloodlust or anything like that. But whatever happened, happened. His mother
-      bled out. And Benedek\u2019s father declared him his sworn enemy about six
-      and a half minutes after he entered the world. \\n \\n Benedek grew up hearing
-      it, over and over. That he was a little murderer. A cursed child. Not everyone
-      said it to hurt him. Some said it as a fact. Some like a joke. His paternal
-      grandfather was even proud. Proud that Benedek had barely drawn his first breath
-      and already \u201Cput a Swab in the ground\u201D. But his father never softened.
-      Not for a second. It was too bitter a pill to swallow that his son had made
-      him a widower. \\n \\n Benedek waited until he was fourteen. Then he left Mez\u0151\xF6rs
-      behind. He took money from weaker kids by force. He bought a train ticket.
-      He didn\u2019t stop until Tata, where he found work as a carpenter\u2019s apprentice.
-      He had as much natural talent for wood as a fattened pig has for self-restraint.
-      But what God had denied him in skill, he made up for with stubbornness. His
-      grandfather used to say it all the time. Not the clever ones get ahead in life
-      but the ones who can sit still and learn. He\u2019d say it under the shade
-      of the cabinet, cherries in their mouths, counting on an abacus while the sun
-      hammered the yard. \\n \\n As it turned out, the old man was right. \\n \\n
-      At first, Master Trok\xE1n Pista only respected Benedek\u2019s effort. The
-      fact that he showed up day after day. That he didn\u2019t quit. Then, slowly,
-      he began to respect the work itself. Once in a while, he\u2019d even say something
-      kind. \u201CYou\u2019re not as hopeless as you look,\u201D he\u2019d tell him,
-      clapping him on the shoulder. And Benedek swelled with pride. \\n \\n Around
-      that time, he decided to take his dead mother\u2019s surname as well. Folhoffer.
-      When he walked out of the registrar\u2019s office with his new name, he did
-      something he had never been able to do before. For the first time in his life,
-      he stopped thinking of himself as a killer. \\n \\n But now\u2026 \\n \\n \u201CNow
-      I\u2019ve finally become what my dear father always said I was,\u201D Benedek
-      mutters as he drops back into the trench for a few seconds to breathe. The
-      endless white is hurting his sight. Stars dance in front of his eyes. Snow-blindness
-      makes him doubt everything. He can\u2019t even be sure he hit anyone across
-      the river. And yet he feels it. He feels that he isn\u2019t just shooting into
-      the world at random. Because lately it has been getting harder to think of
-      himself as a carpenter. Harder to hold onto that word. As if the soul can sense
-      its own slow destruction even when the senses begin to fail. \\n \\n Will he
-      ever be able to create something again, if he makes it home?, he wonders. A
-      table, for example. Or a door. Anything. Can a hand still create, after months
-      of doing nothing but destroy? He doesn\u2019t know the answer. But he knows
-      he wants to get back alive, just to find out. Because it\u2019s better to face
-      horrors in a properly heated workshop than to turn them over in your head while
-      the cold grinds your bones.  "
-    narrationClip: {fileID: 8300000, guid: 555cffd6cbc6e5f48acfff0b68a0bcc8, type: 3}
+    englishDescription: "Benedek Folhoffer / Age: 24 \\n Rank / Position: Private
+      (enlisted soldier), assistant machine gunner (ammunition bearer) \\n Civilian
+      Occupation: Carpenter\u2019s apprentice \\n Origin: Near Gy\u0151r, Transdanubia
+      \\n \\n  If for nothing else, Folhoffer Benedek was grateful for this: out
+      here, in the middle of this frozen hell, nobody knew he had killed his mother. 
+      \\n \\n He hadn\u2019t meant to, of course. A breech-born infant doesn\u2019t
+      have bloodlust or anything like that. But whatever happened, happened. His
+      mother bled out. And Benedek\u2019s father declared him his sworn enemy about
+      six and a half minutes after he entered the world. \\n \\n Benedek grew up
+      hearing it, over and over. That he was a little murderer. A cursed child. Not
+      everyone said it to hurt him. Some said it as a fact. Some like a joke. His
+      paternal grandfather was even proud. Proud that Benedek had barely drawn his
+      first breath and already \u201Cput a Swab in the ground\u201D. But his father
+      never softened. Not for a second. It was too bitter a pill to swallow that
+      his son had made him a widower. \\n \\n Benedek waited until he was fourteen.
+      Then he left Mez\u0151\xF6rs behind. He took money from weaker kids by force.
+      He bought a train ticket. He didn\u2019t stop until Tata, where he found work
+      as a carpenter\u2019s apprentice. He had as much natural talent for wood as
+      a fattened pig has for self-restraint. But what God had denied him in skill,
+      he made up for with stubbornness. His grandfather used to say it all the time.
+      Not the clever ones get ahead in life but the ones who can sit still and learn.
+      He\u2019d say it under the shade of the cabinet, cherries in their mouths,
+      counting on an abacus while the sun hammered the yard. \\n \\n As it turned
+      out, the old man was right. \\n \\n At first, Master Trok\xE1n Pista only respected
+      Benedek\u2019s effort. The fact that he showed up day after day. That he didn\u2019t
+      quit. Then, slowly, he began to respect the work itself. Once in a while, he\u2019d
+      even say something kind. \u201CYou\u2019re not as hopeless as you look,\u201D
+      he\u2019d tell him, clapping him on the shoulder. And Benedek swelled with
+      pride. \\n \\n Around that time, he decided to take his dead mother\u2019s
+      surname as well. Folhoffer. When he walked out of the registrar\u2019s office
+      with his new name, he did something he had never been able to do before. For
+      the first time in his life, he stopped thinking of himself as a killer. \\n
+      \\n But now\u2026 \\n \\n \u201CNow I\u2019ve finally become what my dear father
+      always said I was,\u201D Benedek mutters as he drops back into the trench for
+      a few seconds to breathe. The endless white is hurting his sight. Stars dance
+      in front of his eyes. Snow-blindness makes him doubt everything. He can\u2019t
+      even be sure he hit anyone across the river. And yet he feels it. He feels
+      that he isn\u2019t just shooting into the world at random. Because lately it
+      has been getting harder to think of himself as a carpenter. Harder to hold
+      onto that word. As if the soul can sense its own slow destruction even when
+      the senses begin to fail. \\n \\n Will he ever be able to create something
+      again, if he makes it home?, he wonders. A table, for example. Or a door. Anything.
+      Can a hand still create, after months of doing nothing but destroy? He doesn\u2019t
+      know the answer. But he knows he wants to get back alive, just to find out.
+      Because it\u2019s better to face horrors in a properly heated workshop than
+      to turn them over in your head while the cold grinds your bones.  "
+    hungarianDescription: "Folhoffer Benedek / Kor: 24 \\n Rang/beoszt\xE1s: honv\xE9d,
+      g\xE9ppusk\xE1s seg\xE9d (l\u0151szeres) \\n Civil foglalkoz\xE1s: asztalosseg\xE9d
+      \\n Sz\xE1rmaz\xE1s: Gy\u0151r k\xF6rny\xE9ke, Dun\xE1nt\xFAl \\n \\n  Ha m\xE1s\xE9rt
+      nem is, de Felhoffer Benedek jelenlegi helyzet\xE9ben az\xE9rt mindenk\xE9pp
+      h\xE1l\xE1s volt, hogy itt a jeges pokol kell\u0151s k\xF6zep\xE9n senki sem
+      tudta r\xF3la, hogy meg\xF6lte az anyj\xE1t. Nem sz\xE1nd\xE9kosan tette persze,
+      \xF6l\xE9si v\xE1gy vagy v\xE9rszomj sz\xF3ba sem j\xF6het egy farfekv\xE9ses
+      csecsem\u0151n\xE9l, de att\xF3l m\xE9g ami t\xF6rt\xE9nt, megt\xF6rt\xE9nt.
+      Anyja a v\xE9rvesztes\xE9gbe belehalt, Benedek apja pedig esk\xFCdt ellens\xE9gnek
+      ki\xE1ltotta ki fi\xE1t nagyj\xE1b\xF3l hat \xE9s f\xE9l perccel azut\xE1n,
+      hogy az vil\xE1gra j\xF6tt. \\n \\n  Benedeknek eg\xE9sz gyerekkora, de m\xE9g
+      kamaszkor\xE1nak els\u0151 n\xE9h\xE1ny \xE9ve is azzal telt el, hogy fest
+      und folyv\xE1st azt hallgatta, hogy \u0151 egy meg\xE1talkodott kis gyilkos.
+      Nem mindenki b\xE1ntani akarta am\xFAgy azzal, hogy \xE9lete els\u0151 \xE9s
+      rossz nyelvek szerint utols\xF3 jelent\u0151s cselekedet\xE9re eml\xE9keztette.
+      Apai nagyapja p\xE9l\xE1dul kifejezetten b\xFCszke volt r\xE1, hogy m\xE9g
+      leveg\u0151t is alig vett, de m\xE1r is eltett egy sv\xE1bot l\xE1b al\xF3l.
+      \xC9desapja azonban nem enyh\xFClt meg ir\xE1nta soha, egy pillanatra sem,
+      t\xFAl keser\u0171 pirula volt a sz\xE1m\xE1ra az, hogy csak \xFAgy lenyelje,
+      hogy Benedek idejekor\xE1n \xF6zvegyet csin\xE1lt bel\u0151le. \\n \\n  Benedek
+      tizenn\xE9gy \xE9ves kor\xE1ig v\xE1rt, azt\xE1n maga m\xF6g\xF6tt hagyta Mez\u0151\xF6rst.
+      A n\xE1la gyeng\xE9bb gyerekekt\u0151l er\u0151vel elszedett p\xE9nzb\u0151l
+      vonatjegyet v\xE1ltott \xE9s meg sem \xE1llt Tat\xE1ig, ahol azt\xE1n elszeg\u0151d\xF6tt
+      asztalosseg\xE9dnek. A f\xE1hoz \xE9s annak megmunk\xE1l\xE1s\xE1hoz annyi
+      k\xF6ze volt, mint h\xEDzlalt diszn\xF3nak az \xF6nmegtart\xF3ztat\xE1shoz,
+      de amit a j\xF3isten vele sz\xFCletett tehets\xE9g form\xE1j\xE1ban megvont
+      t\u0151le, azt \u0151 p\xF3tolta szorgalommal \xE9s kitart\xE1ssal. \u201CNem
+      az jut el\u0151re az \xE9letben, akinek esze van, hanem aki meg tud \xFClni
+      a segg\xE9n, hogy tanuljon\u201D, hangoztatta sok-sok \xE9ve egyik kedvenc
+      b\xF6lcsess\xE9g\xE9t nagyapja, mik\xF6zben csereszny\xE9t eszegettek \xE9s
+      abakuszon sz\xE1molgattak az \u0151ket a nap t\u0171z\u0151 sugarait\xF3l v\xE9d\u0151
+      kredenc takar\xE1s\xE1ban. Mint kider\xFClt, az \xF6regnek igaza volt. Benedeknek
+      el\u0151sz\xF6r az igyekezet\xE9t becs\xFClte meg a Trok\xE1n Pista nevezet\u0171
+      asztalosmester, aki bizalmat szavazott neki, mikor munk\xE1t k\xE9rt t\u0151le,
+      azt\xE1n egy id\u0151 ut\xE1n m\xE1r a munk\xE1j\xE1ra is mondott elv\xE9tve
+      egy-egy dics\xE9r\u0151 sz\xF3t. \u201CNem is vagy te olyan rem\xE9nytelen
+      eset\u201D, veregette \u0151t v\xE1llon, \xE9s Benedeknek csak \xFAgy h\xEDzott
+      a m\xE1ja a b\xFCszkes\xE9gt\u0151l. Ezid\u0151t\xE1jt d\xF6nt\xF6tt \xFAgy,
+      hogy felveszi megboldogult anyja csal\xE1dnev\xE9t, a Folhoffert is. Amikor
+      ez megt\xF6rt\xE9nt \xE9s kis\xE9t\xE1lt az anyak\xF6nyvvezet\u0151 irod\xE1j\xE1b\xF3l,
+      Benedek \xE9let\xE9ben el\u0151sz\xF6r elkezdett mag\xE1ra nem gyilkosk\xE9nt
+      gondolni. \\n \\n  \u201CDe mostanra azt\xE1n m\xE1r t\xE9nyleg azz\xE1 v\xE1ltam,
+      aminek az \xE9n dr\xE1ga j\xF3 ap\xE1m mindig is tartott\u201D, mormogja Benedek
+      ahogy lebukik n\xE9h\xE1ny m\xE1sodpercre a l\xF6v\xE9sz\xE1rokba, hogy fujjon
+      egyet. Az \u0151t \xE9s a t\xF6bb ezer m\xE1sikat k\xF6r\xFCl\xF6lel\u0151
+      v\xE9gtelen feh\xE9rs\xE9g kikezdte a l\xE1t\xE1s\xE1t, csillagok t\xE1ncolnak
+      szeme el\u0151tt sz\xFCntelen \xE9s az \u0151t s\xFAjt\xF3 h\xF3vaks\xE1gt\xF3l
+      abban sem lehet biztos, hogy t\xE9nyleg eltal\xE1lt valakit oda\xE1t. Valahogy
+      azonban m\xE9gis \xE9rzi, hogy nem csak \xFAgy a nagyvil\xE1gba l\xF6v\xF6ld\xF6z,
+      mert mostan\xE1ban egyre nehezebb\xE9re esik asztalosk\xE9nt \xE9s nem gyilkosk\xE9nt
+      gondolnia saj\xE1t mag\xE1ra. Mintha a l\xE9lek az \xE9rz\xE9kszervek t\xE1mogat\xE1sa
+      n\xE9lk\xFCl is \xE9rezn\xE9 saj\xE1t fokozatos pusztul\xE1s\xE1t. \\n \\n 
+      Hogy ne egyed\xFCl a tagjait \xE9s iz\xFCleteit ostromol\xF3 hidegre koncentr\xE1ljon,
+      Benedek igyekszik azzal elterelni a figyelm\xE9t mindarr\xF3l, ami k\xF6r\xFCl\xF6tte
+      zajlik, hogy azon t\u0171n\u0151dik, vajon k\xE9pes lesz-e valaha is elk\xE9sz\xEDteni
+      egy \xFAjabb asztalt vagy ajt\xF3t, ha egyszer megt\xE9r innen. K\xE9pes lehet-e
+      m\xE9g az a k\xE9z teremteni, ami az ut\xF3bbi h\xF3napokban m\xE1st sem csin\xE1lt,
+      csak puszt\xEDtott? \\n \\n  Benedek nem tudja a v\xE1laszt, de abban eg\xE9szen
+      biztos, hogy nagyon szeretne hazajutni, hogy a v\xE9g\xE9re j\xE1rjon a k\xE9rd\xE9snek.
+      Elv\xE9gre jobb dolog egy alaposan bemeleg\xEDtett m\u0171helyben sz\xF6rny\u0171s\xE9gekkel
+      szembes\xFClni, mint a csont\u0151rl\u0151 hidegben t\u0171n\u0151dni rajtuk."
+    englishNarrationClip: {fileID: 8300000, guid: 555cffd6cbc6e5f48acfff0b68a0bcc8, type: 3}
+    hungarianNarrationClip: {fileID: 0}
   - image: {fileID: -7610096024345054562, guid: 87bc25401fa314c458f93dfc662e7bb3, type: 3}
-    description: "Istv\xE1n Maruzs / Age: 41 \\n Rank / Position: Private (reservist),
-      trench runner / Messenger \\n Civilian Occupation: Farmer \\n Origin: N\xF3gr\xE1d
-      County, Northern Hungary\t\\n\\n  Maruzs Istv\xE1n simply couldn\u2019t understand
-      why everyone else wasn\u2019t enjoying this at least half as much as he was.
-      \\n\\n Sure, the cold was miserable. The food was scarce, and what there was
-      tasted like horse dung. But those were minor inconveniences compared to the
-      fact that he was finally allowed to hold a weapon. A real weapon. One he could
-      actually use. And not just for shooting at targets. \\n\\n But for killing
-      a man. \\n\\n Because Istv\xE1n had fantasized about taking a human life for
-      as long as he could remember. He could never put into words what was so seductive
-      about it. It wasn\u2019t the cruelty of the ritual. He didn\u2019t take pleasure
-      in someone else\u2019s pain. What fascinated him was the idea itself. The switch.
-      That a person who existed could suddenly stop existing\u2014because of him.
-      \\n\\n The biggest obstacle, for years, was the law. He was terrified of it.
-      Not of morality. Of consequences. Of what would happen to him if he did what
-      he wanted to do. So he stayed inert. He dreamed. He imagined. \\n\\n And he
-      did nothing. \\n\\n Sometimes he went hunting with his friend, Endre. But shooting
-      a pheasant or a rabbit did nothing to ease the itch that took up most of his
-      waking life. He liked pig slaughters better. There was something almost human
-      in a pig\u2019s eyes. If nothing else, it gave him a taste of the forbidden
-      fruit. Then, about five years ago, luck smiled at him\u2014briefly. Istv\xE1n
-      lived off farming. They had a few plots of land, part of his wife\u2019s dowry.
-      But his father-in-law could never bring himself to trust him with the work.
-      He couldn\u2019t believe Istv\xE1n was capable of dealing with it alone. So
-      he would come out with him, again and again, to work the soil. And he would
+    englishDescription: "Istv\xE1n Maruzs / Age: 41 \\n Rank / Position: Private
+      (reservist), trench runner / Messenger \\n Civilian Occupation: Farmer \\n
+      Origin: N\xF3gr\xE1d County, Northern Hungary\t\\n\\n  Maruzs Istv\xE1n simply
+      couldn\u2019t understand why everyone else wasn\u2019t enjoying this at least
+      half as much as he was. \\n\\n Sure, the cold was miserable. The food was scarce,
+      and what there was tasted like horse dung. But those were minor inconveniences
+      compared to the fact that he was finally allowed to hold a weapon. A real weapon.
+      One he could actually use. And not just for shooting at targets. \\n\\n But
+      for killing a man. \\n\\n Because Istv\xE1n had fantasized about taking a human
+      life for as long as he could remember. He could never put into words what was
+      so seductive about it. It wasn\u2019t the cruelty of the ritual. He didn\u2019t
+      take pleasure in someone else\u2019s pain. What fascinated him was the idea
+      itself. The switch. That a person who existed could suddenly stop existing\u2014because
+      of him. \\n\\n The biggest obstacle, for years, was the law. He was terrified
+      of it. Not of morality. Of consequences. Of what would happen to him if he
+      did what he wanted to do. So he stayed inert. He dreamed. He imagined. \\n\\n
+      And he did nothing. \\n\\n Sometimes he went hunting with his friend, Endre.
+      But shooting a pheasant or a rabbit did nothing to ease the itch that took
+      up most of his waking life. He liked pig slaughters better. There was something
+      almost human in a pig\u2019s eyes. If nothing else, it gave him a taste of
+      the forbidden fruit. Then, about five years ago, luck smiled at him\u2014briefly.
+      Istv\xE1n lived off farming. They had a few plots of land, part of his wife\u2019s
+      dowry. But his father-in-law could never bring himself to trust him with the
+      work. He couldn\u2019t believe Istv\xE1n was capable of dealing with it alone.
+      So he would come out with him, again and again, to work the soil. And he would
       wear Istv\xE1n down with his chatter. One of his favorite topics was his broken
       heart. The tragedy that Istv\xE1n and Marika\u2014Istv\xE1n\u2019s wife\u2014hadn\u2019t
       given him a strong, beautiful grandchild. Not even a weak, ugly one. Simply
@@ -1309,9 +1432,82 @@ MonoBehaviour:
       commander looked at him with fatherly pride. He patted his shoulder. And in
       a voice thick with emotion, he said only this: <i> \u201CNow that\u2019s a
       patriot right here!\u201D. </i>"
-    narrationClip: {fileID: 8300000, guid: 50dadd7ea8e52a3438ebc80f2074442e, type: 3}
+    hungarianDescription: "Maruzs Istv\xE1n / Kor: 41 \\n Rang/beoszt\xE1s: honv\xE9d
+      (tartal\xE9kos), l\xF6v\xE9sz\xE1rok-\xF6sszek\xF6t\u0151/fut\xE1r \\n Civil
+      foglalkoz\xE1s: f\xF6ldm\u0171ves (kisgazda) \\n Sz\xE1rmaz\xE1s: N\xF3gr\xE1d
+      megye, \xC9szak-Magyarorsz\xE1 \\n\\n  Maruzs Istv\xE1n egyszer\u0171en nem
+      tudott r\xE1j\xF6nni, hogy m\xE1sok mi\xE9rt nem \xE9lvezik ezt az eg\xE9szet
+      legal\xE1bb fele annyira, mint \u0151. J\xF3, j\xF3, persze, a hideg nem volt
+      t\xFAl kellemes \xE9s a rendelkez\xE9s\xFCkre \xE1ll\xF3 \xE9tel sem volt t\xFAl
+      b\u0151s\xE9ges, vagy ami azt illeti, finom, de h\xE1t ezek eleny\xE9sz\u0151
+      apr\xF3s\xE1gok voltak ahhoz k\xE9pest, hogy fegyvert, egy igazi fegyvert tarthatott
+      a kez\xE9ben, amit haszn\xE1lhatott is. R\xE1ad\xE1ul arra, hogy embert \xF6lj\xF6n.
+      \\n\\n Istv\xE1n ugyanis vil\xE1g \xE9let\xE9ben arr\xF3l fant\xE1zi\xE1lt,
+      hogy kioltson egy emberi \xE9letet. Nem tudta megfogalmazni, mi volt ebben
+      annyira cs\xE1b\xEDt\xF3, mert nem a r\xEDtus kegyetlens\xE9ge vonzotta. Nem
+      lelte \xF6r\xF6m\xE9t abban, hogy f\xE1jdalmat okozzon valakinek, szimpl\xE1n
+      csak izgatta a k\xE9pzel\u0151erej\xE9t, hogy mi t\xF6rt\xE9nik akkor, ha valaki,
+      aki addig l\xE9tezett, hirtelen megsz\u0171nik l\xE9tezni az \u0151 hathat\xF3s
+      k\xF6zrem\u0171k\xF6d\xE9s\xE9nek h\xE1la. \\n\\n A legnagyobb probl\xE9m\xE1ja
+      az volt, hogy a t\xF6rv\xE9nyt\u0151l mag\xE1t\xF3l m\xE1ni\xE1kusan rettegett,
+      illetve h\xE1t azokt\xF3l a k\xF6vetkezm\xE9nyekt\u0151l, amelyeket egy gyilkoss\xE1g,
+      pontosabban annak elk\xF6vet\xE9se vont maga ut\xE1n. Sz\xF3val t\xE9tlen volt,
+      mag\xE1ban \xE1lmodozgatott arr\xF3l, hogy milyen lenne meg\xF6lni valakit,
+      de sok\xE1ig nem volt mersze b\xE1rmit is tenni. N\xE9ha elj\xE1rt Parlag Endre
+      bar\xE1tj\xE1val vad\xE1szni, de h\xE1t egy f\xE1c\xE1n vagy ny\xFAl lepuffant\xE1sa
+      nem enyh\xEDtette ezt az \xE9brenl\xE9te nagyr\xE9sz\xE9t kit\xF6lt\u0151 k\xE9nyszert.
+      A diszn\xF3torokat szerette, mert volt a diszn\xF3k szem\xE9ben valami eg\xE9szen
+      emberi, ami ha m\xE1s nem, \xEDzel\xEDt\u0151t adott neki a tiltott gy\xFCm\xF6lcsb\u0151l.
+      \\n\\n \xDAgy \xF6t \xE9ve viszont r\xE1mosolygott r\xF6vid id\u0151re a szerencse.
+      Istv\xE1n f\xF6ldm\u0171vel\xE9sb\u0151l \xE9lt, feles\xE9ge hozom\xE1nyak\xE9nt
+      volt nekik n\xE9h\xE1ny parcella f\xF6ldj\xFCk, aminek megm\u0171vel\xE9s\xE9t
+      viszont ap\xF3sa egyszer\u0171en k\xE9ptelen volt r\xE1b\xEDzni. Nem tudta
+      vagy akarta elhinni, hogy Istv\xE1n elb\xEDr a f\xF6ld karbantart\xE1rs\xE1nak
+      feladat\xE1val, sz\xF3val rendre kij\xF6tt vele t\xFAni a f\xF6ldet, \xE9s
+      k\xF6zben rendre f\xE1rasztotta a h\xFClyes\xE9geivel. Az egyik kedvenc t\xE9m\xE1ja
+      az volt, hogy megszakadt a sz\xEDve, ami\xE9rt Istv\xE1n \xE9s Marika - \xEDgy
+      h\xEDvt\xE1k Istv\xE1n feles\xE9g\xE9t - nem aj\xE1nd\xE9koztak neki egy sz\xE9p
+      \xE9s eg\xE9szs\xE9ges unok\xE1t. De m\xE9g egy cs\xFAf, eg\xE9szs\xE9gtelent
+      se. Azon a csod\xE1latos napon is err\u0151l panaszkodott, amikor Istv\xE1n
+      \xE9pp azt fogalmazta mag\xE1ban, hogy valamilyen mondvacsin\xE1lt indokkal
+      hazamegy, \xE1m szerencs\xE9re nem jutott od\xE1ig, hogy artikul\xE1lja a kifog\xE1st,
+      mert ekkor ap\xF3sa eg\xE9sz test\xE9ben remegni kezdett, azt\xE1n egyszer\u0171en
+      csak beled\u0151lt az eke \xE1ltal sz\xE1ntott bar\xE1zd\xE1ba. \\n\\n Istv\xE1n
+      odarohant hozz\xE1. El\u0151sz\xF6r a r\xE9m\xFClet szor\xEDtott r\xE1 a mellkas\xE1ra
+      vasmarokkal, de ahogy a bar\xE1zd\xE1ban r\xE1ngat\xF3z\xF3, habz\xF3 sz\xE1j\xFA
+      f\xE9rfit n\xE9zte, elfogta egy olyan megnyugv\xE1s, amire mindig is v\xE1gyott,
+      de rem\xE9lni sosem merte, hogy egyszer val\xF3ban \xE1t\xE9lheti. Az \xF6kr\xF6ket
+      \xE9s az ek\xE9t \xFAgy pozicion\xE1lta, hogy takar\xE1sban legyenek, ha valaki
+      netal\xE1n \xE1tl\xE1tna a szomsz\xE9dos f\xF6ldekr\u0151l, azt\xE1n letelepedett
+      a f\xF6ldre \xE9s v\xE9gign\xE9zte, ahogy ap\xF3sa kiszenved. Hossz\xFA \xE9s
+      az id\u0151sebb f\xE9rfi sz\xE1m\xE1ra minden bizonnyal f\xE1jdalmas folyamat
+      lehetett a hal\xE1ltusa, amely sor\xE1n Istv\xE1n n\xE9ha azzal k\xEDs\xE9rletezett,
+      hogy mi t\xF6rt\xE9nik, ha befogja a m\xE1sik orr\xE1t. Mint kider\xFClt, mind\xF6ssze
+      annyi, hogy hamarabb belefulladt a tork\xE1b\xF3l felt\xF6r\u0151 ny\xE1lk\xE1s
+      valamibe. Istv\xE1n csak azut\xE1n kezdett seg\xEDts\xE9g\xE9rt ki\xE1ltozni,
+      miut\xE1n megbizonyosodott r\xF3la, hogy Marika apj\xE1nak m\xE1r egy\xE1ltal\xE1n
+      nincsen pulzusa. \\n\\n Mindezek ismeret\xE9ben teh\xE1t nem kell csod\xE1lkozni,
+      hogy Istv\xE1n volt szinte az egyed\xFCli, akinek val\xF3s\xE1ggal ragyogott
+      az arca beosoroz\xE1skor. Szerencs\xE9j\xE9re lelkesed\xE9s\xE9t betudt\xE1k
+      hazaszeretetnek, \xEDgy nem tettek fel neki olyan k\xE9rd\xE9s\xE9eket, amikre
+      a v\xE1laszai elmeh\xE1borodotts\xE1gra utalhattak volna. Szerencs\xE9tlens\xE9g\xE9re
+      azonban a Voronyezs r\xE9gi\xF3ba \xE9rve l\xF6v\xE9sz\xE1rok-\xF6sszek\xF6t\u0151
+      fut\xE1rnak osztott\xE1k be, \xEDgy azt\xE1n rohang\xE1lhatott mindenf\xE9le
+      \xFCzenetekkel A pontb\xF3l B-be, mik\xF6zben mindenki m\xE1s kedv\xE9re sz\xF3rakozhatott,
+      l\xF6v\xF6ld\xF6zhetett. \\n\\n M\xE1r \xE9pp a parancs megszeg\xE9s gondolat\xE1val
+      kac\xE9rkodott, amikor a szakaszparancsnok megk\xF6ny\xF6r\xFClt rajta. Janu\xE1r
+      \xF6t\xF6dik\xE9re a n\xE9metek be\xEDg\xE9rt seg\xEDts\xE9ge h\xEDj\xE1n annyira
+      v\xE1ls\xE1gosnak \xEDt\xE9lt\xE9k meg a szovjet t\xFAler\u0151vel szembeni
+      helyzetet, hogy minden \xE9pk\xE9zl\xE1b ember kez\xE9be karab\xE9lyt nyomtak
+      \xE9s a l\xF6v\xE9sz\xE1rkok sz\xE9l\xE9hez tess\xE9kelt\xE9k \u0151ket. \\n\\n
+      Amikor Istv\xE1n \xE1tvette a maga fegyver\xE9t, sz\xE9lesen elvigyorodott,
+      mire a szakaszparancsnok atyai b\xFCszkes\xE9ggel tekintett r\xE1, megveregette
+      a v\xE1ll\xE1t \xE9s meghatotts\xE1gt\xF3l elcsukl\xF3 hangon mind\xF6ssze
+      annyit mondott: <i> \u201CVannak m\xE9g igazi hazafik\u201D. </i> "
+    englishNarrationClip: {fileID: 8300000, guid: 50dadd7ea8e52a3438ebc80f2074442e, type: 3}
+    hungarianNarrationClip: {fileID: 0}
   - image: {fileID: 4570106350468467348, guid: 3c678c94c1be9874db7a0d58a33163d9, type: 3}
-    description: "Aleksei Morozov / Age: 37 \\n Rank / Position: Junior Sergeant,
+    englishDescription: "Aleksei Morozov / Age: 37 \\n Rank / Position: Junior Sergeant,
       deputy squad leader \\n Civilian Occupation: Tractor driver \\n Origin: Kursk
       region, RSFSR (Russian Soviet Federative Socialist Republic) \\n \\n  Aleksei
       Morozov was kept alive by hatred. \\n\\n Not hatred for the Hungarians across
@@ -1367,16 +1563,86 @@ MonoBehaviour:
       uncle\u2019s mouth, and squeeze the trigger. He imagines it with the calm of
       a man imagining sunrise. Not because he loves killing. Because he loves the
       idea of debt being paid."
-    narrationClip: {fileID: 8300000, guid: 44468e74589917f4e94fcd18187c8b88, type: 3}
+    hungarianDescription: "Aleksei Morozov / Kor: 37 \\n Rang/beoszt\xE1s: mladsij
+      serzsant (junior sergeant), rajhelyettes \\n Civil foglalkoz\xE1s: traktoros
+      (kolhoz) \\n Sz\xE1rmaz\xE1s: Kurszk ter\xFClet, RSFSR \\n\\n  Aleksei Morozovot
+      a gy\u0171l\xF6let tartotta \xE9letben. No nem a foly\xF3 t\xFAls\xF3 partj\xE1n
+      \xE1llom\xE1soz\xF3 magyar \xE9s sz\xF3rv\xE1nyosan fellelhet\u0151 n\xE9met
+      katon\xE1k ir\xE1nt \xE9rzett ut\xE1latot, \u0151r\xE1juk csak egy akad\xE1lyk\xE9nt
+      tekintett, amik k\xF6z\xE9 \xE9s a hazajut\xE1s k\xF6z\xE9 \xE1lltak. Ami napr\xF3l
+      napra, pillanatr\xF3l pillanatra pump\xE1lta a v\xE9rt az ereiben az a nagyb\xE1tyja
+      \xE9s anyja ir\xE1nt \xE9rzett megvet\xE9s volt, ami\xE9rt kiforgatt\xE1k \u0151t
+      abb\xF3l, ami jogosan neki j\xE1rt volna. \\n\\n Aleksei \xE9desapja egyszer\u0171,
+      k\xE9tkezi munk\xE1s volt, aki eg\xE9sz \xE9let\xE9t f\xF6ldm\u0171vel\xE9ssel
+      \xE9s \xE1llatteny\xE9szt\xE9ssel t\xF6lt\xF6tte. Nem \xE9rtett \xE9s nem is
+      k\xEDv\xE1nt \xE9rteni a nagyvil\xE1gi dolgokhoz, mert \xFAgy volt vele, hogy
+      mindent, amire csak sz\xFCks\xE9ge van meg tud teremteni mag\xE1nak. Sok\xE1ig
+      \xFAgy t\u0171nt, hogy az \xE9let \u0151t igazolja majd, mert a kem\xE9ny munka
+      ir\xE1nt tan\xFAs\xEDtott al\xE1zata egy meglehet\u0151sen nagy vagyon megszerz\xE9s\xE9t
+      tette sz\xE1m\xE1ra lehet\u0151v\xE9, ami egy kisebb csod\xE1nak k\xF6sz\xF6nhet\u0151en
+      a h\xFAszas \xE9vek polg\xE1rh\xE1bor\xFAs id\u0151szak\xE1t is t\xFAl\xE9lte,
+      hi\xE1ba szedett be az \xE1llam er\u0151vel a gazd\xE1kt\xF3l minden mozgathat\xF3
+      felesleget. \\n\\n Viszont mivel apja nem figyelt a vil\xE1g esem\xE9nyeire,
+      csak gazdas\xE1g\xE1nak \xE9lt, ez\xE9rt Alekseire \xE9s anyj\xE1ra, Ann\xE1ra
+      h\xE1rult a feladat, hogy figyelmeztess\xE9k \u0151t, a szt\xE1lini kollektiviz\xE1l\xE1s
+      elker\xFClhetetlen, \xE9s addig k\xE9ne t\xFAladni a felszerel\xE9seken, cs\xE9pl\u0151g\xE9pen
+      \xE9s j\xF3sz\xE1gokon, ameddig erre van lehet\u0151s\xE9g, ahogy azt\xE1n
+      az ez\xE1ltal befolyt p\xE9nzb\u0151l min\xE9l el\u0151bb dobbantani lehessen
+      k\xFClf\xF6ldre. Aleksei \xE9desapja tal\xE1n l\xE1tta is a r\xE1ci\xF3t csal\xE1dja
+      szavaiban, de t\xFAls\xE1gosan megrettenthette a haz\xE1j\xE1b\xF3l val\xF3
+      t\xE1voz\xE1s, illetve az azzal j\xE1r\xF3 vesz\xE9lyek gondolata. Val\xF3sz\xEDn\u0171leg
+      ez\xE9rt is adott \xF6ccse, Pjotr szav\xE1ra, aki v\xE1ltig \xE1ll\xEDtotta,
+      hogy j\xF6nni fognak m\xE9g a jobb id\u0151k, nem kell p\xE1nikba esni, hanem
+      amit lehet, azt el kell rejteni, hogy k\xE9s\u0151bb, amikor azok a bizonyos
+      jobb id\u0151k el\xE9rkeznek, lehessen mihez ny\xFAlni. \\n\\n Aleksei apja
+      megb\xEDzott \xF6ccs\xE9ben, mi\xE9rt ne tette volna, tal\xE1n m\xE9g arr\xF3l
+      sem volt fogalma, hogy fiv\xE9re ezen a ponton m\xE1r a Komszomol, azaz a szovjet
+      kommunista ifj\xFAs\xE1gi szervezet tagja volt \xE9s nagyrat\xF6r\u0151 politikai
+      amb\xEDci\xF3kat d\xE9delgetett. Ezeknek, m\xE1rmint az amb\xEDci\xF3k sz\xE1rbasz\xF6k\xE9s\xE9nek
+      pedig semmi sem \xE1gyazott meg jobban, mint az, ha \u0151 maga tal\xE1l meg
+      \xE9s f\xFCst\xF6l ki egy kul\xE1kot. \xCDgy h\xE1t Pjotr egy dag\xE1lyos,
+      a k\xF6z\xF6ss\xE9g \xE9rzelmeire j\xE1tsz\xF3 besz\xE9det \xEDrt, melyet azt\xE1n
+      remeg\u0151 hangon, k\xF6nnyeivel k\xFCszk\xF6dve el\u0151adott a szervezet
+      1930-as els\u0151 negyed\xE9ves gy\u0171l\xE9s\xE9n. A gy\u0171l\xE9sen persze
+      nem tart\xF3zkodott a gy\u0171l\xE9sen, de n\xE9h\xE1ny ismer\u0151se, k\xE9s\u0151bbi
+      j\xF3bar\xE1tja igen, \xE9s az \u0151 elmond\xE1saik alapj\xE1n annyiszor maga
+      el\xE9 k\xE9pzelte a v\xE9rl\xE1z\xEDt\xF3 jelenetet, hogy \xFAgy l\xE1tta
+      nagyb\xE1tyja arcizmainak legapr\xF3bb rend\xFCl\xE9seit is, mintha ott \xE1llt
+      volna mellette, mikor el\xE1rulta tulajdon b\xE1tyj\xE1t, azaz Aleksei \xE9desapj\xE1t.
+      \\n\\n Az \xE1llig felfegyverzett brig\xE1d m\xE1r m\xE1snap reggel megjelent
+      Aleksein\xE9l \xE9s csal\xE1dj\xE1n\xE1l \xE9s nem nyugodtak addig, am\xEDg
+      fel nem forgattak \xE9s meg nem tal\xE1ltak mindent, amit a Pjtort\u0151l kapott
+      list\xE1jukon szerepelt. Aleksei\xE9k helyzet\xE9t s\xFAlyosb\xEDtotta, hogy
+      nem csak \xFClni pr\xF3b\xE1ltak a vagyonon, hanem rejtegett\xE9k is azt. Kitelep\xEDtett\xE9k
+      az eg\xE9sz fam\xEDli\xE1t, hely\xFCkre p\xE1rtfunkcion\xE1riusokat k\xF6lt\xF6ztettek
+      be, Pjotr pedig meg lett t\xE9ve brig\xE1dvezet\u0151nek. Aleksei igazolv\xE1ny\xE1ban
+      att\xF3l a napt\xF3l kezdve ott vir\xEDtott egy j\xF3kora \u201CK\u201D bet\u0171,
+      ami nem csak az \u0151, hanem h\xE1rom \xE9vvel k\xE9s\u0151bb sz\xFCletett
+      fia \xE9let\xE9t is megb\xE9lyegezte, l\xE9v\xE9n, hogy a fi\xFAcska oszt\xE1lynapl\xF3j\xE1ban
+      is volt a sz\xF6rny\u0171 stigmata. Aleksei apja nem b\xEDrt el az \xE1rul\xE1s
+      s\xFAly\xE1val, felk\xF6t\xF6tte mag\xE1t, anyja pedig nem sokkal k\xE9s\u0151bb
+      belehalt a b\xE1natba \xE9s a sz\xE9gyenbe. \\n\\n Aleksei traktorist\xE1nak
+      \xE1llt \xE9s \xE9vekig a nagyb\xE1tyja elleni bossz\xFAt tervezgette, amit
+      a csal\xE1dj\xE1ra val\xF3 tekintettel egyre csak halogatott\u2026 eg\xE9szen
+      addig, am\xEDg a h\xE1bor\xFA miatt teljesen le kellett mondania r\xF3la. A
+      katonal\xE9t, az azalatt meg\xE9lt borzalmak annyi mindent elvettek t\u0151le,
+      hogy t\xF6bb\xE9 m\xE1r nem tudta zavartatni mag\xE1t a v\xE9rbossz\xFA esetleges
+      k\xF6vetkezm\xE9nyein. \xCDgy most a jeges senkif\xF6ldj\xE9n a j\xF6v\u0151beli
+      megtorl\xE1s \xEDg\xE9rete mozgatta a tagjait. Az abba vetett hit, hogy elj\xF6n
+      m\xE9g a nap, amikor foghatja a jelenleg is kez\xE9ben tartott M1891-est, id\u0151k\xF6zben
+      irigyl\xE9sre m\xE9lt\xF3 politikai karriert befutott nagyb\xE1tyja sz\xE1j\xE1ba
+      nyomhatja a puska cs\xF6v\xE9t \xE9s megh\xFAzhatja a ravaszt."
+    englishNarrationClip: {fileID: 8300000, guid: 44468e74589917f4e94fcd18187c8b88, type: 3}
+    hungarianNarrationClip: {fileID: 0}
   - image: {fileID: -3432214506606557312, guid: b219ed7586b42db4cac66fca4844c3a2, type: 3}
-    description: "Ivan Petrov / Age: 26 \\n Rank / Position: Red Army soldier (private),
-      rifleman \\n Civilian Occupation: History teacher\\n Origin: Voronezh city
-      / surrounding area, RSFSR (Russian Soviet Federative Socialist Republic) \\n\\n
-      Ivan Petrov was driven by one thing only: patriotism in its purest form. His
-      heart beat for the nation and the motherland. It was almost religious. And
-      he was certain that this devotion\u2014this worship of home\u2014was what kept
-      him alive. \\n\\n Doctors told his parents early on that he was a sick, fragile
-      boy. Not built for this world. <i> \u201CProtect him from everything,\u201D
+    englishDescription: "Ivan Petrov / Age: 26 \\n Rank / Position: Red Army soldier
+      (private), rifleman \\n Civilian Occupation: History teacher\\n Origin: Voronezh
+      city / surrounding area, RSFSR (Russian Soviet Federative Socialist Republic)
+      \\n\\n Ivan Petrov was driven by one thing only: patriotism in its purest form.
+      His heart beat for the nation and the motherland. It was almost religious.
+      And he was certain that this devotion\u2014this worship of home\u2014was what
+      kept him alive. \\n\\n Doctors told his parents early on that he was a sick,
+      fragile boy. Not built for this world. <i> \u201CProtect him from everything,\u201D
       </i> the doctor said. <i> \u201CEven from the wind. There\u2019s no medicine
       I can prescribe for what he has.\u201D </i> His parents listened.  They kept
       him wrapped in comfort. They treated him like porcelain. \\n\\n And Ivan hated
@@ -1425,10 +1691,79 @@ MonoBehaviour:
       He only hopes the sun will come out. That the thick crust of ice over the ground
       will finally soften. So the sweet motherland\u2014his mother earth\u2014can
       drink, to the last drop, the blood of her fragile child.  "
-    narrationClip: {fileID: 8300000, guid: 58069518f45003d459f14a376b4507b5, type: 3}
+    hungarianDescription: "Ivan Petrov / Kor: 26 \\n Rank / Rang/beoszt\xE1s: krasznoarmejec
+      (k\xF6zkatona), l\xF6v\xE9sz \\n Civil foglalkoz\xE1s: t\xF6rt\xE9nelemtan\xE1r
+      \\n Sz\xE1rmaz\xE1s: Voronyezs v\xE1rosa / k\xF6rny\xE9ke, RSFSR \\n\\n Ivan
+      Petrovot nem hajtotta m\xE1s, csak vegytiszta hazaszeretet. A nemzet\xE9rt
+      \xE9s anyaf\xF6ld\xE9rt dobogott a sz\xEDve, \xE9s ez az otthona ir\xE1nt \xE9rzett,
+      szinte m\xE1r vall\xE1sos im\xE1dat tartotta \u0151t \xE9letben, ebben biztos
+      volt. \\n\\n  Az orvosok m\xE1r eg\xE9szen fiatal kor\xE1ban megmondt\xE1k,
+      hogy beteges, csenev\xE9sz gyerek \u0151, aki sajnos nem erre a vil\xE1gra
+      val\xF3. <i> \u201C\xD3vj\xE1k \u0151t mindent\u0151l, m\xE9g a sz\xE9lt\u0151l
+      is, mert ennek a gyereknek a baj\xE1ra sajnos nem l\xE9tezik olyan orvoss\xE1g,
+      amit fel\xEDrhatn\xE9k\u201D, </i>  magyar\xE1zta az orvos a sz\xFCleinek,
+      akik meg is sz\xEDvlelt\xE9k a szakv\xE9lem\xE9nyt. Tejben-vajban f\xFCr\xF6szt\xF6tt\xE9k
+      Ivant, a fi\xFA hi\xE1ba k\xF6vetelte hasztalan ugyanazt a b\xE1n\xE1sm\xF3dot
+      t\u0151l\xFCk, amelyben testv\xE9reit \xE9s \xFAgy \xE1ltal\xE1ban kort\xE1rsait
+      is r\xE9szes\xEDtett\xE9k. \\n\\n   Nem hogy kaccsazni nem engedt\xE9k nyaranta,
+      hogy keressen egy kis p\xE9nzt, de m\xE9g j\xE1tszani is csak s\xF6t\xE9ted\xE9skor
+      mehetett ki, amikor m\xE1r nem kellett att\xF3l tartani, hogy le\xE9g a napon,
+      \xE9s ezt is csak a h\xE1zt\xF3l olyan t\xE1vols\xE1gra tehette meg, hogy anyja
+      szemmel tarthassa a konyhaablakkon kereszt\xFCl. A helyzetet tov\xE1bb rontotta,
+      hogy a t\xF6bbiek gyenge fizikuma miatt kik\xF6z\xF6s\xEDtett\xE9k, nem szerettek
+      vele j\xE1tszani, mert b\xE1rmelyik csapatba is osztott\xE1k fociz\xE1skor
+      vagy amikor h\xE1bor\xFAsat j\xE1tszottak, garant\xE1lt volt, hogy h\xE1tr\xE1nyt
+      jelent majd t\xE1rsai sz\xE1m\xE1ra. \\n\\n  Tal\xE1n ez\xE9rt sem meglep\u0151,
+      hogy egy id\u0151 ut\xE1n m\xE1r \u0151 sem k\xF6vetel\u0151z\xF6tt, hogy kimehessen
+      a szabadba a t\xF6bbiekkel, ink\xE1bb benn maradt a szob\xE1j\xE1ban, \xE9lvezte
+      a beh\xFAzott red\u0151ny\xF6k keltette f\xE9lhom\xE1lyt \xE9s vastag keretes
+      szem\xFCveg\xE9t - melyet am\xFAgy sz\xE9gyellt m\xE1s gyerekek el\u0151tt
+      hordani - orr\xE1ra biggyesztve, er\u0151sen hunyor\xEDtva falta apja kimer\xEDthetetlen
+      k\xF6nyvt\xE1r\xE1nak \xFAjabb \xE9s \xFAjabb darabjait.  Nem kellett sok id\u0151,
+      m\xEDg meggy\u0151zte mag\xE1t arr\xF3l, hogy a Nap\xF3leoni h\xE1bor\xFAk
+      haz\xE1j\xE1t \xE9rt igazs\xE1gtalans\xE1gair\xF3l jobb olvasni, mint a porban
+      fetrengve fuldokolni \xE9s hogy Lenin halhatatlan eszm\xE9i akkor is megnyugv\xE1st
+      hoznak az egyszeri orosz fiatalnak, ha sz\xFArni kezd a mellkasa, mint holmi
+      \xF6regembernek. \\n\\n  Ivannak meggy\u0151zd\xE9s\xE9v\xE9 v\xE1lt, hogy
+      Oroszorsz\xE1got t\xF6rt\xE9nelme sor\xE1n t\xF6bbsz\xF6r is megfosztott\xE1k,
+      azaz megfosztani pr\xF3b\xE1lt\xE1k nagys\xE1g\xE1t\xF3l, de nem sz\xE1m\xEDtott
+      milyen nyugatr\xF3l j\xF6tt h\xF3d\xEDt\xF3k pr\xF3b\xE1lt\xE1k meggyal\xE1zni
+      a szent f\xF6ld tisztas\xE1g\xE1t, rendre kudarcot vallottak. Ivanb\xF3l az\xE9rt
+      is lett t\xF6rt\xE9nelemtan\xE1r, hogy a nemzet nagys\xE1g\xE1r\xF3l sz\xF3l\xF3
+      eszm\xE9it min\xE9l t\xF6bb pall\xE9roz\xE1sra szorul\xF3 elm\xE9nek \xE1tadhassa,
+      ezzel a maga szer\xE9ny m\xF3dj\xE1n hozz\xE1j\xE1rulva ahhoz, hogy a k\xF6vetkez\u0151
+      gener\xE1ci\xF3k kez\xE9ben is j\xF3 kezekben legyen a haza. De a napk\xF6zbeni
+      tantermi sz\xF3nokl\xE1sok nem csillap\xEDtott\xE1k teljesen igazs\xE1g ut\xE1ni
+      szomj\xE1t, ez\xE9rt est\xE9nk\xE9t kocsm\xE1kat, k\xE1v\xE9z\xF3kat l\xE1togatott
+      \xE9s mint egy r\xE9szeg - sosem ivott egy korty alkoholt sem -, kipirult arccal,
+      csillog\xF3 szemekkel hangoztatta sz\xE9kekre \xE9s asztalokra sz\xF6kkenve
+      vagy n\xE9ha egyenesen pultokra felm\xE1szva, hogy mit k\xE9ne csin\xE1lni
+      azokkal a nemzetekkel, amelyek vesz\xE9lyt jelentenek Orosz Any\xE1csk\xE1ra.
+      \\n\\n  \xC9ppen ez\xE9rt, nem is lehetett k\xE9rd\xE9s, hogy hadba vonul,
+      amikor a haz\xE1nak a legnagyobb sz\xFCks\xE9ge volt r\xE1. Tudta, hogy vannak
+      olyan ny\xFAlsz\xEDv\u0171 haza\xE1rul\xF3k, akik a k\xE9t kez\xFCket \xF6sszetenn\xE9k,
+      ha gyenge eg\xE9szs\xE9g\xFCgyi \xE1llapotukra hivatkozva kib\xFAjhatn\xE1nak
+      a szolg\xE1lat felel\u0151ss\xE9ge al\xF3l, de \u0151 term\xE9szetesen nem
+      tartozott az ilyenek k\xF6z\xE9. Nem, \xE9pp ellenkez\u0151leg, \u0151 a zseb\xE9be
+      ny\xFAlt \xE9s a sz\xFClei ut\xE1n meg\xF6r\xF6k\xF6lt vagyona egy jelent\u0151s
+      r\xE9sz\xE9t arra haszn\xE1lta, hogy megkenje a d\xF6nt\xE9shoz\xF3 orvosokat,
+      hunyjanak szemet ritmusalanul ver\u0151 sz\xEDve \xE9s mind\xF6ssze hetven
+      sz\xE1zal\xE9kos kapacit\xE1ssal m\u0171k\xF6d\u0151 t\xFCdeje f\xF6l\xF6tt.
+      \\n\\n  Most teh\xE1t Ivan az \xE1rokb\xF3l kihajolva t\xFCzel, egyre csak
+      t\xFCzel \xE9s teli torokb\xF3l \xE9nekli A szent h\xE1bor\xFAt. \u0150 lep\u0151dik
+      meg rajta a legjobban, hogy nem csuklik el a hangja, hogy nem s\xEDpol a t\xFCdeje.
+      Tiszt\xE1n \xE9s \xE9rthet\u0151en cseng a hangja a fagyos leveg\u0151ben,
+      mely \xE9pp \xFAgy nem \xE1rthat neki, mint a meggy\u0151z\u0151d\xE9s n\xE9lk\xFCl
+      harcol\xF3 ellen t\xF6lt\xE9nyei. Ha netal\xE1n m\xE9gis utol\xE9rn\xE9 itt
+      a hal\xE1l, Ivan nem f\xE9l, csak abban rem\xE9nykedik, hogy kis\xFCt a nap
+      \xE9s megadja mag\xE1t a talajt bor\xEDt\xF3 vastag j\xE9gr\xE9teg, hogy az
+      \xE9des anyaf\xF6ld utols\xF3 cseppig mag\xE1ba ihassa esend\u0151 gyermek\xE9nek
+      v\xE9r\xE9t."
+    englishNarrationClip: {fileID: 8300000, guid: 58069518f45003d459f14a376b4507b5, type: 3}
+    hungarianNarrationClip: {fileID: 0}
   - image: {fileID: 1116025709374489556, guid: 88ce801cd676caa44842508ac0da0c40, type: 3}
-    description: "Mykola Shevchenko (Ukrainian) /  Age:22 \\n Rank/Position: Red
-      Army soldier, submachine gunner(PPSh) \\n Civilian Occupation: Shoemaker\u2019s
+    englishDescription: "Mykola Shevchenko (Ukrainian) /  Age:22 \\n Rank/Position:
+      Red Army soldier, submachine gunner(PPSh) \\n Civilian Occupation: Shoemaker\u2019s
       apprentice /  Origin: Around Poltava, Ukrainian SSR \\n\\n  Mykola shouldn\u2019t
       be here. Not in the karmic, spiritual sense, like \u201Cno child of God deserves
       to be dragged into a slaughterhouse\u201D. Not even because, as a Ukrainian,
@@ -1509,11 +1844,117 @@ MonoBehaviour:
       a full second to realize the words are meant for him. He turns toward the voice.
       A cigarette is offered. He takes it with gratitude. Thin blue smoke rises gracefully
       into the steel-gray sky. "
-    narrationClip: {fileID: 8300000, guid: a063a791164b67e418f9a2c48b7abe1c, type: 3}
+    hungarianDescription: "Mykola Shevchenko (ukr\xE1n) /  Kor: 22 \\n Rang/beoszt\xE1s:
+      krasznoarmejec, g\xE9ppisztolyos (PPSh) \\n Civil foglalkoz\xE1s: cip\xE9szinas
+      /  Sz\xE1rmaz\xE1s: Poltava k\xF6rny\xE9ke, Ukr\xE1n SZSZK \\n\\n  Mykol\xE1nak
+      nem kellene itt lennie. Nem puszt\xE1n a karmikus vagy \xE9ppen spiritu\xE1lis
+      \xE9rtelemben, miszerint \u201CIsten egyetlen gyermeke sem \xE9rdemli meg,
+      hogy m\xE9sz\xE1rsz\xE9kre r\xE1ngass\xE1k\u201D. M\xE9g csak nem is az\xE9rt,
+      mert ukr\xE1n ajk\xFAk\xE9nt nem \xE9rezte mag\xE1nak az orosz nemzet konfliktu\xE1st
+      a Harmadik Birodalommal \xE9s annak csatl\xF3saival, hanem mert magas ranggal
+      b\xEDr\xF3 apja r\xE9v\xE9n v\xE9detts\xE9get kellett volna \xE9reznie az olyan
+      k\xF6zembereket \xE9rint\u0151 dolgokt\xF3l, mint amilyen a besoroz\xE1s. \u0150
+      m\xE9gis itt volt. \xC9s a legrosszabb az eg\xE9szben, hogy \xF6nk\xE9nt v\xE1llalkozot,
+      hogy r\xE9szt vegyen ebben az \u0151r\xFCletben. \\n\\n Mykol\xE1nak volt egy
+      legjobb bar\xE1tja, Bohdan. Egyik\xFCknek sem volt testv\xE9re, \xEDgy n\xE9gy
+      vagy \xF6t\xE9vesen, mikor tal\xE1lkoztak k\xF6lcs\xF6n\xF6sen bet\xF6lt\xF6tt\xE9k
+      az \u0171rt egym\xE1s \xE9let\xE9ben. Mykola sz\xFClei \xF3vatoss\xE1gra intett\xE9k
+      csemet\xE9j\xFCket, hogy vigy\xE1zzon, kivel bar\xE1tkozik, mert egy Bohdan
+      h\xE1tter\xE9vel rendelkez\u0151 fi\xFA k\xF6nnyen bajt hozhat az ember fej\xE9re.
+      Ennek az id\u0151sebb gener\xE1ci\xF3 ir\xE1ny\xE1b\xF3l sz\xE1rmaz\xF3 ellenszenvnek
+      az volt az alapja, hogy m\xEDg Mykola \xE9desapja a p\xE1rtbizotts\xE1g Kijevb\u0151l
+      \xE1thelyezett gazdas\xE1gi felel\u0151se volt, akinek v\xE1ll\xE1n a r\xE9gi\xF3
+      had\xE1szati felszerel\xE9s gy\xE1rt\xE1sa nyugodott, addig Bohdan apja nem
+      volt t\xF6bb, mint egy egyszer\u0171 lakatos. \\n\\n \u201CM\xE9gis, milyen
+      f\xE9nyt vet r\xE1nk, hogy egy j\xF6tt-ment senkivel bar\xE1tkozol?\u201D,
+      k\xE9rdezte Mykol\xE1t\xF3l az anyja, de a fi\xFA nem foglalkozott vele. Minden
+      idej\xE9t Bohdannal, sokszor egyenesen Bohdan\xE9kn\xE1l t\xF6lt\xF6tte. Lehet,
+      hogy j\xF3val szer\xE9nyebb k\xF6r\xFClm\xE9nyek k\xF6z\xF6tt \xE9ltek, mint
+      Mykola \xE9s csal\xE1dja, de a hangulat mindig jobb volt n\xE1luk, mint odahaza.
+      \xC9nekeltek, sokszor \xE9jszak\xE1ba ny\xFAl\xF3an k\xE1rty\xE1ztak, illetve
+      hatalmasakat lakom\xE1ztak \xE9s Mykol\xE1t is mindig sz\xEDvesen l\xE1tt\xE1k
+      az asztalukn\xE1l. Mykola sosem vallotta volna be \xE9desanyj\xE1nak, de a
+      h\xE1zi koszt sz\xE1m\xE1ra Daryna n\xE9ni f\u0151ztj\xE9vel volt egyenl\u0151,
+      nem pedig azokkal az \xE1ltal\xE1ban kih\u0171lt kotyval\xE9kokkal, amit otthon
+      el\xE9 raktak. \\n\\n Az \xE9vek sor\xE1n a k\xE9t fi\xFA k\xF6zti elv\xE1laszthatatlannak
+      hitt k\xF6tel\xE9k sok rosszm\xE1j\xFA pletyka alapj\xE1t k\xE9pezte oszt\xE1lyt\xE1rsaik,
+      s\u0151t, m\xE9g tan\xE1raik k\xF6r\xE9ben is, \xE9ppen ez\xE9rt volt ironikus,
+      hogy v\xE9g\xFCl egy l\xE1ny \xE1llt kettej\xFCk k\xF6z\xE9. Oksana \xE9s csal\xE1dja
+      - anyja, apja \xE9s n\xE9gy fiatlabb fiv\xE9re - egy Poltava k\xF6rny\xE9ki
+      tany\xE1r\xF3l k\xF6lt\xF6ztek be a v\xE1rosba, miut\xE1n az \xE1llam kiforgatta
+      \u0151ket szinte minden vagyonukb\xF3l. \\n\\n A h\xE1rom fiatal sorsa a sakknak,
+      azaz pontos\xEDtva a poltavai sakk klubnak k\xF6sz\xF6nhet\u0151en fon\xF3dott
+      \xF6ssze. Mykola nem volt t\xFAl j\xF3 j\xE1t\xE9kos, Bohdan viszont sokak
+      szerint gener\xE1ci\xF3s tehets\xE9gnek sz\xE1m\xEDtott, aki mindig minimum
+      n\xE9gy l\xE9p\xE9ssel ellenfelei el\u0151tt j\xE1rt\u2026 legal\xE1bbis eg\xE9szen
+      addig, m\xEDgnem egy este Oksana tisztelet\xE9t nem tette a klubban. Mykola
+      k\xE9t n\xE1la j\xF3val fiatalabb gyerk\u0151ccel val\xF3 lagymatag meccs ut\xE1n
+      elunta a j\xE1t\xE9kot \xE9s egy cs\xE9sze vodk\xE1val fel\xF6nt\xF6tt te\xE1val
+      felkerekedett, hogy megkeresse a m\u0171vel\u0151d\xE9si h\xE1z p\xE9ntek esti
+      forgatag\xE1ban bar\xE1tj\xE1t. \\n\\n Mikor r\xE1tal\xE1lt, olyan kifejez\xE9st
+      l\xE1tott Bohdan ar\xE1ct, amilyet soha, legal\xE1bbis sakk k\xF6zben biztosan
+      nem. Koncentr\xE1ci\xF3 \xE9s gondterhelts\xE9g egyveleg\xE9t. A fi\xFAval
+      szemben egy szalmasz\u0151ke, szepl\u0151s l\xE1ny \xFClt, aki a kettej\xFCk
+      k\xF6z\xF6tt elhelyezett t\xE1bl\xE1n sorakoz\xF3 b\xE1buk sz\xE1m\xE1b\xF3l
+      kiindulva komoly kih\xEDv\xE1s el\xE9 \xE1ll\xEDtotta Poltava sakkbajnok\xE1t.
+      Mykola a vodk\xE1s te\xE1t kortyolgatva szem\xE9rmetlen\xFCl legeltette a szem\xE9t
+      Oksan\xE1n, aki v\xE9g\xFCl ugyan kikapott Bohdanellen, de cser\xE9be visszavonhatatlanul
+      mindkettej\xFCk \xE9lete r\xE9sz\xE9v\xE9 v\xE1lt - \xE9s ez persze ford\xEDtva
+      is igaz volt. \\n\\n Mykola a kezdetekt\u0151l fogva harmadik ker\xE9knek \xE9rezte
+      mag\xE1t, mikor a tri\xF3 egy\xFCtt t\xF6lt\xF6tt id\u0151t. Oksan\xE1ban \xE9s
+      Bohdanban egyszer\u0171en a sakkon t\xFAl is t\xF6bb volt a k\xF6z\xF6s, ami
+      olyan harm\xF3ni\xE1t teremtett kettej\xFCk k\xF6z\xF6tt, ami mellett m\xE9g
+      a k\xE9t fi\xFA legend\xE1snak tartott bar\xE1ts\xE1ga sem tudott labd\xE1ba
+      r\xFAgni. Ellenben mikor Mykola nagy ritk\xE1n kettesben maradt a l\xE1nnyal
+      - az apja keze al\xE1 dolgoz\xF3 Bohdannak sokszor a gy\xE1rban kellett t\xFAl\xF3r\xE1znia
+      -, akkor \xFAgy l\xE1tta, Oksan\xE1t nem hagyja hidegen az \u0151 temperamentumos
+      term\xE9szete, l\xE1tv\xE1nyos kicsapong\xE1sai \xE9s b\xE1rdolatlan humora.
+      \\n\\n Mint kider\xFClt, nem csak bek\xE9pzelte ezt a bizonyos \xE9rdekl\u0151d\xE9s\xE9t:
+      k\xE9t h\xE9ttel azut\xE1n, hogy Bohdan megk\xE9rte Oksana kez\xE9t \xE9s egy
+      \u201Cigen\u201D-t kapott v\xE1laszul, a l\xE1ny s\xE9t\xE1ra h\xEDvta Mykol\xE1t,
+      aminek az lett a v\xE9ge, hogy a fi\xFA a Vorszkla partj\xE1n szerelmeskedett
+      egyet gyerekkori legjobb bar\xE1tja menyasszony\xE1val. Mykola persze nem ringatta
+      mag\xE1t hi\xFA \xE1br\xE1ndokba azzal kapcsolatban, hogy a l\xE9gyott b\xE1rmit
+      is jelentett Oksan\xE1nak egy utols\xF3 kicsapong\xE1son t\xFAl, de ett\u0151l
+      m\xE9g f\xE1jt neki a szenvtelen elfordul\xE1s, amiben a l\xE1ny r\xE9szes\xEDtette
+      ezut\xE1n. \\n\\n Legk\xF6zelebb h\xE1rom h\xF3nappal k\xE9s\u0151bb hallott
+      fel\u0151le, mikor m\xE1r jav\xE1ban zajlottak a besoroz\xE1sok Poltav\xE1ban.
+      Mykol\xE1nak pap\xEDron nem volt f\xE9lnival\xF3ja, mivel \xE9desapja k\xF6ztiszteletben
+      \xE1ll\xF3 tagja (rossz nyelvek szerint: hasznos h\xFCly\xE9je) volt a szovjet
+      hadi g\xE9pezetnek, \xEDgy nem volt m\xE1s dolga, csak hogy ker\xFClje a k\xF6zfigyelmet
+      \xE9s hogy maradjon t\xE1vol az utc\xE1kt\xF3l. Ez\xE9rt is okozott nagy riadalamt
+      odahaza, mikor egyik d\xE9lel\u0151tt kopogtak a bej\xE1rati ajt\xF3n, de hamar
+      kider\xFClt, hogy nincs ok a f\xE9lelemre, mert nem orosz katonatisztek topogtak
+      a k\xFCsz\xF6b\xF6n, hanem Oksana, akinek Mykol\xE1val volt besz\xE9lnival\xF3ja.
+      \\n\\n A l\xE1ny helyet foglalt a szalonban \xE9s nem kertelt, a t\u0151le
+      megszokott \u0151szinte \xE9s kertez\xE9s n\xE9lk\xFCli st\xEDlusban k\xF6z\xF6lte
+      Mykol\xE1val, hogy terhes \xE9s a gyermek majdnem biztos, hogy az \xF6v\xE9,
+      nem Bohdan\xE9. Mikor a d\xF6bbent Mykola visszak\xE9rdezett, hogy m\xE9gis
+      mit kezdjen ezzel az inform\xE1ci\xF3val, akkor Oksana azt felelte, hogy tegye
+      azt, ami helyes \xE9s vonuljon be Bohdan helyett. Mykola erre \u0151r\xFCltnek
+      nevezte a l\xE1nyt, kijelentette, hogy enn\xE9l nagyobb \u0151r\xFClts\xE9get
+      m\xE9g sohasem hallott, de ekkor Oksana kij\xE1tszotta az adu\xE1sz\xE1t: Mykola
+      vagy \xE1tveszi legjobb bar\xE1tja hely\xE9t vagy Oksana kit\xE1lal Bohdannak
+      \xE9s akkor Mykol\xE1nak \xE9lete v\xE9g\xE9ig egy\xFCtt kell \xE9lnie \xE1rul\xE1sa
+      k\xF6vetkezm\xE9nyeivel. \u201CK\xE9pzeld csak el, hogy Bohdan ott van a fronton
+      \xE9s arra gondol, mik\xF6zben elv\xE9rzik a s\xE1rban, hogy a fiv\xE9rek\xE9nt
+      szeretett legjobb bar\xE1tja \xE9s a szerelme felszarvazt\xE1k \u0151t\u201D.
+      \\n\\n Mykola most a csontfagyaszt\xF3 hidegben vacogva, a fegyver\xE9t g\xF6rcs\xF6sen
+      markolva arra gondol, hogy vil\xE1gi h\xFClyes\xE9get k\xF6vetett el, mikor
+      k\xF6t\xE9lnek \xE1llt, de h\xE1t k\xF6nny\u0171 nemes lelk\u0171nek \xE9s
+      nagyvonal\xFAnak lenni, amikor az ember kellemes melegben van van, tele a hasa
+      \xE9s nem kell att\xF3l f\xE9lnie, hogy b\xE1rmelyik pillanatban lel\u0151hetik.
+      \\n\\n \u201CBohdan, gyere ide!\u201D, sz\xF3l neki oda az egyik bajt\xE1rsa
+      \xE9s Mykol\xE1nak kell egy m\xE1sodperc, am\xEDg felfogja, hogy neki c\xEDmezt\xE9k
+      a szavakat. Mykola a hang ir\xE1ny\xE1ba fordul, majd nem sokkal k\xE9s\u0151bb
+      h\xE1l\xE1san veszi el a fel\xE9je k\xEDn\xE1lt cigarett\xE1t. A halv\xE1ny
+      k\xE9k f\xFCst kecsesen sz\xE1ll az ac\xE9lsz\xFCrke \xE9gbolt fel\xE9. "
+    englishNarrationClip: {fileID: 8300000, guid: a063a791164b67e418f9a2c48b7abe1c, type: 3}
+    hungarianNarrationClip: {fileID: 0}
   - image: {fileID: 6467543913970071884, guid: 329a93f3f8c316e4daeee18d27a4caf4, type: 3}
-    description: "Serik Nurgaliyev (Kazakh; \u201CSiberian side\u201D / eastern recruitment)
-      \\n Age: 30 Rank / role: light machine gunner \\n Civilian occupation: Miner
-      / ore extractor (Karaganda-region) \\n Place of origin: Kazakh SSR (Central
+    englishDescription: "Serik Nurgaliyev (Kazakh; \u201CSiberian side\u201D / eastern
+      recruitment) \\n Age: 30 Rank / role: light machine gunner \\n Civilian occupation:
+      Miner / ore extractor (Karaganda-region) \\n Place of origin: Kazakh SSR (Central
       Asian steppe / East) \\n\\n    As the enemy soldier\u2019s head disappears
       in a blood-red burst under Serik\u2019s fire, the Kazakh machine-gunner thinks
       about the dreams he used to have back home. Down in the mines, bending in the
@@ -1581,11 +2022,99 @@ MonoBehaviour:
       he used to be.\\n\\n He is pulled out of his thoughts by another scream\u2014another
       enemy crying out in pain under Serik\u2019s fire. Serik doesn\u2019t like thinking
       about how many little girls like Ainur he has already made into orphans. "
-    narrationClip: {fileID: 8300000, guid: ec55de7c793ae9142972faf9511b6013, type: 3}
+    hungarianDescription: "Serik Nurgaliyev (kazah; \u201Cszib\xE9riai oldal\u201D/keleti
+      toborz\xE1s) \\n Kor: 30 / Rang/beoszt\xE1s: krasznoarmejec, k\xF6nny\u0171
+      g\xE9ppusk\xE1s (DP) \\n Civil foglalkoz\xE1s: b\xE1ny\xE1sz / \xE9rckitermel\u0151
+      (Karaganda-t\xE9rs\xE9g hangulat) \\n Sz\xE1rmaz\xE1s: Kazah SZSZK (k\xF6z\xE9p-\xE1zsiai
+      sztyeppe/Kelet) \\n\\n  Ahogy a t\xFAloldalon l\xE9v\u0151, ellens\xE9ges katona
+      feje elt\u0171nik egy v\xE9rv\xF6r\xF6s robban\xE1sban Serik l\xF6v\xE9se nyom\xE1n,
+      a kazah g\xE9ppusk\xE1s arra gondol, hogy amikor odahaza a b\xE1ny\xE1k m\xE9ly\xE9n
+      g\xF6rnyedezve arr\xF3l \xE1lmodozott, hogy egy nap majd vil\xE1got l\xE1t,
+      nem eg\xE9szen az j\xE1rt a fej\xE9ben, hogy akarata ellen\xE9re elhurcolj\xE1k
+      majd egy idegen helyre, ahol ha lehet, m\xE9g nyomor\xFAs\xE1gosabb k\xF6r\xFClm\xE9nyek
+      k\xF6z\xF6tt kell \xE9lnie, mint el\u0151tte.\\n\\n Pedig pontosan ez t\xF6rt\xE9nt
+      \xE9s Serik csak azzal tudta nyugtatni mag\xE1t, hogy akkor sem lenne k\xE9pes
+      semmit az esem\xE9nyek v\xE9gkiemenetel\xE9n v\xE1ltoztatni, ha valamilyen
+      csoda folyt\xE1n visszamehetne az id\u0151ben. Egyszer\u0171en tehetetlen volt
+      att\xF3l a pillanatt\xF3l kezdve, hogy a soroz\xF3 tisztek megjelentek a b\xE1ny\xE1n\xE1l
+      \xE9s bejelentett\xE9k, hogy van h\xE1rom \xF3r\xE1juk \xF6sszepakolni, elint\xE9zni
+      \xFCgyes-bajos dolgaikat, miel\u0151tt \xFAtra keln\xE9nek, \u201Chogy seg\xEDtsenek
+      megtiszt\xEDtani Orosz Any\xE1csk\xE1t a nyugati betolakod\xF3kt\xF3l\u201D.\\n\\n
+      Serik nem akart h\xFCly\xE9nek t\u0171nni, ez\xE9rt nem k\xE9rdezte meg, hogy
+      kik azok a nyugati betolakod\xF3k \xE9s hogy mi\xE9rt kell t\u0151l\xFCk megszabad\xEDtani
+      Orosz Any\xE1csk\xE1t. Azt meg szimpl\xE1n okosabbnak l\xE1tta nem bolygatni,
+      hogy neki kazahk\xE9nt ugyan mi k\xF6ze ehhez az eg\xE9sz perpatvarhoz. \xCDgy
+      h\xE1t csak \xFAgy, mint mindenki m\xE1s a m\u0171szakj\xE1b\xF3l hazament.
+      Ahogy v\xE9gigs\xE9t\xE1ltak a havas utc\xE1n, Serik a szeme sark\xE1b\xF3l
+      l\xE1tta, hogy a kertszomsz\xE9dja nem megy be a h\xE1z\xE1ba, hanem fut\xE1snak
+      ered \xE9s a k\xF6zeli erd\u0151 fel\xE9 veszi az ir\xE1nyt. Serik sz\xE1m\xE1ra
+      ez nem volt opci\xF3. A dezert\u0151r\xF6ket majdnem biztos, hogy levad\xE1ssz\xE1k
+      vagy ha nem, akkor hal\xE1lra fagynak odakinn. Neki csal\xE1dja volt, \xEDgy
+      azt az utat kellett v\xE1lasztania, ami a legnagyobb es\xE9llyel hajlik vissza
+      \xF6nmag\xE1ba \xE9s hazavezeti \u0151t. \\n\\n Sz\xF3val bement a h\xE1zba,
+      \xF6sszek\xE9sz\xEDtette n\xE9k\xFCl\xF6zhetetlennek tartott ing\xF3s\xE1gait,
+      azt\xE1n \xFAgy \xF6lelte Gaukhart \xE9s a mind\xF6ssze h\xE9t h\xF3napos csecsem\u0151j\xFCket,
+      Ainurt, mintha nem lenne sz\xE1m\xE1ra holnap. Elv\xE9gre k\xF6nnyen meglehetett,
+      hogy sz\xE1m\xE1ra nem is lesz. \\n\\n Ainur \xE9des babaillat\xE1val az orr\xE1ban
+      kelt \xFAtra a falu f\xE9rfiaival \xE9s az \u0151ket k\xE9t oldalr\xF3l k\xEDs\xE9r\u0151
+      soroz\xF3 tisztekkel \xE9s egy r\xF6pke h\xE9t kilom\xE9teres s\xE9t\xE1t k\xF6vet\u0151en
+      meg\xE9rkeztek a megyei gy\xFClekez\u0151pontra, ahonnan a vonatok indultak.\\n\\n
+      A vonat\xFAt nyomor\xFAs\xE1gosnak tetszett - Serik \xE9s t\xF6bb sz\xE1z m\xE1sik
+      \xF6ssze volt zs\xFAfolva az egyik kocsiban, mint a szard\xEDnia \xE9s mivel
+      az illemhely haszn\xE1lata lehetetlennek bizonyult, az els\u0151 n\xE9h\xE1ny
+      \xF3ra ut\xE1n mindent \xE1tj\xE1rt a szobatisztas\xE1gukat felad\xF3 f\xE9rfiak
+      viezet- \xE9s \xFCr\xFCl\xE9kszaga -, de csak addig, am\xEDg napokkal k\xE9s\u0151bb
+      a fagyos leveg\u0151 \xE1ltal sz\xE9trohasztott s\xEDnek miatt meg nem k\xE9nyszer\xFCltek
+      \xE1llni a semmi k\xF6zep\xE9n. Ami ezut\xE1n k\xF6vetkezett, az Serik \xE9let\xE9nek
+      legnehezebb n\xE9gy \xE9s f\xE9l hete volt, ami sokatmond\xF3 volt, tekintve,
+      hogy a f\xE9rfi 12 \xE9ves kora \xF3ta k\xF6vet t\xF6rt, iszonyatos s\xFAlyokat
+      emelt \xE9s pokoli h\u0151s\xE9gben g\xF6rnyedezett napi tizenn\xE9gy \xF3r\xE1kon
+      kereszt\xFCl. \\n\\n A h\u0151s\xE9g volt az els\u0151, ami hi\xE1nyozni kezdett
+      neki. A t\xE9rdig \xE9r\u0151 h\xF3ban val\xF3 g\xE1zol\xE1s eleinte pr\xF3b\xE1ra
+      tette, de k\xE9s\u0151bb, ahogy mindene \xE1t\xE1zott \xE9s v\xE9gtagjai g\xE9mberedni,
+      merevedni kezdett, egyre lehetetlenebb k\xFCldet\xE9snek bizonyult. Az els\u0151
+      napokban \xFAgy tartotta mag\xE1ban a lelket, hogy kin\xE9zett egy pontot a
+      t\xE1volban \xE9s azt szugger\xE1lta mag\xE1ban, hogy ha el\xE9r od\xE1ig,
+      akkor minden szenved\xE9s\xE9nek v\xE9ge lesz. Egy h\xE9ttel k\xE9s\u0151bb
+      m\xE1r csak a l\xE9p\xE9seire koncentr\xE1lt, arra, hogy az egyiket mindig
+      egy m\xE1sik k\xF6vesse. A lehet\u0151 legapr\xF3bb \xE9rt\xE9k, ami a rendelkez\xE9s\xE9re
+      \xE1llt, de azt bizonygatta mag\xE1nak, hogy am\xEDg ezt tartani tudja, addig
+      nem lesz baj. \\n\\n Az egyik falubelij\xE9nek, a p\xE9k Nurnak \xF6sszesen
+      h\xE1rom l\xE1bujj\xE1t kellett lev\xE1gni. Kett\u0151t a jobb, egyet pedig
+      a bal l\xE1b\xE1r\xF3l. Az elfagyott kis v\xE9gtagok \xFAgy n\xE9ztek ki, mint
+      holmi erdei bogy\xF3s gy\xFCm\xF6lcs\xF6k \xE9s ahogy l\xE1tv\xE1nyukt\xF3l
+      megkordult Serik gyomra, azon nyomban felt\xF3dult az epe a tork\xE1n. Nur
+      egy\xE9bk\xE9nt m\xE9g napot \xE9lt. A hi\xE1nyz\xF3 l\xE1bujjai miatt d\xFCl\xF6ng\xE9lve
+      j\xE1rt, sokszor elesett, a tisztek \xE9s t\xE1rsai nem gy\u0151zt\xE9k felnyal\xE1bolni
+      a f\xF6ldr\u0151l, \xEDgy egyik \xE9jszaka ketten a h\xF3na al\xE1 ny\xFAltak,
+      elvezett\xE9k a t\xE1bort\u0171z\xF6n k\xEDv\xFCli s\xF6t\xE9ts\xE9gbe \xE9s
+      ott agyonvert\xE9k. Serik hallotta elojtott sikolyait \xE9s a tompa puffan\xE1sokat.
+      Mikor m\xE1snap megk\xE9rdezte a rangid\u0151st, hogy nem lett volna-e kegyesebb
+      agyonl\u0151ni, amazt azt v\xE1laszolta, hogy nem szabad csak \xFAgy l\u0151szert
+      pazarolni. \\n\\n Serik ezut\xE1n nem k\xE9rdezett, meg sem sz\xF3lalt t\xF6bb\xE9
+      az \xFAton, mert f\xE9lt, hogy ha sz\xF3ra nyitja a sz\xE1j\xE1t, azzal feleslegesen
+      energi\xE1t pazarol. Nem tett m\xE1st, csak egyik l\xE9p\xE9s\xE9re koncentr\xE1lt
+      a m\xE1sik ut\xE1n. Mire az Ur\xE1lhoz \xE9rtek, a menetoszlop majdnem k\xE9tharmada
+      odaveszett. Serik szinte biztos volt benne, hogy \u0151 volt az egyetlen, aki
+      t\xFAl\xE9lte a faluj\xE1b\xF3l. \\n\\n \xC9s most nem lehetett biztos benne,
+      hogy meddig tart ki a szerencs\xE9je. \xDAgy t\u0171nt, hogy nyer\xE9sre \xE1llnak
+      a foly\xF3 t\xFAls\xF3 partj\xE1n \xE1llom\xE1soz\xF3 magyarokkal szemben,
+      de mi t\xF6rt\xE9nik majd azut\xE1n, ha \u0151ket fel\u0151r\xF6lt\xE9k? Hov\xE1
+      vez\xE9nylik majd \u0151ket? Mennyit kell m\xE9g menetelnie? Mikor vesz\xEDti
+      el \u0151 is ujjait vagy ne adj isten valamilyen f\u0151bb v\xE9gtagj\xE1t?
+      A sok megpr\xF3b\xE1ltat\xE1s ut\xE1n egy\xE1ltal\xE1n felismerik majd az otthoniak,
+      ha egyszer hazajut? Gaukhart m\xE9g tal\xE1n - hab\xE1r ebben sem volt biztos
+      -, de Ainur sz\xE1m\xE1ra egy idegen lesz, egy k\xEDs\xE9rtet, halv\xE1ny lenyomata
+      annak, aki valaha volt. \\n\\n Mereng\xE9s\xE9b\u0151l akkor ocs\xFAdott fel,
+      mikor l\xF6v\xE9se nyom\xE1n egy \xFAjabb ellens\xE9ges katona ki\xE1ltott
+      fel f\xE1jdalm\xE1ban. Serik nem szeretett arra gondolni, hogy h\xE1ny Ainurhoz
+      hasonl\xF3 kisl\xE1nyb\xF3l csin\xE1lt m\xE1r \xE1rv\xE1t."
+    englishNarrationClip: {fileID: 8300000, guid: ec55de7c793ae9142972faf9511b6013, type: 3}
+    hungarianNarrationClip: {fileID: 0}
   - image: {fileID: -8142763403083625019, guid: daa16bd2a10e36249a13bf32307300cf, type: 3}
-    description: "Andr\xE1s Hodanics / Age: 29 \\n Rank / Position: Corporal (junior
-      non-commissioned officer), squad leader \\n Civilian Occupation: Mason \\n
-      Origin: B\xE1cska / Southern Hungary (Vojvodina) \\n \\n  Hodanics Andr\xE1s
+    englishDescription: "Andr\xE1s Hodanics / Age: 29 \\n Rank / Position: Corporal
+      (junior non-commissioned officer), squad leader \\n Civilian Occupation: Mason
+      \\n Origin: B\xE1cska / Southern Hungary (Vojvodina) \\n \\n  Hodanics Andr\xE1s
       would have paid a serious sum\u2014if he\u2019d ever possessed the kind of
       money that deserves the word \u201Cserious\u201D\u2014for someone to explain
       to him how the hell he ended up here. \\n\\n He knew every step of the road
@@ -1643,7 +2172,88 @@ MonoBehaviour:
       mother gave him. The ring he carried nearly two thousand kilometers. The ring
       he meant to use to ask Elza to marry him. He can\u2019t let it hit the ground.
       Not here. Not on this ice, red with blood. \\n\\n "
-    narrationClip: {fileID: 8300000, guid: 06f6e8cfb33ae184b818f0a92bf39957, type: 3}
+    hungarianDescription: "Hodanics Andr\xE1s / Kor: 29 \\n Rang/beoszt\xE1s: tizedes
+      (kiskatona-vezet\u0151), rajparancsnok \\n Civil foglalkoz\xE1s: k\u0151m\u0171ves
+      \\n Sz\xE1rmaz\xE1s: B\xE1cska / D\xE9lvid\xE9k \\n \\n  Hodanics Andr\xE1s
+      s\xFAlyos \xF6sszeget fizetett volna \xE9rte - b\xE1r soha nem volt a birtok\xE1ban
+      olyan mennyis\xE9g\u0171 p\xE9nz, amire illett volna a \u201Cs\xFAlyos \xF6sszeg\u201D
+      jelz\u0151 -, hogy valaki elmagyar\xE1zza neki, hogy hogy a fen\xE9be keveredett
+      \u0151 ide. A Donig vezet\u0151 \xFAt minden egyes l\xE9p\xE9s\xE9vel tiszt\xE1ban
+      volt persze, \xE1lm\xE1b\xF3l felriasztva is fel tudta volna id\xE9zni az alkalmass\xE1gi
+      vizsg\xE1latot Zomborban, az azt k\xF6vet\u0151 kik\xE9pz\xE9s r\xE9szleteit
+      Baj\xE1n, a v\xE9gtelennek tetsz\u0151 vonatutat keletre \xE9s az eg\xE9sz
+      k\xE1lv\xE1ri\xE1t megkoron\xE1z\xF3, l\xE9lek\xF6l\u0151 menetel\xE9st a semmibe.
+      \\n\\n Sz\xF3val az ide\xFAt logisztik\xE1ja tiszta sor volt a sz\xE1m\xE1ra,
+      az m\xE1r viszont kev\xE9sb\xE9, hogy mi\xE9rt kell neki itt lennie \xE9s olyanokra
+      sz\xF3rnia a hal\xE1lt, akiket nem ismer, akik eredetileg egy f\xE9l vil\xE1ggal
+      arr\xE9bb \xE9ltek t\u0151le \xE9s akiknek v\xE9lem\xE9nye szerint ugyan\xFAgy
+      nem volt fogalma arr\xF3l, hogy mire fel ez az eg\xE9sz c\xE9c\xF3, mint neki.
+      Az hom\xE1lyosan r\xE9mlett sz\xE1m\xE1ra, hogy egy nagyhatalm\xFA valaki megt\xE1madott
+      egy olyan orsz\xE1got, amelynek a megt\xE1mad\xE1s\xE1t sok egy\xE9b nagyhatalm\xFA
+      valaki nem n\xE9zte j\xF3 szemmel, de hogy ebb\u0151l mik\xE9nt k\xF6vetkezett
+      az, hogy neki le kellett tennie a k\u0151m\u0171ves kanalat, hogy karab\xE9lyt
+      ragadjon helyette, az maga volt a nagybet\u0171s rejt\xE9ly. \\n\\n Tal\xE1n
+      nem is sz\xE1m\xEDtott \xE9s k\xE1r volt erre id\u0151t \xE9s gondolatokat
+      fecs\xE9relnie, de nem tudta le\xE1ll\xEDtani mag\xE1t. \xC9rz\xE9keny fi\xFA
+      volt vil\xE1g \xE9let\xE9ben, akit ha nem is nagy szavakkal zsongl\u0151rk\xF6dve,
+      de mindig is foglalkoztatott, hogy miben m\xE9rik az emberi m\xE9lt\xF3s\xE1got,
+      hi\xE1ba tettette az ellenkez\u0151j\xE9t m\xE1sok el\u0151tt. Ez az \xE9rz\xE9kenys\xE9g
+      h\xE1tr\xE1ny\xE1ra v\xE1lt mi\xF3ta az esz\xE9t tudta, mert egy k\u0151m\u0171ves
+      csal\xE1d k\u0151m\u0171ves sarjak\xE9nt nem engedhetett meg mag\xE1nak ilyesfajta
+      esend\u0151s\xE9get, legal\xE1bbis nem ny\xEDltan. A kocsm\xE1ban ki kellett
+      vennie a r\xE9sz\xE9t vereked\xE9sekb\u0151l ugyan\xFAgy, mint a bar\xE1tainak,
+      a diszn\xF3v\xE1g\xE1son pedig ugyanolyan er\u0151sen kellett a szajl\xE1t
+      markolnia, mint a nagyb\xE1tyj\xE1nak vagy b\xE1rmelyik unokatest\xE9v\xE9rnek.
+      \\n\\n Akkor most, a h\xE1bor\xFA eszm\xE9j\xE9nek \xF6r\xF6k ellens\xE9gek\xE9nt,
+      a l\xE9tk\xE9rd\xE9seken val\xF3 morfond\xEDroz\xE1s k\xF6zben, m\xE9gis mi\xE9rt
+      kapaszkodik olyan g\xF6rcs\xF6sen a fegyver cs\xF6v\xE9be, mint a fuldokl\xF3
+      a fel\xE9je vetett darab k\xF6t\xE9lbe? H\xE1t az\xE9rt, mert hossz\xFA, hossz\xFA
+      \xE9vek keresg\xE9l\xE9se ut\xE1n nagy nehezen tal\xE1lt v\xE9gre valakit,
+      aki el\u0151tt nem kellett szenvtelens\xE9get m\xEDmelnie, valakit, akir\u0151l
+      tudta, hogy elfogadja \u0151t olyannak, amilyen. Viszont ahhoz, hogy ehhez
+      a valakihez visszajusson, el\u0151sz\xF6r s\xE1rba kellett tipornia saj\xE1t
+      \xE9rt\xE9krendj\xE9t \xE9s legal\xE1bb annyi szovjetet eltennie a l\xE1b al\xF3l,
+      ah\xE1ny t\xE9gl\xE1t peckesen egym\xE1sra pakolt, amikor az \u0151 im\xE1dott
+      Elz\xE1j\xE1nak h\xE1z\xE1t meg\xE9p\xEDtette. \\n\\n \xCDgy ismerte meg ugyanis
+      sz\xEDve v\xE1lasztottj\xE1t, hogy az f\xE9rj\xE9vel egy\xFCtt felk\xE9rte
+      \u0151t, \xE9p\xEDtsen neki h\xE1zat Zombor centrum\xE1ban. Hodanics Andr\xE1s
+      k\xF6t\xE9lnek \xE1llt, hogyne \xE1llt volna k\xF6t\xE9lnek, elv\xE9gre a hossz\xFAt\xE1v\xFA
+      \xE9s j\xF3l fizet\u0151 megb\xEDz\xE1s az egyszeri k\u0151m\u0171ves legkedvesebb
+      kombin\xE1ci\xF3ja. Egyed\xFCl azok a sz\xFCrke, majdhogynem \xE1ttetsz\u0151
+      \xEDr\xEDsz\u0171 szemek nem hagyt\xE1k nyugodni, amelyekkel Elza els\u0151
+      tal\xE1lkoz\xE1suk sor\xE1n felm\xE9rte \u0151t \xE9s amelyekkel a ves\xE9j\xE9be
+      l\xE1tott. Eleinte persze azt hitte, k\xE9pzeli csak az asszony fel\xE9je tan\xFAs\xEDtott
+      \xE9rdekl\u0151d\xE9s\xE9t, de azt\xE1n ahogy a megb\xEDz\xE1s ut\xE1n n\xE9h\xE1ny
+      h\xF3nappal bek\xF6sz\xF6nt\xF6tt a ny\xE1r \xE9s \u0151 kinn aszal\xF3dott
+      a napon, Elza kij\xF6tt hozz\xE1 a szomsz\xE9dos h\xE1zb\xF3l, ahol f\xE9rje
+      sz\xFCleivel laktak, hideg s\xF6rt hozott neki, amibe \u0151 maga is kac\xE9ran
+      belekortyolt, mik\xF6zben mindenf\xE9le nagyvil\xE1gi, Andr\xE1s sz\xE1m\xE1ra
+      tal\xE1n kiss\xE9 magasnak bizonyul\xF3 dolgokr\xF3l besz\xE9lgettek. Eleinte
+      feszeng\xE9st eredm\xE9nyez\u0151 diskurzusaik sor\xE1n azonban Andr\xE1s egyre
+      ink\xE1bb azon kapta mag\xE1t, hogy \xFAgy megny\xEDlik a n\u0151nek, mint
+      soha azel\u0151tt senkinek. \\n\\n F\xE9rjes asszonyt beh\xE1l\xF3zni persze
+      vesz\xE9lyes mulats\xE1g lett volna, Hodanics Andr\xE1snak val\xF3sz\xEDn\u0171leg
+      a gyomra sem lett volna meg hozz\xE1, de Elza f\xE9rj\xE9t egy \xE9vvel kor\xE1bban
+      elr\xE1ngatt\xE1k kik\xE9pz\xE9sre, mint \u0151t \xE9s n\xE9h\xE1ny h\xF3nappal
+      k\xE9s\u0151bb j\xF6tt is a lev\xE9l, hogy elesett, nem t\xE9r haza t\xF6bb\xE9.
+      Elza persze siratta elhunyt ur\xE1t, de Andr\xE1s \xFAgy l\xE1tta, hogy nem
+      olyan \xE1h\xEDtattal \xE9s bele\xE9l\xE9ssel, ahogy azt egy friss \xF6zvegynek
+      illene. Ezt j\xF3 jelnek vette kettej\xFCk k\xF6z\xF6s j\xF6v\u0151re n\xE9zve,
+      de ennek ellen\xE9re tisztess\xE9gb\u0151l meg szerette volna v\xE1rni, hogy
+      lej\xE1rjanak a gy\xE1sz b\xFAskomor hetei, h\xF3napjai, de a vil\xE1g\xE9g\xE9s
+      nem alkalmazkodott \u0151hozz\xE1. T\u0151le f\xFCggetlen, rajta t\xFAln\xF6v\u0151
+      dolgok beleavatkoztak az \xE9lete k\xF6rforg\xE1s\xE1ba \xE9s a sors szesz\xE9lye
+      kisodorta \u0151t ide, az isten h\xE1ta m\xF6g\xE9. \\n\\n Hodanics Andr\xE1s
+      c\xE9lzott, a magass\xE1gos isten megbocs\xE1t\xE1st k\xE9rte, majd els\xFCt\xF6tte
+      a fegyvert, azt\xE1n pedig egyik l\xE1b\xE1r\xF3l a m\xE1sikra \xE1llt, mert
+      f\xE9l\u0151 volt, hogy az als\xF3gaty\xE1j\xE1ba rejtett gy\u0171r\u0171,
+      melyet anyja adott oda neki, amelyet majd\u2019 kett\u0151ezer kilom\xE9teren
+      kereszt\xFCl mag\xE1val hordozott \xE9s amellyel feltett sz\xE1nd\xE9ka volt,
+      hogy megk\xE9rje Elza kez\xE9t, lecs\xFAszik a combja ment\xE9n \xE9s a fagyos,
+      v\xE9rt\u0151l v\xF6r\xF6sl\u0151 j\xE9ggel bor\xEDtott f\xF6ld\xF6n k\xF6t
+      ki. "
+    englishNarrationClip: {fileID: 8300000, guid: 06f6e8cfb33ae184b818f0a92bf39957, type: 3}
+    hungarianNarrationClip: {fileID: 0}
 --- !u!82 &147734231
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2106,8 +2716,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 17bcd7bff0e0d48d3a3704c7979f3f34, type: 2}
-  m_sharedMaterial: {fileID: 5469495789024433995, guid: 17bcd7bff0e0d48d3a3704c7979f3f34, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 80d679ee9997f024ba4ece8f570f66f0, type: 2}
+  m_sharedMaterial: {fileID: 7409515842414935642, guid: 80d679ee9997f024ba4ece8f570f66f0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2359,7 +2969,7 @@ MonoBehaviour:
   narrationSource: {fileID: 318125752}
   characters:
   - image: {fileID: 8830225953951354234, guid: 2a6cd810f5d10ff47b2bdead4a5d6e9b, type: 3}
-    description: "Ferenc Bed\u0151 / Age: 33 \\n Rank/Position: Private (enlisted
+    englishDescription: "Ferenc Bed\u0151 / Age: 33 \\n Rank/Position: Private (enlisted
       soldier), infantryman \\n Civilian Occupation: Railway worker (switchman /
       track switch operator) \\n Origin: Szolnok County \\n \\n Bed\u0151 Ferenc
       was \u201CFerk\xF3\u201D to everyone back home. \\n \\n He had to be. His father
@@ -2406,81 +3016,85 @@ MonoBehaviour:
       If he ever gets lucky enough to introduce himself to a new person again, he\u2019ll
       say the following: \u201CBed\u0151 Ferenc. The younger one. But you can just
       call me Ferk\xF3.\u201D "
-    narrationClip: {fileID: 8300000, guid: 16ad02e124fb2e34294adb7bcf313033, type: 3}
+    hungarianDescription: 
+    englishNarrationClip: {fileID: 8300000, guid: 16ad02e124fb2e34294adb7bcf313033, type: 3}
+    hungarianNarrationClip: {fileID: 0}
   - image: {fileID: -7754199205684209494, guid: 80770355e2e487c43a2433218c3f020c, type: 3}
-    description: "Benedek Folhoffer / Age: 24 \\n Rank / Position: Private (enlisted
-      soldier), assistant machine gunner (ammunition bearer) \\n Civilian Occupation:
-      Carpenter\u2019s apprentice \\n Origin: Near Gy\u0151r, Transdanubia \\n \\n 
-      If for nothing else, Folhoffer Benedek was grateful for this: out here, in
-      the middle of this frozen hell, nobody knew he had killed his mother.  \\n
-      \\n He hadn\u2019t meant to, of course. A breech-born infant doesn\u2019t have
-      bloodlust or anything like that. But whatever happened, happened. His mother
-      bled out. And Benedek\u2019s father declared him his sworn enemy about six
-      and a half minutes after he entered the world. \\n \\n Benedek grew up hearing
-      it, over and over. That he was a little murderer. A cursed child. Not everyone
-      said it to hurt him. Some said it as a fact. Some like a joke. His paternal
-      grandfather was even proud. Proud that Benedek had barely drawn his first breath
-      and already \u201Cput a Swab in the ground\u201D. But his father never softened.
-      Not for a second. It was too bitter a pill to swallow that his son had made
-      him a widower. \\n \\n Benedek waited until he was fourteen. Then he left Mez\u0151\xF6rs
-      behind. He took money from weaker kids by force. He bought a train ticket.
-      He didn\u2019t stop until Tata, where he found work as a carpenter\u2019s apprentice.
-      He had as much natural talent for wood as a fattened pig has for self-restraint.
-      But what God had denied him in skill, he made up for with stubbornness. His
-      grandfather used to say it all the time. Not the clever ones get ahead in life
-      but the ones who can sit still and learn. He\u2019d say it under the shade
-      of the cabinet, cherries in their mouths, counting on an abacus while the sun
-      hammered the yard. \\n \\n As it turned out, the old man was right. \\n \\n
-      At first, Master Trok\xE1n Pista only respected Benedek\u2019s effort. The
-      fact that he showed up day after day. That he didn\u2019t quit. Then, slowly,
-      he began to respect the work itself. Once in a while, he\u2019d even say something
-      kind. \u201CYou\u2019re not as hopeless as you look,\u201D he\u2019d tell him,
-      clapping him on the shoulder. And Benedek swelled with pride. \\n \\n Around
-      that time, he decided to take his dead mother\u2019s surname as well. Folhoffer.
-      When he walked out of the registrar\u2019s office with his new name, he did
-      something he had never been able to do before. For the first time in his life,
-      he stopped thinking of himself as a killer. \\n \\n But now\u2026 \\n \\n \u201CNow
-      I\u2019ve finally become what my dear father always said I was,\u201D Benedek
-      mutters as he drops back into the trench for a few seconds to breathe. The
-      endless white is hurting his sight. Stars dance in front of his eyes. Snow-blindness
-      makes him doubt everything. He can\u2019t even be sure he hit anyone across
-      the river. And yet he feels it. He feels that he isn\u2019t just shooting into
-      the world at random. Because lately it has been getting harder to think of
-      himself as a carpenter. Harder to hold onto that word. As if the soul can sense
-      its own slow destruction even when the senses begin to fail. \\n \\n Will he
-      ever be able to create something again, if he makes it home?, he wonders. A
-      table, for example. Or a door. Anything. Can a hand still create, after months
-      of doing nothing but destroy? He doesn\u2019t know the answer. But he knows
-      he wants to get back alive, just to find out. Because it\u2019s better to face
-      horrors in a properly heated workshop than to turn them over in your head while
-      the cold grinds your bones.  "
-    narrationClip: {fileID: 8300000, guid: 555cffd6cbc6e5f48acfff0b68a0bcc8, type: 3}
+    englishDescription: "Benedek Folhoffer / Age: 24 \\n Rank / Position: Private
+      (enlisted soldier), assistant machine gunner (ammunition bearer) \\n Civilian
+      Occupation: Carpenter\u2019s apprentice \\n Origin: Near Gy\u0151r, Transdanubia
+      \\n \\n  If for nothing else, Folhoffer Benedek was grateful for this: out
+      here, in the middle of this frozen hell, nobody knew he had killed his mother. 
+      \\n \\n He hadn\u2019t meant to, of course. A breech-born infant doesn\u2019t
+      have bloodlust or anything like that. But whatever happened, happened. His
+      mother bled out. And Benedek\u2019s father declared him his sworn enemy about
+      six and a half minutes after he entered the world. \\n \\n Benedek grew up
+      hearing it, over and over. That he was a little murderer. A cursed child. Not
+      everyone said it to hurt him. Some said it as a fact. Some like a joke. His
+      paternal grandfather was even proud. Proud that Benedek had barely drawn his
+      first breath and already \u201Cput a Swab in the ground\u201D. But his father
+      never softened. Not for a second. It was too bitter a pill to swallow that
+      his son had made him a widower. \\n \\n Benedek waited until he was fourteen.
+      Then he left Mez\u0151\xF6rs behind. He took money from weaker kids by force.
+      He bought a train ticket. He didn\u2019t stop until Tata, where he found work
+      as a carpenter\u2019s apprentice. He had as much natural talent for wood as
+      a fattened pig has for self-restraint. But what God had denied him in skill,
+      he made up for with stubbornness. His grandfather used to say it all the time.
+      Not the clever ones get ahead in life but the ones who can sit still and learn.
+      He\u2019d say it under the shade of the cabinet, cherries in their mouths,
+      counting on an abacus while the sun hammered the yard. \\n \\n As it turned
+      out, the old man was right. \\n \\n At first, Master Trok\xE1n Pista only respected
+      Benedek\u2019s effort. The fact that he showed up day after day. That he didn\u2019t
+      quit. Then, slowly, he began to respect the work itself. Once in a while, he\u2019d
+      even say something kind. \u201CYou\u2019re not as hopeless as you look,\u201D
+      he\u2019d tell him, clapping him on the shoulder. And Benedek swelled with
+      pride. \\n \\n Around that time, he decided to take his dead mother\u2019s
+      surname as well. Folhoffer. When he walked out of the registrar\u2019s office
+      with his new name, he did something he had never been able to do before. For
+      the first time in his life, he stopped thinking of himself as a killer. \\n
+      \\n But now\u2026 \\n \\n \u201CNow I\u2019ve finally become what my dear father
+      always said I was,\u201D Benedek mutters as he drops back into the trench for
+      a few seconds to breathe. The endless white is hurting his sight. Stars dance
+      in front of his eyes. Snow-blindness makes him doubt everything. He can\u2019t
+      even be sure he hit anyone across the river. And yet he feels it. He feels
+      that he isn\u2019t just shooting into the world at random. Because lately it
+      has been getting harder to think of himself as a carpenter. Harder to hold
+      onto that word. As if the soul can sense its own slow destruction even when
+      the senses begin to fail. \\n \\n Will he ever be able to create something
+      again, if he makes it home?, he wonders. A table, for example. Or a door. Anything.
+      Can a hand still create, after months of doing nothing but destroy? He doesn\u2019t
+      know the answer. But he knows he wants to get back alive, just to find out.
+      Because it\u2019s better to face horrors in a properly heated workshop than
+      to turn them over in your head while the cold grinds your bones.  "
+    hungarianDescription: 
+    englishNarrationClip: {fileID: 8300000, guid: 555cffd6cbc6e5f48acfff0b68a0bcc8, type: 3}
+    hungarianNarrationClip: {fileID: 0}
   - image: {fileID: -7610096024345054562, guid: 87bc25401fa314c458f93dfc662e7bb3, type: 3}
-    description: "Istv\xE1n Maruzs / Age: 41 \\n Rank / Position: Private (reservist),
-      trench runner / Messenger \\n Civilian Occupation: Farmer \\n Origin: N\xF3gr\xE1d
-      County, Northern Hungary\t\\n\\n  Maruzs Istv\xE1n simply couldn\u2019t understand
-      why everyone else wasn\u2019t enjoying this at least half as much as he was.
-      \\n\\n Sure, the cold was miserable. The food was scarce, and what there was
-      tasted like horse dung. But those were minor inconveniences compared to the
-      fact that he was finally allowed to hold a weapon. A real weapon. One he could
-      actually use. And not just for shooting at targets. \\n\\n But for killing
-      a man. \\n\\n Because Istv\xE1n had fantasized about taking a human life for
-      as long as he could remember. He could never put into words what was so seductive
-      about it. It wasn\u2019t the cruelty of the ritual. He didn\u2019t take pleasure
-      in someone else\u2019s pain. What fascinated him was the idea itself. The switch.
-      That a person who existed could suddenly stop existing\u2014because of him.
-      \\n\\n The biggest obstacle, for years, was the law. He was terrified of it.
-      Not of morality. Of consequences. Of what would happen to him if he did what
-      he wanted to do. So he stayed inert. He dreamed. He imagined. \\n\\n And he
-      did nothing. \\n\\n Sometimes he went hunting with his friend, Endre. But shooting
-      a pheasant or a rabbit did nothing to ease the itch that took up most of his
-      waking life. He liked pig slaughters better. There was something almost human
-      in a pig\u2019s eyes. If nothing else, it gave him a taste of the forbidden
-      fruit. Then, about five years ago, luck smiled at him\u2014briefly. Istv\xE1n
-      lived off farming. They had a few plots of land, part of his wife\u2019s dowry.
-      But his father-in-law could never bring himself to trust him with the work.
-      He couldn\u2019t believe Istv\xE1n was capable of dealing with it alone. So
-      he would come out with him, again and again, to work the soil. And he would
+    englishDescription: "Istv\xE1n Maruzs / Age: 41 \\n Rank / Position: Private
+      (reservist), trench runner / Messenger \\n Civilian Occupation: Farmer \\n
+      Origin: N\xF3gr\xE1d County, Northern Hungary\t\\n\\n  Maruzs Istv\xE1n simply
+      couldn\u2019t understand why everyone else wasn\u2019t enjoying this at least
+      half as much as he was. \\n\\n Sure, the cold was miserable. The food was scarce,
+      and what there was tasted like horse dung. But those were minor inconveniences
+      compared to the fact that he was finally allowed to hold a weapon. A real weapon.
+      One he could actually use. And not just for shooting at targets. \\n\\n But
+      for killing a man. \\n\\n Because Istv\xE1n had fantasized about taking a human
+      life for as long as he could remember. He could never put into words what was
+      so seductive about it. It wasn\u2019t the cruelty of the ritual. He didn\u2019t
+      take pleasure in someone else\u2019s pain. What fascinated him was the idea
+      itself. The switch. That a person who existed could suddenly stop existing\u2014because
+      of him. \\n\\n The biggest obstacle, for years, was the law. He was terrified
+      of it. Not of morality. Of consequences. Of what would happen to him if he
+      did what he wanted to do. So he stayed inert. He dreamed. He imagined. \\n\\n
+      And he did nothing. \\n\\n Sometimes he went hunting with his friend, Endre.
+      But shooting a pheasant or a rabbit did nothing to ease the itch that took
+      up most of his waking life. He liked pig slaughters better. There was something
+      almost human in a pig\u2019s eyes. If nothing else, it gave him a taste of
+      the forbidden fruit. Then, about five years ago, luck smiled at him\u2014briefly.
+      Istv\xE1n lived off farming. They had a few plots of land, part of his wife\u2019s
+      dowry. But his father-in-law could never bring himself to trust him with the
+      work. He couldn\u2019t believe Istv\xE1n was capable of dealing with it alone.
+      So he would come out with him, again and again, to work the soil. And he would
       wear Istv\xE1n down with his chatter. One of his favorite topics was his broken
       heart. The tragedy that Istv\xE1n and Marika\u2014Istv\xE1n\u2019s wife\u2014hadn\u2019t
       given him a strong, beautiful grandchild. Not even a weak, ugly one. Simply
@@ -2514,9 +3128,11 @@ MonoBehaviour:
       commander looked at him with fatherly pride. He patted his shoulder. And in
       a voice thick with emotion, he said only this: <i> \u201CNow that\u2019s a
       patriot right here!\u201D. </i>"
-    narrationClip: {fileID: 8300000, guid: 50dadd7ea8e52a3438ebc80f2074442e, type: 3}
+    hungarianDescription: 
+    englishNarrationClip: {fileID: 8300000, guid: 50dadd7ea8e52a3438ebc80f2074442e, type: 3}
+    hungarianNarrationClip: {fileID: 0}
   - image: {fileID: 4570106350468467348, guid: 3c678c94c1be9874db7a0d58a33163d9, type: 3}
-    description: "Aleksei Morozov / Age: 37 \\n Rank / Position: Junior Sergeant,
+    englishDescription: "Aleksei Morozov / Age: 37 \\n Rank / Position: Junior Sergeant,
       deputy squad leader \\n Civilian Occupation: Tractor driver \\n Origin: Kursk
       region, RSFSR (Russian Soviet Federative Socialist Republic) \\n \\n  Aleksei
       Morozov was kept alive by hatred. \\n\\n Not hatred for the Hungarians across
@@ -2572,16 +3188,18 @@ MonoBehaviour:
       uncle\u2019s mouth, and squeeze the trigger. He imagines it with the calm of
       a man imagining sunrise. Not because he loves killing. Because he loves the
       idea of debt being paid."
-    narrationClip: {fileID: 8300000, guid: 44468e74589917f4e94fcd18187c8b88, type: 3}
+    hungarianDescription: 
+    englishNarrationClip: {fileID: 8300000, guid: 44468e74589917f4e94fcd18187c8b88, type: 3}
+    hungarianNarrationClip: {fileID: 0}
   - image: {fileID: -3432214506606557312, guid: b219ed7586b42db4cac66fca4844c3a2, type: 3}
-    description: "Ivan Petrov / Age: 26 \\n Rank / Position: Red Army soldier (private),
-      rifleman \\n Civilian Occupation: History teacher\\n Origin: Voronezh city
-      / surrounding area, RSFSR (Russian Soviet Federative Socialist Republic) \\n\\n
-      Ivan Petrov was driven by one thing only: patriotism in its purest form. His
-      heart beat for the nation and the motherland. It was almost religious. And
-      he was certain that this devotion\u2014this worship of home\u2014was what kept
-      him alive. \\n\\n Doctors told his parents early on that he was a sick, fragile
-      boy. Not built for this world. <i> \u201CProtect him from everything,\u201D
+    englishDescription: "Ivan Petrov / Age: 26 \\n Rank / Position: Red Army soldier
+      (private), rifleman \\n Civilian Occupation: History teacher\\n Origin: Voronezh
+      city / surrounding area, RSFSR (Russian Soviet Federative Socialist Republic)
+      \\n\\n Ivan Petrov was driven by one thing only: patriotism in its purest form.
+      His heart beat for the nation and the motherland. It was almost religious.
+      And he was certain that this devotion\u2014this worship of home\u2014was what
+      kept him alive. \\n\\n Doctors told his parents early on that he was a sick,
+      fragile boy. Not built for this world. <i> \u201CProtect him from everything,\u201D
       </i> the doctor said. <i> \u201CEven from the wind. There\u2019s no medicine
       I can prescribe for what he has.\u201D </i> His parents listened.  They kept
       him wrapped in comfort. They treated him like porcelain. \\n\\n And Ivan hated
@@ -2630,10 +3248,12 @@ MonoBehaviour:
       He only hopes the sun will come out. That the thick crust of ice over the ground
       will finally soften. So the sweet motherland\u2014his mother earth\u2014can
       drink, to the last drop, the blood of her fragile child.  "
-    narrationClip: {fileID: 8300000, guid: 58069518f45003d459f14a376b4507b5, type: 3}
+    hungarianDescription: 
+    englishNarrationClip: {fileID: 8300000, guid: 58069518f45003d459f14a376b4507b5, type: 3}
+    hungarianNarrationClip: {fileID: 0}
   - image: {fileID: 1116025709374489556, guid: 88ce801cd676caa44842508ac0da0c40, type: 3}
-    description: "Mykola Shevchenko (Ukrainian) /  Age:22 \\n Rank/Position: Red
-      Army soldier, submachine gunner(PPSh) \\n Civilian Occupation: Shoemaker\u2019s
+    englishDescription: "Mykola Shevchenko (Ukrainian) /  Age:22 \\n Rank/Position:
+      Red Army soldier, submachine gunner(PPSh) \\n Civilian Occupation: Shoemaker\u2019s
       apprentice /  Origin: Around Poltava, Ukrainian SSR \\n\\n  Mykola shouldn\u2019t
       be here. Not in the karmic, spiritual sense, like \u201Cno child of God deserves
       to be dragged into a slaughterhouse\u201D. Not even because, as a Ukrainian,
@@ -2714,11 +3334,13 @@ MonoBehaviour:
       a full second to realize the words are meant for him. He turns toward the voice.
       A cigarette is offered. He takes it with gratitude. Thin blue smoke rises gracefully
       into the steel-gray sky. "
-    narrationClip: {fileID: 8300000, guid: a063a791164b67e418f9a2c48b7abe1c, type: 3}
+    hungarianDescription: 
+    englishNarrationClip: {fileID: 8300000, guid: a063a791164b67e418f9a2c48b7abe1c, type: 3}
+    hungarianNarrationClip: {fileID: 0}
   - image: {fileID: 6467543913970071884, guid: 329a93f3f8c316e4daeee18d27a4caf4, type: 3}
-    description: "Serik Nurgaliyev (Kazakh; \u201CSiberian side\u201D / eastern recruitment)
-      \\n Age: 30 Rank / role: light machine gunner \\n Civilian occupation: Miner
-      / ore extractor (Karaganda-region) \\n Place of origin: Kazakh SSR (Central
+    englishDescription: "Serik Nurgaliyev (Kazakh; \u201CSiberian side\u201D / eastern
+      recruitment) \\n Age: 30 Rank / role: light machine gunner \\n Civilian occupation:
+      Miner / ore extractor (Karaganda-region) \\n Place of origin: Kazakh SSR (Central
       Asian steppe / East) \\n\\n    As the enemy soldier\u2019s head disappears
       in a blood-red burst under Serik\u2019s fire, the Kazakh machine-gunner thinks
       about the dreams he used to have back home. Down in the mines, bending in the
@@ -2786,11 +3408,13 @@ MonoBehaviour:
       he used to be.\\n\\n He is pulled out of his thoughts by another scream\u2014another
       enemy crying out in pain under Serik\u2019s fire. Serik doesn\u2019t like thinking
       about how many little girls like Ainur he has already made into orphans. "
-    narrationClip: {fileID: 8300000, guid: ec55de7c793ae9142972faf9511b6013, type: 3}
+    hungarianDescription: 
+    englishNarrationClip: {fileID: 8300000, guid: ec55de7c793ae9142972faf9511b6013, type: 3}
+    hungarianNarrationClip: {fileID: 0}
   - image: {fileID: -8142763403083625019, guid: daa16bd2a10e36249a13bf32307300cf, type: 3}
-    description: "Andr\xE1s Hodanics / Age: 29 \\n Rank / Position: Corporal (junior
-      non-commissioned officer), squad leader \\n Civilian Occupation: Mason \\n
-      Origin: B\xE1cska / Southern Hungary (Vojvodina) \\n \\n  Hodanics Andr\xE1s
+    englishDescription: "Andr\xE1s Hodanics / Age: 29 \\n Rank / Position: Corporal
+      (junior non-commissioned officer), squad leader \\n Civilian Occupation: Mason
+      \\n Origin: B\xE1cska / Southern Hungary (Vojvodina) \\n \\n  Hodanics Andr\xE1s
       would have paid a serious sum\u2014if he\u2019d ever possessed the kind of
       money that deserves the word \u201Cserious\u201D\u2014for someone to explain
       to him how the hell he ended up here. \\n\\n He knew every step of the road
@@ -2848,7 +3472,9 @@ MonoBehaviour:
       mother gave him. The ring he carried nearly two thousand kilometers. The ring
       he meant to use to ask Elza to marry him. He can\u2019t let it hit the ground.
       Not here. Not on this ice, red with blood. \\n\\n "
-    narrationClip: {fileID: 8300000, guid: 06f6e8cfb33ae184b818f0a92bf39957, type: 3}
+    hungarianDescription: 
+    englishNarrationClip: {fileID: 8300000, guid: 06f6e8cfb33ae184b818f0a92bf39957, type: 3}
+    hungarianNarrationClip: {fileID: 0}
 --- !u!225 &318125754
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3011,8 +3637,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Play game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
-  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3036,8 +3662,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 27
+  m_fontSizeBase: 27
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -3314,8 +3940,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
-  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3583,8 +4209,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Portraits & Programming
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c72fd84918a0e4194a48294f04008932, type: 2}
-  m_sharedMaterial: {fileID: 4684507092206647844, guid: c72fd84918a0e4194a48294f04008932, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3719,8 +4345,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Exit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
-  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3744,8 +4370,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 27
+  m_fontSizeBase: 27
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -3936,8 +4562,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
-  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4226,8 +4852,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000020981, y: 125}
-  m_SizeDelta: {x: 203.2605, y: 24.6308}
+  m_AnchoredPosition: {x: 6.034, y: 143.1017}
+  m_SizeDelta: {x: 215.3284, y: 60.8341}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &643642876
 MonoBehaviour:
@@ -4251,8 +4877,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: when the river froze
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
-  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4672,22 +5298,29 @@ MonoBehaviour:
   subtitlesEnabled: 0
   subtitlesLanguage: 
   DONTitleText: {fileID: 0}
-  playButtonText: {fileID: 0}
-  charactersButtonText: {fileID: 0}
-  settingsButtonText: {fileID: 0}
-  creditsButtonText: {fileID: 0}
-  exitButtonText: {fileID: 0}
-  closeButtonText: {fileID: 0}
-  narrationButtonText: {fileID: 0}
-  backButtonText: {fileID: 0}
-  creditsTitleText: {fileID: 0}
-  programmingTitleText: {fileID: 0}
-  artLabelText: {fileID: 0}
-  portraitsLabelText: {fileID: 0}
-  uiDesignLabelText: {fileID: 0}
-  writingLabelText: {fileID: 0}
-  audioLabelText: {fileID: 0}
-  charactersExitButtonText: {fileID: 0}
+  playButtonText: {fileID: 321205395}
+  charactersButtonText: {fileID: 1558418242}
+  settingsButtonText: {fileID: 1259068490}
+  creditsButtonText: {fileID: 1798396955}
+  exitButtonText: {fileID: 411835108}
+  openingQuoteText: {fileID: 143718569}
+  closeButtonText: {fileID: 1337364354}
+  narrationButtonText: {fileID: 1727152536}
+  backButtonText: {fileID: 325226191}
+  creditsTitleText: {fileID: 1262601088}
+  programmingTitleText: {fileID: 1392564814}
+  artLabelText: {fileID: 122777860}
+  portraitsLabelText: {fileID: 386113347}
+  uiDesignLabelText: {fileID: 704245106}
+  writingLabelText: {fileID: 1119086609}
+  audioLabelText: {fileID: 874084346}
+  charactersExitButtonText: {fileID: 1063739949}
+  creditsNameBajnokText: {fileID: 49436191}
+  creditsNameGaluszText: {fileID: 766697295}
+  creditsNameBartaText: {fileID: 1054347867}
+  creditsNameNagyBorusText: {fileID: 1761334489}
+  creditsNameBendaText: {fileID: 1765216998}
+  creditsNameBorosText: {fileID: 2013819049}
   settingsTitleText: {fileID: 601692897}
   languageLabelText: {fileID: 1397237962}
   languageButtonText: {fileID: 736130374}
@@ -4789,6 +5422,9 @@ MonoBehaviour:
   button6: {fileID: 704460222}
   button7: {fileID: 1895930140}
   button8: {fileID: 323879519}
+  lockedButtonAlpha: 0.5
+  buttonShadowColor: {r: 0, g: 0, b: 0, a: 0.6}
+  buttonShadowDistance: {x: 3, y: -3}
 --- !u!4 &678694481
 Transform:
   m_ObjectHideFlags: 0
@@ -4947,8 +5583,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -45, y: 146}
-  m_SizeDelta: {x: 141.7933, y: 32.6618}
+  m_AnchoredPosition: {x: 71.98035, y: 146}
+  m_SizeDelta: {x: 375.754, y: 32.662}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &704245106
 MonoBehaviour:
@@ -4972,8 +5608,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: UI Design
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c72fd84918a0e4194a48294f04008932, type: 2}
-  m_sharedMaterial: {fileID: 4684507092206647844, guid: c72fd84918a0e4194a48294f04008932, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5420,8 +6056,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '    <b>English</b> / Hungarian'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
-  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5556,8 +6192,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: <b>On</b> / Off
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
-  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5692,8 +6328,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Marci Galusz
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 51fcc563f79b944a7b70bf678803fda0, type: 2}
-  m_sharedMaterial: {fileID: -1371307987657508136, guid: 51fcc563f79b944a7b70bf678803fda0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6057,8 +6693,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.7362, y: -76}
-  m_SizeDelta: {x: 230.321, y: 32.6618}
+  m_AnchoredPosition: {x: 110.14088, y: -76}
+  m_SizeDelta: {x: 452.075, y: 32.6618}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &874084346
 MonoBehaviour:
@@ -6082,8 +6718,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Audio Engineering
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c72fd84918a0e4194a48294f04008932, type: 2}
-  m_sharedMaterial: {fileID: 4684507092206647844, guid: c72fd84918a0e4194a48294f04008932, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6995,8 +7631,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: David Barta
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 51fcc563f79b944a7b70bf678803fda0, type: 2}
-  m_sharedMaterial: {fileID: -1371307987657508136, guid: 51fcc563f79b944a7b70bf678803fda0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7257,8 +7893,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
-  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7368,8 +8004,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.1128, y: 34}
-  m_SizeDelta: {x: 238.019, y: 32.6618}
+  m_AnchoredPosition: {x: 103.64, y: 34}
+  m_SizeDelta: {x: 439.07, y: 32.662}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1119086609
 MonoBehaviour:
@@ -7393,8 +8029,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Writing & Narration
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c72fd84918a0e4194a48294f04008932, type: 2}
-  m_sharedMaterial: {fileID: 4684507092206647844, guid: c72fd84918a0e4194a48294f04008932, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7680,8 +8316,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Settings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
-  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7705,8 +8341,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 27
+  m_fontSizeBase: 27
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -7791,8 +8427,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -398, y: 221}
-  m_SizeDelta: {x: 141.7933, y: 32.6618}
+  m_AnchoredPosition: {x: -292.4, y: 221.5086}
+  m_SizeDelta: {x: 353, y: 33.679}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1262601088
 MonoBehaviour:
@@ -7816,8 +8452,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: CREDITS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9059c881bfa1940119d4ae5d36aa62bc, type: 2}
-  m_sharedMaterial: {fileID: 2354571462987380143, guid: 9059c881bfa1940119d4ae5d36aa62bc, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 80d679ee9997f024ba4ece8f570f66f0, type: 2}
+  m_sharedMaterial: {fileID: 7409515842414935642, guid: 80d679ee9997f024ba4ece8f570f66f0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8067,8 +8703,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Close
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
-  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8230,8 +8866,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -382.60764, y: 146}
-  m_SizeDelta: {x: 162.578, y: 32.662}
+  m_AnchoredPosition: {x: -311.40225, y: 146}
+  m_SizeDelta: {x: 304.9889, y: 32.662}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1392564814
 MonoBehaviour:
@@ -8255,8 +8891,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Programming
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c72fd84918a0e4194a48294f04008932, type: 2}
-  m_sharedMaterial: {fileID: 4684507092206647844, guid: c72fd84918a0e4194a48294f04008932, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8391,8 +9027,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Language
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
-  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8506,8 +9142,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -90}
-  m_SizeDelta: {x: 420, y: 240}
+  m_AnchoredPosition: {x: 0, y: -76.13858}
+  m_SizeDelta: {x: 420, y: 267.7228}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1406501797
 MonoBehaviour:
@@ -8889,8 +9525,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Subtitles language
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
-  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9100,8 +9736,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
-  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9695,8 +10331,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Characters
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
-  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9720,8 +10356,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 27
+  m_fontSizeBase: 27
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -10078,8 +10714,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Narration
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
-  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10189,8 +10825,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 182}
-  m_SizeDelta: {x: 254.1096, y: 67.9212}
+  m_AnchoredPosition: {x: 4.8271, y: 198.8949}
+  m_SizeDelta: {x: 345.7929, y: 123.6367}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1735727464
 MonoBehaviour:
@@ -10239,8 +10875,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 84
-  m_fontSizeBase: 84
+  m_fontSize: 110
+  m_fontSizeBase: 110
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -10350,8 +10986,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Levente Nagy Bor\xFAs"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 51fcc563f79b944a7b70bf678803fda0, type: 2}
-  m_sharedMaterial: {fileID: -1371307987657508136, guid: 51fcc563f79b944a7b70bf678803fda0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10486,8 +11122,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Daniel Benda
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 51fcc563f79b944a7b70bf678803fda0, type: 2}
-  m_sharedMaterial: {fileID: -1371307987657508136, guid: 51fcc563f79b944a7b70bf678803fda0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10755,8 +11391,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Subtitles
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
-  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10891,8 +11527,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Credits
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
-  m_sharedMaterial: {fileID: 2796876540084035634, guid: 40effa7dc2c974566ba57fa45459f9f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10916,8 +11552,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 27
+  m_fontSizeBase: 27
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
@@ -12339,8 +12975,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Aron Boros
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 51fcc563f79b944a7b70bf678803fda0, type: 2}
-  m_sharedMaterial: {fileID: -1371307987657508136, guid: 51fcc563f79b944a7b70bf678803fda0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

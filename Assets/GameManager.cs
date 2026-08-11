@@ -49,8 +49,13 @@ public class GameManager : MonoBehaviour
     public Button exitCancelButton;
     public TextMeshProUGUI exitConfirmationTitleText;
     public TextMeshProUGUI exitConfirmationMessageText;
+    public TextMeshProUGUI exitYesButtonText;
+    public TextMeshProUGUI exitNoButtonText;
     public string exitConfirmationTitle = "Kilépés";
     public string exitConfirmationMessage = "Kilépsz a főmenübe?";
+
+    [Header("Opening Caption UI")]
+    public TextMeshProUGUI openingCaptionText;
 
     [SerializeField] private AudioSource playerHitAudio;
     [SerializeField] private AudioSource playerMissAudio;
@@ -165,6 +170,11 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
+        if (!LocalizationManager.IsInitialized)
+        {
+            LocalizationManager.Initialize();
+        }
+
         hungarianSide = Random.Range(0,2) == 0;
 
         ChooseSoldier();
@@ -247,7 +257,7 @@ public class GameManager : MonoBehaviour
                 currentSoldier = availableHungarianSoldiers[Random.Range(0, availableHungarianSoldiers.Length)];
                 currentSoldier.picked = true; // Jelöld meg, hogy ki lett választva
 
-                string language = PlayerPrefs.GetString("NarrationLanguage", "English");
+                string language = LocalizationManager.CurrentLanguage;
                 if (language == "Hungarian")
                 {
                     subtitles.SetSubtitles(currentSoldier.hungarianEntries); // Magyar feliratok
@@ -267,7 +277,7 @@ public class GameManager : MonoBehaviour
                 currentSoldier = availableRussianSoldiers[Random.Range(0, availableRussianSoldiers.Length)];
                 currentSoldier.picked = true; // Jelöld meg, hogy ki lett választva
 
-                string language = PlayerPrefs.GetString("NarrationLanguage", "English");
+                string language = LocalizationManager.CurrentLanguage;
                 if (language == "Hungarian")
                 {
                     subtitles.SetSubtitles(currentSoldier.hungarianEntries); // Magyar feliratok
@@ -344,9 +354,19 @@ public class GameManager : MonoBehaviour
         if (wind     != null) wind.volume     = 0f;
         if (distance != null) distance.volume = 0f;
 
-        CanvasGroup canvasGroup = canvas_opening != null 
-            ? canvas_opening.GetComponent<CanvasGroup>() 
+        CanvasGroup canvasGroup = canvas_opening != null
+            ? canvas_opening.GetComponent<CanvasGroup>()
             : null;
+
+        if (openingCaptionText == null)
+        {
+            openingCaptionText = FindSceneGameObject("Programming")?.GetComponent<TextMeshProUGUI>();
+        }
+
+        if (openingCaptionText != null)
+        {
+            openingCaptionText.text = LocalizationManager.GetText("GameScene.Opening.Caption", openingCaptionText.text);
+        }
 
         if (canvasGroup != null) canvasGroup.alpha = 1f;
 
@@ -382,7 +402,7 @@ public class GameManager : MonoBehaviour
 
     public void Narration()
     {
-        string language = PlayerPrefs.GetString("NarrationLanguage", "English");
+        string language = LocalizationManager.CurrentLanguage;
         AudioClip narrationClip = null;
 
         if (language == "Hungarian")
@@ -667,6 +687,16 @@ public class GameManager : MonoBehaviour
             exitConfirmationMessageText = FindSceneGameObject("ExitConfirmationMessage")?.GetComponent<TextMeshProUGUI>();
         }
 
+        if (exitYesButtonText == null)
+        {
+            exitYesButtonText = FindSceneGameObject("ExitYesButtonText")?.GetComponent<TextMeshProUGUI>();
+        }
+
+        if (exitNoButtonText == null)
+        {
+            exitNoButtonText = FindSceneGameObject("ExitNoButtonText")?.GetComponent<TextMeshProUGUI>();
+        }
+
         if (exitConfirmationPanel != null)
         {
             exitConfirmationPanel.SetActive(false);
@@ -696,7 +726,17 @@ public class GameManager : MonoBehaviour
 
         if (exitConfirmationMessageText != null)
         {
-            exitConfirmationMessageText.text = exitConfirmationMessage;
+            exitConfirmationMessageText.text = LocalizationManager.GetText("GameScene.ExitConfirmation.Message", exitConfirmationMessage);
+        }
+
+        if (exitYesButtonText != null)
+        {
+            exitYesButtonText.text = LocalizationManager.GetText("GameScene.ExitConfirmation.YesButton", exitYesButtonText.text);
+        }
+
+        if (exitNoButtonText != null)
+        {
+            exitNoButtonText.text = LocalizationManager.GetText("GameScene.ExitConfirmation.NoButton", exitNoButtonText.text);
         }
     }
 
@@ -1108,7 +1148,7 @@ public class GameManager : MonoBehaviour
         SaveWrapper wrapper = new SaveWrapper 
         {
             Soldiers = saveData,
-            NarrationLanguage = PlayerPrefs.GetString("NarrationLanguage", "English"), // Nyelv mentése
+            NarrationLanguage = LocalizationManager.CurrentLanguage, // Nyelv mentése
             SubtitlesEnabled = PlayerPrefs.GetInt("SubtitlesEnabled", 1) == 1,          // Felirat állapot mentése
             SubtitlesLanguage = PlayerPrefs.GetString("SubtitlesLanguage", "English")            // Felirat nyelv mentése
         };

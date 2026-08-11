@@ -14,26 +14,54 @@ public class CharacterSelector : MonoBehaviour
     public class CharacterData
     {
         public Sprite image;
-        public string description;
-        public AudioClip narrationClip;
+        public string englishDescription;
+        public string hungarianDescription;
+        public AudioClip englishNarrationClip;
+        public AudioClip hungarianNarrationClip;
     }
 
     public CharacterData[] characters;
     private int currentCharacterIndex = -1;
 
+    private static string GetLocalizedDescription(CharacterData data)
+    {
+        if (LocalizationManager.CurrentLanguage == "Hungarian" && !string.IsNullOrEmpty(data.hungarianDescription))
+        {
+            return data.hungarianDescription;
+        }
+
+        return data.englishDescription;
+    }
+
+    private static AudioClip GetLocalizedNarrationClip(CharacterData data)
+    {
+        if (LocalizationManager.CurrentLanguage == "Hungarian" && data.hungarianNarrationClip != null)
+        {
+            return data.hungarianNarrationClip;
+        }
+
+        return data.englishNarrationClip;
+    }
+
     public void SelectCharacter(int index)
     {
         currentCharacterIndex = index;
         characterImage.sprite = characters[index].image;
-        characterDescription.text = characters[index].description;
+        characterDescription.text = GetLocalizedDescription(characters[index]);
         characterInfoPanel.SetActive(true);
     }
 
     public void PlayNarration()
     {
-        if (currentCharacterIndex >= 0 && characters[currentCharacterIndex].narrationClip != null)
+        if (currentCharacterIndex < 0)
         {
-            narrationSource.clip = characters[currentCharacterIndex].narrationClip;
+            return;
+        }
+
+        AudioClip clip = GetLocalizedNarrationClip(characters[currentCharacterIndex]);
+        if (clip != null)
+        {
+            narrationSource.clip = clip;
             narrationSource.Play();
         }
     }
