@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 42813f604f020954cbf7174987196655
+guid: 2d8cd73ac25bdec4ab96d78e38c11cc6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 297761703447499198
-    second: enemy_0
+      213: 4600190765878652158
+    second: death_mark_0
+  - first:
+      213: -8843430956673176166
+    second: death_mark_1
+  - first:
+      213: -9197959105207270422
+    second: death_mark_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +103,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy_0
+      name: death_mark_0
       rect:
         serializedVersion: 2
-        x: 119
-        y: 0
-        width: 559
-        height: 419
+        x: 5
+        y: 56
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eb114b111bcd12400800000000000000
-      internalID: 297761703447499198
+      spriteID: efcaa33f02927df30800000000000000
+      internalID: 4600190765878652158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_mark_1
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 7
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9d6dcf3662d54580800000000000000
+      internalID: -8843430956673176166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_mark_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 49
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae30d8b3de84a5080800000000000000
+      internalID: -9197959105207270422
       vertices: []
       indices: 
       edges: []
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      enemy_0: 297761703447499198
+      death_mark_0: 4600190765878652158
+      death_mark_1: -8843430956673176166
+      death_mark_2: -9197959105207270422
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

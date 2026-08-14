@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
+using UnityEngine.Localization.Tables;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
 public static class LocalizationManager
@@ -39,7 +40,8 @@ public static class LocalizationManager
         { "Settings.SubtitlesLanguageLabel", new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { { "English", "Subtitles Language" }, { "Hungarian", "Felirat nyelve" } } },
         { "Settings.SubtitlesLanguageButton.EnglishHungarian", new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { { "English", "    <b>English</b> / Hungarian" }, { "Hungarian", "<b>Angol</b> / Magyar" } } },
         { "Settings.SubtitlesLanguageButton.HungarianEnglish", new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { { "English", "   English / <b>Hungarian</b>" }, { "Hungarian", "Angol / <b>Magyar</b>" } } },
-        { "Settings.BackButton", new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { { "English", "Back" }, { "Hungarian", "Vissza" } } }
+        { "Settings.BackButton", new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { { "English", "Back" }, { "Hungarian", "Vissza" } } },
+        { "GameScene.NarrationComplete.Message", new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) { { "English", "You have listened to {0}'s story." }, { "Hungarian", "Végighallgattad {0} történetét." } } }
     };
 
     public static void Initialize()
@@ -118,6 +120,12 @@ public static class LocalizationManager
         if (!LocalizationSettings.InitializationOperation.IsDone)
         {
             LocalizationSettings.InitializationOperation.WaitForCompletion();
+        }
+
+        StringTable table = LocalizationSettings.StringDatabase.GetTable(StringTableName);
+        if (table == null || table.GetEntry(key) == null)
+        {
+            return null;
         }
 
         AsyncOperationHandle<string> handle = LocalizationSettings.StringDatabase.GetLocalizedStringAsync(StringTableName, key);

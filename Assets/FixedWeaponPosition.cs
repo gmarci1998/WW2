@@ -1,7 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 
 public class FixedWeaponPosition : MonoBehaviour
 {
@@ -66,9 +64,9 @@ public class FixedWeaponPosition : MonoBehaviour
     [SerializeField] private AudioSource weaponRaiseSound;
     [SerializeField] private Animator sparkAnimator;
 
-    private List<Transform> enemySoldiers = new List<Transform>();
     private SpriteRenderer spriteRenderer;
     private SpriteRenderer restSpriteRenderer;
+    private CanvasGroup openingCanvasGroup;
 
     [SerializeField] private Sprite hungarianReloadWeapon;
     [SerializeField] private Sprite russianReloadWeapon;
@@ -96,8 +94,6 @@ public class FixedWeaponPosition : MonoBehaviour
     private Vector3 originalScale;
     private bool isKickbacking = false;
 
-    List<Transform> GetEnemies => FindObjectsByType<SoldierMovement>(FindObjectsSortMode.None).Select(s => s.transform).ToList();
-
     void Awake()
     {
         Instance = this;
@@ -108,7 +104,6 @@ public class FixedWeaponPosition : MonoBehaviour
     void Start()
 {
     if (cam == null) cam = Camera.main;
-    enemySoldiers = GameManager.Instance.GetEnemies();
     spriteRenderer = GetComponent<SpriteRenderer>();
     originalScale = transform.localScale;
     initialWeaponPosition = transform.position;
@@ -139,12 +134,15 @@ public class FixedWeaponPosition : MonoBehaviour
     void Update()
     {
         bool isCurrentlyHiding = GameManager.Instance != null && GameManager.Instance.IsHiding();
-        Debug.Log("IsHiding: " + isCurrentlyHiding );
 
         if (Input.GetMouseButtonDown(0) && !isActive && GameManager.Instance.CanShoot())
         {
-            Debug.Log("!isActive: " + !isActive + " CanShoot: " + GameManager.Instance.CanShoot() + " CanvasAlpha: " + GameManager.Instance.canvas_opening.GetComponent<CanvasGroup>().alpha);
-            if (!isActive && GameManager.Instance.CanShoot() && GameManager.Instance.canvas_opening.GetComponent<CanvasGroup>().alpha == 0f)
+            if (openingCanvasGroup == null && GameManager.Instance.canvas_opening != null)
+            {
+                openingCanvasGroup = GameManager.Instance.canvas_opening.GetComponent<CanvasGroup>();
+            }
+
+            if (!isActive && GameManager.Instance.CanShoot() && openingCanvasGroup != null && openingCanvasGroup.alpha == 0f)
             {
                 StartCoroutine(FireEffect());
                 CheckIfEnemyGotShot();
@@ -935,14 +933,16 @@ public class FixedWeaponPosition : MonoBehaviour
 
     void CheckIfEnemyGotShot()
     {
-        foreach (Transform enemy in GetEnemies)
+        SoldierMovement[] enemies = FindObjectsByType<SoldierMovement>(FindObjectsSortMode.None);
+
+        foreach (SoldierMovement soldier in enemies)
         {
-            if (enemy == null) continue;
-            var soldier = enemy.GetComponent<SoldierMovement>();
+            if (soldier == null) continue;
             if (soldier.IsDead || !soldier.IsKillable) continue;
+            Transform enemy = soldier.transform;
             float distance = Vector3.Distance(
                 new Vector3(fireSpark.transform.position.x, fireSpark.transform.position.y, 0f),
-                new Vector3(enemy.transform.position.x, fireSpark.transform.position.y, 0f)
+                new Vector3(enemy.position.x, fireSpark.transform.position.y, 0f)
             );
             if (distance < 0.3)
             {

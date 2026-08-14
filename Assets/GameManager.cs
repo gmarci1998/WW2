@@ -43,6 +43,27 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject flagRus;
     [SerializeField] GameObject license;
 
+    [Tooltip("Az a fedezék Sprite Renderer-e (a \"Ground (1)\" objektum), amelyiken a kép a szovjet/magyar oldal szerint vált.")]
+    [SerializeField] private SpriteRenderer ruinsCoverRenderer;
+    [Tooltip("Ezt a képet mutassa a ruinsCoverRenderer szovjet oldalon (pl. ruins_1_0).")]
+    [SerializeField] private Sprite sovietRuinsSprite;
+    [Tooltip("Ezt a képet mutassa a ruinsCoverRenderer magyar oldalon (pl. ruins_2_0).")]
+    [SerializeField] private Sprite hungarianRuinsSprite;
+    [Tooltip("A sovietRuinsSprite egységes (uniform) skálája - a két kép mérete eltér, enélkül váltáskor megugrana/összezsugorodna.")]
+    [SerializeField] private float sovietRuinsScale = 0.31095874f;
+    [Tooltip("A hungarianRuinsSprite egységes (uniform) skálája.")]
+    [SerializeField] private float hungarianRuinsScale = 1f;
+
+    [Tooltip("A \"Fog\" objektum Sprite Renderer-e - magyar oldalon megfordítjuk a mozgása irányát.")]
+    [SerializeField] private SpriteRenderer fogRenderer;
+    private Vector4 fogBaseSpeed;
+    private Vector4 fogBaseSpeed2;
+
+    [Tooltip("A TopView térképen a magyar oldalhoz tartozó X jelölők szülő objektuma (gyerekei: az egyes X pozíciók).")]
+    [SerializeField] private RectTransform hungarianXGroup;
+    [Tooltip("A TopView térképen a szovjet oldalhoz tartozó X jelölők szülő objektuma (gyerekei: az egyes X pozíciók).")]
+    [SerializeField] private RectTransform sovietXGroup;
+
     [Header("Exit Confirmation UI")]
     public GameObject exitConfirmationPanel;
     public Button exitConfirmButton;
@@ -57,10 +78,21 @@ public class GameManager : MonoBehaviour
     [Header("Opening Caption UI")]
     public TextMeshProUGUI openingCaptionText;
 
+    [Header("Narration Complete Transition")]
+    [Tooltip("Ennyi másodperc alatt jelenik meg fokozatosan az átvezető, miután végighallgattunk egy narrációt.")]
+    [SerializeField] private float narrationCompleteFadeInDuration = 3f;
+    [Tooltip("Miután teljesen látszik, ennyi másodpercig marad még kint az átvezető, mielőtt a következő katonára váltanánk.")]
+    [SerializeField] private float narrationCompleteHoldDuration = 3f;
+    private bool narrationCompleteUIBuilt = false;
+    private CanvasGroup narrationCompleteCanvasGroup;
+    private Image narrationCompletePortraitImage;
+    private TextMeshProUGUI narrationCompleteText;
+
     [SerializeField] private AudioSource playerHitAudio;
     [SerializeField] private AudioSource playerMissAudio;
     [SerializeField] private AudioSource playerDeathAudio;
     [SerializeField] private AudioSource gunshothAudio;
+    [SerializeField] private AudioSource sniperGunshotAudio;
 
 
     private Vector3 startPos;
@@ -68,7 +100,7 @@ public class GameManager : MonoBehaviour
     public GameObject middlegroundSprite;
     public GameObject canvas_opening;    
     private List<Transform> enemySoldiers = new List<Transform>();
-    private List<Transform> enemyMovers = new List<Transform>();
+    private List<CursorMovementEnemy> enemyMovers = new List<CursorMovementEnemy>();
 
     
     private Vector3 licenseViewportOffset = new Vector3(0.075f, 0.1f, 8f);
@@ -90,6 +122,15 @@ public class GameManager : MonoBehaviour
 
     private bool isLock = false;
     private int maxPlayerLives = 3;
+
+    [Tooltip("Ennyi másodpercig kell sértetlennek maradnia a játékosnak ahhoz, hogy plusz 1 életet kapjon.")]
+    [SerializeField] private float lifeRegenDelay = 30f;
+    private Coroutine lifeRegenCoroutine;
+
+    private SpriteRenderer licenseSpriteRenderer;
+    private SpriteRenderer shatterSpriteRenderer;
+    private bool sideVisualsApplied = false;
+    private bool appliedHungarianSide;
 
     public static GameManager Instance { get; private set; }
     
@@ -140,7 +181,88 @@ public class GameManager : MonoBehaviour
         if (playerLives <= 0)
         {
             PlayerDeath();
+            return;
         }
+
+        if (lifeRegenCoroutine != null)
+        {
+            StopCoroutine(lifeRegenCoroutine);
+        }
+        lifeRegenCoroutine = StartCoroutine(RegenerateLifeAfterDelay());
+    }
+
+    IEnumerator RegenerateLifeAfterDelay()
+    {
+        float elapsed = 0f;
+
+        while (elapsed < lifeRegenDelay)
+        {
+            if (!isHiding)
+            {
+                elapsed += Time.deltaTime;
+            }
+
+            yield return null;
+        }
+
+        lifeRegenCoroutine = null;
+
+        if (isPlayerDead || playerLives >= maxPlayerLives)
+        {
+            yield break;
+        }
+
+        playerLives++;
+        StartCoroutine(PlayLifeRegenPortraitAnimation());
+    }
+
+    IEnumerator PlayLifeRegenPortraitAnimation()
+    {
+        if (shatterSpriteRenderer == null)
+        {
+            shatterSpriteRenderer = license.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        }
+
+        float startAlpha = shatterSpriteRenderer.color.a;
+        float targetAlpha = playerLives == maxPlayerLives
+            ? 0f
+            : 1f / (System.Math.Max(playerLives, 0) + 1f);
+
+        Transform portraitTransform = license.transform;
+        Vector3 baseScale = portraitTransform.localScale;
+        Vector3 pulseScale = baseScale * 1.15f;
+
+        float pulseDuration = 0.3f;
+        float elapsed = 0f;
+
+        while (elapsed < pulseDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / pulseDuration);
+
+            portraitTransform.localScale = Vector3.Lerp(baseScale, pulseScale, t);
+
+            Color color = shatterSpriteRenderer.color;
+            color.a = Mathf.Lerp(startAlpha, targetAlpha, t);
+            shatterSpriteRenderer.color = color;
+
+            yield return null;
+        }
+
+        elapsed = 0f;
+        while (elapsed < pulseDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / pulseDuration);
+            portraitTransform.localScale = Vector3.Lerp(pulseScale, baseScale, t);
+            yield return null;
+        }
+
+        portraitTransform.localScale = baseScale;
+
+        Color finalColor = shatterSpriteRenderer.color;
+        finalColor.a = targetAlpha;
+        shatterSpriteRenderer.color = finalColor;
     }
         public void PlayPlayerHitSound()
     {
@@ -166,7 +288,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void PlaySniperGunshotSound()
+    {
+        if (sniperGunshotAudio != null)
+        {
+            sniperGunshotAudio.Play();
+        }
+    }
+
     void Awake() {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(Instance.gameObject);
+        }
+
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
@@ -330,12 +465,27 @@ public class GameManager : MonoBehaviour
         GameObject[] enemyM = GameObject.FindGameObjectsWithTag("EnemyMover");
         foreach (GameObject enemy in enemyM)
         {
-            enemyMovers.Add(enemy.transform);
+            CursorMovementEnemy mover = enemy.GetComponent<CursorMovementEnemy>();
+            if (mover != null)
+            {
+                enemyMovers.Add(mover);
+            }
         }
 
         PositionLicense();
 
-        StartCoroutine(SceneStart()); 
+        if (fogRenderer == null)
+        {
+            fogRenderer = FindSceneGameObject("Fog")?.GetComponent<SpriteRenderer>();
+        }
+
+        if (fogRenderer != null)
+        {
+            fogBaseSpeed = fogRenderer.material.GetVector("Speed");
+            fogBaseSpeed2 = fogRenderer.material.GetVector("Speed_2");
+        }
+
+        StartCoroutine(SceneStart());
 
         InitializeExitConfirmationUI();
         licenseInitialized = true;
@@ -453,8 +603,6 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        Debug.Log("Player élete: " + playerLives);
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (exitConfirmationVisible)
@@ -467,7 +615,6 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        Debug.Log("Player élete: " + isPlayerDead);
         if(isPlayerDead) {
             //license.SetActive(false); 
         }else{
@@ -480,11 +627,6 @@ public class GameManager : MonoBehaviour
         }
 
         UpdateRadioNoiseVolume();
-
-        if (license != null && cam != null) {
-            PositionLicense();
-        }
-
 
         if (camMoving) {
             camLerpT += Time.deltaTime * camLerpSpeed;
@@ -503,8 +645,11 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        float normalizedX = (Input.mousePosition.x / Screen.width - 0.5f) * 2f * parallaxFactorX;
-        float normalizedY = (Input.mousePosition.y / Screen.height - 0.5f) * 2f * parallaxFactorY;
+        Vector3 mousePos = Input.mousePosition;
+        float rawMouseX = (mousePos.x / Screen.width - 0.5f) * 2f;
+        float rawMouseY = (mousePos.y / Screen.height - 0.5f) * 2f;
+        float normalizedX = rawMouseX * parallaxFactorX;
+        float normalizedY = rawMouseY * parallaxFactorY;
 
         Vector3 targetPos = startPos + new Vector3(normalizedX, normalizedY, 0);
         transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * 10f);
@@ -525,24 +670,43 @@ public class GameManager : MonoBehaviour
             );
         }
 
-        foreach (Transform enemy in enemyMovers) {
-            if (enemy == null) continue;  
-            enemy.GetComponent<CursorMovementEnemy>().SetNormalized((Input.mousePosition.x / Screen.width - 0.5f) * 2f, (Input.mousePosition.y / Screen.height - 0.5f) * 2f);
+        foreach (CursorMovementEnemy mover in enemyMovers) {
+            if (mover == null) continue;
+            mover.SetNormalized(rawMouseX, rawMouseY);
         }
 
-        if(hungarianSide){
-            background.sprite = hungarianBackground;
-            flagHun.active = true;
-            flagRus.active = false;
-            //middleground.sprite = hungarianMiddleground;
-        }else{
-            background.sprite = russianBackground;
-            flagHun.active = false;
-            flagRus.active = true;
-            //middleground.sprite = russianMiddleground;
+        if (!sideVisualsApplied || appliedHungarianSide != hungarianSide)
+        {
+            appliedHungarianSide = hungarianSide;
+            sideVisualsApplied = true;
+
+            if (hungarianSide) {
+                background.sprite = hungarianBackground;
+                flagHun.SetActive(true);
+                flagRus.SetActive(false);
+                if (ruinsCoverRenderer != null) {
+                    ruinsCoverRenderer.sprite = hungarianRuinsSprite;
+                    ruinsCoverRenderer.transform.localScale = new Vector3(hungarianRuinsScale, hungarianRuinsScale, 1f);
+                }
+                //middleground.sprite = hungarianMiddleground;
+            } else {
+                background.sprite = russianBackground;
+                flagHun.SetActive(false);
+                flagRus.SetActive(true);
+                if (ruinsCoverRenderer != null) {
+                    ruinsCoverRenderer.sprite = sovietRuinsSprite;
+                    ruinsCoverRenderer.transform.localScale = new Vector3(sovietRuinsScale, sovietRuinsScale, 1f);
+                }
+                //middleground.sprite = russianMiddleground;
+            }
+
+            if (fogRenderer != null)
+            {
+                float fogDirection = hungarianSide ? -1f : 1f;
+                fogRenderer.material.SetVector("Speed", fogBaseSpeed * fogDirection);
+                fogRenderer.material.SetVector("Speed_2", fogBaseSpeed2 * fogDirection);
+            }
         }
-
-
 
         PositionLicense();
 
@@ -875,6 +1039,29 @@ public class GameManager : MonoBehaviour
     public bool IsHiding() {
         return isHiding;
     }
+    public float GetSoldierHitChance()
+    {
+        int listenedCount = CountListenedNarrations();
+
+        return listenedCount switch
+        {
+            0 => 0.3f,
+            1 => 0.4f,
+            2 => 0.5f,
+            3 => 0.6f,
+            4 => 0.7f,
+            5 => 0.8f,
+            6 => 0.9f,
+            _ => 1f, 
+        };
+    }
+
+    int CountListenedNarrations()
+    {
+        int hungarianCount = HungarianSoldiers?.Count(soldier => soldier.isOpened) ?? 0;
+        int russianCount = RussianSoldiers?.Count(soldier => soldier.isOpened) ?? 0;
+        return hungarianCount + russianCount;
+    }
 
     public void PlayerDeath()
     {
@@ -902,6 +1089,12 @@ public class GameManager : MonoBehaviour
         {
             StopCoroutine(resumeNarrationCoroutine);
             resumeNarrationCoroutine = null;
+        }
+
+        if (lifeRegenCoroutine != null)
+        {
+            StopCoroutine(lifeRegenCoroutine);
+            lifeRegenCoroutine = null;
         }
 
         StopNarrationPauseWarningAudio();
@@ -957,14 +1150,35 @@ public class GameManager : MonoBehaviour
         // Enable death gameobject
         // Fade in the death image, 0.5f, death images is the first child of the death gameobject
         // Slow zoom out, 2s, parallel to the fade in, zooming happens by scaling the image, it should start from x=5, y=5, z=1, and end at x=1, y=1, z=1
-        Transform deathImageTransform = death.transform.GetChild(0);
+        RectTransform deathImageTransform = death.transform.GetChild(0) as RectTransform;
         Image deathSprite = deathImageTransform.GetComponent<Image>() ?? death.GetComponent<Image>();
         death.SetActive(true);
         Vector3 zoomOutStartScale = new Vector3(5f, 5f, 1f);
         Vector3 zoomOutEndScale = Vector3.one;
         float fadeInDuration = 1.5f;
         float zoomOutDuration = 1.5f;
+
+        RectTransform startGroup = hungarianSide ? hungarianXGroup : sovietXGroup;
+        RectTransform endGroup = hungarianSide ? sovietXGroup : hungarianXGroup;
+        RectTransform startMarker = PickRandomChildMarker(startGroup);
+        RectTransform endMarker = PickRandomChildMarker(endGroup);
+        
+        Vector2 startAnchor = startMarker != null ? (Vector2)deathImageTransform.InverseTransformPoint(startMarker.position) : Vector2.zero;
+        Vector2 endAnchor = endMarker != null ? (Vector2)deathImageTransform.InverseTransformPoint(endMarker.position) : Vector2.zero;
+
+        Vector2 startOffsetAtMaxZoom = -startAnchor * zoomOutStartScale.x;
+        Vector2 endOffsetAtMaxZoom = -endAnchor * zoomOutStartScale.x;
+        Vector2 neutralOffset = Vector2.zero;
+
+        SetAllMarkersVisible(hungarianXGroup, false);
+        SetAllMarkersVisible(sovietXGroup, false);
+        if (startMarker != null)
+        {
+            startMarker.gameObject.SetActive(true);
+        }
+
         deathImageTransform.localScale = zoomOutStartScale;
+        deathImageTransform.anchoredPosition = startOffsetAtMaxZoom;
         if (deathSprite != null)
         {
             Color c = deathSprite.color;
@@ -976,7 +1190,9 @@ public class GameManager : MonoBehaviour
         {
             elapsed += Time.deltaTime;
             float zoomT = Mathf.Clamp01(elapsed / zoomOutDuration);
-            deathImageTransform.localScale = Vector3.Lerp(zoomOutStartScale, zoomOutEndScale, zoomT);
+            float scale = Mathf.Lerp(zoomOutStartScale.x, zoomOutEndScale.x, zoomT);
+            deathImageTransform.localScale = new Vector3(scale, scale, 1f);
+            deathImageTransform.anchoredPosition = Vector2.Lerp(startOffsetAtMaxZoom, neutralOffset, zoomT);
 
             if (deathSprite != null)
             {
@@ -989,6 +1205,7 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
         deathImageTransform.localScale = zoomOutEndScale;
+        deathImageTransform.anchoredPosition = neutralOffset; 
         if (deathSprite != null)
         {
             Color c = deathSprite.color;
@@ -1013,7 +1230,9 @@ public class GameManager : MonoBehaviour
             elapsed += Time.deltaTime;
             float t = Mathf.Clamp01(elapsed / zoomInDuration);
 
-            deathImageTransform.localScale = Vector3.Lerp(zoomOutEndScale, zoomOutStartScale, t);
+            float scale = Mathf.Lerp(zoomOutEndScale.x, zoomOutStartScale.x, t);
+            deathImageTransform.localScale = new Vector3(scale, scale, 1f);
+            deathImageTransform.anchoredPosition = Vector2.Lerp(neutralOffset, endOffsetAtMaxZoom, t);
 
             if (deathSprite != null)
             {
@@ -1043,71 +1262,163 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
     }
 
-    void SetShatterPortraitAlpha(int lives)
+    RectTransform PickRandomChildMarker(RectTransform group)
     {
-        var shatter = license.transform.GetChild(0);
+        if (group == null || group.childCount == 0)
+        {
+            return null;
+        }
 
-        if (shatter == null)
+        return group.GetChild(Random.Range(0, group.childCount)) as RectTransform;
+    }
+
+    void SetAllMarkersVisible(RectTransform group, bool visible)
+    {
+        if (group == null)
         {
             return;
         }
 
-        SpriteRenderer spriteRenderer = shatter.GetComponent<SpriteRenderer>();
-        var color = spriteRenderer.color;
+        for (int i = 0; i < group.childCount; i++)
+        {
+            group.GetChild(i).gameObject.SetActive(visible);
+        }
+    }
+
+    void SetShatterPortraitAlpha(int lives)
+    {
+        if (shatterSpriteRenderer == null)
+        {
+            shatterSpriteRenderer = license.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        }
+
+        var color = shatterSpriteRenderer.color;
 
         if(playerLives == maxPlayerLives)
         {
             color.a = 0f;
-            spriteRenderer.color = color;
+            shatterSpriteRenderer.color = color;
             Debug.Log($"Color alpha set to 0 for {currentSoldier.Name} with {playerLives} lives");
         }
         else
         {
             color.a = 1f / (System.Math.Max(playerLives, 0) + 1f);
-            spriteRenderer.color = color;
+            shatterSpriteRenderer.color = color;
             Debug.Log($"Color alpha set to {color.a} for {currentSoldier.Name} with {playerLives} lives");
         }
+    }
+
+    void BuildNarrationCompleteUI()
+    {
+        if (narrationCompleteUIBuilt)
+        {
+            return;
+        }
+        narrationCompleteUIBuilt = true;
+
+        GameObject canvasGO = new GameObject("Canvas-NarrationComplete");
+        Canvas canvas = canvasGO.AddComponent<Canvas>();
+        canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        canvas.sortingOrder = 500;
+        canvasGO.AddComponent<CanvasScaler>();
+        canvasGO.AddComponent<GraphicRaycaster>();
+
+        narrationCompleteCanvasGroup = canvasGO.AddComponent<CanvasGroup>();
+        narrationCompleteCanvasGroup.alpha = 0f;
+        narrationCompleteCanvasGroup.interactable = false;
+        narrationCompleteCanvasGroup.blocksRaycasts = false;
+
+        GameObject backgroundGO = new GameObject("Background");
+        backgroundGO.transform.SetParent(canvasGO.transform, false);
+        Image background = backgroundGO.AddComponent<Image>();
+        background.color = Color.black;
+        RectTransform backgroundRect = background.rectTransform;
+        backgroundRect.anchorMin = Vector2.zero;
+        backgroundRect.anchorMax = Vector2.one;
+        backgroundRect.offsetMin = Vector2.zero;
+        backgroundRect.offsetMax = Vector2.zero;
+
+        GameObject portraitGO = new GameObject("Portrait");
+        portraitGO.transform.SetParent(canvasGO.transform, false);
+        narrationCompletePortraitImage = portraitGO.AddComponent<Image>();
+        narrationCompletePortraitImage.preserveAspect = true;
+        RectTransform portraitRect = narrationCompletePortraitImage.rectTransform;
+        portraitRect.anchorMin = new Vector2(0.5f, 0.5f);
+        portraitRect.anchorMax = new Vector2(0.5f, 0.5f);
+        portraitRect.pivot = new Vector2(0.5f, 0.5f);
+        portraitRect.anchoredPosition = new Vector2(-220f, 0f);
+        portraitRect.sizeDelta = new Vector2(320f, 320f);
+
+        GameObject textGO = new GameObject("NarrationCompleteText");
+        textGO.transform.SetParent(canvasGO.transform, false);
+        narrationCompleteText = textGO.AddComponent<TextMeshProUGUI>();
+
+        if (openingCaptionText != null)
+        {
+            narrationCompleteText.font = openingCaptionText.font;
+            narrationCompleteText.fontSharedMaterial = openingCaptionText.fontSharedMaterial;
+        }
+
+        narrationCompleteText.color = Color.white;
+        narrationCompleteText.fontSize = 28f;
+        narrationCompleteText.alignment = TextAlignmentOptions.MidlineLeft;
+        narrationCompleteText.enableWordWrapping = true;
+
+        RectTransform textRect = narrationCompleteText.rectTransform;
+        textRect.anchorMin = new Vector2(0.5f, 0.5f);
+        textRect.anchorMax = new Vector2(0.5f, 0.5f);
+        textRect.pivot = new Vector2(0.5f, 0.5f);
+        textRect.anchoredPosition = new Vector2(150f, 0f);
+        textRect.sizeDelta = new Vector2(560f, 200f);
+
+        canvasGO.SetActive(false);
     }
 
     IEnumerator ChangeSoldier()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        SpriteRenderer spriteRenderer = death.GetComponent<SpriteRenderer>();
-        if (spriteRenderer == null)
+
+        BuildNarrationCompleteUI();
+
+        if (narrationCompletePortraitImage != null)
         {
-            yield break;
+            narrationCompletePortraitImage.sprite = currentSoldier?.Image;
         }
 
-        Color color = spriteRenderer.color;
-        float alpha = color.a;
-
-        while (alpha < 1f)
+        if (narrationCompleteText != null)
         {
-            alpha += Time.deltaTime / 2f; // 2 másodperc alatt növeli az átlátszóságot
-            color.a = Mathf.Clamp01(alpha);
-            spriteRenderer.color = color;
+            string messageTemplate = LocalizationManager.GetText(
+                "GameScene.NarrationComplete.Message",
+                "You have listened to {0}'s story.");
+            narrationCompleteText.text = string.Format(messageTemplate, currentSoldier?.Name);
+        }
+
+        narrationCompleteCanvasGroup.gameObject.SetActive(true);
+        narrationCompleteCanvasGroup.alpha = 0f;
+
+        float elapsed = 0f;
+        while (elapsed < narrationCompleteFadeInDuration)
+        {
+            elapsed += Time.deltaTime;
+            narrationCompleteCanvasGroup.alpha = Mathf.Clamp01(elapsed / narrationCompleteFadeInDuration);
             yield return null;
         }
-
-        yield return new WaitForSeconds(1f);
+        narrationCompleteCanvasGroup.alpha = 1f;
 
         EnemyManager.Instance.ResetAllEnemies();
 
         //hungarianSide = !hungarianSide; erre itt nincs szükség, mert a katonák váltogatása után is ugyanazon az oldalon maradunk
 
-        while (alpha > 0f)
-        {
-            alpha -= Time.deltaTime / 2f; // 2 másodperc alatt csökkenti az átlátszóságot
-            color.a = Mathf.Clamp01(alpha);
-            spriteRenderer.color = color;
-            yield return null;
-        }
+        yield return new WaitForSeconds(narrationCompleteHoldDuration);
+
+        narrationCompleteCanvasGroup.alpha = 0f;
+        narrationCompleteCanvasGroup.gameObject.SetActive(false);
+
         Cursor.lockState = CursorLockMode.Confined;
         ChooseSoldier();
         isPlayerDead = false;
         playerLives = 3;
-
-        yield return new WaitForSeconds(1f);
+        SetShatterPortraitAlpha(playerLives);
     }
 
     
@@ -1115,20 +1426,20 @@ public class GameManager : MonoBehaviour
     void PositionLicense()
 {
     if (license == null || cam == null || !licenseInitialized) return;
-    
-    Vector3 licenseOffset = licenseViewportOffset;
-    
-    if (isHiding) {
-        licenseOffset.y = 0.1f;  // Hiding: 15% alulról (magasabb)
-    } else {
-        licenseOffset.y = 0.1f;  // Normál: 25% alulról (még magasabb)
+
+    if (licenseSpriteRenderer == null)
+    {
+        licenseSpriteRenderer = license.GetComponent<SpriteRenderer>();
     }
-    
+
+    Vector3 licenseOffset = licenseViewportOffset;
+    licenseOffset.y = 0.1f;
+
     Vector3 worldPos = cam.ViewportToWorldPoint(licenseOffset);
     license.transform.position = worldPos;
-    
-    license.GetComponent<SpriteRenderer>().sprite = currentSoldier?.Image;
-    license.GetComponent<SpriteRenderer>().sortingOrder = 100;
+
+    licenseSpriteRenderer.sprite = currentSoldier?.Image;
+    licenseSpriteRenderer.sortingOrder = 100;
 }
 
 

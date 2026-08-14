@@ -98,7 +98,6 @@ GameObject:
   - component: {fileID: 1124048124807032749}
   - component: {fileID: 8693092511967742174}
   - component: {fileID: 2553884087071905679}
-  - component: {fileID: 1657631722436741506}
   m_Layer: 0
   m_Name: EnemySoldier
   m_TagString: EnemySoldier
@@ -166,7 +165,7 @@ SpriteRenderer:
   m_SortingLayerID: -956780627
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 920290439808299714, guid: 273701e740a8ec64a8f49105996a5a76, type: 3}
+  m_Sprite: {fileID: 6457080526365527131, guid: 76fae2cda0de3384b9b41d964a99a264, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -187,109 +186,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ca84ca35d76a144ea7aa21631ca3a64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   enemyParallaxX: 8
   enemyParallaxY: 0.2
   moveSpeed: 2
   startingHeight: 0
   maximumHeight: 3
-  dying: {fileID: 1657631722436741506}
   timeBeforeFirstAction: 3
---- !u!82 &1657631722436741506
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8772047326046934785}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b60f2a891bab64f4db504ca18416e05d, type: 3}
-  m_Resource: {fileID: 8300000, guid: b60f2a891bab64f4db504ca18416e05d, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  frames:
+  - {fileID: 6457080526365527131, guid: 76fae2cda0de3384b9b41d964a99a264, type: 3}
+  - {fileID: -2645993232879205138, guid: 76fae2cda0de3384b9b41d964a99a264, type: 3}
+  - {fileID: 7317081455886813277, guid: 76fae2cda0de3384b9b41d964a99a264, type: 3}
+  - {fileID: 7301229493634203488, guid: 76fae2cda0de3384b9b41d964a99a264, type: 3}
+  - {fileID: -5219499076325597978, guid: 76fae2cda0de3384b9b41d964a99a264, type: 3}
+  - {fileID: -997686283776520110, guid: 76fae2cda0de3384b9b41d964a99a264, type: 3}
+  - {fileID: -4275191514074207463, guid: 76fae2cda0de3384b9b41d964a99a264, type: 3}
+  - {fileID: 6281359221948001162, guid: 76fae2cda0de3384b9b41d964a99a264, type: 3}
+  - {fileID: -560196442516759774, guid: 76fae2cda0de3384b9b41d964a99a264, type: 3}
+  - {fileID: 218282468245210989, guid: 76fae2cda0de3384b9b41d964a99a264, type: 3}
+  frameDuration: 0.12
+  deathFrameDuration: 0.15
