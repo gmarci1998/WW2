@@ -8,8 +8,11 @@ public class MusicManager : MonoBehaviour
     [SerializeField] private AudioClip hoverSound;
     [SerializeField] private AudioClip paperSound;
     [SerializeField] private AudioClip paperClosedSound;
+    [SerializeField] private AudioClip menuMusicTrack1;
+    [SerializeField] private AudioClip menuMusicTrack2;
 
     private bool canPlayHover = true;
+    private int currentMenuMusicTrack;
 
     void Awake()
     {
@@ -21,6 +24,9 @@ public class MusicManager : MonoBehaviour
         if (musicSource != null)
         {
             musicSource.spatialBlend = 0f;
+            musicSource.loop = false;
+            currentMenuMusicTrack = Random.Range(0, 2);
+            PlayCurrentMenuMusicTrack();
         }
 
         if (sfxSource == null)
@@ -30,6 +36,27 @@ public class MusicManager : MonoBehaviour
 
         sfxSource.playOnAwake = false;
         sfxSource.spatialBlend = 0f;
+    }
+
+    void Update()
+    {
+        if (musicSource != null && musicSource.clip != null && !musicSource.isPlaying)
+        {
+            currentMenuMusicTrack = 1 - currentMenuMusicTrack;
+            PlayCurrentMenuMusicTrack();
+        }
+    }
+
+    private void PlayCurrentMenuMusicTrack()
+    {
+        AudioClip track = currentMenuMusicTrack == 0 ? menuMusicTrack1 : menuMusicTrack2;
+        if (track == null)
+        {
+            return;
+        }
+
+        musicSource.clip = track;
+        musicSource.Play();
     }
 
     public void FadeOutMusic()

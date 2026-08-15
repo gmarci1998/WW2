@@ -419,6 +419,7 @@ public class MenuManager : MonoBehaviour
             language = PlayerPrefs.GetString(LocalizationManager.MenuLanguagePrefKey, "English");
             subtitlesEnabled = PlayerPrefs.GetInt("SubtitlesEnabled", 1) == 1;
             subtitlesLanguage = PlayerPrefs.GetString("SubtitlesLanguage", "English");
+            UpdateCharacterButtonsVisuals();
             return;
         }
 
