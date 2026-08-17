@@ -55,27 +55,27 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1957535749
-    m_Localized: "Programoz\xE1s"
+    m_Localized: "Programoz\xF3"
     m_Metadata:
       m_Items: []
   - m_Id: 1957535750
-    m_Localized: "M\u0171v\xE9szet \xE9s vizu\xE1lis elemek"
+    m_Localized: "Vizu\xE1lis Rendez\u0151"
     m_Metadata:
       m_Items: []
   - m_Id: 1957535751
-    m_Localized: "Portr\xE9k \xE9s programoz\xE1s"
+    m_Localized: "Programoz\xF3 \xE9s Grafikus"
     m_Metadata:
       m_Items: []
   - m_Id: 1957535752
-    m_Localized: "Fel\xFClet diz\xE1jn"
+    m_Localized: "UI Tervez\u0151"
     m_Metadata:
       m_Items: []
   - m_Id: 1957535753
-    m_Localized: "\xCDr\xE1s \xE9s narr\xE1ci\xF3"
+    m_Localized: "\xCDr\xF3 \xE9s Szinkronrendez\u0151"
     m_Metadata:
       m_Items: []
   - m_Id: 1957535754
-    m_Localized: "Hangm\xE9rn\xF6ki munka"
+    m_Localized: "Hangm\xE9rn\xF6k"
     m_Metadata:
       m_Items: []
   - m_Id: 1957535755
@@ -164,9 +164,167 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 253860416167936
-    m_Localized: "\u201CIn the bleak mid-winter\nFrosty wind made moan\nEarth stood
-      hard as iron\nWater like a stone;\nSnow had fallen, snow on snow,\nSnow on
-      snow,\nIn the bleak mid-winter\nLong ago.\u201D - Christina Rossetti"
+    m_Localized: "\u201EA zord t\xE9lk\xF6z\xE9pen\nFagyos sz\xE9l jajgatott,\nVask\xE9nt
+      \xE1llt a kem\xE9ny f\xF6ld,\nK\u0151v\xE9 fagyott a v\xEDz;\nH\xF3 hullott,
+      h\xF3ra h\xF3,\nH\xF3ra h\xF3,\nA zord t\xE9lk\xF6z\xE9pen,\nR\xE9ges-r\xE9gen.\u201D
+      - Christina Rossetti"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433111830528
+    m_Localized: "Egy \xE9let"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688128
+    m_Localized: "Egy \xE9let."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688129
+    m_Localized: "Mib\u0151l \xE1ll egyetlen \xE9let"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688130
+    m_Localized: "Tov\xE1bb"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688131
+    m_Localized: 80
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688132
+    m_Localized: "K\xF6r\xFClbel\xFCl 80 sz\xFClet\xE9snap."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688133
+    m_Localized: 960
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688134
+    m_Localized: "K\xF6r\xFClbel\xFCl 960 h\xF3nap."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688135
+    m_Localized: 1000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688136
+    m_Localized: "K\xF6r\xFClbel\xFCl 1000 telihold. Ezer \xE9jszaka, amikor visszat\xE9rt
+      a hold, ak\xE1r \xE9szrevette valaki, ak\xE1r nem."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688137
+    m_Localized: 4000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688138
+    m_Localized: "K\xF6r\xFClbel\xFCl 4000 h\xE9tv\xE9ge. Azok a napok, amelyekr\u0151l
+      azt rem\xE9lted, hogy \xF6r\xF6kk\xE9 tartanak majd."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688139
+    m_Localized: 7000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688140
+    m_Localized: "K\xF6r\xFClbel\xFCl 7000 dal, amit egyn\xE9l t\xF6bbsz\xF6r hallottunk.
+      Dalok a gyerekkorb\xF3l. Dalok konyh\xE1kb\xF3l, r\xE1di\xF3kb\xF3l, t\xE1ncmulats\xE1gokb\xF3l,
+      temet\xE9sekr\u0151l \xE9s laktany\xE1kb\xF3l."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688141
+    m_Localized: 10 000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688142
+    m_Localized: "K\xF6r\xFClbel\xFCl 10 000 ember, akivel tal\xE1lkozunk f\xF6ldi
+      napjaink sor\xE1n. Bar\xE1tok, idegenek, tan\xE1rok, szomsz\xE9dok, koll\xE9g\xE1k,
+      ellens\xE9gek \xE9s szerelmek."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688143
+    m_Localized: 15 000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688144
+    m_Localized: "K\xF6r\xFClbel\xFCl 15 000 besz\xE9lget\xE9s. N\xE9melyik azonnal
+      feled\xE9sbe mer\xFCl. N\xE9melyik \xE9vtizedekig visszhangzik a fej\xFCnkben."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688145
+    m_Localized: 20 000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688146
+    m_Localized: "K\xF6r\xFClbel\xFCl 20 000 s\xE9ta egyik helyr\u0151l a m\xE1sikra.
+      Iskol\xE1ba. Munk\xE1ba. A boltba. Valakihez, aki v\xE1r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688147
+    m_Localized: 29 000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688148
+    m_Localized: "K\xF6r\xFClbel\xFCl 29 000 vacsora. \xC9tkez\xE9sek a konyhaasztaln\xE1l.
+      Gyors falatok \xFCgyint\xE9z\xE9s k\xF6zben. \xDCnnepl\xE9sek \xE9ttermekben.
+      Valami zs\xEDros egy bar\xE1tokkal t\xF6lt\xF6tt \xE9jszaka ut\xE1n. Egy j\xF3,
+      laktat\xF3 \xE9tel valakivel, akit szerett\xFCnk."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688149
+    m_Localized: 30
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688150
+    m_Localized: "30 halott egy oszt\xE1lyterem. Annyi gyerek, ah\xE1nyan egykor
+      k\xF6r\xFCl\xF6tted \xFCltek, m\xEDg olvasni tanultatok, vicceket sugdostatok,
+      \xE9s a cseng\u0151re v\xE1rtatok."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688151
+    m_Localized: 80
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688152
+    m_Localized: "80 halott egy zs\xFAfolt v\xE1rosi busz. Az emberek, akik egy es\u0151s
+      reggelen k\xF6r\xE9d pr\xE9sel\u0151dtek."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688153
+    m_Localized: 250
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688154
+    m_Localized: "250halott egy kisebb mozin\xE9z\u0151 k\xF6z\xF6ns\xE9g. A terem,
+      amelyen egykor idegenekkel osztozt\xE1l, mik\xF6zben  gyerekkorod kedvenc filmj\xE9t
+      n\xE9zted."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688155
+    m_Localized: 300
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688156
+    m_Localized: "300 halott egy tele utassz\xE1ll\xEDt\xF3 rep\xFCl\u0151g\xE9p.
+      Mindenki, aki felsz\xE1llt, feltette a csomagj\xE1t, becsatolta az \xF6v\xE9t,
+      \xE9s arra sz\xE1m\xEDtott, hogy landolni fog."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688157
+    m_Localized: 1000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688158
+    m_Localized: "1000 halott egy eg\xE9sz iskola. Minden di\xE1k a folyos\xF3n.
+      Minden tan\xE1r egy tanterem ajtaja m\xF6g\xF6tt. Mindenki, aki bent van."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688159
+    m_Localized: 5000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688160
+    m_Localized: "5000 halott egy koncertk\xF6z\xF6ns\xE9g. Az idegenek t\xF6mege,
+      akik k\xF6zt egykor \xE1llt\xE1l, v\xE1llt v\xE1llnak vetve, ugyanazt a refr\xE9nt
+      \xE9nekelve."
     m_Metadata:
       m_Items: []
   references:

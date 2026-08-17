@@ -55,27 +55,27 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1957535749
-    m_Localized: Programming
+    m_Localized: Programmer
     m_Metadata:
       m_Items: []
   - m_Id: 1957535750
-    m_Localized: Art & Visual Assets
+    m_Localized: Art Direction
     m_Metadata:
       m_Items: []
   - m_Id: 1957535751
-    m_Localized: Portraits & Programming
+    m_Localized: Programmer & Artist
     m_Metadata:
       m_Items: []
   - m_Id: 1957535752
-    m_Localized: UI Design
+    m_Localized: UI Designer
     m_Metadata:
       m_Items: []
   - m_Id: 1957535753
-    m_Localized: Writing & Narration
+    m_Localized: Writer & Narration Director
     m_Metadata:
       m_Items: []
   - m_Id: 1957535754
-    m_Localized: Audio Engineering
+    m_Localized: Sound Engineer
     m_Metadata:
       m_Items: []
   - m_Id: 1957535755
@@ -111,7 +111,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1957535763
-    m_Localized: <b>English</b> / Hungarian
+    m_Localized: '    <b>English</b> / Hungarian'
     m_Metadata:
       m_Items: []
   - m_Id: 1957535764
@@ -167,6 +167,155 @@ MonoBehaviour:
     m_Localized: "\u201CIn the bleak mid-winter\nFrosty wind made moan\nEarth stood
       hard as iron\nWater like a stone;\nSnow had fallen, snow on snow,\nSnow on
       snow,\nIn the bleak mid-winter\nLong ago.\u201D - Christina Rossetti"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433111830528
+    m_Localized: One Life
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688128
+    m_Localized: One life.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688129
+    m_Localized: What one life contains
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688130
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688131
+    m_Localized: 80
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688132
+    m_Localized: About 80 birthdays.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688133
+    m_Localized: 960
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688134
+    m_Localized: About 960 months.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688135
+    m_Localized: 1,000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688136
+    m_Localized: About 1,000 full moons. A thousand nights when the moon returned,
+      whether anyone noticed or not.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688137
+    m_Localized: 4,000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688138
+    m_Localized: About 4,000 weekends. The days you hoped would keep coming forever.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688139
+    m_Localized: 7,000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688140
+    m_Localized: About 7,000 songs heard more than once. Songs from childhood. Songs
+      from kitchens, radios, dances, funerals, and barracks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688141
+    m_Localized: 10,000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688142
+    m_Localized: Around 10,000 people you meet during your days on Earth. Friends,
+      strangers, teachers, neighbors, colleagues, enemies and lovers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688143
+    m_Localized: 15,000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688144
+    m_Localized: About 15,000 conversations. Some forgotten immediately. Some replayed
+      in your head for decades.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688145
+    m_Localized: 20,000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688146
+    m_Localized: About 20,000 walks from one place to another. To school. To work.
+      To the shop. To someone waiting.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688147
+    m_Localized: 29,000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688148
+    m_Localized: About 29,000 dinners. Meals at the kitchen table. Quick bites between
+      errands. Celebrations at restaurants. Something greasy after a night out with
+      friends. A nice, hearty meal with someone you loved.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688149
+    m_Localized: 30
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688150
+    m_Localized: 30 dead is a classroom. The number of children who once sat around
+      you while you learned to read, whispered jokes, and waited for the bell.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688151
+    m_Localized: 80
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688152
+    m_Localized: 80 dead is a crowded city bus. The people pressed around you on
+      a rainy morning, all going somewhere ordinary.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688153
+    m_Localized: 250
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688154
+    m_Localized: 250 dead is a small cinema audience. The room you once shared with
+      strangers while watching the film you loved as a child.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688155
+    m_Localized: 300
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688156
+    m_Localized: 300 dead is a full passenger plane. Everyone who boarded, put bags
+      overhead, fastened seatbelts, and expected to land.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688157
+    m_Localized: 1,000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688158
+    m_Localized: 1,000 dead is an entire school. Every student in the hallway. Every
+      teacher behind a classroom door. Everyone inside it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688159
+    m_Localized: 5,000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688160
+    m_Localized: 5,000 dead is a concert crowd. The mass of strangers you once stood
+      among, shoulder to shoulder, singing the same chorus.
     m_Metadata:
       m_Items: []
   references:

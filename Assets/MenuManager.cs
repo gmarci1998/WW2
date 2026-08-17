@@ -13,6 +13,7 @@ public class MenuManager : MonoBehaviour
     public CanvasGroup creditsMenu;
     public CanvasGroup openingScene;
     public CanvasGroup settingsScene;
+    public CanvasGroup oneLifeMenu;
     public string GameScene = "GameScene";
     public string language;
     public bool subtitlesEnabled;
@@ -28,6 +29,12 @@ public class MenuManager : MonoBehaviour
 
     [Header("Opening Sequence UI")]
     [SerializeField] private TextMeshProUGUI openingQuoteText;
+
+    [Header("One Life UI")]
+    [SerializeField] private TextMeshProUGUI oneLifeButtonText;
+    [SerializeField] private TextMeshProUGUI oneLifeIntroTitleText;
+    [SerializeField] private TextMeshProUGUI oneLifeHeaderText;
+    [SerializeField] private TextMeshProUGUI oneLifeContinueButtonText;
 
 
     [Header("Characters Menu UI")]
@@ -81,6 +88,23 @@ public class MenuManager : MonoBehaviour
     public void OpenCredits()
     {
         StartCoroutine(SwitchMenu(mainMenu, creditsMenu));
+    }
+
+    public void OpenOneLife()
+    {
+        StartCoroutine(SwitchMenu(mainMenu, oneLifeMenu));
+    }
+
+    public void ContinueFromOneLifeToCredits()
+    {
+        oneLifeMenu.interactable = false;
+        oneLifeMenu.blocksRaycasts = false;
+        oneLifeMenu.gameObject.SetActive(false);
+
+        creditsMenu.gameObject.SetActive(true);
+        creditsMenu.alpha = 1f;
+        creditsMenu.interactable = true;
+        creditsMenu.blocksRaycasts = true;
     }
 
     public void BackFromCharacters()
@@ -185,43 +209,43 @@ public class MenuManager : MonoBehaviour
 
     void Awake()
     {
-        StartCoroutine(CheckCreditsOnAwake());
+        StartCoroutine(CheckOneLifeOnAwake());
     }
 
-    IEnumerator CheckCreditsOnAwake()
+    IEnumerator CheckOneLifeOnAwake()
     {
-        yield return null; 
-        
-        if (GameManager.Instance != null && mainMenu != null && creditsMenu != null)
+        yield return null;
+
+        if (GameManager.Instance != null && mainMenu != null && oneLifeMenu != null)
         {
-            bool shouldShowCredits = GameManager.Instance.showCreditsOnGameEnd;
-            GameManager.Instance.showCreditsOnGameEnd = false;
-            
-            if (shouldShowCredits)
+            bool shouldShowOneLife = GameManager.Instance.showOneLifeOnGameEnd;
+            GameManager.Instance.showOneLifeOnGameEnd = false;
+
+            if (shouldShowOneLife)
             {
                 // Főmenü elrejtése
                 mainMenu.alpha = 0f;
                 mainMenu.gameObject.SetActive(false);
-                
-                StartCoroutine(OpenCreditsSafe());
+
+                StartCoroutine(OpenOneLifeSafe());
                 yield break;
             }
         }
     }
 
-    IEnumerator OpenCreditsSafe()
+    IEnumerator OpenOneLifeSafe()
     {
         yield return new WaitForEndOfFrame(); // Biztos stabilitás
-        
-        // Credits aktiválása
-        creditsMenu.gameObject.SetActive(true);
-        creditsMenu.alpha = 0f;
-        
-        // Gyors fade-in credits-re
-        StartCoroutine(Fade(creditsMenu, 0f, 1f));
-        creditsMenu.interactable = true;
-        creditsMenu.blocksRaycasts = true;
-        
+
+        // One Life aktiválása
+        oneLifeMenu.gameObject.SetActive(true);
+        oneLifeMenu.alpha = 0f;
+
+        // Gyors fade-in one life-ra
+        StartCoroutine(Fade(oneLifeMenu, 0f, 1f));
+        oneLifeMenu.interactable = true;
+        oneLifeMenu.blocksRaycasts = true;
+
         // Inicializálás
         LoadSoldiersFromFile();
         UnlockCursor();
@@ -272,6 +296,11 @@ public class MenuManager : MonoBehaviour
         if (creditsButtonText != null) creditsButtonText.text = LocalizationManager.GetText("MainMenu.CreditsButton", creditsButtonText.text);
         if (exitButtonText != null) exitButtonText.text = LocalizationManager.GetText("MainMenu.ExitButton", exitButtonText.text);
         if (openingQuoteText != null) openingQuoteText.text = LocalizationManager.GetText("MainMenu.OpeningQuote", openingQuoteText.text);
+
+        if (oneLifeButtonText != null) oneLifeButtonText.text = LocalizationManager.GetText("MainMenu.OneLifeButton", oneLifeButtonText.text);
+        if (oneLifeIntroTitleText != null) oneLifeIntroTitleText.text = LocalizationManager.GetText("OneLife.Intro.Title", oneLifeIntroTitleText.text);
+        if (oneLifeHeaderText != null) oneLifeHeaderText.text = LocalizationManager.GetText("OneLife.Contains.Header", oneLifeHeaderText.text);
+        if (oneLifeContinueButtonText != null) oneLifeContinueButtonText.text = LocalizationManager.GetText("OneLife.ContinueButton", oneLifeContinueButtonText.text);
 
         if (closeButtonText != null) closeButtonText.text = LocalizationManager.GetText("Characters.CloseButton", closeButtonText.text);
         if (narrationButtonText != null) narrationButtonText.text = LocalizationManager.GetText("Characters.NarrationButton", narrationButtonText.text);

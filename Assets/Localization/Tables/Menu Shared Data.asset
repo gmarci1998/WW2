@@ -163,6 +163,142 @@ MonoBehaviour:
     m_Key: MainMenu.OpeningQuote
     m_Metadata:
       m_Items: []
+  - m_Id: 2153433111830528
+    m_Key: MainMenu.OneLifeButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688128
+    m_Key: OneLife.Intro.Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688129
+    m_Key: OneLife.Contains.Header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688130
+    m_Key: OneLife.ContinueButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688131
+    m_Key: OneLife.Contains.Row1.Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688132
+    m_Key: OneLife.Contains.Row1.Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688133
+    m_Key: OneLife.Contains.Row2.Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688134
+    m_Key: OneLife.Contains.Row2.Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688135
+    m_Key: OneLife.Contains.Row3.Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688136
+    m_Key: OneLife.Contains.Row3.Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688137
+    m_Key: OneLife.Contains.Row4.Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688138
+    m_Key: OneLife.Contains.Row4.Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688139
+    m_Key: OneLife.Contains.Row5.Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688140
+    m_Key: OneLife.Contains.Row5.Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688141
+    m_Key: OneLife.Contains.Row6.Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688142
+    m_Key: OneLife.Contains.Row6.Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688143
+    m_Key: OneLife.Contains.Row7.Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688144
+    m_Key: OneLife.Contains.Row7.Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688145
+    m_Key: OneLife.Contains.Row8.Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688146
+    m_Key: OneLife.Contains.Row8.Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688147
+    m_Key: OneLife.Contains.Row9.Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688148
+    m_Key: OneLife.Contains.Row9.Description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688149
+    m_Key: OneLife.Bars.Bar1.Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688150
+    m_Key: OneLife.Bars.Bar1.Caption
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688151
+    m_Key: OneLife.Bars.Bar2.Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688152
+    m_Key: OneLife.Bars.Bar2.Caption
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688153
+    m_Key: OneLife.Bars.Bar3.Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688154
+    m_Key: OneLife.Bars.Bar3.Caption
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688155
+    m_Key: OneLife.Bars.Bar4.Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688156
+    m_Key: OneLife.Bars.Bar4.Caption
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688157
+    m_Key: OneLife.Bars.Bar5.Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688158
+    m_Key: OneLife.Bars.Bar5.Caption
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688159
+    m_Key: OneLife.Bars.Bar6.Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688160
+    m_Key: OneLife.Bars.Bar6.Caption
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

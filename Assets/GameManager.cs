@@ -10,7 +10,7 @@ using TMPro;
 public class GameManager : MonoBehaviour 
 {
     [Header("Menu Navigation")]
-    public bool showCreditsOnGameEnd = false;
+    public bool showOneLifeOnGameEnd = false;
     
     [SerializeField] private Subtitles subtitles;
 
@@ -1119,24 +1119,32 @@ public class GameManager : MonoBehaviour
     IEnumerator FullDeath()
     {
         Cursor.lockState = CursorLockMode.None;
-        SpriteRenderer spriteRenderer = death.GetComponent<SpriteRenderer>();
-        if (spriteRenderer == null)
+
+        RectTransform deathImageTransform = death.transform.GetChild(0) as RectTransform;
+        Image deathSprite = deathImageTransform != null ? deathImageTransform.GetComponent<Image>() : null;
+        deathSprite ??= death.GetComponent<Image>();
+        if (deathSprite == null)
         {
+            showOneLifeOnGameEnd = true;
+            SceneManager.LoadScene("Menu");
+            Destroy(em);
             yield break;
         }
 
-        Color color = spriteRenderer.color;
+        death.SetActive(true);
+
+        Color color = deathSprite.color;
         float alpha = color.a;
 
         while (alpha < 1f)
         {
             alpha += Time.deltaTime / 2f; // 2 másodperc alatt növeli az átlátszóságot
             color.a = Mathf.Clamp01(alpha);
-            spriteRenderer.color = color;
+            deathSprite.color = color;
             yield return null;
         }
 
-        showCreditsOnGameEnd = true;
+        showOneLifeOnGameEnd = true;
         SceneManager.LoadScene("Menu");
         Destroy(em);
     }
