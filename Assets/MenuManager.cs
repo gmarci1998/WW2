@@ -57,6 +57,10 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI creditsNameNagyBorusText;
     [SerializeField] private TextMeshProUGUI creditsNameBendaText;
     [SerializeField] private TextMeshProUGUI creditsNameBorosText;
+    [SerializeField] private TextMeshProUGUI hungarianNarrationLabelText;
+    [SerializeField] private TextMeshProUGUI creditsNameNagySandorText;
+    [SerializeField] private TextMeshProUGUI englishNarrationLabelText;
+    [SerializeField] private TextMeshProUGUI creditsNameHulseText;
 
 
     [Header("Settings Menu UI")]
@@ -185,6 +189,10 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private Button button6;
     [SerializeField] private Button button7;
     [SerializeField] private Button button8;
+
+    [Header("IDEIGLENES - teszteleshez")]
+    [Tooltip("Ha be van kapcsolva, a karakter menuben minden karakter kattinthato, fuggetlenul attol, hogy vegighallgattad-e mar a narraciojat. Teszteles utan kapcsold ki.")]
+    [SerializeField] private bool unlockAllCharacters = false;
 
     [Header("Characters Menu Locked Visual")]
     [SerializeField] private float lockedButtonAlpha = 0.25f;
@@ -320,6 +328,10 @@ public class MenuManager : MonoBehaviour
         if (creditsNameNagyBorusText != null) creditsNameNagyBorusText.text = LocalizationManager.GetText("Credits.Name.NagyBorus", creditsNameNagyBorusText.text);
         if (creditsNameBendaText != null) creditsNameBendaText.text = LocalizationManager.GetText("Credits.Name.Benda", creditsNameBendaText.text);
         if (creditsNameBorosText != null) creditsNameBorosText.text = LocalizationManager.GetText("Credits.Name.Boros", creditsNameBorosText.text);
+        if (hungarianNarrationLabelText != null) hungarianNarrationLabelText.text = LocalizationManager.GetText("Credits.HungarianNarrationLabel", hungarianNarrationLabelText.text);
+        if (creditsNameNagySandorText != null) creditsNameNagySandorText.text = LocalizationManager.GetText("Credits.Name.NagySandor", creditsNameNagySandorText.text);
+        if (englishNarrationLabelText != null) englishNarrationLabelText.text = LocalizationManager.GetText("Credits.EnglishNarrationLabel", englishNarrationLabelText.text);
+        if (creditsNameHulseText != null) creditsNameHulseText.text = LocalizationManager.GetText("Credits.Name.Hulse", creditsNameHulseText.text);
 
         settingsTitleText.text = LocalizationManager.GetText("Settings.Title", settingsTitleText.text);
         languageLabelText.text = LocalizationManager.GetText("Settings.LanguageLabel", languageLabelText.text);
@@ -487,14 +499,35 @@ public class MenuManager : MonoBehaviour
 
     private void UpdateCharacterButtonsVisuals()
     {
-        ApplyCharacterButtonVisual(button1, HungarianSoldiers[0].isOpened);
-        ApplyCharacterButtonVisual(button2, HungarianSoldiers[1].isOpened);
-        ApplyCharacterButtonVisual(button3, HungarianSoldiers[2].isOpened);
-        ApplyCharacterButtonVisual(button4, HungarianSoldiers[3].isOpened);
-        ApplyCharacterButtonVisual(button5, RussianSoldiers[0].isOpened);
-        ApplyCharacterButtonVisual(button6, RussianSoldiers[1].isOpened);
-        ApplyCharacterButtonVisual(button7, RussianSoldiers[2].isOpened);
-        ApplyCharacterButtonVisual(button8, RussianSoldiers[3].isOpened);
+        // A gomb-objektumok nevei NEM a rajtuk levo portret koveti (a "Button_Andras" peldaul
+        // Folhoffer Benedek kepet mutatja), ezert a parositas a gombon latszo portre es a
+        // CharacterSelector indexe alapjan keszult, nem a GameObject neve alapjan.
+        ApplyCharacterButtonVisual(button1, IsCharacterUnlocked(HungarianSoldiers, 2)); // Folhoffer Benedek
+        ApplyCharacterButtonVisual(button2, IsCharacterUnlocked(HungarianSoldiers, 1)); // Ferenc Bedo
+        ApplyCharacterButtonVisual(button3, IsCharacterUnlocked(HungarianSoldiers, 3)); // Istvan Maruzs
+        ApplyCharacterButtonVisual(button4, IsCharacterUnlocked(HungarianSoldiers, 0)); // Andras Hodanics
+        ApplyCharacterButtonVisual(button5, IsCharacterUnlocked(RussianSoldiers, 3));   // Serik Nurgaliyev
+        ApplyCharacterButtonVisual(button6, IsCharacterUnlocked(RussianSoldiers, 1));   // Ivan Petrov
+        ApplyCharacterButtonVisual(button7, IsCharacterUnlocked(RussianSoldiers, 0));   // Aleksei Morozov
+        ApplyCharacterButtonVisual(button8, IsCharacterUnlocked(RussianSoldiers, 2));   // Mykola Shevchenko
+    }
+
+    // IDEIGLENES: az unlockAllCharacters bekapcsolva minden karaktert kattinthatova tesz,
+    // hogy teszteles kozben ne kelljen vegighallgatni a narraciokat. Kikapcsolva a
+    // mentesbol betoltott isOpened dont, pontosan ugy, ahogy eddig.
+    private bool IsCharacterUnlocked(SoldierData[] soldiers, int index)
+    {
+        if (unlockAllCharacters)
+        {
+            return true;
+        }
+
+        if (soldiers == null || index < 0 || index >= soldiers.Length || soldiers[index] == null)
+        {
+            return false;
+        }
+
+        return soldiers[index].isOpened;
     }
 
     private void ApplyCharacterButtonVisual(Button button, bool isOpened)

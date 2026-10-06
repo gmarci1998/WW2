@@ -8,6 +8,8 @@ public class FixedWeaponPosition : MonoBehaviour
     [SerializeField] private float reloadUpTime = 0.6f;
     [SerializeField] private float normalWeaponDownTiltAngle = 8f;
     [SerializeField] private float normalWeaponUpTiltAngle = 6f;
+    [Tooltip("Felalláskor ennyi masodperc alatt emelkedik fel a fegyver (az ujratoltestol fuggetlenul). Gyorsan indul, a vegen lassul.")]
+    [SerializeField] private float normalRaiseTime = 0.3f;
     [SerializeField] private float reloadTiltAngle = 50f;
     [SerializeField] private float reloadSlideDistance = -0.35f;
     [SerializeField, Range(0.05f, 0.8f)] private float reloadTiltOutPortion = 0.25f;
@@ -484,7 +486,8 @@ public class FixedWeaponPosition : MonoBehaviour
         ShowNormalWeaponSprite();
         SetRestSpriteVisible(false);
 
-        float duration = normalHideTransition == NormalHideTransition.Lowering ? reloadDownTime : reloadUpTime;
+        bool raising = normalHideTransition == NormalHideTransition.Raising;
+        float duration = raising ? normalRaiseTime : reloadDownTime;
         if (duration <= 0f)
         {
             currentHideProgress = normalHideTargetProgress;
@@ -492,9 +495,11 @@ public class FixedWeaponPosition : MonoBehaviour
             return;
         }
 
-        normalHideTimer += Time.deltaTime * lerpSpeed;
+        // Az emelés valós másodpercben mér, a leengedés marad a régi (lerpSpeed-del skálázott) időzítésen.
+        normalHideTimer += raising ? Time.deltaTime : Time.deltaTime * lerpSpeed;
         float progress = Mathf.Clamp01(normalHideTimer / duration);
-        currentHideProgress = Mathf.Lerp(normalHideStartProgress, normalHideTargetProgress, progress);
+        float easedProgress = raising ? 1f - (1f - progress) * (1f - progress) : progress;
+        currentHideProgress = Mathf.Lerp(normalHideStartProgress, normalHideTargetProgress, easedProgress);
 
         float y = Mathf.Lerp(startY, targetY, currentHideProgress) + weaponYOffset;
         float zRotation = Mathf.Lerp(0f, normalWeaponDownTiltAngle, currentHideProgress);

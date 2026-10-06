@@ -17,8 +17,10 @@ public class SoldierMovement : MonoBehaviour
     private bool isMoving = false;
     private float waitForShooting = 4f;
     [SerializeField] private float duckTime = 1f;
-    [Tooltip("Sniper lövésnél a lövés (hang/villanás) és a tényleges találat-ellenőrzés között eltelő idő - hosszabb reakcióidőt ad a játékosnak, mint a sima katonánál.")]
-    [SerializeField] private float sniperHitDelay = 2f;
+    [Tooltip("Sniper lövésnél a lövés (hang/villanás) és a tényleges találat-ellenőrzés között eltelő idő - ennyi ideje van a játékosnak leguggolni.")]
+    [SerializeField] private float sniperHitDelay = 1f;
+    [Tooltip("Sniper lövés után meddig marad még fent (és kilőhető) az ellenfél, mielőtt visszahúzódik. Szándékosan külön a sniperHitDelay-től: az a játékos reakcióideje, ez pedig azt szabja meg, meddig lehet még kilőni.")]
+    [SerializeField] private float sniperExposureAfterShot = 2f;
     private float firingTimer = 0f;
     private GameObject spark;
 
@@ -254,7 +256,7 @@ public class SoldierMovement : MonoBehaviour
 
         StartCoroutine(FireAtPlayer());
 
-        yield return new WaitForSeconds(firingTimer + GetPostShotDelay());
+        yield return new WaitForSeconds(firingTimer + GetPostShotExposure());
         IsKillable = false;
 
         PlaySpriteAnimation(DescendFrameSequence, frameDuration, false);
@@ -265,9 +267,18 @@ public class SoldierMovement : MonoBehaviour
         DecideAndAct();
     }
 
+    // A lövés és a találat-ellenőrzés közötti idő: a játékos reakcióideje.
     float GetPostShotDelay()
     {
         return enemyType == EnemyType.Sniper ? sniperHitDelay : duckTime;
+    }
+
+    // Meddig marad fent az ellenfél a lövés után. Ez nem a reakcióidő: ha a kettőt
+    // összevonnánk, a reakcióidő rövidítése azt is lecsökkentené, hogy meddig lehet
+    // kilőni a snipert - vagyis egy második, nem kért balansz-változás lenne.
+    float GetPostShotExposure()
+    {
+        return enemyType == EnemyType.Sniper ? sniperExposureAfterShot : duckTime;
     }
 
     IEnumerator FireAtPlayer()
@@ -285,7 +296,6 @@ public class SoldierMovement : MonoBehaviour
             StartCoroutine(ShineWarningAfterDelay(Mathf.Max(0f, firingTimer - shineWarningBeforeSecond)));
         }
 
-        // Lövés előtt fireFrameLeadTime másodperccel már a lövő pózra vált, és ott is marad lövésig.
         float leadTime = Mathf.Clamp(fireFrameLeadTime, 0f, firingTimer);
         yield return new WaitForSeconds(firingTimer - leadTime);
 

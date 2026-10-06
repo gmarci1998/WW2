@@ -31,6 +31,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float maxOffsetY = 2f;     
     [SerializeField] private bool hungarianSide = true;
 
+    [Header("Trench (guggolt nezet) parallax")]
+    [Tooltip("Mekkora kilengest tegyen meg a Trench vizszintesen vilagegysegben, amikor az egerrel balra-jobbra mozgunk. A Trench a legkozelebbi reteg, ezert sokkal tobbet kell mozognia, mint a hatternek. A sprite 28,8 egyseg szeles, a kamera 16:9-nel 17,78-at lat, ezert a biztonsagos maximum kb. 5,5 - a program automatikusan erre vagja az erteket, hogy a kep szele soha ne johessen be.")]
+    [SerializeField] private float trenchHorizontalRange = 5f;
+    [Tooltip("A Trench fuggoleges mozgasa a hatter fuggoleges mozgasahoz kepest (szorzo). A hatterrel azonos iranyba mozog, igy a vilag reszenek tunik, nem a fegyverhez ragasztottnak. 1 = pont annyit mozog, mint a hatter; nagyobb ertek = kozelebbi retegnek hat.")]
+    [SerializeField] private float trenchVerticalFactor = 1.2f;
+    private SpriteRenderer trenchRenderer;
+
     [SerializeField] private SpriteRenderer background;
     [SerializeField] Sprite hungarianBackground;
     [SerializeField] Sprite russianBackground;
@@ -392,15 +399,7 @@ public class GameManager : MonoBehaviour
                 currentSoldier = availableHungarianSoldiers[Random.Range(0, availableHungarianSoldiers.Length)];
                 currentSoldier.picked = true; // Jelöld meg, hogy ki lett választva
 
-                string language = LocalizationManager.CurrentLanguage;
-                if (language == "Hungarian")
-                {
-                    subtitles.SetSubtitles(currentSoldier.hungarianEntries); // Magyar feliratok
-                }
-                else
-                {
-                    subtitles.SetSubtitles(currentSoldier.englishEntries); // Alapértelmezett (angol)
-                }
+                ApplySubtitles();
             }
         }
         else
@@ -412,15 +411,7 @@ public class GameManager : MonoBehaviour
                 currentSoldier = availableRussianSoldiers[Random.Range(0, availableRussianSoldiers.Length)];
                 currentSoldier.picked = true; // Jelöld meg, hogy ki lett választva
 
-                string language = LocalizationManager.CurrentLanguage;
-                if (language == "Hungarian")
-                {
-                    subtitles.SetSubtitles(currentSoldier.hungarianEntries); // Magyar feliratok
-                }
-                else
-                {
-                    subtitles.SetSubtitles(currentSoldier.englishEntries); // Alapértelmezett (angol)
-                }
+                ApplySubtitles();
             }
         }
 
@@ -550,6 +541,76 @@ public class GameManager : MonoBehaviour
         if (distance != null) distance.volume = distanceTarget;
     }
 
+    /// <summary>
+    /// A narráció nyelve. Ez dönti el, melyik hanghoz időzített feliratot kell használni.
+    /// </summary>
+    private bool NarrationIsHungarian()
+    {
+        return LocalizationManager.CurrentLanguage == "Hungarian";
+    }
+
+    /// <summary>
+    /// A felirat nyelve. A beállítások menüben a narráció nyelvétől függetlenül állítható.
+    /// </summary>
+    private bool SubtitlesAreHungarian()
+    {
+        return PlayerPrefs.GetString("SubtitlesLanguage", "English") == "Hungarian";
+    }
+
+    /// <summary>
+    /// A kiválasztott katona feliratainak betöltése.
+    /// Két tengely dönt: a narráció nyelve adja az időzítést, a felirat nyelve a szöveget.
+    /// </summary>
+    private void ApplySubtitles()
+    {
+        if (subtitles == null || currentSoldier == null)
+        {
+            return;
+        }
+
+        bool huAudio = NarrationIsHungarian();
+        bool huText = SubtitlesAreHungarian();
+
+        TextAsset file;
+        if (huAudio)
+        {
+            file = huText ? currentSoldier.huAudioHuSubtitles : currentSoldier.huAudioEnSubtitles;
+        }
+        else
+        {
+            file = huText ? currentSoldier.enAudioHuSubtitles : currentSoldier.enAudioEnSubtitles;
+        }
+
+        // Tartalék: ha a kért kombináció nincs beállítva, a narráció nyelvével azonos
+        // nyelvű feliratra esünk vissza, mert az legalább a hanghoz van időzítve.
+        if (file == null)
+        {
+            file = huAudio ? currentSoldier.huAudioHuSubtitles : currentSoldier.enAudioEnSubtitles;
+
+            if (file != null)
+            {
+                Debug.LogWarning("GameManager: hiányzó feliratfájl (" + (huAudio ? "HU" : "EN") + " hang / "
+                    + (huText ? "HU" : "EN") + " szöveg) ennél a katonánál: " + currentSoldier.Name
+                    + " - a narráció nyelvével azonos feliratot használom.");
+            }
+        }
+
+        SubtitleEntry[] entries = SubtitleLoader.Load(file);
+
+        if (entries == null || entries.Length == 0)
+        {
+            // Végső tartalék: a régi, Inspectorban felvitt sorok.
+            entries = huText ? currentSoldier.hungarianEntries : currentSoldier.englishEntries;
+
+            if (file != null)
+            {
+                Debug.LogWarning("GameManager: üres feliratfájl ennél a katonánál: " + currentSoldier.Name);
+            }
+        }
+
+        subtitles.SetSubtitles(entries);
+    }
+
     public void Narration()
     {
         string language = LocalizationManager.CurrentLanguage;
@@ -564,10 +625,27 @@ public class GameManager : MonoBehaviour
             narrationClip = currentSoldier.englishAudio; // Alapértelmezett (angol)
         }
 
-        narrationAudio = gameObject.AddComponent<AudioSource>();
+        // Újrahasznosítjuk a meglévő forrást, hogy ne halmozódjanak az AudioSource komponensek.
+        if (narrationAudio == null)
+        {
+            narrationAudio = gameObject.AddComponent<AudioSource>();
+        }
+
+        narrationAudio.Stop();
         narrationAudio.clip = narrationClip;
         narrationAudio.volume = 1.0f;
         narrationAudio.playOnAwake = false;
+
+        if (narrationClip != null)
+        {
+            narrationAudio.time = 0f;
+        }
+
+        // A felirat ehhez a hangforráshoz igazodik, így fedezékben szüneteltetve sem csúszik el.
+        if (subtitles != null)
+        {
+            subtitles.SetNarrationSource(narrationAudio);
+        }
 
         if (startNarrationCoroutine != null)
         {
@@ -664,8 +742,8 @@ public class GameManager : MonoBehaviour
 
         if (middlegroundSprite != null) {
             middlegroundSprite.transform.position = new Vector3(
-                -normalizedX / 32f, 
-                -normalizedY / 32f - 10f, 
+                -TrenchOffsetX(rawMouseX),
+                -normalizedY * trenchVerticalFactor - 10f,
                 middlegroundSprite.transform.position.z
             );
         }
@@ -769,6 +847,10 @@ public class GameManager : MonoBehaviour
         {
             exitConfirmationPanel.SetActive(true);
         }
+
+        // A popup gombjait csak látható kurzorral lehet kényelmesen kiválasztani.
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     private void HideExitConfirmation()
@@ -778,6 +860,10 @@ public class GameManager : MonoBehaviour
         {
             exitConfirmationPanel.SetActive(false);
         }
+
+        // Visszaállítjuk a játék közbeni rejtett kurzort (lásd Start).
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
     }
 
     private void ToggleHideState()
@@ -1022,6 +1108,31 @@ public class GameManager : MonoBehaviour
         {
             narrationPauseWarningAudio.Stop();
         }
+    }
+
+    // A Trench a legkozelebbi reteg a guggolt nezetben, ezert sokkal tobbet kell mozognia,
+    // mint a hatternek: igy olvasodik ugy, hogy mi mozgunk mogotte, nem pedig ugy, hogy
+    // o kovet minket. A kilenges a sprite tenyleges meretehez es a kamera latoszogehez van
+    // vagva, igy a kep szele semmilyen felbontason es kepaanyon nem johet be.
+    float TrenchOffsetX(float rawMouseX)
+    {
+        float range = Mathf.Max(0f, trenchHorizontalRange);
+
+        if (trenchRenderer == null && middlegroundSprite != null)
+        {
+            trenchRenderer = middlegroundSprite.GetComponent<SpriteRenderer>();
+        }
+
+        Camera c = cam != null ? cam : Camera.main;
+
+        if (trenchRenderer != null && trenchRenderer.sprite != null && c != null && c.orthographic)
+        {
+            float halfWidth = trenchRenderer.sprite.bounds.extents.x
+                              * Mathf.Abs(middlegroundSprite.transform.lossyScale.x);
+            range = Mathf.Min(range, Mathf.Max(0f, halfWidth - c.orthographicSize * c.aspect));
+        }
+
+        return Mathf.Clamp(rawMouseX, -1f, 1f) * range;
     }
 
     public List<Transform> GetEnemies(){
@@ -1376,8 +1487,11 @@ public class GameManager : MonoBehaviour
         textRect.anchorMin = new Vector2(0.5f, 0.5f);
         textRect.anchorMax = new Vector2(0.5f, 0.5f);
         textRect.pivot = new Vector2(0.5f, 0.5f);
-        textRect.anchoredPosition = new Vector2(150f, 0f);
-        textRect.sizeDelta = new Vector2(560f, 200f);
+        // A szoveg bal szele a portre jobb szelen tul kezdodik, 48 px ressel, hogy ne
+        // lapoljon ra a kepre. A jobb szelso kiterjedes igy is 428 px marad, ami kis
+        // felbontasnal is befer (a canvas Constant Pixel Size modban van).
+        textRect.anchoredPosition = new Vector2(208f, 0f);
+        textRect.sizeDelta = new Vector2(440f, 200f);
 
         canvasGO.SetActive(false);
     }
