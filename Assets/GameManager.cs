@@ -65,6 +65,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private SpriteRenderer fogRenderer;
     private Vector4 fogBaseSpeed;
     private Vector4 fogBaseSpeed2;
+    [Tooltip("A hatter (Mountains) gyerekekent levo \"Fog_Back\" Sprite Renderer-e - a fedezekek mogott, a hatterkep elott; a hatterrel egyutt mozog. Magyar oldalon ennek is megforditjuk a mozgasa iranyat.")]
+    [SerializeField] private SpriteRenderer backFogRenderer;
+    private Vector4 backFogBaseSpeed;
+    private Vector4 backFogBaseSpeed2;
+
+    [Tooltip("A \"Snow\" objektum SnowController-e - a ho sodrodasat a Fog iranyahoz igazitjuk.")]
+    [SerializeField] private SnowController snow;
 
     [Tooltip("A TopView térképen a magyar oldalhoz tartozó X jelölők szülő objektuma (gyerekei: az egyes X pozíciók).")]
     [SerializeField] private RectTransform hungarianXGroup;
@@ -476,6 +483,22 @@ public class GameManager : MonoBehaviour
             fogBaseSpeed2 = fogRenderer.material.GetVector("Speed_2");
         }
 
+        if (backFogRenderer == null)
+        {
+            backFogRenderer = FindSceneGameObject("Fog_Back")?.GetComponent<SpriteRenderer>();
+        }
+
+        if (backFogRenderer != null)
+        {
+            backFogBaseSpeed = backFogRenderer.material.GetVector("Speed");
+            backFogBaseSpeed2 = backFogRenderer.material.GetVector("Speed_2");
+        }
+
+        if (snow == null)
+        {
+            snow = FindFirstObjectByType<SnowController>();
+        }
+
         StartCoroutine(SceneStart());
 
         InitializeExitConfirmationUI();
@@ -740,12 +763,19 @@ public class GameManager : MonoBehaviour
             );
         }
 
+        Vector2 trenchParallax = new Vector2(-TrenchOffsetX(rawMouseX), -normalizedY * trenchVerticalFactor);
+
         if (middlegroundSprite != null) {
             middlegroundSprite.transform.position = new Vector3(
-                -TrenchOffsetX(rawMouseX),
-                -normalizedY * trenchVerticalFactor - 10f,
+                trenchParallax.x,
+                trenchParallax.y - 10f,
                 middlegroundSprite.transform.position.z
             );
+        }
+
+        // A ho retegei a hatter es a Trench elmozdulasa kozott mozognak (tavoli = hatter, kozeli = Trench).
+        if (snow != null) {
+            snow.SetParallax(new Vector2(-normalizedX, -normalizedY), trenchParallax);
         }
 
         foreach (CursorMovementEnemy mover in enemyMovers) {
@@ -783,6 +813,18 @@ public class GameManager : MonoBehaviour
                 float fogDirection = hungarianSide ? -1f : 1f;
                 fogRenderer.material.SetVector("Speed", fogBaseSpeed * fogDirection);
                 fogRenderer.material.SetVector("Speed_2", fogBaseSpeed2 * fogDirection);
+            }
+
+            if (backFogRenderer != null)
+            {
+                float fogDirection = hungarianSide ? -1f : 1f;
+                backFogRenderer.material.SetVector("Speed", backFogBaseSpeed * fogDirection);
+                backFogRenderer.material.SetVector("Speed_2", backFogBaseSpeed2 * fogDirection);
+            }
+
+            if (snow != null)
+            {
+                snow.SetWindDirection(hungarianSide ? -1f : 1f);
             }
         }
 
