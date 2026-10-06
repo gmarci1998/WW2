@@ -59,7 +59,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1957535750
-    m_Localized: Art Direction
+    m_Localized: Art Director
     m_Metadata:
       m_Items: []
   - m_Id: 1957535751
@@ -71,7 +71,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1957535753
-    m_Localized: Writer & Narration Director
+    m_Localized: Narrative Designer
     m_Metadata:
       m_Items: []
   - m_Id: 1957535754
@@ -170,7 +170,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2153433111830528
-    m_Localized: One Life
+    m_Localized: Life Scale
     m_Metadata:
       m_Items: []
   - m_Id: 2153433216688128
@@ -316,6 +316,22 @@ MonoBehaviour:
   - m_Id: 2153433216688160
     m_Localized: 5,000 dead is a concert crowd. The mass of strangers you once stood
       among, shoulder to shoulder, singing the same chorus.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688161
+    m_Localized: Hungarian narration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688162
+    m_Localized: Sandor Nagy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688163
+    m_Localized: English narration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688164
+    m_Localized: Everett Hulse
     m_Metadata:
       m_Items: []
   references:

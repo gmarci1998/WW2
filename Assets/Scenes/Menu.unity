@@ -1055,7 +1055,7 @@ GameObject:
   - component: {fileID: 122777861}
   - component: {fileID: 122777860}
   m_Layer: 5
-  m_Name: Art & Visual Assets
+  m_Name: Art Director
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Art & Visual Assets
+  m_text: Art Director
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
@@ -1569,8 +1569,8 @@ MonoBehaviour:
       mondogatja mag\xE1nak, hogy ha valaha is lesz olyan szerencs\xE9s, hogy bemutatkozzon
       egy \xFAj embernek, akkor garant\xE1ltan azt fogja neki mondani, hogy \u201CIfjabb
       Bed\u0151 Ferenc, de te h\xEDvj\xE1l csak nyugodtan  Ferk\xF3nak\u201D. "
-    englishNarrationClip: {fileID: 8300000, guid: 16ad02e124fb2e34294adb7bcf313033, type: 3}
-    hungarianNarrationClip: {fileID: 0}
+    englishNarrationClip: {fileID: 8300000, guid: da4514c0ba14ff44c9d762ee29302858, type: 3}
+    hungarianNarrationClip: {fileID: 8300000, guid: e945e95128208804493d1ad5a9119fcc, type: 3}
   - image: {fileID: -7754199205684209494, guid: 80770355e2e487c43a2433218c3f020c, type: 3}
     englishDescription: "Benedek Folhoffer / Age: 24 \\n Rank / Position: Private
       (enlisted soldier), assistant machine gunner (ammunition bearer) \\n Civilian
@@ -1679,8 +1679,8 @@ MonoBehaviour:
       biztos, hogy nagyon szeretne hazajutni, hogy a v\xE9g\xE9re j\xE1rjon a k\xE9rd\xE9snek.
       Elv\xE9gre jobb dolog egy alaposan bemeleg\xEDtett m\u0171helyben sz\xF6rny\u0171s\xE9gekkel
       szembes\xFClni, mint a csont\u0151rl\u0151 hidegben t\u0171n\u0151dni rajtuk."
-    englishNarrationClip: {fileID: 8300000, guid: 555cffd6cbc6e5f48acfff0b68a0bcc8, type: 3}
-    hungarianNarrationClip: {fileID: 0}
+    englishNarrationClip: {fileID: 8300000, guid: 9cf9ad2dfc1b0884abc7c80f94deb444, type: 3}
+    hungarianNarrationClip: {fileID: 8300000, guid: b3f461d0e2c7579479f58a42c343dff5, type: 3}
   - image: {fileID: -7610096024345054562, guid: 87bc25401fa314c458f93dfc662e7bb3, type: 3}
     englishDescription: "Istv\xE1n Maruzs / Age: 41 \\n Rank / Position: Private
       (reservist), trench runner / Messenger \\n Civilian Occupation: Farmer \\n
@@ -1812,8 +1812,8 @@ MonoBehaviour:
       mire a szakaszparancsnok atyai b\xFCszkes\xE9ggel tekintett r\xE1, megveregette
       a v\xE1ll\xE1t \xE9s meghatotts\xE1gt\xF3l elcsukl\xF3 hangon mind\xF6ssze
       annyit mondott: <i> \u201CVannak m\xE9g igazi hazafik\u201D. </i> "
-    englishNarrationClip: {fileID: 8300000, guid: 50dadd7ea8e52a3438ebc80f2074442e, type: 3}
-    hungarianNarrationClip: {fileID: 0}
+    englishNarrationClip: {fileID: 8300000, guid: 7dcc2ea0bb585de498d907e2e58d5eec, type: 3}
+    hungarianNarrationClip: {fileID: 8300000, guid: 288b07e07c1ccf34ba30c811fad01366, type: 3}
   - image: {fileID: 4570106350468467348, guid: 3c678c94c1be9874db7a0d58a33163d9, type: 3}
     englishDescription: "Aleksei Morozov / Age: 37 \\n Rank / Position: Junior Sergeant,
       deputy squad leader \\n Civilian Occupation: Tractor driver \\n Origin: Kursk
@@ -1940,8 +1940,8 @@ MonoBehaviour:
       m\xE9g a nap, amikor foghatja a jelenleg is kez\xE9ben tartott M1891-est, id\u0151k\xF6zben
       irigyl\xE9sre m\xE9lt\xF3 politikai karriert befutott nagyb\xE1tyja sz\xE1j\xE1ba
       nyomhatja a puska cs\xF6v\xE9t \xE9s megh\xFAzhatja a ravaszt."
-    englishNarrationClip: {fileID: 8300000, guid: 44468e74589917f4e94fcd18187c8b88, type: 3}
-    hungarianNarrationClip: {fileID: 0}
+    englishNarrationClip: {fileID: 8300000, guid: 93c95f291a6c79443a7aba117404c383, type: 3}
+    hungarianNarrationClip: {fileID: 8300000, guid: ae16f0c8e6742a34a8440d8d934dc5e5, type: 3}
   - image: {fileID: -3432214506606557312, guid: b219ed7586b42db4cac66fca4844c3a2, type: 3}
     englishDescription: "Ivan Petrov / Age: 26 \\n Rank / Position: Red Army soldier
       (private), rifleman \\n Civilian Occupation: History teacher\\n Origin: Voronezh
@@ -2067,8 +2067,8 @@ MonoBehaviour:
       \xE9s megadja mag\xE1t a talajt bor\xEDt\xF3 vastag j\xE9gr\xE9teg, hogy az
       \xE9des anyaf\xF6ld utols\xF3 cseppig mag\xE1ba ihassa esend\u0151 gyermek\xE9nek
       v\xE9r\xE9t."
-    englishNarrationClip: {fileID: 8300000, guid: 58069518f45003d459f14a376b4507b5, type: 3}
-    hungarianNarrationClip: {fileID: 0}
+    englishNarrationClip: {fileID: 8300000, guid: a821284a11752974b889687be7b532d1, type: 3}
+    hungarianNarrationClip: {fileID: 8300000, guid: 7ed2406508628b149beed362eb1964b6, type: 3}
   - image: {fileID: 1116025709374489556, guid: 88ce801cd676caa44842508ac0da0c40, type: 3}
     englishDescription: "Mykola Shevchenko (Ukrainian) /  Age:22 \\n Rank/Position:
       Red Army soldier, submachine gunner(PPSh) \\n Civilian Occupation: Shoemaker\u2019s
@@ -2257,8 +2257,8 @@ MonoBehaviour:
       a szavakat. Mykola a hang ir\xE1ny\xE1ba fordul, majd nem sokkal k\xE9s\u0151bb
       h\xE1l\xE1san veszi el a fel\xE9je k\xEDn\xE1lt cigarett\xE1t. A halv\xE1ny
       k\xE9k f\xFCst kecsesen sz\xE1ll az ac\xE9lsz\xFCrke \xE9gbolt fel\xE9. "
-    englishNarrationClip: {fileID: 8300000, guid: a063a791164b67e418f9a2c48b7abe1c, type: 3}
-    hungarianNarrationClip: {fileID: 0}
+    englishNarrationClip: {fileID: 8300000, guid: dc9a46e0adff7414388e9000ddaa1979, type: 3}
+    hungarianNarrationClip: {fileID: 8300000, guid: c9f70ca9e5653c84e924b48097275beb, type: 3}
   - image: {fileID: 6467543913970071884, guid: 329a93f3f8c316e4daeee18d27a4caf4, type: 3}
     englishDescription: "Serik Nurgaliyev (Kazakh; \u201CSiberian side\u201D / eastern
       recruitment) \\n Age: 30 Rank / role: light machine gunner \\n Civilian occupation:
@@ -2417,8 +2417,8 @@ MonoBehaviour:
       mikor l\xF6v\xE9se nyom\xE1n egy \xFAjabb ellens\xE9ges katona ki\xE1ltott
       fel f\xE1jdalm\xE1ban. Serik nem szeretett arra gondolni, hogy h\xE1ny Ainurhoz
       hasonl\xF3 kisl\xE1nyb\xF3l csin\xE1lt m\xE1r \xE1rv\xE1t."
-    englishNarrationClip: {fileID: 8300000, guid: ec55de7c793ae9142972faf9511b6013, type: 3}
-    hungarianNarrationClip: {fileID: 0}
+    englishNarrationClip: {fileID: 8300000, guid: 1c61e49ebc7a56a4792e11f1ac51ce41, type: 3}
+    hungarianNarrationClip: {fileID: 8300000, guid: a271e95542b364543b23bf0aa568fe61, type: 3}
   - image: {fileID: -8142763403083625019, guid: daa16bd2a10e36249a13bf32307300cf, type: 3}
     englishDescription: "Andr\xE1s Hodanics / Age: 29 \\n Rank / Position: Corporal
       (junior non-commissioned officer), squad leader \\n Civilian Occupation: Mason
@@ -2560,8 +2560,8 @@ MonoBehaviour:
       hogy megk\xE9rje Elza kez\xE9t, lecs\xFAszik a combja ment\xE9n \xE9s a fagyos,
       v\xE9rt\u0151l v\xF6r\xF6sl\u0151 j\xE9ggel bor\xEDtott f\xF6ld\xF6n k\xF6t
       ki. "
-    englishNarrationClip: {fileID: 8300000, guid: 06f6e8cfb33ae184b818f0a92bf39957, type: 3}
-    hungarianNarrationClip: {fileID: 0}
+    englishNarrationClip: {fileID: 8300000, guid: ed623ca14a524a5478d4500336b9eae4, type: 3}
+    hungarianNarrationClip: {fileID: 8300000, guid: 30870671353c43a4b85c0a8f51293d52, type: 3}
 --- !u!82 &147734231
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6759,6 +6759,10 @@ MonoBehaviour:
   creditsNameNagyBorusText: {fileID: 1761334489}
   creditsNameBendaText: {fileID: 1765216998}
   creditsNameBorosText: {fileID: 2013819049}
+  hungarianNarrationLabelText: {fileID: 770100003}
+  creditsNameNagySandorText: {fileID: 770200003}
+  englishNarrationLabelText: {fileID: 770300003}
+  creditsNameHulseText: {fileID: 770400003}
   settingsTitleText: {fileID: 601692897}
   languageLabelText: {fileID: 1397237962}
   languageButtonText: {fileID: 736130374}
@@ -6771,7 +6775,7 @@ MonoBehaviour:
   subtitlesLanguageButton: {fileID: 1529034557}
   fadeTime: 0.4
   HungarianSoldiers:
-  - Name: "Andr\xE1s Hodanincs"
+  - Name: "Andr\xE1s Hodanics"
     Image: {fileID: 0}
     Age: 0
     Description: 
@@ -10182,7 +10186,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: One Life
+  m_text: Life Scale
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
@@ -10401,7 +10405,7 @@ GameObject:
   - component: {fileID: 1119086610}
   - component: {fileID: 1119086609}
   m_Layer: 5
-  m_Name: Writing & Narration
+  m_Name: Narrative Designer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10446,7 +10450,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Writing & Narration
+  m_text: Narrative Designer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
   m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
@@ -11780,6 +11784,10 @@ RectTransform:
   - {fileID: 1119086608}
   - {fileID: 1761334488}
   - {fileID: 1805615389}
+  - {fileID: 770100001}
+  - {fileID: 770200001}
+  - {fileID: 770300001}
+  - {fileID: 770400001}
   m_Father: {fileID: 1297756270}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -15815,6 +15823,550 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137440581}
   m_CullTransparentMesh: 1
+--- !u!1 &770100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 770100001}
+  - component: {fileID: 770100002}
+  - component: {fileID: 770100003}
+  m_Layer: 5
+  m_Name: Hungarian Narration
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &770100001
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1468293917}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -237.8592, y: -186}
+  m_SizeDelta: {x: 452.075, y: 32.6618}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &770100002
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770100000}
+  m_CullTransparentMesh: 1
+--- !u!114 &770100003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Hungarian narration
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 26
+  m_fontSizeBase: 26
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &770200000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 770200001}
+  - component: {fileID: 770200002}
+  - component: {fileID: 770200003}
+  m_Layer: 5
+  m_Name: Sandor Nagy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &770200001
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770200000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1468293917}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -244.3598, y: -215.49591}
+  m_SizeDelta: {x: 439.0737, y: 39.6536}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &770200002
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770200000}
+  m_CullTransparentMesh: 1
+--- !u!114 &770200003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770200000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Sandor Nagy
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -78.02173, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &770300000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 770300001}
+  - component: {fileID: 770300002}
+  - component: {fileID: 770300003}
+  m_Layer: 5
+  m_Name: English Narration
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &770300001
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770300000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1468293917}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 110.1408, y: -186}
+  m_SizeDelta: {x: 452.075, y: 32.6618}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &770300002
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770300000}
+  m_CullTransparentMesh: 1
+--- !u!114 &770300003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770300000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: English narration
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 26
+  m_fontSizeBase: 26
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &770400000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 770400001}
+  - component: {fileID: 770400002}
+  - component: {fileID: 770400003}
+  m_Layer: 5
+  m_Name: Everett Hulse
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &770400001
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770400000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1468293917}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 103.6402, y: -215.49591}
+  m_SizeDelta: {x: 439.0737, y: 39.6536}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &770400002
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770400000}
+  m_CullTransparentMesh: 1
+--- !u!114 &770400003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770400000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Everett Hulse
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: -3424795643821942754, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -78.02173, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

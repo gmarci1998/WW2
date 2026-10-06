@@ -59,7 +59,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1957535750
-    m_Localized: "Vizu\xE1lis Rendez\u0151"
+    m_Localized: Art Director
     m_Metadata:
       m_Items: []
   - m_Id: 1957535751
@@ -71,7 +71,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1957535753
-    m_Localized: "\xCDr\xF3 \xE9s Szinkronrendez\u0151"
+    m_Localized: Narrative Designer
     m_Metadata:
       m_Items: []
   - m_Id: 1957535754
@@ -140,7 +140,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 248548359512064
-    m_Localized: Bajnok David
+    m_Localized: "Bajnok D\xE1vid"
     m_Metadata:
       m_Items: []
   - m_Id: 248548409843712
@@ -148,7 +148,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 248548409843713
-    m_Localized: Barta David
+    m_Localized: "Barta D\xE1vid"
     m_Metadata:
       m_Items: []
   - m_Id: 248548409843714
@@ -156,11 +156,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 248548409843715
-    m_Localized: Benda Daniel
+    m_Localized: "Benda D\xE1niel"
     m_Metadata:
       m_Items: []
   - m_Id: 248548409843716
-    m_Localized: Boros Aron
+    m_Localized: "Boros \xC1ron"
     m_Metadata:
       m_Items: []
   - m_Id: 253860416167936
@@ -325,6 +325,22 @@ MonoBehaviour:
     m_Localized: "5000 halott egy koncertk\xF6z\xF6ns\xE9g. Az idegenek t\xF6mege,
       akik k\xF6zt egykor \xE1llt\xE1l, v\xE1llt v\xE1llnak vetve, ugyanazt a refr\xE9nt
       \xE9nekelve."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688161
+    m_Localized: "Magyar narr\xE1ci\xF3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688162
+    m_Localized: "Nagy S\xE1ndor"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688163
+    m_Localized: "Angol narr\xE1ci\xF3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2153433216688164
+    m_Localized: Everett Hulse
     m_Metadata:
       m_Items: []
   references:

@@ -2349,7 +2349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 010cd0f86e5db0143abe8beaefcea3d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showCreditsOnGameEnd: 0
+  showOneLifeOnGameEnd: 0
   subtitles: {fileID: 1532605854}
   ambient: {fileID: 852633452}
   wind: {fileID: 1114724789}
@@ -2364,9 +2364,10 @@ MonoBehaviour:
   crouchAudio: {fileID: 1168232035}
   cam: {fileID: 0}
   parallaxFactorX: 18
-  parallaxFactorY: 0.5
+  parallaxFactorY: 0.52
   maxOffsetY: 0
   hungarianSide: 1
+  trenchHorizontalRange: 5
   background: {fileID: 15922}
   hungarianBackground: {fileID: -2670599806629529493, guid: 5f06c19543569c040a2be0735d111c93, type: 3}
   russianBackground: {fileID: -2078955931572187237, guid: cf59a0fe343a6ba4eba3bb09c6d933b2, type: 3}
@@ -2411,47 +2412,63 @@ MonoBehaviour:
   - Name: "Andr\xE1s Hodanics"
     Image: {fileID: 21300000, guid: bd5ff6cc0b55e2947a11aaa4c5319655, type: 3}
     Age: 22
-    Description: Fasz
-    englishAudio: {fileID: 8300000, guid: 06f6e8cfb33ae184b818f0a92bf39957, type: 3}
-    hungarianAudio: {fileID: 0}
+    Description: 
+    englishAudio: {fileID: 8300000, guid: ed623ca14a524a5478d4500336b9eae4, type: 3}
+    hungarianAudio: {fileID: 8300000, guid: 30870671353c43a4b85c0a8f51293d52, type: 3}
     picked: 0
     isOpened: 0
-    englishEntries:
-    - text: asdasdasdasd
-      time: 0
+    huAudioHuSubtitles: {fileID: 4900000, guid: 87879d76f46519f4f827a9e09e7a9532, type: 3}
+    huAudioEnSubtitles: {fileID: 4900000, guid: 91a38f28b798f494e8b9d170087bffc0, type: 3}
+    enAudioEnSubtitles: {fileID: 4900000, guid: 705f525a3a3bebf4c8e97ef31cf4dde7, type: 3}
+    enAudioHuSubtitles: {fileID: 4900000, guid: 11a52347191686849988610437873fce, type: 3}
+    englishEntries: []
     hungarianEntries: []
   - Name: "Ferenc Bed\u0151"
     Image: {fileID: 21300000, guid: 52aaeb1a801eb4f4d8d2c3ff71e0bd51, type: 3}
     Age: 22
     Description: 
-    englishAudio: {fileID: 8300000, guid: 16ad02e124fb2e34294adb7bcf313033, type: 3}
-    hungarianAudio: {fileID: 0}
+    englishAudio: {fileID: 8300000, guid: da4514c0ba14ff44c9d762ee29302858, type: 3}
+    hungarianAudio: {fileID: 8300000, guid: e945e95128208804493d1ad5a9119fcc, type: 3}
     picked: 0
     isOpened: 0
+    huAudioHuSubtitles: {fileID: 4900000, guid: 7cbb17a3b35f3ed499902039a37b4a7a, type: 3}
+    huAudioEnSubtitles: {fileID: 4900000, guid: 2eb6a55c97bb21e48bfdd6e7447d3d5c, type: 3}
+    enAudioEnSubtitles: {fileID: 4900000, guid: 79c1d7f4317116746b397204cd54c17c, type: 3}
+    enAudioHuSubtitles: {fileID: 4900000, guid: 249b49f3ec0152943ae8df9287b84944, type: 3}
     englishEntries:
     - text: xcavyc
       time: 0
+      endTime: 0
     hungarianEntries: []
   - Name: Folhoffer Benedek
     Image: {fileID: 21300000, guid: 8c3c323d3741d9244afdcdd1915b791c, type: 3}
     Age: 22
     Description: 
-    englishAudio: {fileID: 8300000, guid: 555cffd6cbc6e5f48acfff0b68a0bcc8, type: 3}
-    hungarianAudio: {fileID: 0}
+    englishAudio: {fileID: 8300000, guid: 9cf9ad2dfc1b0884abc7c80f94deb444, type: 3}
+    hungarianAudio: {fileID: 8300000, guid: b3f461d0e2c7579479f58a42c343dff5, type: 3}
     picked: 0
     isOpened: 0
+    huAudioHuSubtitles: {fileID: 4900000, guid: ff7461b076b9989438070df4a2b2fb15, type: 3}
+    huAudioEnSubtitles: {fileID: 4900000, guid: 1ad2ec72e64274048b8570e0b2af6779, type: 3}
+    enAudioEnSubtitles: {fileID: 4900000, guid: f3be3da20d83e85409bb6a07388589a0, type: 3}
+    enAudioHuSubtitles: {fileID: 4900000, guid: e10d9d4bdb82ebd408c01c760dc1797c, type: 3}
     englishEntries:
     - text: 'yxcyx '
       time: 0
+      endTime: 0
     hungarianEntries: []
   - Name: "Istv\xE1n Maruzs"
     Image: {fileID: 21300000, guid: c5226e19a6f38a1428dace1f0eff1005, type: 3}
     Age: 0
     Description: 
-    englishAudio: {fileID: 8300000, guid: 50dadd7ea8e52a3438ebc80f2074442e, type: 3}
-    hungarianAudio: {fileID: 0}
+    englishAudio: {fileID: 8300000, guid: 7dcc2ea0bb585de498d907e2e58d5eec, type: 3}
+    hungarianAudio: {fileID: 8300000, guid: 288b07e07c1ccf34ba30c811fad01366, type: 3}
     picked: 0
     isOpened: 0
+    huAudioHuSubtitles: {fileID: 4900000, guid: dd1db008d8d9bf540970099d7a7f78bc, type: 3}
+    huAudioEnSubtitles: {fileID: 4900000, guid: 9c261827fdb292843bf53b43cdd36849, type: 3}
+    enAudioEnSubtitles: {fileID: 4900000, guid: 1061f274f77a050469df20ea34a3a337, type: 3}
+    enAudioHuSubtitles: {fileID: 4900000, guid: b930857cc6279dc41b89e1679eb24414, type: 3}
     englishEntries: []
     hungarianEntries: []
   RussianSoldiers:
@@ -2459,40 +2476,56 @@ MonoBehaviour:
     Image: {fileID: 21300000, guid: fcdabd6d9c7a5d641923bc90a7ac13ca, type: 3}
     Age: 17
     Description: Jo
-    englishAudio: {fileID: 8300000, guid: 44468e74589917f4e94fcd18187c8b88, type: 3}
-    hungarianAudio: {fileID: 0}
+    englishAudio: {fileID: 8300000, guid: 93c95f291a6c79443a7aba117404c383, type: 3}
+    hungarianAudio: {fileID: 8300000, guid: ae16f0c8e6742a34a8440d8d934dc5e5, type: 3}
     picked: 0
     isOpened: 0
+    huAudioHuSubtitles: {fileID: 4900000, guid: 07658e37c7b788e4d90bc51ca2365529, type: 3}
+    huAudioEnSubtitles: {fileID: 4900000, guid: e326a787056a2df46b6b702f9a27870d, type: 3}
+    enAudioEnSubtitles: {fileID: 4900000, guid: 8897ac43c479e65488d7018893537d7a, type: 3}
+    enAudioHuSubtitles: {fileID: 4900000, guid: e6bab1bdb838915449d813f0afd6c1ca, type: 3}
     englishEntries: []
     hungarianEntries: []
   - Name: Ivan Petrov
     Image: {fileID: 21300000, guid: b212de654d852d646a854ecb1ea48233, type: 3}
     Age: 17
     Description: Jo
-    englishAudio: {fileID: 8300000, guid: 58069518f45003d459f14a376b4507b5, type: 3}
-    hungarianAudio: {fileID: 0}
+    englishAudio: {fileID: 8300000, guid: a821284a11752974b889687be7b532d1, type: 3}
+    hungarianAudio: {fileID: 8300000, guid: 7ed2406508628b149beed362eb1964b6, type: 3}
     picked: 0
     isOpened: 0
+    huAudioHuSubtitles: {fileID: 4900000, guid: 41ac3475278286f46aa907fd40f97e05, type: 3}
+    huAudioEnSubtitles: {fileID: 4900000, guid: df5b303e76ca4d04c98e46fef695655c, type: 3}
+    enAudioEnSubtitles: {fileID: 4900000, guid: c5b9bb100ebe5fb4b82ab12920a2f65d, type: 3}
+    enAudioHuSubtitles: {fileID: 4900000, guid: 4a7cb8db7968d8e4b962dce6b31bc331, type: 3}
     englishEntries: []
     hungarianEntries: []
   - Name: Mykola Shevchenko
     Image: {fileID: 21300000, guid: 108687ffa86b3204c91c090b989ad30a, type: 3}
     Age: 17
     Description: Jo
-    englishAudio: {fileID: 8300000, guid: a063a791164b67e418f9a2c48b7abe1c, type: 3}
-    hungarianAudio: {fileID: 0}
+    englishAudio: {fileID: 8300000, guid: dc9a46e0adff7414388e9000ddaa1979, type: 3}
+    hungarianAudio: {fileID: 8300000, guid: c9f70ca9e5653c84e924b48097275beb, type: 3}
     picked: 0
     isOpened: 0
+    huAudioHuSubtitles: {fileID: 4900000, guid: a82a416eafea6b84d82f484b1441c341, type: 3}
+    huAudioEnSubtitles: {fileID: 4900000, guid: dd7cb167e9ebda040bee1b33826fd123, type: 3}
+    enAudioEnSubtitles: {fileID: 4900000, guid: bec323d101d5df04dafd00c59af2d76c, type: 3}
+    enAudioHuSubtitles: {fileID: 4900000, guid: 4c95915d3e04a73499c8fb041407d6f0, type: 3}
     englishEntries: []
     hungarianEntries: []
   - Name: Serik Nurgaliyev
     Image: {fileID: 21300000, guid: f8416054167921a4c8272865d9673a66, type: 3}
     Age: 17
     Description: Jo
-    englishAudio: {fileID: 8300000, guid: ec55de7c793ae9142972faf9511b6013, type: 3}
-    hungarianAudio: {fileID: 0}
+    englishAudio: {fileID: 8300000, guid: 1c61e49ebc7a56a4792e11f1ac51ce41, type: 3}
+    hungarianAudio: {fileID: 8300000, guid: a271e95542b364543b23bf0aa568fe61, type: 3}
     picked: 0
     isOpened: 0
+    huAudioHuSubtitles: {fileID: 4900000, guid: e6f50f06cf24f4142a3b75572bce4353, type: 3}
+    huAudioEnSubtitles: {fileID: 4900000, guid: 266711c17caa67e469c0e6d30392d72e, type: 3}
+    enAudioEnSubtitles: {fileID: 4900000, guid: 4a5b11f4ea419034488c77376d8381c4, type: 3}
+    enAudioHuSubtitles: {fileID: 4900000, guid: 2d4596f20da21404e8ed82c853a353f7, type: 3}
     englishEntries: []
     hungarianEntries: []
   narrationPauseDelay: 8
@@ -4219,6 +4252,7 @@ GameObject:
   - component: {fileID: 1532605853}
   - component: {fileID: 1532605854}
   - component: {fileID: 1532605855}
+  - component: {fileID: 1532605856}
   m_Layer: 5
   m_Name: Subtitles
   m_TagString: Untagged
@@ -4266,13 +4300,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   subtitleText: {fileID: 1532605855}
-  subtitleEntries:
-  - text: asd assd
-    time: 0
-  - text: wttttttfffffffffffff
-    time: 10
-  - text: asdyxcwerggnbmtz
-    time: 15
+  subtitleEntries: []
+  narrationSource: {fileID: 0}
+  animator: {fileID: 0}
+  settingsPollInterval: 0.5
 --- !u!114 &1532605855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4295,15 +4326,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 187a59b331070a34a8480de39539ad51, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 0eb16b52415249439285640a66ca7484, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4320,14 +4351,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4364,6 +4395,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1532605856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532605850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77dcea3c4381dd345bf93c46b6de8f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wordStagger: 0.2
+  wordFadeDuration: 0.5
+  riseDistance: 15
+  fadeOutDuration: 0.2
 --- !u!1 &1574305199
 GameObject:
   m_ObjectHideFlags: 0
@@ -6218,7 +6265,7 @@ Transform:
   m_GameObject: {fileID: 1958372749}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.88, y: -1.2, z: 0}
+  m_LocalPosition: {x: -11.88, y: -1.3, z: 0}
   m_LocalScale: {x: 0.6219174, y: 0.6219174, z: 0.6219174}
   m_ConstrainProportionsScale: 0
   m_Children:
